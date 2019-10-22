@@ -6,37 +6,7 @@
 
 <section class="container-gral" style="padding-top: 200px" >
     
-        <div id="container-catalogo" class="margin-10">
-
-            <div class="col-12 text-center">
-                <h2>SU FUTURA COCINA EMPIEZA AQUÍ</h2>
-                <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-
-            </div>
-            <div class="row col-padding catalogo topmargin" style="height: 500px">
-                <div class="col-md-6">
-                    sdfsdf
-                </div>
-                <div class="col-md-6 h-100 d-flex">
-                    <div class="justify-content-center align-self-center">
-                        <h2>NUESTRA FILOSOFÍA</h2>
-
-                        <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
-                        <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        @include('modulos.showrooms')
-
         @include('modulos.carrousel')
-
-
-        
 </section>
 @endsection
 

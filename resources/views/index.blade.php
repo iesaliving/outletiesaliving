@@ -4,7 +4,7 @@
 @section('content')
 
 
-<section id="container-gral" style="padding-top: 200px" >
+<section class="container-gral" style="padding-top: 200px" >
     
         <div id="container-catalogo" class="margin-10">
             <div class="row col-padding catalogo topmargin">

@@ -23,6 +23,10 @@ Route::get('/servicios', function () {
     return view('servicios');
 });
 
+Route::get('/showroom', function () {
+    return view('showroom');
+});
+
 Route::get('/faq', function () {
     return view('faq-index');
 });
@@ -30,3 +34,28 @@ Route::get('/faq', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
+
+
+Route::get('/sub-zero', function () {
+    return view('sub-zero');
+});
+
+Route::get('/wolf', function () {
+    return view('wolf');
+});
+
+Route::get('/cove', function () {
+    return view('cove');
+});	
+
+Route::get('/asko', function () {
+    return view('asko');
+});	
+
+Route::get('/deza', function () {
+    return view('deza');
+}); 
+
+Route::get('/gracias', function () {
+    return view('gracias');
+}); 

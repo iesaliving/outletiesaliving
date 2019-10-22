@@ -63,6 +63,10 @@ a:hover{
     border-color: #01bb9c;
 }
 
+.fa-map-marker{
+  color: #01bb9c;
+}
+
 a.btn {
   font-size: 0.7rem!important
 }
@@ -71,8 +75,16 @@ a.btn {
   background-color:  rgb(231, 232, 234);
 }
 
+.bold{
+  font-weight: 900!important
+}
+
+#conoce h2, #conoce p{
+  font-weight: 300
+}
+
 @media(min-width: 1600px){
-  #container-gral{
+  .container-gral{
     max-width: 1300px!important;
     margin:auto;
   }
@@ -327,6 +339,13 @@ ul#menu a:hover {
 }
 /* --------------------FIN gallery ---------------------------------*/
 
+/* --------------------FIN calendario ---------------------------------*/
+
+#calendario{
+  font-size: 0.7rem
+}
+
+/* --------------------FIN calendario ---------------------------------*/
 
 /* --------------------carrousel---------------------------------*/
 #marcas .owl-prev{
@@ -380,6 +399,14 @@ ul#menu a:hover {
 /*------------------------container faq---------------*/
 
 #container-faq h2, #container-faq p {
+  font-weight: 300
+
+}
+/*------------------------container faq---------------*/
+
+/*------------------------container faq---------------*/
+
+#container-form h2, #container-form p,#modulos-faq h2, #modulos-faq p {
   font-weight: 300
 
 }
