@@ -4,6 +4,53 @@
 @section('content')
 
 
+<section style="height: 500px; width: 100%; background-color: gray">
+    <div class="col-12 nopadding h-100 d-flex aling">
+
+        <div class="justify-content-center align-self-center col-md-5" style="padding: 5%;
+        background: rgb(210,210,210);
+        background: linear-gradient(90deg, #d2d2d2b5 0%, #cfcfcf66 35%, #ffffff00 100%)" >
+            <h2 class="light nomargin">INSPIRADO EN</h2>
+            <h2 class="bold"><b><i>ESCANDINAVIA</i></b></h2>
+        </div>
+        
+    </div>
+    
+</section>
+
+<section style="margin: 5% 30px">
+  
+    <div class="owl-carousel owl-theme col-md-12">
+        <div class="item">
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+
+            <div style="width: 100%; height: 50px; background-color: red">
+                        
+            </div>
+                
+        </div>
+    </div>
+</section>
+
+
 <section class="container-gral" style="padding-top: 200px" >
     
         <div id="container-catalogo" class="margin-10">
@@ -290,7 +337,40 @@
 
 
 @section('styles')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+
 @endsection
 
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function() {
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                dots:false,
+            
+                 navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
+                margin: 10,
+                responsive: {
+                  0: {
+                    items: 1,
+                  },
+                  600: {
+                    items: 2,
+                  },
+                  900: {
+                    items: 3,
+                  },
+                  1200: {
+                    items: 4,
+                  },    
+                  1500: {
+                    items: 6,
+                  }
+                }
+              })
+            }) 
+</script>
 @endsection
