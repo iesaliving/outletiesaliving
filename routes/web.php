@@ -36,6 +36,10 @@ Route::get('/faq', function () {
     return view('faq-index');
 });
 
+Route::get('/aviso-privacidad', function () {
+    return view('aviso-privacidad');
+});
+
 Route::get('/contacto', function () {
     return view('contacto');
 });
@@ -51,16 +55,16 @@ Route::get('/wolf', function () {
 
 Route::get('/cove', function () {
     return view('cove');
-});	
+});
 
 Route::get('/asko', function () {
     return view('asko');
-});	
+});
 
 Route::get('/dexa', function () {
     return view('dexa');
-}); 
+});
 
 Route::get('/gracias', function () {
     return view('gracias');
-}); 
+});
