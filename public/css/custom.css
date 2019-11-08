@@ -8,7 +8,9 @@ body{
    overflow-y: hidden;
 }
 
-
+a{
+  color: #000!important
+}
 .item{
   background-color: #e7e8ea;
 }
@@ -105,7 +107,7 @@ a:hover{
 
 
 .btn-cyan{
-    color: #fff;
+    color: #fff!important;
     background-color: #01bb9c;
     border-color: #01bb9c;
 }
@@ -474,11 +476,15 @@ ul#menu a:hover {
 }
 /* --------------------FIN gallery ---------------------------------*/
 
-/* --------------------FIN calendario ---------------------------------*/
 
 #calendario{
   font-size: 0.7rem
 }
+
+#calendario a{
+  color: #000
+}
+
 
 /* --------------------FIN calendario ---------------------------------*/
 
