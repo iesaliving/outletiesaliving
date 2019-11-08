@@ -1,11 +1,16 @@
         <div id="showroom-container" style="margin: 10%">
             <div class="text-center col-12">
                 <h2>VISITE NUESTRO SHOWROOM</h2>
-                <p>loremIpsum</p>
+                <p>
+                  Un lugar para comenzar, experimentar y dar vida a la visión de su cocina.
+                </p>
+                <p>
+                  Visitar nuestro showroom no es un día de compras ordinario, es una experiencia interactiva que le ayuda a visualizar las posibilidades de su futura cocina. En un ambiente sin presiones, puede descubrir como se va a sentir, ver y a que va a saber su cocina - guiado por un cordial experto en equipos que se enfoca a atender sus necesidades.
+                </p>
 
 
-                <div class="col-md-6 offset-md-3">
-                    <a class="btn btn-cyan btn-block" href="">VISITE NUESTROS SHOWROOM</a>
+                <div class="col-md-6 offset-md-3 topmargin">
+                    <a class="btn btn-cyan btn-block showroon-btn" href=""><img src="{{ URL::asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
                 </div>
 
             <div id="gallery">
@@ -16,7 +21,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
                       <div class="img-wrapper">
-                        <a href="https://unsplash.it/700"><img src="https://unsplash.it/700" class="img-responsive"></a>
+                        <a href="{{ URL::asset('img/SHOWROOM_HOME1.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME1.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">
                           <i class="fa fa-plus-circle" aria-hidden="true"></i>
                         </div>
@@ -24,7 +29,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
                       <div class="img-wrapper">
-                        <a href="https://unsplash.it/800"><img src="https://unsplash.it/800" class="img-responsive"></a>
+                        <a href="{{ URL::asset('img/SHOWROOM_HOME2.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME2.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">
                           <i class="fa fa-plus-circle" aria-hidden="true"></i>
                         </div>
@@ -32,7 +37,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
                       <div class="img-wrapper">
-                        <a href="https://unsplash.it/900"><img src="https://unsplash.it/900" class="img-responsive"></a>
+                        <a href="{{ URL::asset('img/SHOWROOM_HOME3.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME3.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">
                           <i class="fa fa-plus-circle" aria-hidden="true"></i>
                         </div>

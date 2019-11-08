@@ -3,10 +3,15 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
+
 #boddy{
    overflow-y: hidden;
 }
 
+
+.item{
+  background-color: #e7e8ea;
+}
 .margin-10{
   margin: 10%;
 }
@@ -54,6 +59,48 @@ a:hover{
 
 .col-padding-h {
     padding: 0 5%;
+}
+.col-padding-sm{
+  padding: 20px
+}
+
+.nopaddingleft{
+  padding-left: 0
+}
+
+.nopaddingright{
+   padding-right: 0
+}
+
+
+.showroon-btn img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.showroon-btn p{
+  line-height: 2.0;
+  display: inline;
+}
+
+.solicitar-btn img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.solicitar-btn p{
+  line-height: 2.0;
+  display: inline;
+}
+
+.descubra-btn img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.descubra-btn p{
+  line-height: 2.0;
+  display: inline;
 }
 
 
@@ -119,17 +166,18 @@ nav#header{
 	width: 100%;
 }
 #header-custom{
+  z-index: 10;
 	width: 100%;
 	transition: opacity 0.5s; 
 }
 
 #header-custom .navbar-brand{
-	width: 13vw;
+	width: 9vw;
 }
 
 
 #header-custom .navbar-expand-lg{
-	padding: 0 5vw;
+	padding: 15px 5vw;
 }
 
 #menu .nav-item{
@@ -176,10 +224,12 @@ ul#menu a:hover {
 }
 
 #footer-iesa h5{
-  font-weight: 700
+  font-weight: 700;
+  font-size:1rem;
 }
 
-#footer-iesa p{
+#footer-iesa p, #footer-iesa a{
+  color: #000!important;
   font-weight: 300
 }
 
@@ -187,20 +237,101 @@ ul#menu a:hover {
   color: #01bb9c
 }
 
+
+
+/*HERO-IMAGE*/
+.container-hero-image{
+  background-size: cover;background-repeat: no-repeat; padding: 200px 0 
+}
+
+.gradient-hero{
+  padding: 5%;
+  background: rgb(210,210,210);
+  background: linear-gradient(90deg, #d2d2d2b5 0%, #cfcfcf66 35%, #ffffff00 100%)
+}
+
+.gradient-hero-cove {
+    padding: 5%;
+    background: rgb(210,210,210);
+    background: linear-gradient(90deg, #ffffffe0 0%, #ffffff9c 35%, #ffffff00 100%);
+}
+
+.h2-text{
+  margin-top: -13px;
+  margin-bottom: 0;
+}
+
+
+
+/*FACEBOOK*/
+
+.container-fb{
+  width: 100%; 
+  height: 300px; 
+  background-size: 100% 100%;
+}
 /*CATALOGOS*/
 
-#container-catalogo p,#container-catalogo h2{
+#container-catalogo p{
   font-weight: 300
 }
 
+
+#container-catalogo h2{
+  font-weight: 300;
+  text-transform: uppercase;  
+}
+
+#container-catalogo .form-custom{
+  background-color: #e7e8ea;
+}
+
+
+.container-descripcion{
+  margin-top: 10px
+}
+
+.container-text{
+  margin-top: 10px
+}
+
+.icon-catalogo-right{
+  width: 20px
+}
+
+
+.img-left{
+  padding: 0 10px 0 0
+}
 
 .catalogo{
   background-color:  rgb(231, 232, 234);
   padding: 2%
 }
 
+.container-icon.right > div{
+  margin: 0 5px;
+}
 
-.catalogo-right{
+.container-icon.right > div:first-child{
+  margin: 0 5px 0 0 !important
+}
+
+.container-icon.left > div{
+   margin: 0 5px;
+}
+
+.container-icon.left > div:first-child{
+  margin: 0 5px 0 0 !important
+}
+
+
+.container-icon > div > img{
+  width: 20px
+}
+
+
+.container-icon.left{
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
@@ -354,8 +485,8 @@ ul#menu a:hover {
 /* --------------------carrousel---------------------------------*/
 #marcas .owl-prev{
     position: absolute;
-    left: -30px;
-    top: 4px;
+    left: -40px;
+    top: 50px;
 
 }
 
@@ -366,8 +497,8 @@ ul#menu a:hover {
 
 #marcas .owl-next{
     position: absolute;
-    right: -30px;
-    top: 4px;
+    right: -40px;
+    top: 50px;
 }
 
 #marcas .owl-next i{
@@ -384,6 +515,7 @@ ul#menu a:hover {
 /*------------------------LUGAR---------------*/
 
 #lugar h2,#lugar p{
+  line-height: 1.3;
   font-weight: 300
 }
 /*-----------------------FIN LUGAR---------------*/
@@ -415,3 +547,7 @@ ul#menu a:hover {
 
 }
 /*------------------------container faq---------------*/
+
+#carousel-showrooms .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #01bb9c!important;
+}

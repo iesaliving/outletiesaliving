@@ -109,11 +109,11 @@
 
                   
               } else {  
-                   $("#header-custom").attr('style',  'opacity: 1;z-index:1'); 
+                   $("#header-custom").attr('style',  'opacity: 1;z-index:10'); 
                    
               }
               lastPositionScrollTop = position;
-              if (position<500 ){
+              if (position<600 ){
                    $("#header").attr('style',  'position: relative'); 
 
               } else{

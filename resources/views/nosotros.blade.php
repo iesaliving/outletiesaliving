@@ -4,32 +4,45 @@
 @section('content')
 
 
-<section class="container-gral" style="padding-top: 200px" >
+
+
+<section>
+  <img src="{{ URL::asset('img/nosotros/hero.jpg')}}">
+</section>
+
+<section class="container-gral" style="padding-top: 4px" >
     
         <div id="container-catalogo" class="margin-10">
 
-            <div class="col-12 text-center">
+            <div class="col-12 text-center bottommargin-lg">
                 <h2>SU FUTURA COCINA EMPIEZA AQUÍ</h2>
-                <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Empiece en uno de nuestros showrooms Sub-Zero, Wolf, Cove y Asko. Aquí lo atenderá un consultor dedicado a ayudarlo durante cada fase de su proyecto - desde el entender esa inspiración inicial hasta el aprovechar al máximo los equipos que seleccione cuidadosamente una vez que estén en su casa. Nosotros proveeremos todo lo que necesita para empezar, asegurando que la experiencia total este amoldada específicamente a usted.</p>
 
             </div>
-            <div class="row col-padding catalogo topmargin" style="height: 500px">
-                <div class="col-md-6">
-                    sdfsdf
+            <div class="row col-padding catalogo topmargin">
+                <div class="col-md-6 col-padding-sm">
+                    <img src="{{ URL::asset('img/nosotros/objetivo.jpg')}}">
                 </div>
-                <div class="col-md-6 h-100 d-flex">
+                <div class="col-md-6 d-flex">
                     <div class="justify-content-center align-self-center">
-                        <h2>NUESTRA FILOSOFÍA</h2>
-
-                        <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
-                        <p>lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum</p>
+                        <h2 class="bottommargin-sm">NUESTRO OBJETIVO</h2>
+                        <p>Un lugar para empezar, experimentar y hacer realidad su visión. <br>Este no es un día de compras normal.</p>
+                        <p>Es una experiencia inmersiva para ayudarlo a visualizar las posibilidades de su futura cocina en una ambiente libre de presión donde usted puede descubrir cómo se va a sentir, ver y hasta como va a saber su futura cocina - guiado(a) por un consultor experto cuyo enfoque es amoldar la visita a sus necesidades.</p>
                         
                     </div>
 
                 </div>
             </div>
-        </div>
 
+
+            <div class="col-12 text-center bottommargin-lg topmargin-lg">
+                <h2>¿TE GUSTARÍA FORMAR PARTE DE NUESTRO EQUIPO DE TRABAJO?</h2>
+                <p>Piensa en lo emocionante que sería trabajar para una compañía dedicada a vender los mejores enseres de lujo del mundo, mejorando la vida en la cocina para miles de clientes. Somos una empresa impulsada por la innovación y la integridad, que se esfuerza por ser el mejor y brindar el mejor ambiente de trabajo. Si quieres trabajar con un líder, has llegado al lugar correcto.</p>
+
+                <p>Envíanos tu curriculum a: <a href="cflores@iesa.cc">cflores@iesa.cc</a> adjuntando en el subject el puesto de tu interés.</p>
+
+            </div>
+        </div>
 
         @include('modulos.showrooms')
 
@@ -60,7 +73,7 @@ $(document).ready(function() {
                 loop: true,
                 nav: true,
                  navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
-                margin: 10,
+                margin: 20,
                 responsive: {
                   0: {
                     items: 1,
@@ -68,9 +81,8 @@ $(document).ready(function() {
                   600: {
                     items: 3,
                   },
-                  1000: {
+                  900: {
                     items: 4,
-                    margin: 20
                   }
                 }
               })

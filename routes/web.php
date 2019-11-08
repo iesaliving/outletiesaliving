@@ -27,6 +27,11 @@ Route::get('/showroom', function () {
     return view('showroom');
 });
 
+
+Route::get('/exteriores', function () {
+    return view('exteriores');
+});
+
 Route::get('/faq', function () {
     return view('faq-index');
 });
@@ -52,8 +57,8 @@ Route::get('/asko', function () {
     return view('asko');
 });	
 
-Route::get('/deza', function () {
-    return view('deza');
+Route::get('/dexa', function () {
+    return view('dexa');
 }); 
 
 Route::get('/gracias', function () {

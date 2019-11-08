@@ -4,17 +4,32 @@
 @section('content')
 
 
-<section class="container-gral" style="padding-top: 200px" >
+
+
+
+
+
+
+
+<section>
+  <img src="{{ URL::asset('img/showrooms/hero.jpg')}}">
+</section>
+
+
+<section class="container-gral">
     
   
 
         <div class="margin-10">
-            <div  class="row calendario">
-                <div class="col-lg-6 row">
+            <div  class="row calendario light">
+                <div class="col-lg-6 row ">
+                    <div class="col-12 text-center bottommargin-sm">
+                        <h2 class="light">MONTERREY</h2>
+                    </div>
                     <div class="col-lg-6">
-                        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                        <p class="nomargin"><i style="margin-right: 15px;" class="fa fa-map-marker"></i>Lorem ipsum </p>
-                        <p class="nomargin"><i style="margin-right: 15px;" class="fa fa-map-marker"></i>Lorem ipsum </p>
+                        <p>Carr. Monterrey –<br> Saltillo 3061<br> Fracc. Bosques del Poniente<br> Santa Catarina, NL 66350</p>
+                        <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"></i>Lorem ipsum </p>
+                         <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"></i>Lorem ipsum </p>
 
                         <div class="col-12 topmargin">
 
@@ -52,10 +67,15 @@
                     
                 </div>
                 <div class="col-lg-6 row">
+                    <div class="col-12 text-center bottommargin-sm">
+                        <h2 class="light">CIUDAD DE MÉXICO</h2>
+                    </div>
                         <div class="col-lg-6">
-                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                            <p>Galileo 8 Segundo piso<br> Col. Polanco Chapultepec<br> México, DF 11560</p>
+
                             <p class="nomargin"><i style="margin-right: 15px;" class="fa fa-map-marker"></i>Lorem ipsum </p>
                             <p class="nomargin"><i style="margin-right: 15px;" class="fa fa-map-marker"></i>Lorem ipsum </p>
+                            <br>
 
                             <div class="col-12 topmargin">
 
@@ -96,29 +116,29 @@
             </div>
 
         </div>
-        <div class="margin-10">
+        <div class="margin-10" id="carousel-showrooms">
             <div class="owl-carousel owl-theme col-md-8 offset-md-2">
                 <div class="item">
-                    <div style="width: 100%; height: 50px; background-color: red">
-                        
+                    <div>
+                        <img src="{{ URL::asset('img/showrooms/carrusel_1.jpg')}}">
                     </div>
 
                 </div>
                 <div class="item">
-                    <div style="width: 100%; height: 50px; background-color: red">
-                        
+                    <div>
+                        <img src="{{ URL::asset('img/showrooms/carrusel_2.jpg')}}">
                     </div>
                   
                 </div>
                 <div class="item">
-                    <div style="width: 100%; height: 50px; background-color: red">
-                        
+                    <div>
+                        <img src="{{ URL::asset('img/showrooms/carrusel_3.jpg')}}">
                     </div>
                   
                 </div>
                 <div class="item">
-                    <div style="width: 100%; height: 50px; background-color: red">
-                        
+                    <div>
+                        <img src="{{ URL::asset('img/showrooms/carrusel_4.jpg')}}">
                     </div>
                   
                 </div>
@@ -129,74 +149,82 @@
             <div class="col-md-10 offset-md-1 text-center bottommargin">
                 
                 <h2>UN LUGAR PARA COMENZAR, EXPERIMENTAR Y DAR VIDA A LA VISIÓN DE SU COCINA</h2>
-                <p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+                <p>IESA Consierge de Servicio ofrece reparación, mantenimiento y servicio de expertos  para todos los electrodomésticos Sub-Zero, Wolf y Cove, así como servicio para electrodomésticos ASKO y Dexa.</p>
 
             </div>
+
+
+
+
+
+
+
+
 
             <div class="col-md-12 row nomargin">
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/consulte.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>CONSULTE A LOS EXPERTOS</h5>
+                        <p>Haga que nuestro equipo de expertos en productos, personal capacitado y chefs del showroom respondan a todas sus preguntas.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/test.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>HAGA UN TEST DRIVE</h5>
+                        <p>Gire las perillas. Abra los cajones. Encienda el quemador. Y traiga su delantal: siempre está invitado a cocinar en nuestras salas de exhibición para conocer nuestros electrodomésticos.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/sabor.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>SABOREE CADA BOCADO</h5>
+                        <p>Disfrute de comidas hechas por nuestro chef y experimente todos los beneficios de nuestros equipos con deliciosas demostraciones de productos para apreciar verdaderamente nuestros electrodomésticos con suculentos platillos dulces y salados.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/sueno.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>HAGA REALIDAD SUS SUEÑOS</h5>
+                        <p>Encuentre su estilo, vea la línea completa de productos y compare características en una inspiradora variedad de exhibiciones de cocina y hogar decoradas artísticamente.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/invitado.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>SEA NUESTRO INVITADO</h5>
+                        <p>En nuestras salas de exhibición, no hay un vendedor a la vista, solo nuestro amable personal, listo para brindarle asesoría y orientación de expertos. Verdaderamente. Así que por favor, solo venga, conozca y disfrute.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 bottommargin">
+                <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/logo-header.png')}}">
+                        <img src="{{ URL::asset('img/showrooms/familia.jpg')}}">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
-                        <h5>Lorem Ipsum</h5>
-                        <p> korem ipsum korem ipsum   korem ipsum korem ipsum  korem ipsum korem </p>
+                        <h5>ÚNETE A NUESTRA FAMILIA</h5>
+                        <p>Su relación con la sala de exposición no termina después de instalar sus electrodomésticos. Puede esperar toda una vida de soporte y recursos útiles para ayudarlo a aprovechar al máximo sus nuevos dispositivos.</p>
                     </div>
                 </div>
             </div>
+
             <div class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
-                <a class="btn btn-cyan btn-block" href="">SOLICITAR CITA</a>
-                
+                <a class="btn btn-cyan btn-block descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
             </div>
         </div>
 
@@ -237,32 +265,29 @@
 
         <div id="container-catalogo" class="margin-10">
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-7">
-                    sdfsdf
+                <div class="col-xl-7 col-lg-6 col-padding-sm d-flex">
+                    <div class="justify-content-center align-self-center">
+                        <img src="{{ URL::asset('img/showrooms/demo.jpg')}}">
+                    </div>
                 </div>
-                <div class="col-md-5 col-padding" >
-                    <h2>COOKING DEMO</h2>
-                    <p>Lorem Ipsum</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                        </div> 
-                        <div class="form-group">
-                            <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                        </div> 
-                        <div class="form-group">
-                            <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                        </div> 
-                        <div class="form-group">
-                            <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                        </div> 
-                        
-                    </form>
-                    
-
-          
-                    <div class="col-md-12 nopadding">
-                        <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px" class="fa fa-paper-plane fa-2x"></i> ENVIAR</a>
+                <div class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
+                    <div class="justify-content-center align-self-center">
+                        <h2>COOKING DEMO</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
+                            </div> 
+                            <div class="form-group">
+                                <input type="email" class="form-control form-custom" placeholder="EMAIL COMPLETO">
+                            </div> 
+                            <div class="form-group">
+                                <input type="text" class="form-control form-custom" placeholder="TELÉFONO COMPLETO">
+                            </div> 
+                            <div class="col-md-12 nopadding">
+                                <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px" class="fa fa-paper-plane fa-2x"></i> ENVIAR</a>
+                            </div>
+                        </form>
                     </div>
 
                 </div>

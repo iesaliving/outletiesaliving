@@ -4,106 +4,118 @@
 @section('content')
 
 
-<section style="height: 500px; width: 100%; background-color: gray">
-    <div class="col-12 nopadding h-100 d-flex aling">
+<section>   
+    <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="4000">
 
-        <div class="justify-content-center align-self-center col-md-5" style="padding: 5%;
-        background: rgb(210,210,210);
-        background: linear-gradient(90deg, #d2d2d2b5 0%, #cfcfcf66 35%, #ffffff00 100%)" >
-            <h2 class="light nomargin">INSPIRADO EN</h2>
-            <h2 class="bold"><b><i>ESCANDINAVIA</i></b></h2>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            @include('hero.asko')
         </div>
-        
+        <div class="carousel-item">
+            @include('hero.subzero')
+        </div>
+        <div class="carousel-item">
+            @include('hero.wolf')
+        </div>
+        <div class="carousel-item">
+            @include('hero.cove')
+        </div>
+        <div class="carousel-item">
+            @include('hero.dexa')
+        </div>
+        <div class="carousel-item">
+            @include('hero.exteriores')
+        </div>
+      </div>
     </div>
-    
 </section>
 
 <section style="margin: 5% 30px">
   
     <div class="owl-carousel owl-theme col-md-12">
-        <div class="item">
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/subzero/logo.png')}}">
             </div>
 
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/wolf/logo.png')}}">
             </div>
 
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/cove/logo.png')}}">
             </div>
 
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/asko/logo.png')}}">
             </div>
 
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/dexa/logo.png')}}">
             </div>
 
-            <div style="width: 100%; height: 50px; background-color: red">
-                        
+            <div class="item"> 
+                <img src="{{ URL::asset('img/scotsman/logo.png')}}">
             </div>
                 
         </div>
     </div>
 </section>
 
-
-<section class="container-gral" style="padding-top: 200px" >
+<section class="container-gral">
     
         <div id="container-catalogo" class="margin-10">
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6">
-                    sdfsdf
+                <div class="col-md-6 img-left">
+                  <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}">
                 </div>
-                <div class="col-md-6">
-                    <div class="row nomargin">
-                        <div class="col-4" style="padding-left: 0">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                    </div>
-                    <div class="row nomargin topmargin-sm">
-                        <div style="margin: 0 15px 0 0">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-
-
-                    </div>
-
-                    <div class="topmargin-sm">
-                        <h2>
-                            DESCUBRA NUESTRO LEGENDARIOS PRODUCTOS
-                        </h2>
+                <div class="col-md-6 container-descripcion d-flex"  style="">
+                    <div class="justify-content-center align-self-center">
                         
-                    </div>
-
-                    <div class="topmargin-sm row nomargin">
-                        <div class="col-md-5 nopadding">
-                            <a class="btn btn-block btn-cyan" href="">DESCUBRA MÁS</a>
+                        <div class="row nomargin">
+                            <div class="col-10 nopadding">
+                                <img src="{{ URL::asset('img/Marca_Wolf_SubZero_Cove.png')   }}">
+                            </div>
+                        </div>
+                        <div class="row nomargin topmargin-sm container-icon right">
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Cafetera.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Campana.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                            </div>
                         </div>
 
-                        <div class="col-md-7">
-                            <a class="btn btn-block btn-cyan" href="">SOLICITAR CATÁLOGO</a>
+                        <div class="topmargin-sm">
+                            <h2>
+                                DESCUBRA NUESTROS LEGENDARIOS PRODUCTOS
+                            </h2>
+                            <p>
+                                Desde 1945, Sub-Zero ha sido el pionero en la ciencia de la refrigeración doméstica al mismo tiempo que transformaba el diseño de equipos integrados y empotrados. Wolf tiene una tradición de innovación aún mayor, con ingeniería que proviene de más de 80 años de experiencia de equipos de cocción comercial. Junto con la tecnología de lavavajillas de Cove, Sub-Zero y Wolf están dedicados a ayudarlo a crear la cocina funcional y flexible de sus sueños.                           
+                            </p>
+                            
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-md-5 nopadding">
+                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,167 +123,207 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                
-                <div class="col-md-6">
-                    <div class="row nomargin text-right col-12 nopadding">
-                        <div class="col-4 offset-8" style="padding-left: 0">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                    </div>
-                    <div class="row  topmargin-sm catalogo-right">
-                        <div style="margin: 0 15px 0 0">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-
-
-                    </div>
-
-                    <div class="topmargin-sm col-12 nopadding text-right">
-                        <h2>
-                            DESCUBRA NUESTRO LEGENDARIOS PRODUCTOS
-                        </h2>
+                <div class="col-md-6 d-flex">
+                    <div class="align-self-center justify-content-center">
                         
-                    </div>
-
-                    <div class="topmargin-sm row nomargin">
-                        <div class="col-md-5 nopadding">
-                            <a class="btn btn-block btn-cyan" href="">DESCUBRA MÁS</a>
+                        <div class="row nomargin text-right col-12 nopadding">
+                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
+                                <img src="{{ URL::asset('img/Marca-Asko.png')}}">
+                            </div>
+                        </div>
+                        <div class="row  topmargin-sm container-icon left">
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Cafetera.png')   }}">
+                            </div>
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Campana.png')   }}">
+                            </div>
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Horno.png')   }}">
+                            </div>
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                            </div>
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                            </div>
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                            </div>
                         </div>
 
-                        <div class="col-md-7">
-                            <a class="btn btn-block btn-cyan" href="">SOLICITAR CATÁLOGO</a>
+                        <div class="topmargin-sm col-12 nopadding text-right">
+                            <h2>
+                                ENSERES DE LUJO INSPIRADOS <br> EN ESCANDINAVIA
+                            </h2>
+                            <p>
+                                Electrodomésticos escandinavos ASKO; productos durables y de máxima calidad con soluciones innovadoras respetuosas con el medio ambiente y el uso económico de los recursos como agua y energía.
+                            </p>
+                            
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-md-5 nopadding">
+                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7 nopaddingright">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    sdfsdf
+                <div class="col-md-6" style="padding: 0 0 0 10px">
+                    <img src="{{ URL::asset('img/Asko-home.jpg')}}">
                 </div>
             </div>
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6">
-                    sdfsdf
+                <div class="col-md-6 img-left">
+                  <img src="{{ URL::asset('img/dexa.jpg')}}">
                 </div>
-                <div class="col-md-6">
-                    <div class="row nomargin">
-                        <div class="col-4" style="padding-left: 0">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                    </div>
-                    <div class="row nomargin topmargin-sm">
-                        <div style="margin: 0 15px 0 0">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-
-
-                    </div>
-
-                    <div class="topmargin-sm">
-                        <h2>
-                            DESCUBRA NUESTRO LEGENDARIOS PRODUCTOS
-                        </h2>
+                <div class="col-md-6 container-descripcion d-flex"  style="">
+                    <div class="justify-content-center align-self-center">
                         
-                    </div>
-
-                    <div class="topmargin-sm row nomargin">
-                        <div class="col-md-5 nopadding">
-                            <a class="btn btn-block btn-cyan" href="">DESCUBRA MÁS</a>
+                        <div class="row nomargin">
+                            <div class="col-10 nopadding">
+                                <img src="{{ URL::asset('img/marca_deza.png')   }}">
+                            </div>
+                        </div>
+                        <div class="row nomargin topmargin-sm container-icon right">
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Vajillas.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Fregadero.png')   }}">
+                            </div>
                         </div>
 
-                        <div class="col-md-7">
-                            <a class="btn btn-block btn-cyan" href="">SOLICITAR CATÁLOGO</a>
+                        <div class="topmargin-sm">
+                            <h2>
+                                Diseños y elementos que expresan una Personalidad diferente
+                            </h2>
+                            <p>
+                                Diseños espectaculares y funcionalidad sin igual, son los atributos de los productos de DEXA.  Nuestra línea está pensada para integrarse al diseño de tu cocina ideal, pues con su variedad en estufas, parrillas, hornos, tarjas, campanas y llaves, le darás esa personalidad que tu cocina necesita.
+                            </p>
+                            
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-md-5 nopadding">
+                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
 
 
             <div class="row col-padding catalogo topmargin">
-                
-                <div class="col-md-6">
-                    <div class="row nomargin text-right col-12 nopadding">
-                        <div class="col-4 offset-8" style="padding-left: 0">
-                            <img src="{{ URL::asset('img/logo-header.png')   }}">
-                        </div>
-                    </div>
-                    <div class="row  topmargin-sm catalogo-right">
-                        <div style="margin: 0 15px 0 0">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-                        <div style="margin: 0 15px">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </div>
-
-
-                    </div>
-
-                    <div class="topmargin-sm col-12 nopadding text-right">
-                        <h2>
-                            DESCUBRA NUESTRO LEGENDARIOS PRODUCTOS
-                        </h2>
+                <div class="col-md-6 d-flex">
+                    <div class="align-self-center justify-content-center">
                         
-                    </div>
-
-                    <div class="topmargin-sm row nomargin">
-                        <div class="col-md-5 nopadding">
-                            <a class="btn btn-block btn-cyan" href="">DESCUBRA MÁS</a>
+                        <div class="row nomargin text-right col-12 nopadding">
+                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
+                                <img src="{{ URL::asset('img/Marca_Scotsman.png')}}">
+                            </div>
+                        </div>
+                        <div class="row  topmargin-sm container-icon left">
+                            <div>
+                                <img  src="{{ URL::asset('img/icono/Hielo.png')   }}">
+                            </div>
                         </div>
 
-                        <div class="col-md-7">
-                            <a class="btn btn-block btn-cyan" href="">SOLICITAR CATÁLOGO</a>
+                        <div class="topmargin-sm col-12 nopadding text-right">
+                            <h2>
+                                EL HIELO IDEAL <br>EL LUJO DEFINITIVO
+                            </h2>
+                            <p>
+                                Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de un detalle, el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure más tiempo. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.
+                            </p>
+                            
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-md-5 nopadding">
+                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    sdfsdf
+                <div class="col-md-6" style="padding: 0 10px 0 0">
+                    <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
                 </div>
             </div>
+
+
+            <div class="row col-padding catalogo topmargin">
+                <div class="col-md-6 img-left">
+                  <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}">
+                </div>
+                <div class="col-md-6 container-descripcion d-flex"  style="">
+                    <div class="justify-content-center align-self-center">
+                        <div class="row nomargin">
+                            <div class="col-10 nopadding">
+                                <img src="{{ URL::asset('img/Marca_Wolf_SubZero.png')   }}">
+                            </div>
+                        </div>
+                        <div class="row nomargin topmargin-sm container-icon right">
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Parrilla.png')   }}">
+                            </div>
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                            </div>
+                        </div>
+
+                        <div class="topmargin-sm">
+                            <h2>
+                                COCINA DE EXTERIOR
+                            </h2>
+                            <p>
+                                Diseños espectaculares y funcionalidad sin igual, son los atributos de los productos de DEXA.  Nuestra línea está pensada para integrarse al diseño de tu cocina ideal, pues con su variedad en estufas, parrillas, hornos, tarjas, campanas y llaves, le darás esa personalidad que tu cocina necesita.
+                            </p>
+                            
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-md-5 nopadding">
+                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        
         </div>
 
         <div id="testimoniales"  class="bg-gray">
@@ -341,6 +393,39 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 
+<style type="text/css">
+    
+
+.carousel-fade .carousel-item {
+ opacity: 0;
+ transition-duration: .6s;
+ transition-property: opacity;
+}
+
+.carousel-fade  .carousel-item.active,
+.carousel-fade  .carousel-item-next.carousel-item-left,
+.carousel-fade  .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-right {
+ opacity: 0;
+}
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-prev {
+ transform: translateX(0);
+ transform: translate3d(0, 0, 0);
+}
+
+
+
+</style>
+
 @endsection
 
 @section('scripts')
@@ -350,9 +435,9 @@ $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: true,
                 dots:false,
-            
-                 navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
-                margin: 10,
+
+                navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
+                margin: 25,
                 responsive: {
                   0: {
                     items: 1,
@@ -361,10 +446,10 @@ $(document).ready(function() {
                     items: 2,
                   },
                   900: {
-                    items: 3,
+                    items: 4,
                   },
                   1200: {
-                    items: 4,
+                    items: 5,
                   },    
                   1500: {
                     items: 6,
