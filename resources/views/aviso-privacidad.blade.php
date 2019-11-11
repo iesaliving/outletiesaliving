@@ -6,7 +6,7 @@
 
 
     <section>
-        <img src="{{ URL::asset('img/faq/hero.jpg')}}">
+        <img src="{{ URL::asset('img/hero-aviso.jpg')}}">
     </section>
 
 

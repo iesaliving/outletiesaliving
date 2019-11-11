@@ -35,27 +35,27 @@
     <div class="owl-carousel owl-theme col-md-12">
         
             <div class="item"> 
-                <img src="{{ URL::asset('img/subzero/logo.png')}}">
+                <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/subzero/logo.png')}}"></a>
             </div>
 
             <div class="item"> 
-                <img src="{{ URL::asset('img/wolf/logo.png')}}">
+                <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/wolf/logo.png')}}"></a>
             </div>
 
             <div class="item"> 
-                <img src="{{ URL::asset('img/cove/logo.png')}}">
+                <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cove/logo.png')}}"></a>
             </div>
 
             <div class="item"> 
-                <img src="{{ URL::asset('img/asko/logo.png')}}">
+                <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/asko/logo.png')}}"></a>
             </div>
 
             <div class="item"> 
-                <img src="{{ URL::asset('img/dexa/logo.png')}}">
+                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/dexa/logo.png')}}"></a>
             </div>
 
             <div class="item"> 
-                <img src="{{ URL::asset('img/scotsman/logo.png')}}">
+                <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/scotsman/logo.png')}}"></a>
             </div>
                 
         </div>
@@ -110,7 +110,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-5 nopadding">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7">
@@ -164,7 +164,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-5 nopadding">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7 nopaddingright">
@@ -224,7 +224,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-5 nopadding">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7">
@@ -263,7 +263,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-5 nopadding">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7">
@@ -310,7 +310,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-5 nopadding">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7">
@@ -435,6 +435,7 @@ $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: true,
                 dots:false,
+                autoplay:true,
 
                 navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
                 margin: 25,
@@ -449,7 +450,7 @@ $(document).ready(function() {
                     items: 4,
                   },
                   1200: {
-                    items: 5,
+                    items: 6,
                   },    
                   1500: {
                     items: 6,

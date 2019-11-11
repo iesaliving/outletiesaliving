@@ -28,7 +28,7 @@ Route::get('/showroom', function () {
 });
 
 
-Route::get('/exteriores', function () {
+Route::get('/cocina-exterior', function () {
     return view('exteriores');
 });
 

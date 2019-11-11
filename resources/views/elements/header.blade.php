@@ -11,10 +11,10 @@
             <ul id="menu" class="navbar-nav mr-auto ">
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::to('/blog') }}">Marcas</a>
+                    <a class="nav-link" href="#">Marcas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Servicios</a>
+                    <a class="nav-link border-left" href="{{ URL::to('/servicios') }}">Servicios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link border-left" href="{{ URL::to('/showroom') }}">Showrooms</a>
@@ -26,7 +26,7 @@
                     <a class="nav-link border-left" href="{{ URL::to('/contacto') }}">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Outlet</a>
+                    <a class="nav-link border-left" rel="nofollow" target="_blank" href="http://outlet.lafamiliaperfecta.com/">Outlet</a>
                 </li>
             </ul>
             

@@ -10,7 +10,7 @@
 
 
                 <div class="col-md-6 offset-md-3 topmargin">
-                    <a class="btn btn-cyan btn-block showroon-btn" href=""><img src="{{ URL::asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
+                    <a class="btn btn-cyan btn-block showroon-btn" href="{{ URL::to('/showroom') }}"><img src="{{ URL::asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
                 </div>
 
             <div id="gallery">
