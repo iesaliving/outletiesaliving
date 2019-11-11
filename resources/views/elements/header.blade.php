@@ -17,13 +17,13 @@
                     <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Showrooms</a>
+                    <a class="nav-link border-left" href="{{ URL::to('/showroom') }}">Showrooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/blog') }}">FAQ</a>
+                    <a class="nav-link border-left" href="{{ URL::to('/faq') }}">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Contacto</a>
+                    <a class="nav-link border-left" href="{{ URL::to('/contacto') }}">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link border-left" href="{{ URL::to('/blog') }}">Outlet</a>

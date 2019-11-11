@@ -61,6 +61,10 @@ Route::get('/asko', function () {
     return view('asko');
 });
 
+Route::get('/scotsman', function () {
+    return view('scotsman');
+});
+
 Route::get('/dexa', function () {
     return view('dexa');
 });
