@@ -9,9 +9,18 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
             <ul id="menu" class="navbar-nav mr-auto ">
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Marcas</a>
+                <li  class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+                      Marcas
+                    </a>
+                    <div id="menu-dropbox" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="{{ URL::to('/sub-zero')}}">Sub-Zero</a>
+                      <a class="dropdown-item" href="{{ URL::to('/wolf')}}">Wolf</a>
+                      <a class="dropdown-item" href="{{ URL::to('/cove')}}">Cove</a>
+                      <a class="dropdown-item" href="{{ URL::to('/asko')}}">Asko</a>
+                      <a class="dropdown-item" href="{{ URL::to('/dexa')}}">Dexa</a>
+                      <a class="dropdown-item" href="{{ URL::to('/scotsman')}}">Scotsman</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link border-left" href="{{ URL::to('/servicios') }}">Servicios</a>

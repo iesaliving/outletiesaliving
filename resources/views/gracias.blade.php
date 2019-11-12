@@ -4,8 +4,19 @@
 @section('content')
 
 
-<section class="container-gral" style="padding-top: 200px" >
+
+<section>
+    <img src="{{ URL::asset('img/Hero-Gracias.jpg')}}">
+</section>
+
+<section class="container-gral">
     
+
+  <div class="text-center light topmargin-lg">
+    <h2 class="light">Gracias</h2>
+    <p class="nomargin">Agradecemos de antemano el interés en nuestras marcas.</p>
+    <p>A la brevedad posible nos pondremos en contacto con usted para poder atender su petición.</p>
+  </div>
         @include('modulos.carrousel')
 </section>
 @endsection

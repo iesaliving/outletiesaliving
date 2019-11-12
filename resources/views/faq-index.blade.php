@@ -51,16 +51,22 @@
     			</div>
     		</div> -->
 
-                <div class="col-md-4" style="padding: 10px 6vw">
-                    <img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2">
+                <div class="col-md-4 text-center">
+                    <div style="padding: 10px 4vw">
+                        <img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2">
+                    </div>
                     <p class="text-center"><strong>Marketing</strong></p>
                 </div>
-                <div class="col-md-4" style="padding: 10px 6vw">
-                    <img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2">
+                <div class="col-md-4 text-center">
+                    <div style="padding: 10px 4vw">
+                        <img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2">
+                    </div>
                     <p class="text-center"><strong>Consierge de Servicio</strong></p>
                 </div>
-                <div class="col-md-4" style="padding: 10px 6vw">
-                    <img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2">
+                <div class="col-md-4 text-center">
+                    <div style="padding: 10px 4vw">
+                        <img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2">
+                    </div>
                     <p class="text-center"><strong>Entregas</strong></p>
                 </div>
 

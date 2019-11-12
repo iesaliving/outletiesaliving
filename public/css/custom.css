@@ -17,6 +17,11 @@ a{
 .margin-10{
   margin: 10%;
 }
+
+.margin-6{
+  margin: 6%;
+}
+
 .nomargin{
 	margin: 0!important
 }
@@ -212,6 +217,15 @@ ul#menu a:hover {
 	color:#f42736;
 }
 
+
+#menu-dropbox{
+  background-color: #212832;
+}
+
+#menu-dropbox a{
+  background-color: #212832;
+  color: #fff!important;
+}
 
 
 

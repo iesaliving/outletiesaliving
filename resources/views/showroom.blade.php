@@ -20,7 +20,7 @@
     
   
 
-        <div class="margin-10">
+        <div class="margin-6">
             <div  class="row calendario light">
                 <div class="col-lg-6 row ">
                     <div class="col-12 text-center bottommargin-sm">

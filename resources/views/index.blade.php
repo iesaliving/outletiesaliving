@@ -66,8 +66,10 @@
     
         <div id="container-catalogo" class="margin-10">
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 img-left">
-                  <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}">
+                <div class="col-md-6 img-left d-flex">
+                    <div class="justify-content-center align-self-center">
+                        <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}">
+                    </div>
                 </div>
                 <div class="col-md-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
@@ -173,15 +175,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" style="padding: 0 0 0 10px">
-                    <img src="{{ URL::asset('img/Asko-home.jpg')}}">
+                <div class="col-md-6 img-left d-flex">
+                    <div class="justify-content-center align-self-center">
+                        <img src="{{ URL::asset('img/Asko-home.jpg')}}">
+                    </div>
                 </div>
             </div>
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 img-left">
-                  <img src="{{ URL::asset('img/dexa.jpg')}}">
+                <div class="col-md-6 img-left d-flex">
+                    <div class="justify-content-center align-self-center">
+                         <img src="{{ URL::asset('img/dexa.jpg')}}">
+                    </div>
                 </div>
                 <div class="col-md-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
@@ -272,15 +278,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" style="padding: 0 10px 0 0">
-                    <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
+                <div class="col-md-6 img-left d-flex">
+                    <div class="justify-content-center align-self-center">
+                        <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
+                    </div>
                 </div>
             </div>
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 img-left">
-                  <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}">
+                <div class="col-md-6 img-left d-flex">
+                    <div class="justify-content-center align-self-center">
+                        <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}">
+                    </div>
                 </div>
                 <div class="col-md-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
@@ -337,10 +347,11 @@
                 <div class="carousel-item active">
                   <div class="col-8 offset-2 row">
                     <div class="col-3">
-                        sdf
+                        <img src="{{ URL::asset('img/persona1.png')   }}">
                     </div>
                     <div class="col-9">
-                        sdfsdfsdfs
+                        <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
+                        <p><b>María José López</b></p>
                     </div>
                       
                   </div>
@@ -348,21 +359,11 @@
                 <div class="carousel-item">
                   <div class="col-8 offset-2 row">
                     <div class="col-3">
-                        sdf
+                        <img src="{{ URL::asset('img/persona2.png')   }}">
                     </div>
                     <div class="col-9">
-                        sdfsdfsdfs
-                    </div>
-                      
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-8 offset-2 row">
-                    <div class="col-3">
-                        sdf
-                    </div>
-                    <div class="col-9">
-                        sdfsdfsdfs
+                        <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
+                        <p><b>Martin García</b></p>
                     </div>
                       
                   </div>

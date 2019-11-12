@@ -89,13 +89,13 @@
                         <div class="col-md-12">
                             <p class="bold nomargin">MONTERREY</p>
                             <a href="tel:+528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
-                            <a href="tel:+528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
+                            <a target="_blank" href="https://wa.me/528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
                         </div>
                         
                         <div class="col-md-12 topmargin-sm">
                             <p class="bold nomargin">CUIDAD DE MÉXICO</p>
                             <a href="tel:+528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
-                            <a href="tel:+528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
+                            <a target="_blank" href="https://wa.me/+528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
                         </div>
                     </div>
                     </div>

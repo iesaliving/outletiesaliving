@@ -10,10 +10,10 @@
   <img src="{{ URL::asset('img/servicios/hero.jpg')}}">
   <div class="col-xl-4 offset-xl-4 col-md-6 offset-md-3 row" style="position: absolute;bottom: 30px;">
     <div class="col-xl-8 col-md-7">
-        <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
+        <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
     </div>
     <div class="col-xl-4 col-md-5">
-        <a class="btn btn-block btn-cyan descubra-btn" href=" tel:811-803-6339"><p>811-803-6339</p></a>        
+        <a class="btn btn-block btn-cyan descubra-btn" href=" tel:8118036339"><p>811-803-6339</p></a>        
     </div>
       
   </div>
@@ -42,10 +42,10 @@
                             <p class="nomargin">Si tiene alguna pregunta sobre nuestro servicio, llámenos al 01-800-400 IESA (4372)</p>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href=""><p class="nomargin">811 803 6339</p></a>
+                            <a href="https://wa.me/8118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -104,10 +104,10 @@
                             <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
                         </div>
                         <div class="col-11 bottommargin-sm text-right">
-                            <a href=""><p class="nomargin">811 803 6339</p></a>
+                            <a href="https://wa.me/8118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
                         </div>
                         <div class="col-11 bottommargin-sm text-right">
                            <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
