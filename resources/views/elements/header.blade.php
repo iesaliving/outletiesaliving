@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
             <ul id="menu" class="navbar-nav mr-auto ">
                 <li  class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
                       Marcas
                     </a>
                     <div id="menu-dropbox" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

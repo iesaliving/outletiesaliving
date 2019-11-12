@@ -249,7 +249,7 @@
                         </div> 
 
                         <div class="form-group  col-lg-2 offset-lg-5 text-center topmargin-sm">
-                            <a class="btn btn-cyan btn-block" href=""><i style="margin-right: 15px" class="fa fa-paper-plane fa-2x"></i> ENVIAR</a>
+                            <a class="btn btn-cyan btn-block" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
                         </div>    
                     </div>
                 </form>
@@ -278,7 +278,7 @@
                                 <input type="text" class="form-control form-custom" placeholder="TELÉFONO COMPLETO">
                             </div> 
                             <div class="col-md-12 nopadding">
-                                <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px" class="fa fa-paper-plane fa-2x"></i> ENVIAR</a>
+                                <a class="btn btn-block btn-cyan" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
                             </div>
                         </form>
                     </div>
