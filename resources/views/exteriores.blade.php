@@ -26,7 +26,7 @@
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/exteriores/asadores.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -48,7 +48,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5  offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -79,7 +79,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
@@ -94,10 +94,10 @@
             </div>
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-md-6 col-padding-sm col-xl-5 offset-xl-1">
                     <img src="{{ URL::asset('img/exteriores/calentadores.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-lg-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -116,7 +116,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
@@ -140,7 +140,7 @@
                         <div class="col-5 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-6 nopadding topmargin-sm">
-                            <a href="" class="btn btn-block btn-cyan">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

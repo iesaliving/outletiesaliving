@@ -26,11 +26,11 @@
                     Una marca propia de IESA, cuenta con productos de calidad con diseño italiano. Una Marca joven, audaz y divertida, aquí creamos nuestras experiencias rompiendo las reglas y reinventando lo cotidiano
                     </p>
             </div>
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/estufas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -49,11 +49,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/estufas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5  offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -80,11 +80,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/parrillas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -94,11 +94,11 @@
                 </div>
             </div>
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/hornos.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -117,11 +117,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/hornos/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5  offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -148,11 +148,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/campanas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -162,11 +162,11 @@
                 </div>
             </div>
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/lavavajillas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -185,11 +185,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/lavavajillas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -215,12 +215,15 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            <div class="col-md-12 nopadding bottommargin-sm">
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                            <div class="col-md-6">
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/llaves/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE(LLAVES)</p></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/tarjas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE(TARJAS)</p></a>
                             </div>
                         </div>
                     </div>
@@ -243,7 +246,7 @@
                         <div class="col-12 justify-content-center align-self-center">
                             <h2 style="color: #fff" class="light text-center">DEXA</h2>
                         <div class="col-md-2 offset-md-5 text-center nopadding topmargin-sm">
-                            <a href="" class="btn btn-block  btn-cyan">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

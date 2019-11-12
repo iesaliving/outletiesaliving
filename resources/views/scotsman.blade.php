@@ -17,11 +17,11 @@
             <div class="col-12 text-center bottommargin-lg">
                 <p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.a</p>
             </div>
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/scotsman/hielo.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -40,11 +40,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://www.scotsman.mx/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -52,18 +52,19 @@
             </div>
 
 
-            <div id="hielo" class="row nomargin">
+            <div id="hielo" class="row nomargin topmargin-lg">
                 <div class="col-md-6">
                     <div class="col-7 offset-1">
                         <img src="{{ URL::asset('img/scotsman/hielo-gourmet.png')}}">
                     </div>
-                    <div style="position: relative;">
+                    <div class="topmargin-sm">
+                        <h3 class="light" style="margin-left: 40px">HIELO GOURMET</h3>
                         <ul>
-                          <li>Coffee</li>
-                          <li>Tea</li>
-                          <li>Milk</li>
+                          <li><p>Forma: Pequeño vaso tipo "shot"</p></li>
+                          <li><p>Ideal para: Bebidas y bebidas tipo gourmet</p></li>
+                          <li><p>Ventajas:</p></li>
                         </ul>
-                        <div>
+                        <div class="offset-2">
                             <p><span>-</span>Se derrite lentamente</p>
                             <p><span>-</span>Ideal para la casa </p>
                             <p><span>-</span>Hielo duro en forma única</p>
@@ -74,27 +75,25 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-7 offset-1">
-                        <img src="{{ URL::asset('img/scotsman/hielo-gourmet.png')}}">
+                        <img src="{{ URL::asset('img/scotsman/hielo-nugget.png')}}">
                     </div>
-                    <div style="position: relative;">
+                    <div class="topmargin-sm">
+                        <h3 class="light" style="margin-left: 40px">HIELO NUGGET</h3>
                         <ul>
-                          <li>Coffee</li>
-                          <li>Tea</li>
-                          <li>Milk</li>
+                          <li><p>Forma: Pequeño cilindro</p></li>
+                          <li><p>Ideal para: Bebidas de sabores / carbonatadas</p></li>
+                          <li><p>Ventajas:</p></li>
                         </ul>
-                        <div>
+                        <div class="offset-2">
                             <p><span>-</span>Se derrite lentamente</p>
-                            <p><span>-</span>Ideal para la casa </p>
-                            <p><span>-</span>Hielo duro en forma única</p>
-                            <p><span>-</span>No tiene sabor ni olor</p>
-                            <p><span>-</span>No diluye el sabor de las bebidas</p>
+                            <p><span>-</span>Enfría las bebidas más rápido</p>
+                            <p><span>-</span>Hielo Suave y masticable</p>
+                            <p><span>-</span>Absorbe el sabor de la bebida</p>
                         </div>
                     </div>
-                </div>
-                
+                </div>        
             </div>
         </div>
-
 </section>
 
 <section class="container-gral topmargin">
@@ -146,9 +145,16 @@
 <style type="text/css">
     #hielo ul {list-style: none}
    #hielo li::before {
+        margin-right: 5px;
         content: "•"; 
-        color: red;
-        font-size: 35px;
+        color: #01bb9c;
+        font-size: 23px;
+    }
+
+    #hielo  p{
+        display: inline-flex;
+        margin-bottom: 5px!important;
+        line-height: 1
     }
 </style>
 @endsection

@@ -79,6 +79,14 @@ a:hover{
    padding-right: 0
 }
 
+.btn-facebook{
+  line-height: 2.5;
+}
+
+.btn-facebook img{
+  width: 25px;
+  margin-right: 15px;
+}
 
 .showroon-btn img{
   width: 20px;
@@ -117,6 +125,10 @@ a:hover{
     border-color: #01bb9c;
 }
 
+.cyan{
+  color:  #01bb9c!important;
+}
+
 .fa-map-marker{
   color: #01bb9c;
 }
@@ -143,7 +155,7 @@ a.btn {
 
 @media(min-width: 1600px){
   .container-gral{
-    max-width: 1400px!important;
+    max-width: 1550px!important;
     margin:auto;
   }
 }

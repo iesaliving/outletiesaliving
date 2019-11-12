@@ -20,11 +20,11 @@
                     Disfrute toda una vida cocinando con más emoción y satisfacción. Wolf destila una legendaria herencia profesional, potencia y clase en equipo de cocina, cuyo control preciso garantiza que el plato que tiene en mente, sea el plato que llegue a la mesa.
                 </p>
             </div>
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/estufas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -43,11 +43,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/ranges"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -74,11 +74,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/ovens"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -89,11 +89,11 @@
             </div>
 
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/parrillas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -112,11 +112,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/cooktops-and-rangetops"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -143,11 +143,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/microwave-ovens"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -159,11 +159,11 @@
 
 
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/horno_convecion_vapor.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -182,11 +182,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/ovens/steam-oven"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -213,11 +213,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/ovens/speed-ovens"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -229,11 +229,11 @@
 
 
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/modulos.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -252,11 +252,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/cooktop"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +264,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -283,11 +283,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/range-hood"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -299,11 +299,11 @@
 
 
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/calentadores.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -322,11 +322,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/warming-drawer"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -353,11 +353,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/vacuum-drawer"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -369,11 +369,11 @@
 
 
 
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/wolf/cafetera.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -392,11 +392,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf/coffee-systems"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -404,7 +404,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -423,11 +423,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/wolf-gourmet/countertop-appliances"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                         <div class="col-5 offset-7 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-6 offset-6 nopadding topmargin-sm">
-                            <a href="" class="btn btn-block btn-cyan">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="col-xl-6 col-lg-4" style="overflow: hidden;">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1TDfIYdcJYDqRaeOb8rXQPqKM5dKcQBRA" width="640" height="480"></iframe>
+            <iframe style="margin-top: -50px;margin-left: -25px;" src="https://www.google.com/maps/d/embed?mid=1TDfIYdcJYDqRaeOb8rXQPqKM5dKcQBRA" width="640" height="480"></iframe>
         </div>
         <div class="col-xl-3 col-lg-4 topmargin nopadding">
             <div class="row nomargin col-12 nopadding">
@@ -48,8 +48,11 @@
         </div>
         
     </div>
-    <div style="border-top: 2px solid #000; width: 100% "> 
+    <div class="topmargin-sm" style="border-top: 1px solid #000; width: 100% "> 
         
+    </div>
+    <div class="topmargin-sm">
+        <p>© 2019 Importaciones Electrodomésticas S.A de C.V. | 01 800 400 4372 |  <a href="{{ URL::to('/aviso-privacidad')}}">Aviso de Privacidad</a></p>
     </div>
     
 </footer><!-- #footer end -->

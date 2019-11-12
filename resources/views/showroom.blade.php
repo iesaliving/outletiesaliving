@@ -8,9 +8,6 @@
 
 
 
-
-
-
 <section>
   <img src="{{ URL::asset('img/showrooms/hero.jpg')}}">
 </section>
@@ -35,9 +32,9 @@
 
                         <div class="col-12 topmargin">
 
-                            <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
+                            <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
 
-                            <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                            <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/Importaciones+Electrodom%C3%A9sticas,+S.A.+De+C.V./@25.682615,-100.4560607,17z/data=!3m1!4b1!4m5!3m4!1s0x86629816d52a561b:0x708d48dbe192e667!8m2!3d25.682615!4d-100.453872"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
                             
                         </div>
                     </div>
@@ -81,9 +78,9 @@
 
                         <div class="col-12 topmargin">
 
-                            <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
+                            <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
 
-                            <a class="btn btn-block btn-cyan" href=""><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                            <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/IESA/@19.4284845,-99.1956162,17z/data=!3m1!4b1!4m5!3m4!1s0x85d201ff11a77f6d:0x18848b36c0d7d2d9!8m2!3d19.4284845!4d-99.1934275"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
                             
                         </div>
                     </div>
@@ -157,12 +154,6 @@
 
 
 
-
-
-
-
-
-
             <div class="col-md-12 row nomargin">
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
@@ -226,7 +217,7 @@
             </div>
 
             <div class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
-                <a class="btn btn-cyan btn-block descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
+                <a class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
             </div>
         </div>
 

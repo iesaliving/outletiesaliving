@@ -17,11 +17,11 @@
             <div class="col-12 text-center bottommargin-lg">
                 <p>Mientras Sub-Zero exista, los alimentos resistirán el paso del tiempo, lo mismo que la belleza y el rendimiento de su cocina. Construido y probado con los más altos estándares, Sub-Zero es algo más que sólo un refrigerador. Se trata de un sistema de conservación de los alimentos, con más de 70 años de pensamiento innovador que lo avalan. Mientras exista Sub-Zero, la comida tendrá un delicioso futuro.</p>
             </div>
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -40,11 +40,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/full-size-refrigeration"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
 
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5 offset-xl-1">
                     <div class="justify-content-center align-self-center">
 
                         <div class="topmargin-sm text-right">
@@ -74,11 +74,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/counter-refrigerator"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
 
@@ -112,11 +112,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/wine-cooler"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                         <div class="col-5 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-6 nopadding topmargin-sm">
-                            <a href="" class="btn btn-block btn-cyan">SIGUENOS</a>
+                            <a target="_blank" rel="nofllow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

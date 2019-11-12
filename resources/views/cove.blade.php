@@ -17,11 +17,11 @@
                     Las lavavajillas Cove proviene de los pioneros en conservación de alimentos Sub-Zero y cocción a precisión Wolf. Los electrodomésticos Cove están diseñados para adaptarse a los platos que más limpia – con ciclos que garantizan resultados impecables y un funcionamiento silencioso. Diseñado cuidadosamente con interiores ajustables, acabados exteriores personalizables y la mejor garantía y servicio disponibles. Cove es simplemente una forma más inteligente de lavar.
                 </p>
             </div>
-            <div class="row col-padding catalogo topmargin">
+            <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
                     <img src="{{ URL::asset('img/cove/vajilla.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -40,11 +40,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 nopadding">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href=""><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-md-5">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/cove/dishwashers" target="_blank" rel="nofollow"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                 
             </div>
 
-            <div class="bottommargin-sm col-md-4 offset-md-2">
+            <div class="bottommargin-sm col-md-4 offset-md-1">
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/cove/ajuste.png')   }}">
                 </div>
@@ -116,7 +116,6 @@
 
 </section>
 
-
 <section class="container-fb" style="background-image: url('{{ URL::asset('img/cove/facebook.jpg')}}')">
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
@@ -124,7 +123,8 @@
                         <div class="col-5 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-6 nopadding topmargin-sm">
-                            <a href="" class="btn btn-block btn-cyan">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+
                         </div>
                         </div>
                     </div>
