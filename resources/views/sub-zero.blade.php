@@ -84,13 +84,13 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/subzero/subzero3.jpg')}}">
+                    <img src="{{ URL::asset('img/subzero/subzero2.jpg')}}">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">
+                    <img src="{{ URL::asset('img/subzero/subzero3.jpg')}}">
                 </div>
                 <div class="col-md-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">

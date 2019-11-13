@@ -24,6 +24,9 @@
             @include('hero.dexa')
         </div>
         <div class="carousel-item">
+            @include('hero.scotsman')
+        </div>
+        <div class="carousel-item">
             @include('hero.exteriores')
         </div>
       </div>

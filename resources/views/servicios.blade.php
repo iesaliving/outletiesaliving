@@ -149,7 +149,7 @@
             <div class="col-12 text-center bottommargin-lg topmargin-lg">
                 <h2>CENTROS AUTORIZADOS DE SERVICIO</h2>
                 <p>GRUPO IESA cuenta con una amplia red de Centros Autorizados de Servicio, en México y Latinoamérica.</p>
-                <p>Nuestro Concierge de Servicio puede brindarle los datos del CAS más cercano a usted. Contáctenos al<a class="cyan" href="tel:+528183894372"> +52 (81) 8389 4372</a> , llamada sin costo dentro de la Republica Mexicana al <a class="cyan" href="018004004372">01 800 400 4372</a>, por WhatsApp al <a target="_blank" class="cyan" href="https://wa.me/528118036339">811.803.6339</a> o al correo electrónico <a class="cyan" href="mailto:atencionalcliente@iesa.cc"> atencionalcliente@iesa.cc</a> </p>
+                <p>Nuestro Concierge de Servicio puede brindarle los datos del CAS más cercano a usted. Contáctenos al<a class="cyan" href="tel:+528183894372"> +52 (81) 8389 4372</a> , llamada sin costo dentro de la Republica Mexicana al <a class="cyan" href="tel:018004004372">01 800 400 4372</a>, por WhatsApp al <a target="_blank" class="cyan" href="https://wa.me/528118036339">811.803.6339</a> o al correo electrónico <a class="cyan" href="mailto:atencionalcliente@iesa.cc"> atencionalcliente@iesa.cc</a> </p>
                 <div class="form-group  col-xl-4 offset-xl-4  col-md-4 offset-md-4 text-center topmargin-sm">
                     <a class="btn btn-cyan btn-block" target="_blank" rel="nofollow" href="https://mx.subzero-wolf.com/es/locator#Tab-Service"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}">LOCALÍZALOS AQUÍ</a>
                 </div>
