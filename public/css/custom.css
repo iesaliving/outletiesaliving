@@ -30,6 +30,12 @@ a{
 	padding: 0!important
 }
 
+@media(max-width: 768px){
+  .noPaddingLeftMobile{
+    padding-left: 0
+  }
+}
+
 .topmargin-sm{
 	margin-top: 20px!important;
 }
