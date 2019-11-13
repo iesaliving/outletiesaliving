@@ -275,7 +275,7 @@
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 nopaddingright">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>

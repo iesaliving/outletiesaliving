@@ -13,7 +13,7 @@
 
 
             <div class="col-12 nopadding topmargin">
-                <h5>IESA Mexico</h5>
+                <h5>IESA México</h5>
                 <a href="tel:528183894372"><p class="nomargin">Tel.: +52 (81) 8389 4372</p></a>
                 <a href="mailto:marketing@iesa.cc"><p>marketing@iesa.cc</p></a>
                 

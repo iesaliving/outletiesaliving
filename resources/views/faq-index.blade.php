@@ -94,8 +94,8 @@
                     <li>por whatsapp al +52 (81) 1803 6339 o</li>
                     <li>enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
-                <h5>¿Que incluye la conexión de mis equipos?</h5>
-                <p>La conexión de sus equipos incluye dos visitas; La primera es para hacer una inspección del espacio donde van a ser instalados los equipos y verificar que cumpla con la guia mecanica del fabricante. La segunda para la conexión de los equipos.
+                <h5>¿Qué incluye la conexión de mis equipos?</h5>
+                <p>La conexión de sus equipos incluye dos visitas; La primera es para hacer una inspección del espacio donde van a ser instalados los equipos y verificar que cumpla con la guía mecánica del fabricante. La segunda para la conexión de los equipos.
                 </p>
                 <p>
                     Es importante asegurarse que el espacio esté preparado para recibir a los equipos de acuerdo a las especificaciones de las guías mecánicas de cada modelo. Las guías mecánicas de sus equipos pueden conseguirse en el website, ser solicitadas con quien compró sus equipos o al concierge de servicio.
@@ -122,7 +122,7 @@
                     <li>por whatsapp al +52 (81) 1803 6339 o</li>
                     <li>enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
-                <h5>El servicio llega a mi ciudad?</h5>
+                <h5>¿El servicio llega a mi ciudad?</h5>
                 <p>Grupo IESA proporciona servicio en toda América Latina, algunos lugares podrían generar un cargo por traslado del técnico.</p>
                 <p>No se genera cargo por traslado del personal de servicio en las capitales de los estados, así como en destinos turísticos importantes (Los Cabos, Puerto Vallarta y Cancún) dentro de México, y las capitales de los países en el resto de América Latina.</p>
                 <p>Fuera de los destinos mencionados arriba, puede haber un cargo por traslado. Para solicitar un estimado existen las siguientes opciones:
@@ -145,10 +145,10 @@
                 <h5>¿La entrega de mis equipos me genera un cargo?</h5>
                 <p>Estamos complacidos de llevar sus electrodomésticos hasta la puerta de su hogar sin ningún costo en Monterrey, CDMX y Guadalajara.</p>
                 <p>El resto de las entregas se surten de nuestro Centro de Distribución en Monterrey. Nuestro equipo de Logística de Embarque se puede coordinar con usted para entregarlo a la fletera de su preferencia.</p>
-                <p>Para embarques fuera de México, se surtirán desde nuestro Centro de Distribucion en Miami. Nuestro equipo de Logística de Embarque puede coordinar el envío al forwarder de su preferencia en Miami y ayudarle a coordinar el envio hasta el puerto de entrada de su país.</p>
-                <h5>¿Que hago si mi equipo llega dañado o presenta algún golpe?</h5>
+                <p>Para embarques fuera de México, se surtirán desde nuestro Centro de Distribucion en Miami. Nuestro equipo de Logística de Embarque puede coordinar el envío al forwarder de su preferencia en Miami y ayudarle a coordinar el envío hasta el puerto de entrada de su país.</p>
+                <h5>¿Qué hago si mi equipo llega dañado o presenta algún golpe?</h5>
                 <p>Hemos invertido en herramientas que nos permiten manipular los equipos con gran cuidado minimizando daños, sin embargo es importante que revise cuidadosamente sus equipos al recibirlos.</p>
-                <p>En caso de detectar algún daño en algún equipo le sugerimos no recibirlo, nuestros camiones de entrega o la compañía fletera se encargaran de regresarlo a nuestro almacén y nuestro equipo logístico se encargará de tramitar la entrega de un sustituto.</p>
+                <p>En caso de detectar algún daño en algún equipo le sugerimos no recibirlo, nuestros camiones de entrega o la compañía fletera se encargarán de regresarlo a nuestro almacén y nuestro equipo logístico se encargará de tramitar la entrega de un sustituto.</p>
                 <p>Si no tuvo oportunidad de verificarlo durante la recepción, tiene 24 hrs adicionales para reportarlo a nuestro equipo de Concierge de Servicio </p>
                 <ul>
                     <li>llamar nuestro concierge de servicio al +52 (81) 8389 4372 </li>

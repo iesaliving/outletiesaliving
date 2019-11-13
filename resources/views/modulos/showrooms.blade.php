@@ -5,7 +5,7 @@
                   Un lugar para comenzar, experimentar y dar vida a la visión de su cocina.
                 </p>
                 <p>
-                  Visitar nuestro showroom no es un día de compras ordinario, es una experiencia interactiva que le ayuda a visualizar las posibilidades de su futura cocina. En un ambiente sin presiones, puede descubrir como se va a sentir, ver y a que va a saber su cocina - guiado por un cordial experto en equipos que se enfoca a atender sus necesidades.
+                  Visitar nuestro showroom no es un día de compras ordinario, es una experiencia interactiva que le ayuda a visualizar las posibilidades de su futura cocina. En un ambiente sin presiones, puede descubrir cómo se va a sentir, ver y a qué va a saber su cocina - guiado por un cordial experto en equipos que se enfoca a atender sus necesidades.
                 </p>
 
 
