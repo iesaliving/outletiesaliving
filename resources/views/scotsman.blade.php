@@ -5,8 +5,11 @@
 
 
 
-<section>
+<section id="hero-desktop">
     @include('hero.scotsman')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.scotsman')    
 </section>
 
 

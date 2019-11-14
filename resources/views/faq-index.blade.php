@@ -41,7 +41,7 @@
                         <p class="text-center"><strong>Entregas</strong></p>
                     </div>
 
-                </div>>
+                </div>
 
             </div>
 

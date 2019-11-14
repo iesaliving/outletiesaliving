@@ -5,8 +5,11 @@
 
 
 
-<section>
+<section id="hero-desktop">
     @include('hero.cove')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.cove')    
 </section>
 
 <section class="container-gral">

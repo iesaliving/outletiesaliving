@@ -7,8 +7,11 @@
 
 
 
-<section>
+<section id="hero-desktop">
     @include('hero.exteriores')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.exteriores')    
 </section>
 
 

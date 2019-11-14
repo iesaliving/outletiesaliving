@@ -5,8 +5,11 @@
 
 
 
-<section>
+<section id="hero-desktop">
     @include('hero.subzero')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.subzero')    
 </section>
 
 

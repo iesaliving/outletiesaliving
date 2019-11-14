@@ -371,6 +371,16 @@ ul#menu a:hover {
 
 
 /*HERO-IMAGE*/
+@media(max-width: 768px){
+  #hero-desktop{
+    display: none;
+  }
+}
+@media(min-width: 769px){
+  #hero-mobile{
+    display: none;
+  }
+}
 .container-hero-image{
   background-size: cover;background-repeat: no-repeat; padding: 250px 0 
 }

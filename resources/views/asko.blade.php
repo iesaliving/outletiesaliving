@@ -4,8 +4,11 @@
 @section('content')
 
 
-<section>
+<section id="hero-desktop">
     @include('hero.asko')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.asko')    
 </section>
 
 <section class="container-gral">

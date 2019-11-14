@@ -6,9 +6,11 @@
 
 
 
-
-<section>
+<section id="hero-desktop">
     @include('hero.dexa')
+</section>
+<section id="hero-mobile">
+    @include('hero-mobile.dexa')    
 </section>
 
 

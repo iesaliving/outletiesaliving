@@ -1,4 +1,6 @@
 <div id="marcas" class="margin-10">
+  <div class="col-10 offset-1 col-md-12 offset-md-0">
+    
             <div class="owl-carousel owl-theme">
                 <a href="{{ URL::to('/sub-zero') }}">
                   <div class="item">
@@ -31,4 +33,5 @@
                   </div>
                 </a>
           </div>
-      </div>
+  </div>
+</div>
