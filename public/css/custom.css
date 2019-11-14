@@ -297,7 +297,7 @@ ul#menu a:hover {
 
   ul#menu{
     position: absolute;
-    width: 60%!important;
+    width: 67%!important;
     margin-right: -25px!important;
     margin-left: auto;
     background-color: #fff;
@@ -352,6 +352,11 @@ ul#menu a:hover {
 
 .img-footer{
   width: 14vw;
+}
+@media(max-width: 768px){
+  .img-footer {
+      width: 50vw;
+  }
 }
 
 #footer-iesa h5{
