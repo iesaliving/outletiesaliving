@@ -121,9 +121,9 @@
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
                         <div class="col-5 justify-content-center align-self-center">
-                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
+                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA</h2>
                         <div class="col-6 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
 
                         </div>
                         </div>

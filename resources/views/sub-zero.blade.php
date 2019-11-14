@@ -33,7 +33,7 @@
 
                         <div class="topmargin-sm">
                             <p>
-                                Desde hace casi 70 años, nada ha mantenido los alimentos mas frescos durante más tiempo que un refrigerador Sub-Zero. Elija refrigeradores empotrados con el aspecto clásico del acero inoxidable o terminados en paneles personalizados. Las unidades integradas se funden con la decoración. También tenemos el poderoso PRO 48 - una pieza central imponente para cualquier cocina.
+                                Desde hace casi 70 años, nada ha mantenido los alimentos más frescos durante más tiempo que un refrigerador Sub-Zero. Elija refrigeradores empotrados con el aspecto clásico del acero inoxidable o terminados en paneles personalizados. Las unidades integradas se funden con la decoración. También tenemos el poderoso PRO 48 - una pieza central imponente para cualquier cocina.
                             </p>
                             
                         </div>
@@ -77,7 +77,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/counter-refrigerator"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -135,9 +135,9 @@
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
                         <div class="col-5 justify-content-center align-self-center">
-                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
+                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA</h2>
                         <div class="col-6 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofllow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+                            <a target="_blank" rel="nofllow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

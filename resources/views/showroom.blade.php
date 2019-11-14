@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-lg-6 row nomargin">
                         <div class="col-12">
-                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"></i><b>Horarios y Días de trabajo</b></p>
+                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
                         </div>
                         <div class="col-4 " style="display: inline-grid;">
                             <p class="nomargin">Mon.</p>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-lg-6 row nomargin">
                         <div class="col-12">
-                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"></i><b>Horarios y Días de trabajo</b></p>
+                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
                         </div>
                         <div class="col-4 " style="display: inline-grid;">
                             <p class="nomargin">Mon.</p>
@@ -111,10 +111,10 @@
                     </div>
                     
                 </div>
-                </div>
-            </div>
-
         </div>
+    </div>
+
+    
         <div class="margin-10" id="carousel-showrooms">
             <div class="owl-carousel owl-theme col-md-8 offset-md-2">
                 <div class="item">
@@ -286,8 +286,8 @@
                 </div>
             </div>
         </div>
-
 </section>
+
 @endsection
 
 

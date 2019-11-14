@@ -15,7 +15,7 @@
         <div id="container-catalogo" class="margin-10">
 
             <div class="col-12 text-center bottommargin-lg">
-                <p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.a</p>
+                <p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.</p>
             </div>
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-md-6 col-padding-sm">
