@@ -98,12 +98,12 @@
     
         <div id="container-catalogo" class="margin-10">
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 d-flex col-padding-sm">
+                <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}">
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-6 container-descripcion d-flex"  style="">
+                <div class="col-xl-5 col-lg-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="row nomargin">
@@ -143,11 +143,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -157,11 +157,11 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex order-md-1 order-2">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 d-flex order-lg-1 order-2">
                     <div class="align-self-center justify-content-center">
                         
-                        <div class="row nomargin text-md-right text-left col-12 nopadding">
-                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                        <div class="row nomargin text-lg-right text-left col-12 nopadding">
+                            <div class="col-lg-10 offset-lg-2 col-12 nopadding" style="padding-left: 0">
                                 <img class="img-asko" src="{{ URL::asset('img/Marca-Asko.png')}}">
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                             </div>
                         </div>
 
-                        <div class="topmargin-sm col-12 nopadding text-md-right text-left">
+                        <div class="topmargin-sm col-12 nopadding text-lg-right text-left">
                             <h2>
                                 ENSERES DE LUJO INSPIRADOS <br> EN ESCANDINAVIA
                             </h2>
@@ -197,7 +197,7 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
@@ -207,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 d-flex col-padding-sm order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Asko-home.jpg')}}">
                     </div>
@@ -216,12 +216,12 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 d-flex col-padding-sm">
+                <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
                          <img src="{{ URL::asset('img/dexa.jpg')}}">
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-6 container-descripcion d-flex"  style="">
+                <div class="col-xl-5 col-lg-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="row nomargin">
@@ -261,7 +261,7 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
@@ -275,11 +275,11 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex order-md-1 order-2">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 d-flex order-lg-1 order-2">
                     <div class="align-self-center justify-content-center">
                         
-                        <div class="row nomargin text-md-right text-left col-12 nopadding">
-                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                        <div class="row nomargin text-lg-right text-left col-12 nopadding">
+                            <div class="col-lg-10 offset-lg-2 col-12 nopadding" style="padding-left: 0">
                                 <img class="img-scotsman" src="{{ URL::asset('img/Marca_Scotsman.png')}}">
                             </div>
                         </div>
@@ -289,7 +289,7 @@
                             </div>
                         </div>
 
-                        <div class="topmargin-sm col-12 nopadding text-md-right text-left">
+                        <div class="topmargin-sm col-12 nopadding text-lg-right text-left">
                             <h2>
                                 EL HIELO IDEAL <br>EL LUJO DEFINITIVO
                             </h2>
@@ -300,17 +300,17 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 d-flex col-padding-sm order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
                     </div>
@@ -319,12 +319,12 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 d-flex col-padding-sm">
+                <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}">
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-6 container-descripcion d-flex"  style="">
+                <div class="col-xl-5 col-lg-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
                             <div class="col-10 nopadding">
@@ -351,11 +351,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>

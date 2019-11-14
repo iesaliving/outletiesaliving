@@ -32,7 +32,7 @@
     	</div>
 
         <div class="row nomargin">
-            <div class="col-md-6 nomargin row">
+            <div class="col-lg-6 nomargin row">
                 <div class="col-12">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6277240649997!2d-99.19561618681189!3d19.428484486886635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201ff11a77f6d%3A0x18848b36c0d7d2d9!2sIESA!5e0!3m2!1ses-419!2sve!4v1573338741143!5m2!1ses-419!2sve" style="width: 100%;height:300px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
@@ -47,7 +47,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 nomargin row">
+            <div class="col-lg-6 nomargin row">
                 <div class="col-12">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.656346959698!2d-100.4540079!3d25.682684199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629816d52a561b%3A0x708d48dbe192e667!2sImportaciones%20Electrodom%C3%A9sticas%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2sve!4v1573338887727!5m2!1ses-419!2sve" style="width: 100%;height:300px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>

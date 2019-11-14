@@ -21,10 +21,10 @@
                 <p>Mientras Sub-Zero exista, los alimentos resistirán el paso del tiempo, lo mismo que la belleza y el rendimiento de su cocina. Construido y probado con los más altos estándares, Sub-Zero es algo más que sólo un refrigerador. Se trata de un sistema de conservación de los alimentos, con más de 70 años de pensamiento innovador que lo avalan. Mientras exista Sub-Zero, la comida tendrá un delicioso futuro.</p>
             </div>
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -42,11 +42,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/full-size-refrigeration"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -58,17 +58,17 @@
 
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 Refrigeración Bajo Cubierta
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Productos frescos en la isla de la cocina, bebidas frías en el gimnasio y hielo en abundancia cerca de la piscina. La refrigeración Sub-Zero está en todos lados. Ya sea que elija cajones integrados, centros de bebidas, refrigeradores bajo cubierta o máquinas de hielo, nuestras unidades encajan a la perfección, sin interrumpir el flujo de su casa y la forma en que vive.
                             </p>
@@ -76,26 +76,26 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/counter-refrigerator"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/subzero/subzero2.jpg')}}">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/subzero/subzero3.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
 
@@ -114,11 +114,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/wine-cooler"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>

@@ -29,10 +29,10 @@
                     </p>
             </div>
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/estufas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -50,11 +50,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/estufas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -63,17 +63,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5  offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5  offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 PARRILLAS
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Las parrillas de DEXA cuentan con materiales de alta calidad y con una variedad de tamaños, también cuentan con diferentes niveles de cocción y con un gran diseño italiano.
                             </p>
@@ -81,25 +81,25 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/parrillas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/dexa/parrillas.jpg')}}">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/hornos.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -117,11 +117,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/hornos/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -130,17 +130,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5  offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5  offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                CAMPANAS
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Las campanas DEXA están dotadas con una gran capacidad de extracción y algunos modelos con re-circulación del aire. Proporcionando ambientes confortables en tu cocina, evitando olores.
                             </p>
@@ -148,25 +148,25 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/campanas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/dexa/campanas.jpg')}}">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/dexa/lavavajillas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -184,11 +184,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/lavavajillas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -197,17 +197,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 TARJAS Y LLAVES
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 DEXA ofrece una variada selección de llaves y tarjas para cocina cuidadosamente diseñadas para brindar la mejor combinación posible entre estilo, calidad y precio
                             </p>
@@ -218,16 +218,16 @@
                             <div class="col-md-12 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
-                            <div class="col-md-6 bottommargin-sm nopadding-mobile">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/llaves/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE(LLAVES)</p></a>
                             </div>
-                            <div class="col-md-6 bottommargin-sm nopadding-mobile">
+                            <div class="col-md-5 offset-md-2 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/tarjas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE(TARJAS)</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/dexa/llaves.jpg')}}">
                 </div>
             </div>
@@ -244,7 +244,7 @@
                     <div class="h-100 d-flex">
                         <div class="col-md-12 col-12 justify-content-center align-self-center">
                             <h2 style="color: #fff" class="light text-center">DEXA</h2>
-                        <div class="col-md-2 offset-md-5 col-6 offset-3 text-center nopadding topmargin-sm">
+                        <div class="col-lg-2 offset-lg-5 col-md-4 offset-md-4 col-6 offset-3 text-center nopadding topmargin-sm">
                             <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>

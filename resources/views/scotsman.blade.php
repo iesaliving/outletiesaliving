@@ -21,10 +21,10 @@
                 <p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.</p>
             </div>
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/scotsman/hielo.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -42,11 +42,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding  bottommargin-sm">
+                            <div class="col-lg-7 nopadding  bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://www.scotsman.mx/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>

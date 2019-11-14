@@ -23,10 +23,10 @@
 
             </div>
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/nosotros/objetivo.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex">
+                <div class="col-lg-6 d-flex">
                     <div class="justify-content-center align-self-center">
                         <h2 class="bottommargin-sm">NUESTRO OBJETIVO</h2>
                         <p>Un lugar para empezar, experimentar y hacer realidad su visión. <br>Este no es un día de compras normal.</p>

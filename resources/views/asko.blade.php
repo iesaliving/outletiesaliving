@@ -21,10 +21,10 @@
                 </p>
             </div>
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/asko/asko_hornos.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -45,11 +45,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/hornos"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -58,17 +58,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 parrillas
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 ¿Gas o inducción? Una difícil elección para muchos entusiastas de la cocina. No importa lo que elija, con una parrilla de inducción ASKO en la cocina tendrá un control perfecto del calor. Las parrillas de gas cuentan con el exclusivo quemador Wok Volcano con una llama altamente concentrada y un soporte estable para la sartén wok; las parrillas de inducción están equipadas con zonas Bridge Induction™ que permiten combinar sartenes de diferentes tamaños. Elija lo que quiera, pero debe ser un equipo ASKO.
                             </p>
@@ -76,26 +76,26 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/parrillas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/asko/asko_parrillas.jpg')}}">
                 </div>
             </div>
 
              <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/asko/asko_campanas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -113,11 +113,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/campanas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -126,17 +126,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 CAFETERA 
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Con una filosofía única de interacción y control basada en una interfaz TFT touch, tiene todas las posibilidades para preparar su café de manera perfecta, justo como usted lo desea. La interfaz cuenta con programas, opciones y configuraciones diferentes. Por ejemplo, tamaño de bebida personalizable, selección de idioma, enjuague automático, ajuste de agua caliente y programa de descalcificación.<br>Todos sus componentes son desmontables y fáciles de limpiar
 
@@ -145,26 +145,26 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/cafetera"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/asko/asko_cafetera.jpg')}}">
                 </div>
             </div>
 
              <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/asko/asko_cajon.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -182,11 +182,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/cajon-calentador"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -195,17 +195,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 REFRIGERADOR / CONGELADOR
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Simplemente enfriar los alimentos frescos no es suficiente para conservarlos durante mucho tiempo. Varios alimentos frescos requieren diferentes temperaturas, niveles de humedad e incluso luz. También pensamos que debería ser fácil para usted colocar sus alimentos frescos y luego encontrarlos, antes de que se vuelvan demasiado viejos.
                             </p>
@@ -213,26 +213,26 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/refrigeracion"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/asko/asko_congelador.jpg')}}">
                 </div>
             </div>
 
              <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/asko/asko_lavavajillas.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -250,11 +250,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/lavavajillas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -263,17 +263,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5 offset-xl-1 order-md-1 order-2">
+                <div class="col-lg-6 d-flex col-xl-5 offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <h2>
                                 Lavadora 
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-md-right text-left">
+                        <div class="topmargin-sm text-lg-right text-left">
                             <p>
                                 Esta lavadora blanca de nuestra gama Logic con detalles en acero inoxidable presenta nuestra exclusiva Quattro Construction ™. Cuatro amortiguadores transfieren vibraciones a la placa inferior, haciendo que la lavadora esté prácticamente libre de vibraciones, incluso a velocidades de centrifugado de 1400 rpm. 21 programas cuidadosamente diseñados y 5 modos de funcionamiento significan que siempre hay una configuración que se adapta solo a sus necesidades de lavado.
                             </p>
@@ -281,26 +281,26 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/lavanderia/lavadoras"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm order-md-2 order-1">
+                <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/asko/asko_lavadora.jpg')}}">
                 </div>
             </div>
 
              <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/asko/asko_secadora.jpg')}}">
                 </div>
-                <div class="col-md-6 d-flex col-xl-5">
+                <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
                         
                         <div class="topmargin-sm">
@@ -318,11 +318,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/lavanderia/secadora"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
