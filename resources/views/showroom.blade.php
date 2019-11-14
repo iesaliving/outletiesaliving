@@ -8,8 +8,12 @@
 
 
 
-<section>
+
+<section id="hero-desktop">
   <img src="{{ URL::asset('img/showrooms/hero.jpg')}}">
+</section>
+<section id="hero-mobile">
+  <img src="{{ URL::asset('img/hero-showroom-mobile.jpg')}}">
 </section>
 
 

@@ -7,9 +7,14 @@
 
 
 
-<section>
+<section id="hero-desktop">
     <img src="{{ URL::asset('img/hero-contacto.jpg')}}">
 </section>
+
+<section id="hero-mobile">
+    <img src="{{ URL::asset('img/hero-contacto-mobile.jpg')}}">
+</section>
+
 
 
 <section class="container-gral">

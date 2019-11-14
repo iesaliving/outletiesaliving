@@ -297,7 +297,7 @@ ul#menu a:hover {
 
   ul#menu{
     position: absolute;
-    width: 67%!important;
+    width: 60%!important;
     margin-right: -25px!important;
     margin-left: auto;
     background-color: #fff;
@@ -306,8 +306,13 @@ ul#menu a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+  #menu .dropdown-toggle::after {
+    color:#01bb9c; 
+  }
+
   #menu-dropbox{
-    margin-left: -1.2%!important;
+    border: 0px;
+    margin-left: -1.4%!important;
   }
 
   .border-left:before{
@@ -555,6 +560,12 @@ ul#menu a:hover {
 
 #overlay img{
   width: 40%!important;
+}
+
+@media(max-width: 768px){
+  #overlay img {
+    width: 80%!important;
+  }
 }
 
 #gallery {

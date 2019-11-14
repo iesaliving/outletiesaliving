@@ -5,9 +5,15 @@
 
 
 
-    <section>
+<section id="hero-desktop">
         <img src="{{ URL::asset('img/faq/hero.jpg')}}">
     </section>
+
+
+<section id="hero-mobile">
+    <img src="{{ URL::asset('img/hero-faq-mobile.jpg')}}">
+</section>
+
 
 
     <section class="container-gral" style="padding-top: 40px" >

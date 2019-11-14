@@ -136,21 +136,7 @@
 </section>
 
 
-<section style="width: 100%; height: 300px; background-image: url('{{ URL::asset('img/exteriores/facebook.jpg')}}')">
-            <div  class="container-gral h-100">
-                <div class="margin-10 h-100">
-                    <div class="h-100 d-flex">
-                        <div class="col-md-5 col-12 justify-content-center align-self-center">
-                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
-                        <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
-                        </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-</section>
+
 
 <section class="container-gral topmargin">
         @include('modulos.showrooms')
