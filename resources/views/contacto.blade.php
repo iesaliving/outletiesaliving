@@ -26,7 +26,7 @@
 
 
     	<div class="text-center bottommargin-lg">
-        	<h2 style="text-transform: uppercase;"> Ya sea que esté comprando electrodomésticos o tenga preguntas sobre aquellos que ya posee</h2>
+        	<h2 id="text-contacto" style="text-transform: uppercase;"> Ya sea que esté comprando electrodomésticos o tenga preguntas sobre aquellos que ya posee</h2>
 
         	<p>Nuestro equipo de Atención al cliente tiene una reputación de servicio tan excepcional como nuestros productos.</p>
     	</div>

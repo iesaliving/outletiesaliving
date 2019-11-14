@@ -12,7 +12,7 @@
     </div>
 
     <div id="hero-mobile" class="col-12 nopadding">
-        <img src="{{ URL::asset('img/hero-servicios-mobile.jpg')}}">
+        <img src="{{ URL::asset('img/hero-servicio-mobile.jpg')}}">
     </div>
     <div id="container-btn-servicios" class="col-xl-4 offset-xl-4 col-md-6 offset-md-3">
         <div class="row nomargin">            

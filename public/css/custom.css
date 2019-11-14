@@ -22,6 +22,9 @@ a{
   .margin-10{
     margin: 10% 5%;
   }
+  #text-contacto{
+   font-size: 1.7rem!important
+  }
 }
 
 .margin-6{
@@ -352,7 +355,7 @@ ul#menu a:hover {
 
 
 #footer-iesa{
-  padding: 40px 5vw 0px;
+  padding: 40px 5vw 1px;
 }
 
 .img-footer{
