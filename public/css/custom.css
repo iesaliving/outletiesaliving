@@ -88,9 +88,10 @@ a:hover{
 .col-padding-sm{
   padding: 20px
 }
-
-#contacto-footer{
-  display: none;
+@media(max-width: 991px){
+  #contacto-footer{
+    display: none;
+}
 }
 
 @media(max-width: 768px){

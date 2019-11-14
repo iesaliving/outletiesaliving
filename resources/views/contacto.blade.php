@@ -66,7 +66,7 @@
         </div>
 
         <div class="row nomargin topmargin-lg">
-            <div class="col-lg-8 text-center">
+            <div class="col-xl-8 col-lg-7 text-center">
                     <div class="col-12 text-center bottommargin-sm">
                         <h2 class="">FORMULARIO</h2>
                     </div>
@@ -91,7 +91,7 @@
                         </div>
                     </form>        
             </div>
-            <div id="contacto-footer" class="col-lg-4">
+            <div id="contacto-footer" class="col-xl-4 col-lg-5">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-4 d-flex h-100">
                     <div class="justify-content-center align-self-center">
                         <div class="col-md-12">
