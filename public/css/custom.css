@@ -9,8 +9,15 @@ body{
 }
 
 a{
-  color: #000!important
+  color: #000!important;
+  transition:all 0.5s;
 }
+
+a:hover{
+  color: #01bb9c!important;
+  transition:all 0.5s;
+}
+
 .item{
   background-color: #e7e8ea;
 }
@@ -171,6 +178,13 @@ a:hover{
     color: #fff!important;
     background-color: #01bb9c;
     border-color: #01bb9c;
+    transition: all 0.3s;
+}
+
+.btn-cyan:hover{
+    color: #fff!important;
+    background-color: #212832!important;
+    border-color: #212832!important;
 }
 
 .cyan{
@@ -373,9 +387,16 @@ ul#menu a:hover {
   font-size:1rem;
 }
 
-#footer-iesa p, #footer-iesa a{
+
+
+#footer-iesa a{
   color: #000!important;
-  font-weight: 300
+  font-weight: 300;
+  transition:all 0.3s;
+}
+
+#footer-iesa a:hover {
+    color: #01bb9c!important;
 }
 
 #footer-iesa i{

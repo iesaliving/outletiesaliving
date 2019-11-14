@@ -49,7 +49,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/hornos"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/parrillas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/campanas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/cafetera"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/cajon-calentador"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/refrigeracion"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/cocina/lavavajillas"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -285,7 +285,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/lavanderia/lavadoras"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -322,7 +322,7 @@
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
+                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://www.asko.com/mx/lavanderia/secadora"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
