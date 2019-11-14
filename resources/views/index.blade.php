@@ -132,8 +132,8 @@
                     <div class="align-self-center justify-content-center">
                         
                         <div class="row nomargin text-md-right text-left col-12 nopadding">
-                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
-                                <img src="{{ URL::asset('img/Marca-Asko.png')}}">
+                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                                <img class="img-asko" src="{{ URL::asset('img/Marca-Asko.png')}}">
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -172,7 +172,7 @@
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright">
+                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -236,7 +236,7 @@
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 bottommargin-sm">
+                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -250,8 +250,8 @@
                     <div class="align-self-center justify-content-center">
                         
                         <div class="row nomargin text-md-right text-left col-12 nopadding">
-                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
-                                <img src="{{ URL::asset('img/Marca_Scotsman.png')}}">
+                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                                <img class="img-scotsman" src="{{ URL::asset('img/Marca_Scotsman.png')}}">
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -345,14 +345,14 @@
                 
             </div>
             
-            <div id="carouselExampleControls" class="carousel slide topmargin" data-ride="carousel" style="margin: 10px 50px">
+            <div id="carouselExampleControls" class="carousel slide margin-carrousel" data-ride="carousel">
               <div class="carousel-inner style">
                 <div class="carousel-item active">
-                  <div class="col-8 offset-2 row">
-                    <div class="col-3">
+                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
+                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
                         <img src="{{ URL::asset('img/persona1.png')   }}">
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
                         <p><b>María José López</b></p>
                     </div>
@@ -360,11 +360,11 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="col-8 offset-2 row">
-                    <div class="col-3">
+                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
+                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
                         <img src="{{ URL::asset('img/persona2.png')   }}">
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
                         <p><b>Martin García</b></p>
                     </div>

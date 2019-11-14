@@ -77,6 +77,17 @@ a:hover{
   padding: 20px
 }
 
+@media(max-width: 768px){
+  .col-padding-sm{
+    padding: 15px
+  }
+
+  .bottommargin-sm {
+    margin-bottom: 15px!important;
+  }
+
+}
+
 .nopaddingleft{
   padding-left: 0
 }
@@ -295,6 +306,21 @@ ul#menu a:hover {
   margin-bottom: 0;
 }
 
+#container-btn-servicios{
+  position: absolute;
+  bottom: 30px;
+}
+
+
+@media(max-width: 768px){
+    #container-btn-servicios{
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+  }
+
+}
+
 
 
 /*FACEBOOK*/
@@ -365,6 +391,7 @@ ul#menu a:hover {
 }
 
 
+
 .container-icon.left{
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
@@ -372,6 +399,22 @@ ul#menu a:hover {
   margin-right: 0;
   margin-left: auto;
 }
+
+@media(max-width: 768px){
+  .img-scotsman{
+    margin-left: -68%
+  }
+
+  .img-asko{
+    margin-left: -74%
+  }
+  .container-icon.left{
+    width: 100%;           /* Safari/WebKit uses a non-standard name */
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 
 /**/
 
@@ -517,6 +560,17 @@ ul#menu a:hover {
   color: #000
 }
 
+/*TESTIMIONIALES*/
+.margin-carrousel{
+  margin: 10px 50px
+}
+
+@media(max-width:768px ){
+  .margin-carrousel{
+    margin: 10px 0px
+  }
+}
+/*FIN*/
 
 /* --------------------FIN calendario ---------------------------------*/
 
@@ -541,6 +595,17 @@ ul#menu a:hover {
 
 #marcas .owl-next i{
   color: #01bb9c;
+}
+
+@media(max-width: 768px){
+  #marcas .owl-prev{
+    top: 25px;
+
+}
+  #marcas .owl-next{
+    top: 25px;
+  }
+
 }
 
 #marcas .owl-dots{
