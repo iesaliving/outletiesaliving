@@ -4,11 +4,17 @@
         <a class="navbar-brand" href="{{ URL::to('/')}}"><img  src="{{ URL::asset('img/logo-header.png')   }}" alt="Logo Wizerlink" ></a>
 
         <button class="navbar-toggler" type="button">
-            <a class="nav-link menu-trigger" href="#"><i class="fa fa-th fa-2x" style="color: #498ac0;"></i></a>
+            <a class="menu-trigger" href="#"><i class="fa fa-bars fa-2x" style="color: #212832;"></i></a>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContentLG">
+        <div id="menu-container" class="collapse navbar-collapse" id="navbarSupportedContentLG">
             <ul id="menu" class="navbar-nav mr-auto ">
+                <li id="cerrar-menu">
+                    <a class="menu-trigger" href="#"><i class="fa fa-times fa-2x" style="color: #212832;"></i></a>
+                </li>
+                <li id="a-home" class="nav-item">
+                    <a class="nav-link border-left" href="{{ URL::to('/servicios') }}">Home</a>
+                </li>
                 <li  class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
                       Marcas
