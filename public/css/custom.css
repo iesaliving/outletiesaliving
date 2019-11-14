@@ -40,6 +40,9 @@ a{
   .noPaddingLeftMobile{
     padding-left: 0
   }
+  .nopadding-mobile{
+    padding: 0
+  }
 }
 
 .topmargin-sm{
@@ -412,6 +415,13 @@ ul#menu a:hover {
   width: 100%; 
   height: 300px; 
   background-size: 100% 100%;
+}
+
+@media(max-width: 768px){
+  .container-fb {
+    height: 200px;
+    background-size: cover;
+  }
 }
 /*CATALOGOS*/
 

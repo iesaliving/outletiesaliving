@@ -39,11 +39,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
+                            <div class="col-md-7 nopadding  bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://www.scotsman.mx/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
 
 
             <div id="hielo" class="row nomargin topmargin-lg">
-                <div class="col-md-6">
+                <div class="col-md-6 bottommargin">
                     <div class="col-7 offset-1">
                         <img src="{{ URL::asset('img/scotsman/hielo-gourmet.png')}}">
                     </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 bottommargin">
                     <div class="col-7 offset-1">
                         <img src="{{ URL::asset('img/scotsman/hielo-nugget.png')}}">
                     </div>

@@ -13,7 +13,7 @@
                     <a class="menu-trigger" href="#"><i class="fa fa-times fa-2x" style="color: #212832;"></i></a>
                 </li>
                 <li id="a-home" class="nav-item">
-                    <a class="nav-link border-left" href="{{ URL::to('/servicios') }}">Home</a>
+                    <a class="nav-link border-left" href="{{ URL::to('/') }}">Home</a>
                 </li>
                 <li  class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
