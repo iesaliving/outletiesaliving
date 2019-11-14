@@ -4,7 +4,7 @@
 @section('content')
 
 
-<section>   
+<section id="hero-desktop">   
     <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="4000">
 
       <div class="carousel-inner">
@@ -28,6 +28,35 @@
         </div>
         <div class="carousel-item">
             @include('hero.exteriores')
+        </div>
+      </div>
+    </div>
+</section>
+
+<section id="hero-mobile">   
+    <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="4000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            @include('hero-mobile.asko')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.subzero')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.wolf')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.cove')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.dexa')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.scotsman')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.exteriores')
         </div>
       </div>
     </div>
