@@ -19,57 +19,29 @@
 
                 <p>Encuentre respuestas en línea a sus preguntas</p>
             </div>
-            <div class="row col-md-10 offset-md-1">
-            <!--     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
-    			<div class='text-center'>
-    				<h6><b>Lorem ipsum dolor sit amet</b></h6>
-    			</div>
-    		</div>
-    		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
-    			<div class='text-center'>
-    				<h6><b>Lorem ipsum dolor sit amet</b></h6>
-    			</div>
-    		</div>
-    		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
-    			<div class='text-center'>
-    				<h6><b>Lorem ipsum dolor sit amet</b></h6>
-    			</div>
-    		</div>
-    		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
-    			<div class='text-center'>
-    				<h6><b>Lorem ipsum dolor sit amet</b></h6>
-    			</div>
-    		</div>
-    		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
-    			<div class='text-center'>
-    				<h6><b>Lorem ipsum dolor sit amet</b></h6>
-    			</div>
-    		</div> -->
+            <div class="col-md-10 offset-md-1 col-12 nopadding">
+                <div class="col-12 row nomargin nopadding">
+                    
+                    <div class="col-4 text-center">
+                        <div style="padding: 10px 4vw">
+                            <img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2">
+                        </div>
+                        <p class="text-center"><strong>Marketing</strong></p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div style="padding: 10px 4vw">
+                            <img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2">
+                        </div>
+                        <p class="text-center"><strong>Consierge de Servicio</strong></p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div style="padding: 10px 4vw">
+                            <img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2">
+                        </div>
+                        <p class="text-center"><strong>Entregas</strong></p>
+                    </div>
 
-                <div class="col-md-4 text-center">
-                    <div style="padding: 10px 4vw">
-                        <img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2">
-                    </div>
-                    <p class="text-center"><strong>Marketing</strong></p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div style="padding: 10px 4vw">
-                        <img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2">
-                    </div>
-                    <p class="text-center"><strong>Consierge de Servicio</strong></p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div style="padding: 10px 4vw">
-                        <img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2">
-                    </div>
-                    <p class="text-center"><strong>Entregas</strong></p>
-                </div>
-
+                </div>>
 
             </div>
 

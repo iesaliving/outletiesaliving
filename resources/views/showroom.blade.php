@@ -15,101 +15,107 @@
 
 <section class="container-gral">
     
-  
-
         <div class="margin-6">
             <div  class="row calendario light">
-                <div class="col-lg-6 row ">
-                    <div class="col-12 text-center bottommargin-sm">
-                        <h2 class="light">MONTERREY</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p>Carr. Monterrey –<br> Saltillo 3061<br> Fracc. Bosques del Poniente<br> Santa Catarina, NL 66350</p>
+                <div class="col-lg-6 topmargin">
+                    <div class="col-12 nopadding nomargin row">
+                        <div class="col-12 text-center bottommargin-sm">
+                            <h2 class="light">MONTERREY</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-xl-8 col-12 nopadding">
+                                <p>Carr. Monterrey – Saltillo 3061 Fracc. Bosques del Poniente Santa Catarina, NL 66350</p>
+                            </div>
 
-                        <a href="tel:528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
-                        <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
-                        
-
-                        <div class="col-12 topmargin">
-
-                            <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
-
-                            <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/Importaciones+Electrodom%C3%A9sticas,+S.A.+De+C.V./@25.682615,-100.4560607,17z/data=!3m1!4b1!4m5!3m4!1s0x86629816d52a561b:0x708d48dbe192e667!8m2!3d25.682615!4d-100.453872"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                            <a href="tel:528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
+                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
                             
+
+                            <div class="col-12 topmargin bottommargin nopadding">
+
+                                <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
+
+                                <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/Importaciones+Electrodom%C3%A9sticas,+S.A.+De+C.V./@25.682615,-100.4560607,17z/data=!3m1!4b1!4m5!3m4!1s0x86629816d52a561b:0x708d48dbe192e667!8m2!3d25.682615!4d-100.453872"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                                
+                            </div>
                         </div>
+                        <div class="col-lg-6 row nomargin">
+                            <div class="col-12">
+                                <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
+                            </div>
+                            <div class="col-md-4 col-6" style="display: inline-grid;">
+                                <p class="nomargin">Mon.</p>
+                                <p class="nomargin">Tue.</p>
+                                <p class="nomargin">Wed.</p>
+                                <p class="nomargin">Thu.</p>
+                                <p class="nomargin">Fri.</p>
+                                <p class="nomargin">Sat.</p>
+                                <p class="nomargin">Sun.</p>
+                                
+                            </div>
+                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">Closed</p>
+                                <p class="nomargin">Closed</p>
+                                
+                            </div>
+                        </div>                    
                     </div>
-                    <div class="col-lg-6 row nomargin">
-                        <div class="col-12">
-                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
-                        </div>
-                        <div class="col-4 " style="display: inline-grid;">
-                            <p class="nomargin">Mon.</p>
-                            <p class="nomargin">Tue.</p>
-                            <p class="nomargin">Wed.</p>
-                            <p class="nomargin">Thu.</p>
-                            <p class="nomargin">Fri.</p>
-                            <p class="nomargin">Sat.</p>
-                            <p class="nomargin">Sun.</p>
-                            
-                        </div>
-                        <div class="col-8" style="display: inline-grid;">
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">Closed</p>
-                            <p class="nomargin">Closed</p>
-                            
-                        </div>
-                    </div>
-                    
                 </div>
-                <div class="col-lg-6 row ">
-                    <div class="col-12 text-center bottommargin-sm">
-                        <h2 class="light">CIUDAD DE MÉXICO</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p>Galileo 8 Segundo piso<br> Col. Polanco Chapultepec<br> México, DF 11560<br><b style="color: #fff">blando blando blando blando</b></p>
+                <div class="col-lg-6 topmargin">
+                    <div class="col-12 nopadding nomargin row">
+                        <div class="col-12 text-center bottommargin-sm">
+                            <h2 class="light">CIUDAD DE MÉXICO</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-xl-8 col-12 nopadding">
+                                <p>
+                                    Galileo 8 Segundo piso Col. Polanco Chapultepec México, DF 11560<b style="color: #fff">blando blando blando blando</b>
+                                </p>
+                            </div>
 
-                        <a href="tel:525552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (55) 5280 9648</p></a>
-                        <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
-                        
-
-                        <div class="col-12 topmargin">
-
-                            <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
-
-                            <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/IESA/@19.4284845,-99.1956162,17z/data=!3m1!4b1!4m5!3m4!1s0x85d201ff11a77f6d:0x18848b36c0d7d2d9!8m2!3d19.4284845!4d-99.1934275"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                            <a href="tel:525552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (55) 5280 9648</p></a>
+                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
                             
+
+                            <div class="col-12 topmargin bottommargin nopadding">
+
+                                <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CATÁLOGO</a>
+
+                                <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/IESA/@19.4284845,-99.1956162,17z/data=!3m1!4b1!4m5!3m4!1s0x85d201ff11a77f6d:0x18848b36c0d7d2d9!8m2!3d19.4284845!4d-99.1934275"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
+                                
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 row nomargin">
-                        <div class="col-12">
-                            <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
+                        <div class="col-lg-6 row nomargin">
+                            <div class="col-12">
+                                <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
+                            </div>
+                            <div class="col-md-4 col-6" style="display: inline-grid;">
+                                <p class="nomargin">Mon.</p>
+                                <p class="nomargin">Tue.</p>
+                                <p class="nomargin">Wed.</p>
+                                <p class="nomargin">Thu.</p>
+                                <p class="nomargin">Fri.</p>
+                                <p class="nomargin">Sat.</p>
+                                <p class="nomargin">Sun.</p>
+                                
+                            </div>
+                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">09:00-19:00</p>
+                                <p class="nomargin">Closed</p>
+                                <p class="nomargin">Closed</p>
+                                
+                            </div>
                         </div>
-                        <div class="col-4 " style="display: inline-grid;">
-                            <p class="nomargin">Mon.</p>
-                            <p class="nomargin">Tue.</p>
-                            <p class="nomargin">Wed.</p>
-                            <p class="nomargin">Thu.</p>
-                            <p class="nomargin">Fri.</p>
-                            <p class="nomargin">Sat.</p>
-                            <p class="nomargin">Sun.</p>
-                            
-                        </div>
-                        <div class="col-8" style="display: inline-grid;">
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">09:00-19:00</p>
-                            <p class="nomargin">Closed</p>
-                            <p class="nomargin">Closed</p>
-                            
-                        </div>
-                    </div>
-                    
+                    </div>                    
                 </div>
         </div>
     </div>

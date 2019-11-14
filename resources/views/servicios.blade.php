@@ -7,17 +7,23 @@
 
 
 <section style="position: relative;">
-  <img src="{{ URL::asset('img/servicios/hero.jpg')}}">
-  <div class="col-xl-4 offset-xl-4 col-md-6 offset-md-3 row" style="position: absolute;bottom: 30px;">
-    <div class="col-xl-8 col-md-7">
-        <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
+    <div class="col-12 nopadding">
+        <img src="{{ URL::asset('img/servicios/hero.jpg')}}">
     </div>
-    <div class="col-xl-4 col-md-5">
-        <a class="btn btn-block btn-cyan descubra-btn" href=" tel:8118036339"><p>811-803-6339</p></a>        
-    </div>
+    <div id="container-btn-servicios" class="col-xl-4 offset-xl-4 col-md-6 offset-md-3">
+        <div class="row nomargin">            
+            <div class="col-xl-8 col-md-7 bottommargin-sm">
+                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
+            </div>
+            <div class="col-xl-4 col-md-5 bottommargin-sm">
+                <a class="btn btn-block btn-cyan descubra-btn" href=" tel:8118036339"><p>811-803-6339</p></a>        
+            </div>
       
+        </div>
   </div>
 </section>
+
+
 
 <section class="container-gral">
     
@@ -88,32 +94,38 @@
 
             <div class="row col-padding catalogo topmargin">
                 
-                <div class="col-xl-5 offset-xl-1 col-md-6">
-                    <div class="topmargin-sm text-right">
+                <div class="col-xl-5 offset-xl-1 col-md-6 order-2 order-md-1">
+                    <div class="topmargin-sm text-md-right text-left">
                         <h2>
                            AGENDE UNA CITA DE SERVICIO
                         </h2>
                         
                     </div>
                     
-                    <div class="topmargin-sm row nomargin">
-                        <div class="col-11 bottommargin-sm text-right">
-                           <a href="tel:"><p class="nomargin">01 800 400 IESA (4372)</p></a>
+                    <div class="topmargin-sm">
+                        <div class="row nomargin col-12 nopadding">
+                            <div class="order-md-1 order-2 col-11 bottommargin-sm text-md-right text-left">
+                               <a href="tel:"><p class="nomargin">01 800 400 IESA (4372)</p></a>
+                            </div>
+                            <div class="order-md-2 order-1 col-1 nopadding bottommargin-sm">
+                                <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                            </div>
                         </div>
-                        <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                        <div class="row nomargin col-12 nopadding">
+                            <div class="order-md-1 order-2 col-11 bottommargin-sm text-md-right text-left">
+                                <a href="https://wa.me/+528118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
+                            </div>
+                            <div class="order-md-2 order-1 col-1 nopadding bottommargin-sm">
+                                <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
+                            </div>
                         </div>
-                        <div class="col-11 bottommargin-sm text-right">
-                            <a href="https://wa.me/+528118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
-                        </div>
-                        <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
-                        </div>
-                        <div class="col-11 bottommargin-sm text-right">
-                           <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
-                        </div>                        
-                        <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
+                        <div class="row nomargin col-12 nopadding">
+                            <div class="order-md-1 order-2 col-11 bottommargin-sm text-md-right text-left">
+                               <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
+                            </div>                        
+                            <div class="order-md-2 order-1 col-1 nopadding bottommargin-sm">
+                                <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
+                            </div>
                         </div>
                     </div>
 
@@ -135,13 +147,15 @@
                         </div>
                     </div>
 
-                    <div class="text-right topmargin-sm">
+                    <div class="text-md-right text-left topmargin-sm">
                         <p>Nuestro objetivo es una experiencia de servicio perfecta en todo momento.</p>
                     </div>
 
                 </div>
-                <div class="col-md-6 col-padding-sm">
-                  <img src="{{ URL::asset('img/servicios/agenda.jpg')}}">
+                <div class="col-md-6 col-padding-sm d-flex order-1 order-md-2">
+                    <div class="align-self-center justify-content-center">
+                        <img src="{{ URL::asset('img/servicios/agenda.jpg')}}">
+                    </div>
                 </div>
             </div>
 
@@ -177,14 +191,14 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 col-xl-5 offset-xl-1 d-flex text-right">
+                <div class="col-md-6 col-xl-5 offset-xl-1 d-flex text-md-right text-left order-md-1 order-2">
                     <div class="justify-content-center align-self-center">
                         <h2 class="bottommargin-sm">Brindamos servicio de garantía</h2>
                         <p>Comencemos con el beneficio obvio de elegir a nuestros técnicos autorizados:</p>
                         <p>Grupo IESA es el proveedor de servicios certificados de fábrica que está capacitado exclusivamente para trabajar solo en las marcas Sub-Zero, Wolf, Cove, ASKO  Y Dexa. Como resultado, brindamos un servicio experto para todas sus necesidades de garantía.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-md-6 col-padding-sm order-md-2 order-1">
                     <img src="{{ URL::asset('img/servicios/garantia.jpg')}}">
                 </div>
             </div> 
@@ -210,7 +224,7 @@
             </div>
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-md-6 col-xl-5 offset-xl-1 d-flex text-right">
+                <div class="col-md-6 col-xl-5 offset-xl-1 d-flex text-md-right text-left  order-md-1 order-2">
                     <div class="justify-content-center align-self-center">
                         <h2 class="bottommargin-sm">Recibimos una amplia capacitación directamente de Sub-Zero</h2>
                         <p>Estamos tan familiarizados con los equipos Sub-Zero, Wolf, Covey Asko que generalmente podemos diagnosticar un problema incluso antes de salir, asegurando que su problema se resuelva mucho más rápido.</p>
@@ -218,7 +232,7 @@
                         <p>Los dispositivos integrados de Sub-Zero ofrecen un desafío único que nuestros técnicos capacitados pueden manejar con confianza y experiencia.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm d-flex">
+                <div class="col-md-6 col-padding-sm d-flex order-md-2 order-1">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/servicios/capacitacion.jpg')}}">
                     </div>

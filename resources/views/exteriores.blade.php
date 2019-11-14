@@ -47,11 +47,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
+                            <div class="col-md-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -60,17 +60,17 @@
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
-                <div class="col-md-6 d-flex col-xl-5  offset-xl-1">
+                <div class="col-md-6 d-flex col-xl-5  offset-xl-1 order-md-1 order-2">
                     <div class="justify-content-center align-self-center">
 
-                        <div class="topmargin-sm text-right">
+                        <div class="topmargin-sm text-md-right text-left">
                             <h2>
                                 Refrigeración al aire libre
                             </h2>
                             
                         </div>
 
-                        <div class="topmargin-sm text-right">
+                        <div class="topmargin-sm text-md-right text-left">
                             <p>
                                 Nuestros productos para el exterior - entre ellos un refrigerador bajo cubierta de 24” y una máquina de hielos de 15” - están diseñados para temperaturas arriba de 110°F (43 °C) y revestidos con acero inoxidable de alto calibre que soporta el tipo de elementos que corroen materiales menos resistentes.
                             </p>
@@ -78,17 +78,17 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
+                            <div class="col-md-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5 nopaddingright">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-padding-sm">
+                <div class="col-md-6 col-padding-sm order-md-2 order-1">
                     <img src="{{ URL::asset('img/exteriores/refrigeracion.jpg')}}">
                 </div>
             </div>
@@ -115,11 +115,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
+                            <div class="col-md-7 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -137,10 +137,10 @@
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
-                        <div class="col-5 justify-content-center align-self-center">
-                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA</h2>
-                        <div class="col-6 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        <div class="col-md-5 col-12 justify-content-center align-self-center">
+                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
+                        <div class="col-md-6 col-7  nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

@@ -114,11 +114,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 nopadding">
+                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -128,12 +128,12 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex">
+                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex order-md-1 order-2">
                     <div class="align-self-center justify-content-center">
                         
-                        <div class="row nomargin text-right col-12 nopadding">
-                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
-                                <img src="{{ URL::asset('img/Marca-Asko.png')}}">
+                        <div class="row nomargin text-md-right text-left col-12 nopadding">
+                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                                <img class="img-asko" src="{{ URL::asset('img/Marca-Asko.png')}}">
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -157,7 +157,7 @@
                             </div>
                         </div>
 
-                        <div class="topmargin-sm col-12 nopadding text-right">
+                        <div class="topmargin-sm col-12 nopadding text-md-right text-left">
                             <h2>
                                 ENSERES DE LUJO INSPIRADOS <br> EN ESCANDINAVIA
                             </h2>
@@ -168,17 +168,17 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 nopadding">
+                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 nopaddingright">
+                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex col-padding-sm">
+                <div class="col-md-6 d-flex col-padding-sm order-md-2 order-1">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Asko-home.jpg')}}">
                     </div>
@@ -232,11 +232,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 nopadding">
+                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -246,12 +246,12 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex">
+                <div class="col-xl-5 offset-xl-1 col-md-6 d-flex order-md-1 order-2">
                     <div class="align-self-center justify-content-center">
                         
-                        <div class="row nomargin text-right col-12 nopadding">
-                            <div class="col-10 offset-2 nopadding" style="padding-left: 0">
-                                <img src="{{ URL::asset('img/Marca_Scotsman.png')}}">
+                        <div class="row nomargin text-md-right text-left col-12 nopadding">
+                            <div class="col-md-10 offset-md-2 col-12 nopadding" style="padding-left: 0">
+                                <img class="img-scotsman" src="{{ URL::asset('img/Marca_Scotsman.png')}}">
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -260,7 +260,7 @@
                             </div>
                         </div>
 
-                        <div class="topmargin-sm col-12 nopadding text-right">
+                        <div class="topmargin-sm col-12 nopadding text-md-right text-left">
                             <h2>
                                 EL HIELO IDEAL <br>EL LUJO DEFINITIVO
                             </h2>
@@ -271,17 +271,17 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 nopadding">
+                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 nopaddingright">
+                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex col-padding-sm">
+                <div class="col-md-6 d-flex col-padding-sm order-md-2 order-1">
                     <div class="justify-content-center align-self-center">
                         <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
                     </div>
@@ -322,11 +322,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-5 nopadding">
+                            <div class="col-md-5 col-6 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-8 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -345,14 +345,14 @@
                 
             </div>
             
-            <div id="carouselExampleControls" class="carousel slide topmargin" data-ride="carousel" style="margin: 10px 50px">
+            <div id="carouselExampleControls" class="carousel slide margin-carrousel" data-ride="carousel">
               <div class="carousel-inner style">
                 <div class="carousel-item active">
-                  <div class="col-8 offset-2 row">
-                    <div class="col-3">
+                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
+                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
                         <img src="{{ URL::asset('img/persona1.png')   }}">
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
                         <p><b>María José López</b></p>
                     </div>
@@ -360,11 +360,11 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="col-8 offset-2 row">
-                    <div class="col-3">
+                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
+                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
                         <img src="{{ URL::asset('img/persona2.png')   }}">
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
                         <p><b>Martin García</b></p>
                     </div>
@@ -445,7 +445,7 @@ $(document).ready(function() {
                 margin: 25,
                 responsive: {
                   0: {
-                    items: 1,
+                    items: 2,
                   },
                   600: {
                     items: 2,

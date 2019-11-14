@@ -19,7 +19,7 @@
                   <div class="row">
 
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image">
                       <div class="img-wrapper">
                         <a href="{{ URL::asset('img/SHOWROOM_HOME1.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME1.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">
@@ -27,7 +27,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image">
                       <div class="img-wrapper">
                         <a href="{{ URL::asset('img/SHOWROOM_HOME2.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME2.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">
@@ -35,7 +35,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 image">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image">
                       <div class="img-wrapper">
                         <a href="{{ URL::asset('img/SHOWROOM_HOME3.jpg')   }}"><img src="{{ URL::asset('img/SHOWROOM_HOME3.jpg')   }}" class="img-responsive"></a>
                         <div class="img-overlay">

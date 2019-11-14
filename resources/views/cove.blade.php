@@ -39,11 +39,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-md-7 nopadding">
+                            <div class="col-md-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/cove/dishwashers" target="_blank" rel="nofollow"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
@@ -120,11 +120,10 @@
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
-                        <div class="col-5 justify-content-center align-self-center">
-                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA</h2>
-                        <div class="col-6 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
-
+                        <div class="col-md-5 col-12 justify-content-center align-self-center">
+                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
+                        <div class="col-md-6 col-7 nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
                         </div>
                         </div>
                     </div>

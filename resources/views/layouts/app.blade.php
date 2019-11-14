@@ -100,6 +100,12 @@
     <script async type="text/javascript">
       $(document).ready(function(){
 
+
+          $(".menu-trigger").click(function(){
+            $("#menu-container").toggleClass("collapse");
+          });
+
+
           var lastPositionScrollTop =100;
           $(window).scroll(function () {
               var position = $(this).scrollTop();

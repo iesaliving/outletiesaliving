@@ -18,6 +18,12 @@ a{
   margin: 10%;
 }
 
+@media(max-width:768px ){
+  .margin-10{
+    margin: 10% 5%;
+  }
+}
+
 .margin-6{
   margin: 6%;
 }
@@ -28,6 +34,15 @@ a{
 
 .nopadding{
 	padding: 0!important
+}
+
+@media(max-width: 768px){
+  .noPaddingLeftMobile{
+    padding-left: 0
+  }
+  .nopadding-mobile{
+    padding: 0
+  }
 }
 
 .topmargin-sm{
@@ -71,6 +86,23 @@ a:hover{
   padding: 20px
 }
 
+#contacto-footer{
+  display: none;
+}
+
+@media(max-width: 768px){
+  .col-padding-sm{
+    padding: 15px
+  }
+
+  .bottommargin-sm {
+    margin-bottom: 15px!important;
+  }
+  #contacto-footer{
+    display: none;
+  }
+}
+
 .nopaddingleft{
   padding-left: 0
 }
@@ -79,6 +111,18 @@ a:hover{
    padding-right: 0
 }
 
+.fa-contacto{
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+@media(max-width: 768px){
+  .fa-contacto{
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+
+}
 .btn-facebook{
   line-height: 2.5;
 }
@@ -171,6 +215,7 @@ ul#menu{
 }
 
 
+
 header{
 	width: 100%;
 	background-color: #fff;
@@ -240,7 +285,65 @@ ul#menu a:hover {
 }
 
 
+#cerrar-menu{
+    position: absolute;
+    top: 0;
+    right: 15%;
+}
+@media(max-width: 991px){
+  #header-custom .navbar-brand {
+    width: 18vw;
+  }
 
+  ul#menu{
+    position: absolute;
+    width: 60%!important;
+    margin-right: -25px!important;
+    margin-left: auto;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #menu-dropbox{
+    margin-left: -1.2%!important;
+  }
+
+  .border-left:before{
+    content: "";
+    border-left: 0px;
+    padding-left: 0vw;
+  }
+
+  .nav-link{
+    padding-left: 25px!important
+  }
+
+  .dropdown-item {
+    padding: 5px 1.5rem!important;
+  }
+
+  #menu .nav-item {
+    padding: 10px 0.5vw;
+  }
+
+}
+
+@media(min-width: 992px){
+  #a-home{
+    display: none;
+  }
+  #cerrar-menu{
+    display: none;
+  }
+}
+
+@media(max-width: 768px){
+  #header-custom .navbar-brand {
+      width: 25vw;
+    }
+}
 
 
 #footer-iesa{
@@ -289,6 +392,21 @@ ul#menu a:hover {
   margin-bottom: 0;
 }
 
+#container-btn-servicios{
+  position: absolute;
+  bottom: 30px;
+}
+
+
+@media(max-width: 768px){
+    #container-btn-servicios{
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+  }
+
+}
+
 
 
 /*FACEBOOK*/
@@ -297,6 +415,13 @@ ul#menu a:hover {
   width: 100%; 
   height: 300px; 
   background-size: 100% 100%;
+}
+
+@media(max-width: 768px){
+  .container-fb {
+    height: 200px;
+    background-size: cover;
+  }
 }
 /*CATALOGOS*/
 
@@ -359,6 +484,7 @@ ul#menu a:hover {
 }
 
 
+
 .container-icon.left{
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
@@ -366,6 +492,22 @@ ul#menu a:hover {
   margin-right: 0;
   margin-left: auto;
 }
+
+@media(max-width: 768px){
+  .img-scotsman{
+    margin-left: -68%
+  }
+
+  .img-asko{
+    margin-left: -74%
+  }
+  .container-icon.left{
+    width: 100%;           /* Safari/WebKit uses a non-standard name */
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 
 /**/
 
@@ -511,6 +653,17 @@ ul#menu a:hover {
   color: #000
 }
 
+/*TESTIMIONIALES*/
+.margin-carrousel{
+  margin: 10px 50px
+}
+
+@media(max-width:768px ){
+  .margin-carrousel{
+    margin: 10px 0px
+  }
+}
+/*FIN*/
 
 /* --------------------FIN calendario ---------------------------------*/
 
@@ -537,6 +690,17 @@ ul#menu a:hover {
   color: #01bb9c;
 }
 
+@media(max-width: 768px){
+  #marcas .owl-prev{
+    top: 25px;
+
+}
+  #marcas .owl-next{
+    top: 25px;
+  }
+
+}
+
 #marcas .owl-dots{
   display: none;
 }
@@ -549,6 +713,12 @@ ul#menu a:hover {
 #lugar h2,#lugar p{
   line-height: 1.3;
   font-weight: 300
+}
+
+@media(max-width: 768px){
+  #lugar{
+    padding-top: 50px
+  }
 }
 /*-----------------------FIN LUGAR---------------*/
 /*------------------------FORMULARIO---------------*/
