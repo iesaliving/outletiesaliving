@@ -386,9 +386,14 @@ ul#menu a:hover {
   font-weight: 700;
   font-size:1rem;
 }
-
 .m-height{
-  min-height: 90vw
+    height: 60vw
+  }
+
+@media(max-width: 768px){
+  .m-height{
+    min-height: 90vw
+  }
 }
 
 #footer-iesa a{

@@ -1,4 +1,4 @@
-<div class="container-hero-image" style="background-image: url('{{ URL::asset('img/exteriores/hero.jpg')}}');">
+<div class="container-hero-image {{(request()->segment('1')==null)?'m-height':''}}" style="background-image: url('{{ URL::asset('img/exteriores/hero.jpg')}}');">
     <div class="col-12 nopadding h-100 d-flex aling">
         <div class="justify-content-center align-self-center col-md-5 gradient-hero-cove">
             <img style="width: 350px;margin-left: 0px;" src="{{ URL::asset('img/exteriores/logo.png')}}">
