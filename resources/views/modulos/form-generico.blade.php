@@ -1,3 +1,6 @@
+    <div class="col-12 bottommargin-sm" >
+        <h2 class="light  text-center">CONTÁCTENOS Y PRONTO ESTAREMOS CON USTED</h2>
+    </div>
 <form>
     <div class="row nomargin">
         <div class="form-group  col-12">

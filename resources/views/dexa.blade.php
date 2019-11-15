@@ -245,7 +245,7 @@
                         <div class="col-md-12 col-12 justify-content-center align-self-center">
                             <h2 style="color: #fff" class="light text-center">DEXA</h2>
                         <div class="col-lg-2 offset-lg-5 col-md-4 offset-md-4 col-6 offset-3 text-center nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

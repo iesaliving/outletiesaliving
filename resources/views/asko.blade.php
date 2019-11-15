@@ -346,7 +346,7 @@
                         <div class="col-12 justify-content-center align-self-center">
                             <h2 class="light text-center">ASKO MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-md-2 offset-md-5 col-6 offset-3 text-center nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/asko.russia/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/asko.russia/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

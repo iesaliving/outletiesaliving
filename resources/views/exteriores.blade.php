@@ -129,10 +129,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
 </section>
 
 
@@ -143,7 +140,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SIGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

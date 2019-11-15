@@ -64,7 +64,7 @@
                         <h3 class="light" style="margin-left: 40px">HIELO GOURMET</h3>
                         <ul>
                           <li><p>Forma: Pequeño vaso tipo "shot"</p></li>
-                          <li><p>Ideal para: Bebidas y bebidas tipo gourmet</p></li>
+                          <li><p>Ideal para: Bebidas y<br> bebidas tipo gourmet</p></li>
                           <li><p>Ventajas:</p></li>
                         </ul>
                         <div class="offset-2">
@@ -84,7 +84,7 @@
                         <h3 class="light" style="margin-left: 40px">HIELO NUGGET</h3>
                         <ul>
                           <li><p>Forma: Pequeño cilindro</p></li>
-                          <li><p>Ideal para: Bebidas de sabores / carbonatadas</p></li>
+                          <li><p>Ideal para: Bebidas de <br>     sabores / carbonatadas</p></li>
                           <li><p>Ventajas:</p></li>
                         </ul>
                         <div class="offset-2">
