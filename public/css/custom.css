@@ -417,9 +417,15 @@ ul#menu a:hover {
   #hero-desktop{
     display: none;
   }
+  #facebook-desktop{
+    display: none;
+  }
 }
 @media(min-width: 769px){
   #hero-mobile{
+    display: none;
+  }
+  #facebook-mobile{
     display: none;
   }
 }

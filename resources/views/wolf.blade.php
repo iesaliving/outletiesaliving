@@ -447,7 +447,23 @@
 </section>
 
 
-<section class="container-fb" style="background-image: url('{{ URL::asset('img/wolf/facebook.jpg')}}') ;">
+<section id="facebook-desktop" class="container-fb" style="background-image: url('{{ URL::asset('img/wolf/facebook.jpg')}}') ;">
+            <div  class="container-gral h-100">
+                <div class="margin-10 h-100">
+                    <div class="h-100 d-flex">
+                        <div class="col-md-5 offset-md-7 col-12 justify-content-center align-self-center">
+                            <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA</h2>
+                        <div class="col-md-6 offset-md-6 col-7 nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+</section>
+
+<section id="facebook-mobile" class="container-fb" style="background-image: url('{{ URL::asset('img/wolf/facebook-mobile.jpg')}}') ;">
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
@@ -510,6 +526,7 @@
 
 
 @section('styles')
+<style type="text/css"></style>>
 @endsection
 
 @section('scripts')
