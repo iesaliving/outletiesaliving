@@ -143,11 +143,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -197,11 +197,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
+                            <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -261,11 +261,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-md-7 col-8 noPaddingLeftMobile nopaddingright bottommargin-sm">
+                            <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -300,11 +300,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
@@ -351,11 +351,11 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-5 col-6 nopadding bottommargin-sm">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
                                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
                             </div>
 
-                            <div class="col-lg-7 col-8 bottommargin-sm noPaddingLeftMobile">
+                            <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
                                 <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>

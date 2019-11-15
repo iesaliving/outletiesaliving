@@ -526,7 +526,6 @@
 
 
 @section('styles')
-<style type="text/css"></style>>
 @endsection
 
 @section('scripts')

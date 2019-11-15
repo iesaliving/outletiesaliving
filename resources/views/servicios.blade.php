@@ -20,7 +20,7 @@
                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
             </div>
             <div class="col-xl-4 col-md-5 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href=" tel:8118036339"><p>811-803-6339</p></a>        
+                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p>811-803-6339</p></a>        
             </div>
       
         </div>
@@ -55,7 +55,7 @@
                             <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href="https://wa.me/+528118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
+                            <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -117,7 +117,7 @@
                         </div>
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
-                                <a href="https://wa.me/+528118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
+                                <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">811 803 6339</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
                                 <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 

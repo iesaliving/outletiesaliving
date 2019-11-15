@@ -179,6 +179,7 @@ a:hover{
     background-color: #01bb9c;
     border-color: #01bb9c;
     transition: all 0.3s;
+    padding: .575rem .75rem;
 }
 
 .btn-cyan:hover{
@@ -196,7 +197,13 @@ a:hover{
 }
 
 a.btn {
-  font-size: 0.7rem!important
+  font-size: 0.8rem!important
+}
+
+@media(max-width:768px ){
+  a.btn {
+    font-size: 0.9rem!important
+  } 
 }
 
 .bg-gray{

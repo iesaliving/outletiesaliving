@@ -7,10 +7,14 @@
 
 
 <section id="hero-desktop">
-  <img src="{{ URL::asset('img/nosotros/hero.jpg')}}">
+<video id="slide-video" poster="{{ URL::asset('img/nosotros/hero.jpg')}}" preload="auto" loop="" autoplay="" muted="" style="width: 100%; height: 100%;">
+  <source src="{{ URL::asset('img/timelab.mp4')}}" type="video/webm">
+</video>
 </section>
 <section id="hero-mobile">
-  <img src="{{ URL::asset('img/hero-nosotros-mobile.jpg')}}">
+<video id="slide-video" poster="{{ URL::asset('img/hero-nosotros-mobile.jpg')}}" preload="auto" loop="" autoplay="" muted="" style="width: 100%; height: 100%;">
+  <source src="{{ URL::asset('img/timelab-mobile.mp4')}}" type="video/webm">
+</video>
 </section>
 
 <section class="container-gral" style="padding-top: 4px" >

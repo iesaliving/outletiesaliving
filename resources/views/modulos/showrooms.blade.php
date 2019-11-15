@@ -1,5 +1,5 @@
         <div id="showroom-container" style="margin: 10%">
-            <div class="text-center col-12">
+            <div class="text-center col-12 nopadding">
                 <h2>VISITE NUESTRO SHOWROOM</h2>
                 <p>
                   Un lugar para comenzar, experimentar y dar vida a la visión de su cocina.
@@ -9,7 +9,7 @@
                 </p>
 
 
-                <div class="col-md-6 offset-md-3 topmargin">
+                <div class="col-md-6 offset-md-3 topmargin nopadding">
                     <a class="btn btn-cyan btn-block showroon-btn" href="{{ URL::to('/showroom') }}"><img src="{{ URL::asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
                 </div>
 

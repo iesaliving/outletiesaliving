@@ -234,7 +234,7 @@
         <div id="formulario" class="margin-10">
 
             <div class="text-center col-12">
-                <h2>AGENTE TU CITA</h2>
+                <h2>AGENDE SU CITA</h2>
             </div>
 
             <div class="col-12 nopadding">
