@@ -7,13 +7,13 @@
 
 
 <section id="hero-desktop">
-<video id="slide-video" poster="{{ URL::asset('img/nosotros/hero.jpg')}}" preload="auto" loop="" autoplay="" muted="" style="width: 100%; height: 100%;">
-  <source src="{{ URL::asset('img/timelab.mp4')}}" type="video/webm">
+<video id="slide-video" poster="{{ URL::asset('img/nosotros/hero.jpg')}}" preload="auto" loop="" autoplay="" muted="" playsinline style="width: 100%; height: 100%;">
+  <source src="{{ URL::asset('img/timelab.mp4')}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>
 </section>
 <section id="hero-mobile">
-<video id="slide-video" poster="{{ URL::asset('img/hero-nosotros-mobile.jpg')}}" preload="auto" loop="" autoplay="" muted="" style="width: 100%; height: 100%;">
-  <source src="{{ URL::asset('img/timelab-mobile.mp4')}}" type="video/webm">
+<video id="slide-video" poster="{{ URL::asset('img/hero-nosotros-mobile.jpg')}}" preload="auto" loop="" autoplay="" muted="" playsinline style="width: 100%; height: 100%;">
+  <source src="{{ URL::asset('img/timelab-mobile.mp4')}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>
 </section>
 

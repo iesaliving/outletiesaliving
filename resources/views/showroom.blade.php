@@ -31,7 +31,7 @@
                                 <p>Carr. Monterrey – Saltillo 3061 Fracc. Bosques del Poniente Santa Catarina, NL 66350</p>
                             </div>
 
-                            <a href="tel:528183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (81) 8389 4372</p></a>
+                            <a href="tel:5218183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52(1)(81) 8389 4372</p></a>
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
                             
 
@@ -82,7 +82,7 @@
                                 </p>
                             </div>
 
-                            <a href="tel:525552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (55) 5280 9648</p></a>
+                            <a href="tel:5215552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52(1)(55) 5280 9648</p></a>
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
                             
 
