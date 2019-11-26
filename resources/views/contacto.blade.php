@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('description', 'IESA')
-@section('title', 'Home')
+@section('title', 'Contacto')
 @section('content')
 
 
@@ -77,9 +77,6 @@
                             </div> 
                             <div class="form-group  col-md-12">
                                 <input type="text" class="form-control form-custom" placeholder="TELÉFONO">
-                            </div> 
-                            <div class="form-group  col-md-12">
-                                <input type="text" class="form-control form-custom" placeholder="EMAIL">
                             </div> 
                             <div class="form-group  col-md-12">
                                 <input type="text" class="form-control form-custom" placeholder="EMAIL">

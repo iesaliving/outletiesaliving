@@ -12,7 +12,7 @@
     <meta name="author" content="Omar Ramirez"/>
     <meta name="keywords" content="@yield('keywords')">
     <meta name="robots" content="noindex">
-    <title>@yield('title')</title>
+    <title>IESA | @yield('title')</title>
 
     <!-- Stylesheets
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('description', 'IESA')
-@section('title', 'Home')
+@section('title', 'Cocina de Exteriores')
 @section('content')
 
 
