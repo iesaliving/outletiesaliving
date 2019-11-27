@@ -24,9 +24,11 @@ a:hover{
 .margin-10{
   margin: 10%;
 }
-
+.margin-7{
+  margin: 7%;
+}
 @media(max-width:768px ){
-  .margin-10{
+  .margin-10,.margin-7{
     margin: 10% 5%;
   }
   #text-contacto{

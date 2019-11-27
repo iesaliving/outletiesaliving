@@ -16,11 +16,11 @@
     </div>
     <div id="container-btn-servicios" class="col-xl-4 offset-xl-4 col-md-6 offset-md-3">
         <div class="row nomargin">            
-            <div class="col-xl-8 col-md-7 bottommargin-sm">
+            <div class="col-xl-7 col-lg-6 bottommargin-sm">
                 <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
             </div>
-            <div class="col-xl-4 col-md-5 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p>52-1-811-803-6339</p></a>        
+            <div class="col-xl-5 col-lg-6 bottommargin-sm">
+                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p>+52 (1) 811 803 6339</p></a>        
             </div>
       
         </div>
@@ -45,18 +45,19 @@
                         
                     </div>
                     
+ 
                     <div class="topmargin-sm row nomargin">
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href="tel:52101800400"><p class="nomargin">01-800-400 IESA (4372)</p></a>
+                            <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">52 1 811 803 6339</p></a>
+                            <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+52 (1) 811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -110,11 +111,11 @@
                         <p>Nuestro objetivo es una experiencia de servicio perfecta en todo momento.</p>
                         
                     </div>
-                    
+
                     <div class="topmargin-sm">
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
-                               <a href="tel:"><p class="nomargin">01 800 400 IESA (4372)</p></a>
+                               <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
                                 <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -122,7 +123,7 @@
                         </div>
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
-                                <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">52 1 811 803 6339</p></a>
+                                <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+5218118036339</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
                                 <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -139,7 +140,7 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div class="col-2 offset-1" style="padding: 0 5px">
+                        <div class="col-2 offset-lg-1" style="padding: 0 5px">
                             <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
