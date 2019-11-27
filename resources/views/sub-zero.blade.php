@@ -29,7 +29,7 @@
                         
                         <div class="topmargin-sm">
                             <h2>
-                               Refrigeración de tamaño completo
+                               REFRIGERACIÓN
                             </h2>
                             
                         </div>
@@ -43,7 +43,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile">
@@ -77,7 +77,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
@@ -115,7 +115,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile">

@@ -26,7 +26,7 @@
                       <a class="dropdown-item" href="{{ URL::to('/asko')}}">Asko</a>
                       <a class="dropdown-item" href="{{ URL::to('/dexa')}}">Dexa</a>
                       <a class="dropdown-item" href="{{ URL::to('/scotsman')}}">Scotsman</a>
-                      <a class="dropdown-item" href="{{ URL::to('/cocina-exterior')}}">Cocina de<br> Exterior</a>    
+                      <a class="dropdown-item" href="{{ URL::to('/cocina-exterior')}}">Cocina Exterior</a>    
                     </div>
                 </li>
                 <li class="nav-item">
@@ -53,25 +53,3 @@
     </nav>
 </header>
 
-
-            <div class="modal right fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-full" role="document">
-                    <div class="modal-content">
-
-                        <button  id="prev-menu-btn" type="button" class="btn"  data-dismiss="modal"><i class="fa fa-2x fa-arrow-left"></i></button>
-                        <button  id="close-menu-btn" type="button" class="btn" data-dismiss="modal"><i class="fa fa-2x fa-times"></i></button>
-                        <div class="modal-body topmargin-lg" style="" >
-                            <a href="{{ URL::to('/')}}"><h2>Home</h2></a>
-                            <a href="{{ URL::to('servicios')}}"><h2>Servicios</h2></a>
-                            <a href="{{ URL::to('talentos')}}"><h2>Empleo</h2></a>
-                           <!--  <h2>Blog</h2> -->
-                            <a href="{{ URL::to('/contacto') }}"><h2>Contacto</h2></a>
-                            <a href="{{ URL::to('/blog') }}"><h2>Blog</h2></a> 
-                            <div id="link-bot" class="topmargin">
-                                <a href="{{ URL::to('/contacto') }}">Are you lost? take me to you leader!</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>

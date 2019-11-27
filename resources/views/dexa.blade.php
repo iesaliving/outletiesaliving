@@ -51,7 +51,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
@@ -82,7 +82,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/parrillas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
@@ -118,7 +118,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
@@ -149,7 +149,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/campanas/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
@@ -185,7 +185,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                             <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
@@ -216,7 +216,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-12 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                             <div class="col-md-5 bottommargin-sm nopadding-mobile">
                                 <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="http://dexa.mx/llaves/"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE(LLAVES)</p></a>

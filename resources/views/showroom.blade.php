@@ -48,13 +48,13 @@
                                 <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;">
-                                <p class="nomargin">Mon.</p>
-                                <p class="nomargin">Tue.</p>
-                                <p class="nomargin">Wed.</p>
-                                <p class="nomargin">Thu.</p>
-                                <p class="nomargin">Fri.</p>
-                                <p class="nomargin">Sat.</p>
-                                <p class="nomargin">Sun.</p>
+                                <p class="nomargin">Lun.</p>
+                                <p class="nomargin">Mar.</p>
+                                <p class="nomargin">Mie.</p>
+                                <p class="nomargin">Jue.</p>
+                                <p class="nomargin">Vie.</p>
+                                <p class="nomargin">Sab.</p>
+                                <p class="nomargin">Dom.</p>
                                 
                             </div>
                             <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
@@ -99,13 +99,13 @@
                                 <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;">
-                                <p class="nomargin">Mon.</p>
-                                <p class="nomargin">Tue.</p>
-                                <p class="nomargin">Wed.</p>
-                                <p class="nomargin">Thu.</p>
-                                <p class="nomargin">Fri.</p>
-                                <p class="nomargin">Sat.</p>
-                                <p class="nomargin">Sun.</p>
+                                <p class="nomargin">Lun.</p>
+                                <p class="nomargin">Mar.</p>
+                                <p class="nomargin">Mie.</p>
+                                <p class="nomargin">Jue.</p>
+                                <p class="nomargin">Vie.</p>
+                                <p class="nomargin">Sab.</p>
+                                <p class="nomargin">Dom.</p>
                                 
                             </div>
                             <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">

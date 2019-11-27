@@ -41,15 +41,16 @@
                         <h2>
                            CONCIERGE DE SERVICIO TÉCNICO
                         </h2>
+                         <p>Si tiene alguna pregunta sobre nuestro servicio, llámenos al: </p>
                         
                     </div>
                     
                     <div class="topmargin-sm row nomargin">
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <p class="nomargin">Si tiene alguna pregunta sobre nuestro servicio, llámenos al 01-800-400 IESA (4372)</p>
+                            <a href="tel:52101800400"><p class="nomargin">01-800-400 IESA (4372)</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
@@ -66,20 +67,23 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/subzero/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/wolf/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/asko/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/dexa/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/scotsman/logo.png')   }}">
+                        <div class="col-1" style="padding: 0 5px">
+                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
+                        </div>
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
                         </div>
                     </div>
 
@@ -103,6 +107,7 @@
                         <h2>
                            AGENDE UNA CITA DE SERVICIO
                         </h2>
+                        <p>Nuestro objetivo es una experiencia de servicio perfecta en todo momento.</p>
                         
                     </div>
                     
@@ -134,25 +139,28 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/subzero/logo.png')   }}">
+                        <div class="col-2 offset-1" style="padding: 0 5px">
+                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/wolf/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/asko/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/dexa/logo.png')   }}">
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
-                        <div style="width: 20%; padding: 0 0px">
-                            <img src="{{ URL::asset('img/scotsman/logo.png')   }}">
+                        <div class="col-1" style="padding: 0 5px">
+                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
+                        </div>
+                        <div class="col-2" style="padding: 0 5px">
+                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
                         </div>
                     </div>
 
                     <div class="text-lg-right text-left topmargin-sm">
-                        <p>Nuestro objetivo es una experiencia de servicio perfecta en todo momento.</p>
+                        
                     </div>
 
                 </div>

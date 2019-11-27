@@ -4,7 +4,7 @@
 	</div>
     <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
         <div class="justify-content-center align-self-center">
-            <img style="width: 200px;margin-left: -65px;" src="{{ URL::asset('img/dexa/logo.png')}}">
+            <a href="{{ URL::to('/dexa') }}"><img style="width: 200px;margin-left: -65px;" src="{{ URL::asset('img/dexa/logo.png')}}"></a>
             <h2 class="light nomargin">DEXA NON É</h2>
             <h2 class="light nomargin">NORMALE...</h2>
             <h2 class="light nomargin"><b class="bold"><i>COME TE!</i></b></h2>

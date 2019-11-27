@@ -1,5 +1,5 @@
     <div class="col-12 bottommargin-sm" >
-        <h2 class="light  text-center">CONTÁCTENOS Y PRONTO ESTAREMOS CON USTED</h2>
+        <h2 class="light  text-center">¿EN QUÉ PODEMOS AYUDARLE?</h2>
     </div>
 <form>
     <div class="row nomargin">

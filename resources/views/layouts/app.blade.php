@@ -11,7 +11,6 @@
     <meta name="description" content="@yield('description')" />
     <meta name="author" content="Omar Ramirez"/>
     <meta name="keywords" content="@yield('keywords')">
-    <meta name="robots" content="noindex">
     <title>IESA | @yield('title')</title>
 
     <!-- Stylesheets

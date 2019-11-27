@@ -107,8 +107,16 @@
                     <div class="justify-content-center align-self-center">
                         
                         <div class="row nomargin">
-                            <div class="col-10 nopadding">
-                                <img src="{{ URL::asset('img/Marca_Wolf_SubZero_Cove.png')   }}">
+                            <div class="col-10 row">
+                                <div class="col-4 nopadding">
+                                    <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                                </div>
+                                <div class="col-4 nopadding">
+                                    <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                                </div>
+                                <div class="col-4 nopadding">
+                                    <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                                </div>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
@@ -148,7 +156,7 @@
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +170,7 @@
                         
                         <div class="row nomargin text-lg-right text-left col-12 nopadding">
                             <div class="col-lg-10 offset-lg-2 col-12 nopadding" style="padding-left: 0">
-                                <img class="img-asko" src="{{ URL::asset('img/Marca-Asko.png')}}">
+                               <a href="{{ URL::to('/asko') }}"> <img class="img-asko" src="{{ URL::asset('img/Marca-Asko.png')}}"></a>
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -202,7 +210,7 @@
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Asko.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -226,7 +234,7 @@
                         
                         <div class="row nomargin">
                             <div class="col-10 nopadding">
-                                <img src="{{ URL::asset('img/marca_deza.png')   }}">
+                                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/marca_deza.png')   }}"></a>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
@@ -266,7 +274,7 @@
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -280,7 +288,7 @@
                         
                         <div class="row nomargin text-lg-right text-left col-12 nopadding">
                             <div class="col-lg-10 offset-lg-2 col-12 nopadding" style="padding-left: 0">
-                                <img class="img-scotsman" src="{{ URL::asset('img/Marca_Scotsman.png')}}">
+                                <a href="{{ URL::to('/scotsman') }}"><img class="img-scotsman" src="{{ URL::asset('img/Marca_Scotsman.png')}}"></a>
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -327,8 +335,13 @@
                 <div class="col-xl-5 col-lg-6 container-descripcion d-flex"  style="">
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
-                            <div class="col-10 nopadding">
-                                <img src="{{ URL::asset('img/Marca_Wolf_SubZero.png')   }}">
+                            <div class="col-10 row">
+                                <div class="col-lg-4 col-5 nopadding">
+                                    <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                                </div>
+                                <div class="col-lg-4 col-5 nopadding">
+                                    <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                                </div>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
@@ -342,7 +355,7 @@
 
                         <div class="topmargin-sm">
                             <h2>
-                                COCINA DE EXTERIORES
+                                COCINA EXTERIOR
                             </h2>
                             <p>
                                 Todo sabe mejor al aire libre. Sin embargo, el control del calor en la mayoría de los asadores puede convertir el cocinar en exteriores en una tarea imprecisa. Los asadores Wolf cambiar todo eso. Le dan el mismo tipo de control de precisión y facilidad de uso que sus contrapartes de interiores, las estufas, hornos y parrillas Wolf. Imagínese las jugosas posibilidades.
@@ -356,7 +369,7 @@
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
