@@ -37,7 +37,7 @@
 
                             <div class="col-12 topmargin bottommargin nopadding">
 
-                                <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
+                                <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
                                 <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/Importaciones+Electrodom%C3%A9sticas,+S.A.+De+C.V./@25.682615,-100.4560607,17z/data=!3m1!4b1!4m5!3m4!1s0x86629816d52a561b:0x708d48dbe192e667!8m2!3d25.682615!4d-100.453872"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
                                 
@@ -88,7 +88,7 @@
 
                             <div class="col-12 topmargin bottommargin nopadding">
 
-                                <a class="btn btn-block btn-cyan" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
+                                <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
                                 <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/IESA/@19.4284845,-99.1956162,17z/data=!3m1!4b1!4m5!3m4!1s0x85d201ff11a77f6d:0x18848b36c0d7d2d9!8m2!3d19.4284845!4d-99.1934275"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
                                 

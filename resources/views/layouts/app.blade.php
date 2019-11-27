@@ -129,6 +129,11 @@
           });
         });
 
+      function mover(){
+          var elemento = $("#formulario");
+          var posicion = elemento.position();
+          $("html, body").animate({scrollTop:posicion.top+"px"},"slow");
+      }
 
     </script>
 
