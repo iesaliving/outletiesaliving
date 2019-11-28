@@ -6,15 +6,23 @@
 
 
 
-<section id="hero-desktop">
+<!-- <section id="hero-desktop">
 <video id="slide-video" poster="{{ URL::asset('img/nosotros/hero.jpg')}}" preload="auto" loop="" autoplay="" muted="" playsinline style="width: 100%; height: 100%;">
   <source src="{{ URL::asset('img/timelab.mp4')}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>
 </section>
 <section id="hero-mobile">
-<video id="slide-video" poster="{{ URL::asset('img/hero-nosotros-mobile.jpg')}}" preload="auto" loop="" autoplay="" muted="" playsinline style="width: 100%; height: 100%;">
+<video id="slide-video" poster="{{ URL::asset('img/nosotros/mobile.jpg')}}" preload="auto" loop="" autoplay="" muted="" playsinline style="width: 100%; height: 100%;">
   <source src="{{ URL::asset('img/timelab-mobile.mp4')}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>
+</section> -->
+
+<section id="hero-desktop">
+        <img src="{{ URL::asset('img/nosotros/hero.jpg')}}">
+    </section>
+
+<section id="hero-mobile">
+  <img src="{{ URL::asset('img/nosotros/mobile.jpg')}}">
 </section>
 
 <section class="container-gral" style="padding-top: 4px" >
