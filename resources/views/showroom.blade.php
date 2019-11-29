@@ -35,7 +35,7 @@
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
 
 
-                            <div class="col-12 topmargin bottommargin nopadding">
+                            <div class="col-12 topmargin-sm bottommargin-sm nopadding">
 
                                 <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
@@ -43,9 +43,9 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-6 row nomargin" style="display: inline-table;">
+                        <div class="col-lg-6 row nomargin">
                             <div class="col-12 bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>
@@ -78,7 +78,7 @@
                         <div class="col-lg-6">
                             <div class="col-xl-8 col-12 nopadding">
                                 <p>
-                                    Galileo 8 Segundo piso Col. Polanco Chapultepec México, DF 11560
+                                    Galileo 8 Segundo piso Col. Polanco Chapultepec México, DF 11560<span style="color:#fff ">blanco blanco blanco blanco</span>
                                 </p>
                             </div>
 
@@ -86,7 +86,7 @@
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
 
 
-                            <div class="col-12 topmargin bottommargin nopadding">
+                            <div class="col-12 topmargin-sm bottommargin-sm nopadding">
 
                                 <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
@@ -94,9 +94,9 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-6 row nomargin" style="display: inline-table;">
+                        <div class="col-lg-6 row nomargin">
                             <div class="col-12 bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>

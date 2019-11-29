@@ -27,6 +27,21 @@ a:hover{
 .margin-7{
   margin: 7%;
 }
+
+
+.img-reloj{
+  position: absolute;
+  width: 20px;
+  bottom: 0;
+}
+
+@media(max-width:991px ){
+  .img-reloj{
+    position: relative;
+    width: 20px;
+    bottom: 0;
+  }
+}
 @media(max-width:768px ){
   .margin-10,.margin-7{
     margin: 10% 5%;

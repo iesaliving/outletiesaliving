@@ -18,10 +18,10 @@
 
 
 <section class="container-gral">
-    
-    
+
+
     <div id="container-faq" class="margin-7">
-       
+
 
 
 
@@ -76,19 +76,19 @@
                         <div class="row nomargin">
                             <div class="form-group  col-12">
                                 <input required type="text" name="nombre" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                            </div> 
+                            </div>
                             <div class="form-group  col-md-12">
                                 <input required type="text" name="tel" class="form-control form-custom" placeholder="TELÉFONO">
-                            </div> 
+                            </div>
                             <div class="form-group  col-md-12">
                                 <input required type="email" name="email" class="form-control form-custom" placeholder="EMAIL">
-                            </div> 
+                            </div>
 
                             <div class="form-group  col-xl-4 offset-xl-4  col-md-4 offset-md-4 text-center topmargin-sm">
                                 <button class="btn btn-cyan btn-block" type="submit"><img style="margin-right: 15px;width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
-                            </div>    
+                            </div>
                         </div>
-                    </form>        
+                    </form>
             </div>
             <div id="contacto-footer" class="col-xl-5 col-lg-5">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-4 d-flex h-100">
@@ -98,16 +98,16 @@
                             <a href="tel:+5218183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 81 8389 4372</p></a>
                             <a target="_blank" href="https://wa.me/+5218118021004"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 81 1802 1004</p></a>
                         </div>
-                        
+
                         <div class="col-md-12 topmargin-sm">
                             <p class="bold nomargin">CUIDAD DE MÉXICO</p>
-                            <a href="tel:+52555552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (55) 55 5280 9648</p></a>
+                            <a href="tel:+52555552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 55 5280 9648</p></a>
                             <a target="_blank" href="https://wa.me/+5215549509807"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 55 4950 9807</p></a>
                         </div>
                     </div>
                 </div>
-            </div>    
-        </div>         
+            </div>
+        </div>
     </div>
 </section>
 @endsection
@@ -117,7 +117,7 @@
 
 @endsection
 
- 
+
 
 @section('scripts')
 
