@@ -15,14 +15,14 @@
         <img src="{{ URL::asset('img/hero-servicio-mobile.jpg')}}">
     </div>
     <div id="container-btn-servicios">
-        <div class="row nomargin">            
+        <div class="row nomargin">
             <div class="col-xl-7 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDE UNA CITA DE SERVICIO  EL TELÉFONO </p></a>
+                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDE UNA CITA DE SERVICIO</p></a>
             </div>
             <div class="col-xl-5 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p><img src="{{ URL::asset('img/icono-btn/whatsapp_blanco.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 811 803 6339</p></a>        
+                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p><img src="{{ URL::asset('img/icono-btn/whatsapp_blanco.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 811 803 6339</p></a>
             </div>
-      
+
         </div>
   </div>
 </section>
@@ -30,7 +30,7 @@
 
 
 <section class="container-gral">
-    
+
         <div id="container-catalogo" class="margin-10">
         <div class="col-12 text-center bottommargin-lg">
                 <h2>RECIBA LA AYUDA DE EXPERTOS</h2>
@@ -47,10 +47,10 @@
                            CONCIERGE DE SERVICIO TÉCNICO
                         </h2>
                          <p> Obtenga respuestas en línea rápidamente; nuestro equipo está listo para atender todas sus dudas, ya sea que necesite la guía mecánica de algún electrodoméstico, agendar una conexión o servicio, saber sobre la garantía de su equipo o simplemente verificar que su taller sea uno de nuestros talleres autorizados por la fábrica.</p>
-                        
+
                     </div>
-                    
- 
+
+
                     <div class="topmargin-sm row nomargin col-xl-11">
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
@@ -59,17 +59,17 @@
                             <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
+                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
                             <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+52 (1) 811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
+                            <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
                            <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
-                        </div>                        
+                        </div>
                     </div>
 
                     <div class="row nomargin">
@@ -108,7 +108,7 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                
+
                 <div class="col-xl-6 offset-xl-0 col-lg-6 order-2 order-lg-1">
                     <div class="topmargin-sm text-lg-right text-left col-xl-11 offset-xl-1">
                         <h2>
@@ -116,7 +116,7 @@
                         </h2>
                         <p>Nuestros técnicos cuidadosamente seleccionados y entrenados directamente en fábrica, cuentan con altos estándares de rendimiento en la realización de  mantenimiento, diagnóstico y reparación de nuestros electrodomésticos.
                         <br>Agende su cita y viva la experiencia de un servicio de guantes blancos.</p>
-                        
+
                     </div>
 
                     <div class="topmargin-sm">
@@ -125,7 +125,7 @@
                                <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px"> 
+                                <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
                             </div>
                         </div>
                         <div class="row nomargin col-12 nopadding">
@@ -133,15 +133,15 @@
                                 <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+5218118036339</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px"> 
+                                <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
                             </div>
                         </div>
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
                                <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
-                            </div>                        
+                            </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px"> 
+                                <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                     </div>
 
                     <div class="text-lg-right text-left topmargin-sm">
-                        
+
                     </div>
 
                 </div>
@@ -206,7 +206,7 @@
                     </div>
 
                 </div>
-            </div> 
+            </div>
 
 
 
@@ -221,7 +221,7 @@
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
                     <img src="{{ URL::asset('img/servicios/garantia.jpg')}}">
                 </div>
-            </div> 
+            </div>
 
 
             <div class="row col-padding catalogo topmargin">
@@ -236,7 +236,7 @@
                         <p>Como parte de nuestra misión de brindar atención al cliente acorde con los electrodomésticos de lujo que atendemos:<br>Nos esforzamos por llegar cuando está programado para que nuestros clientes no tengan que lidiar con frustrantes ventanas de servicio de tres horas como lo requieren otras compañías de servicios.</p>
                         <p>Nuestros técnicos, equipados con cubre zapatos, esterillas, tapetes y bolsas de herramientas blandas, siempre tratan su hermosa casa con cuidado, limpiando después para no dejar rastro.</p>
                         <p>
-                            Nuestros técnicos están capacitados para ser amigables y comunicativos, para que siempre sepa lo que sucede con sus electrodomésticos.  
+                            Nuestros técnicos están capacitados para ser amigables y comunicativos, para que siempre sepa lo que sucede con sus electrodomésticos.
                         </p>
                     </div>
 
@@ -257,7 +257,7 @@
                         <img src="{{ URL::asset('img/servicios/capacitacion.jpg')}}">
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm d-flex">
@@ -272,7 +272,7 @@
                             Las piezas certificadas de fábrica están cubiertas por una garantía integral de reemplazo de un año y se garantiza que funcionarán mejor y durarán más.
                         </p>
                         <p>Nuestro almacén está abastecido con un gran surtido de piezas para todos los electrodomésticos que manejamos.</p>
-                        
+
                     </div>
 
 

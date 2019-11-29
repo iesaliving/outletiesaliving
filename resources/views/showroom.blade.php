@@ -18,7 +18,7 @@
 
 
 <section class="container-gral">
-    
+
         <div class="margin-6">
             <div  class="row calendario light">
                 <div class="col-lg-6 topmargin">
@@ -33,21 +33,21 @@
 
                             <a href="tel:5218183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 81 8389 4372</p></a>
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
-                            
+
 
                             <div class="col-12 topmargin bottommargin nopadding">
 
                                 <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
                                 <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/Importaciones+Electrodom%C3%A9sticas,+S.A.+De+C.V./@25.682615,-100.4560607,17z/data=!3m1!4b1!4m5!3m4!1s0x86629816d52a561b:0x708d48dbe192e667!8m2!3d25.682615!4d-100.453872"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-6 row nomargin" style="display: inline-table;">
                             <div class="col-12 bottommargin-sm">
                                 <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
                             </div>
-                            <div class="col-md-4 col-6" style="display: inline-grid;">
+                            <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>
                                 <p class="bottommargin-xs">Mar.</p>
                                 <p class="bottommargin-xs">Mie.</p>
@@ -55,9 +55,9 @@
                                 <p class="bottommargin-xs">Vie.</p>
                                 <p class="bottommargin-xs">Sab.</p>
                                 <p class="bottommargin-xs">Dom.</p>
-                                
+
                             </div>
-                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
+                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">09:00-19:00</p>
@@ -65,9 +65,9 @@
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">Cerrado</p>
                                 <p class="bottommargin-xs">Cerrado</p>
-                                
+
                             </div>
-                        </div>                    
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 topmargin">
@@ -78,27 +78,27 @@
                         <div class="col-lg-6">
                             <div class="col-xl-8 col-12 nopadding">
                                 <p>
-                                    Galileo 8 Segundo piso Col. Polanco Chapultepec México, DF 11560<b style="color: #fff">blando blando blando blando</b>
+                                    Galileo 8 Segundo piso Col. Polanco Chapultepec México, DF 11560
                                 </p>
                             </div>
 
                             <a href="tel:5215552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 55 5280 9648</p></a>
                             <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
-                            
+
 
                             <div class="col-12 topmargin bottommargin nopadding">
 
                                 <a class="btn btn-block btn-cyan" onclick="mover()" href="javascript:void(0)"><i style="margin-right: 15px" class="fa fa-calendar fa-2x"></i>SOLICITAR CITA</a>
 
                                 <a class="btn btn-block btn-cyan" target="_blank" href="https://www.google.co.ve/maps/place/IESA/@19.4284845,-99.1956162,17z/data=!3m1!4b1!4m5!3m4!1s0x85d201ff11a77f6d:0x18848b36c0d7d2d9!8m2!3d19.4284845!4d-99.1934275"><i style="margin-right: 15px;color: #fff" class="fa fa-map-marker fa-2x"></i>DIRECCIÓN</a>
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-6 row nomargin" style="display: inline-table;">
                             <div class="col-12 bottommargin-sm">
                                 <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
                             </div>
-                            <div class="col-md-4 col-6" style="display: inline-grid;">
+                            <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>
                                 <p class="bottommargin-xs">Mar.</p>
                                 <p class="bottommargin-xs">Mie.</p>
@@ -106,9 +106,9 @@
                                 <p class="bottommargin-xs">Vie.</p>
                                 <p class="bottommargin-xs">Sab.</p>
                                 <p class="bottommargin-xs">Dom.</p>
-                                
+
                             </div>
-                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
+                            <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">09:00-19:00</p>
@@ -116,15 +116,15 @@
                                 <p class="bottommargin-xs">09:00-19:00</p>
                                 <p class="bottommargin-xs">Previa Cita</p>
                                 <p class="bottommargin-xs">Cerrado</p>
-                                
+
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
         </div>
     </div>
 
-    
+
         <div class="margin-10" id="carousel-showrooms">
             <div class="owl-carousel owl-theme col-md-8 offset-md-2">
                 <div class="item">
@@ -137,26 +137,26 @@
                     <div>
                         <img src="{{ URL::asset('img/showrooms/carrusel_2.jpg')}}">
                     </div>
-                  
+
                 </div>
                 <div class="item">
                     <div>
                         <img src="{{ URL::asset('img/showrooms/carrusel_3.jpg')}}">
                     </div>
-                  
+
                 </div>
                 <div class="item">
                     <div>
                         <img src="{{ URL::asset('img/showrooms/carrusel_4.jpg')}}">
                     </div>
-                  
+
                 </div>
           </div>
       </div>
 
         <div id="lugar" class="margin-10">
             <div class="col-md-10 offset-md-1 text-center bottommargin">
-                
+
                 <h2>UN LUGAR PARA COMENZAR, EXPERIMENTAR Y DAR VIDA A LA VISIÓN DE SU COCINA</h2>
                 <p>Esta no es una compra ordinaria. Es una experiencia inmersiva para ayudarlo a darse cuenta de las posibilidades de su futura cocina. En un entorno sin presión, puede descubrir cómo se siente, se ve y sabe su cocina, guiado por un experto asesor cuyo único objetivo es atender la visita a sus necesidades.</p>
 
@@ -242,25 +242,25 @@
                     <div class="row nomargin">
                         <div class="form-group  col-12">
                             <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                        </div> 
+                        </div>
                         <div class="form-group  col-md-6">
                             <input type="text" class="form-control form-custom" placeholder="TELÉFONO">
-                        </div> 
+                        </div>
                         <div class="form-group  col-md-6">
                             <input type="text" class="form-control form-custom" placeholder="EMAIL">
-                        </div> 
+                        </div>
                         <div class="form-group  col-md-6">
                             <select class="form-control form-custom">
                                 <option>SELECCIONAR SHOWROOM</option>
-                            </select> 
-                        </div> 
+                            </select>
+                        </div>
                         <div class="form-group  col-md-6">
                             <input id="fecha" type="text" class="form-control form-custom" placeholder="CALENDARIO DE VISITAS">
-                        </div> 
+                        </div>
 
                         <div class="form-group  col-lg-2 offset-lg-5 text-center topmargin-sm">
                             <a class="btn btn-cyan btn-block" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
-                        </div>    
+                        </div>
                     </div>
                 </form>
             </div>
@@ -280,13 +280,13 @@
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
-                            </div> 
+                            </div>
                             <div class="form-group">
                                 <input type="email" class="form-control form-custom" placeholder="EMAIL COMPLETO">
-                            </div> 
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-custom" placeholder="TELÉFONO COMPLETO">
-                            </div> 
+                            </div>
                             <div class="col-md-12 nopadding">
                                 <a class="btn btn-block btn-cyan" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
                             </div>
@@ -325,10 +325,10 @@ $(document).ready(function() {
                 todayHighlight: true,
                 orientation: "bottom"
             });
-   
+
            $('.owl-carousel').owlCarousel({
                 loop: true,
-            
+
                  navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
                 margin: 10,
                 responsive: {
@@ -343,6 +343,6 @@ $(document).ready(function() {
                   }
                 }
               })
-            }) 
+            })
 </script>
 @endsection

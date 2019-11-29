@@ -27,22 +27,22 @@
             </div>
             <div class="col-md-10 offset-md-1 col-12 nopadding">
                 <div class="col-12 row nomargin nopadding">
-                    
+
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2">
+                            <a href="#marketing"><img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2"></a>
                         </div>
                         <p class="text-center"><strong>Marketing</strong></p>
                     </div>
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2">
+                            <a href="#servicio"><img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2"></a>
                         </div>
                         <p class="text-center"><strong>Consierge de Servicio</strong></p>
                     </div>
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2">
+                            <a href="#entregas"><img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2"></a>
                         </div>
                         <p class="text-center"><strong>Entregas</strong></p>
                     </div>
@@ -51,14 +51,14 @@
 
             </div>
 
-            <div class="topmargin">
+            <div class="topmargin" id="marketing">
                 <h2 class="bottommargin-sm">MARKETING</h2>
                 <h5 style="margin-top:35px">¿Cómo solicito un catálogo?</h5>
                 <p>DIGITAL: Puede solicitar un catálogo digital al correo electrónico <b>marketing@iesa.cc</b></p>
                 <p>IMPRESO: Durante la visita a nuestros showrooms o a un Distribuidor Autorizado IESA puede solicitar un catálogo impreso.</p>
             </div>
 
-            <div class="topmargin">
+            <div class="topmargin" id="servicio">
                 <h2 class="bottommargin-sm">CONCIERGE DE SERVICIO</h2>
                 <h5 style="margin-top:35px">¿Cuánto tiempo de garantía tienen los equipos?</h5>
                 <p>Todas las marcas del GRUPO IESA tienen 2 años de garantía completa (partes y mano de obra). Sub-Zero, Wolf y Cove extiende la garantía en algunos componentes hasta 5 años. </p>
@@ -109,7 +109,7 @@
                 </ul>
             </div>
 
-            <div class="topmargin">
+            <div class="topmargin" id="entregas">
                 <h2 class="bottommargin-sm">ENTREGAS</h2>
                 <h5 style="margin-top:35px">¿En cuánto tiempo puedo recibir mis equipos?</h5>
                 <p>Nuestro centro de distribución para México se encuentra en Monterrey y cuenta con un amplio inventario de productos para entrega inmediata.</p>

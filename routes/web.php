@@ -27,11 +27,6 @@ Route::get('/showroom', function () {
     return view('showroom');
 });
 
-
-Route::get('/cocina-exterior', function () {
-    return view('exteriores');
-});
-
 Route::get('/faq', function () {
     return view('faq-index');
 });
@@ -44,31 +39,46 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/cocina-exterior', function () {
+    $email="contacto@subzero-wolf.mx";
+    return view('exteriores',compact('email'));
+});
 
 Route::get('/sub-zero', function () {
-    return view('sub-zero');
+    $email="contacto@subzero-wolf.mx";
+    return view('sub-zero',compact('email'));
 });
 
 Route::get('/wolf', function () {
-    return view('wolf');
+    $email="contacto@subzero-wolf.mx";
+    return view('wolf',compact('email'));
 });
 
 Route::get('/cove', function () {
-    return view('cove');
+    $email="contacto@subzero-wolf.mx";
+    return view('cove',compact('email'));
 });
 
 Route::get('/asko', function () {
-    return view('asko');
+    $email="contacto@asko.com.mx";
+    return view('asko',compact('email'));
 });
 
 Route::get('/scotsman', function () {
-    return view('scotsman');
+    $email="contacto@scotsman.mx";
+    return view('scotsman',compact('email'));
 });
 
 Route::get('/dexa', function () {
-    return view('dexa');
+    $email="contacto@dexa.mx";
+    return view('dexa',compact('email'));
 });
 
 Route::get('/gracias', function () {
     return view('gracias');
 });
+
+
+
+Route::post('/enviar-correo', 'MailController@enviar');
+
