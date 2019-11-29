@@ -43,28 +43,28 @@
                                 
                             </div>
                         </div>
-                        <div class="col-lg-6 row nomargin">
-                            <div class="col-12">
-                                <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
+                        <div class="col-lg-6 row nomargin" style="display: inline-table;">
+                            <div class="col-12 bottommargin-sm">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;">
-                                <p class="nomargin">Lun.</p>
-                                <p class="nomargin">Mar.</p>
-                                <p class="nomargin">Mie.</p>
-                                <p class="nomargin">Jue.</p>
-                                <p class="nomargin">Vie.</p>
-                                <p class="nomargin">Sab.</p>
-                                <p class="nomargin">Dom.</p>
+                                <p class="bottommargin-xs">Lun.</p>
+                                <p class="bottommargin-xs">Mar.</p>
+                                <p class="bottommargin-xs">Mie.</p>
+                                <p class="bottommargin-xs">Jue.</p>
+                                <p class="bottommargin-xs">Vie.</p>
+                                <p class="bottommargin-xs">Sab.</p>
+                                <p class="bottommargin-xs">Dom.</p>
                                 
                             </div>
                             <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">Closed</p>
-                                <p class="nomargin">Closed</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">Cerrado</p>
+                                <p class="bottommargin-xs">Cerrado</p>
                                 
                             </div>
                         </div>                    
@@ -94,28 +94,28 @@
                                 
                             </div>
                         </div>
-                        <div class="col-lg-6 row nomargin">
-                            <div class="col-12">
-                                <p class="nomargin"><img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="margin-right: 15px;width: 20px"><b>Horarios y Días de trabajo</b></p>
+                        <div class="col-lg-6 row nomargin" style="display: inline-table;">
+                            <div class="col-12 bottommargin-sm">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" style="width: 20px">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;">
-                                <p class="nomargin">Lun.</p>
-                                <p class="nomargin">Mar.</p>
-                                <p class="nomargin">Mie.</p>
-                                <p class="nomargin">Jue.</p>
-                                <p class="nomargin">Vie.</p>
-                                <p class="nomargin">Sab.</p>
-                                <p class="nomargin">Dom.</p>
+                                <p class="bottommargin-xs">Lun.</p>
+                                <p class="bottommargin-xs">Mar.</p>
+                                <p class="bottommargin-xs">Mie.</p>
+                                <p class="bottommargin-xs">Jue.</p>
+                                <p class="bottommargin-xs">Vie.</p>
+                                <p class="bottommargin-xs">Sab.</p>
+                                <p class="bottommargin-xs">Dom.</p>
                                 
                             </div>
                             <div class="col-md-8 offset-md-0 col-5 offset-1" style="display: inline-grid;">
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">09:00-19:00</p>
-                                <p class="nomargin">Closed</p>
-                                <p class="nomargin">Closed</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">09:00-19:00</p>
+                                <p class="bottommargin-xs">Previa Cita</p>
+                                <p class="bottommargin-xs">Cerrado</p>
                                 
                             </div>
                         </div>
@@ -158,7 +158,7 @@
             <div class="col-md-10 offset-md-1 text-center bottommargin">
                 
                 <h2>UN LUGAR PARA COMENZAR, EXPERIMENTAR Y DAR VIDA A LA VISIÓN DE SU COCINA</h2>
-                <p>IESA Consierge de Servicio ofrece reparación, mantenimiento y servicio de expertos  para todos los electrodomésticos Sub-Zero, Wolf y Cove, así como servicio para electrodomésticos ASKO y Dexa.</p>
+                <p>Esta no es una compra ordinaria. Es una experiencia inmersiva para ayudarlo a darse cuenta de las posibilidades de su futura cocina. En un entorno sin presión, puede descubrir cómo se siente, se ve y sabe su cocina, guiado por un experto asesor cuyo único objetivo es atender la visita a sus necesidades.</p>
 
             </div>
 
@@ -255,7 +255,7 @@
                             </select> 
                         </div> 
                         <div class="form-group  col-md-6">
-                            <input type="text" class="form-control form-custom" placeholder="CALENDARIO DE VISITAS">
+                            <input id="fecha" type="text" class="form-control form-custom" placeholder="CALENDARIO DE VISITAS">
                         </div> 
 
                         <div class="form-group  col-lg-2 offset-lg-5 text-center topmargin-sm">
@@ -276,7 +276,7 @@
                 <div class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
                     <div class="justify-content-center align-self-center">
                         <h2>COOKING DEMO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <p>Experimente el alto rendimiento y los deliciosos resultados de los electrodomésticos en persona, y obtenga consejos confiables de los chefs que usan productos Sub-Zero, Wolf, Cove y Asko todos los días. Las demostraciones son solo una forma más de descubrir la cocina adecuada para usted.</p>
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
@@ -305,18 +305,28 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 @endsection
 
- 
 
 @section('scripts')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
-              $('.owl-carousel').owlCarousel({
+            $('#fecha').datepicker({
+                format: "d-m-Y",
+                language: 'es',
+                format: "dd/mm/yyyy",
+                startDate: 'today',
+                autoclose: true,
+                todayHighlight: true,
+                orientation: "bottom"
+            });
+   
+           $('.owl-carousel').owlCarousel({
                 loop: true,
             
                  navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],

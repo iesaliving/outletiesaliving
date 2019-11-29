@@ -14,13 +14,13 @@
     <div id="hero-mobile" class="col-12 nopadding">
         <img src="{{ URL::asset('img/hero-servicio-mobile.jpg')}}">
     </div>
-    <div id="container-btn-servicios" class="col-xl-4 offset-xl-4 col-md-6 offset-md-3">
+    <div id="container-btn-servicios">
         <div class="row nomargin">            
             <div class="col-xl-7 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDA TU VISITA</p></a>
+                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDE UNA CITA DE SERVICIO  EL TELÉFONO </p></a>
             </div>
             <div class="col-xl-5 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p>+52 (1) 811 803 6339</p></a>        
+                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p><img src="{{ URL::asset('img/icono-btn/whatsapp_blanco.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 811 803 6339</p></a>        
             </div>
       
         </div>
@@ -32,21 +32,26 @@
 <section class="container-gral">
     
         <div id="container-catalogo" class="margin-10">
+        <div class="col-12 text-center bottommargin-lg">
+                <h2>RECIBA LA AYUDA DE EXPERTOS</h2>
+                <p>Ya sea que desee programar una conexión, solicitar un servicio para sus electrodomésticos, tiene dudas de como preparar sus espacios para recibir sus nuevos equipos, o simplemente tiene preguntas acerca de los que ya tiene, tenemos los recursos que usted necesita. Hable directamente con un experto de servicio al cliente.</p>
+
+        </div>
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
                   <img src="{{ URL::asset('img/servicios/servicio.jpg')}}">
                 </div>
-                <div class="col-xl-5  col-lg-6">
-                    <div class="topmargin-sm">
+                <div class="col-xl-6  col-lg-6">
+                    <div class="topmargin-sm col-xl-11">
                         <h2>
                            CONCIERGE DE SERVICIO TÉCNICO
                         </h2>
-                         <p>Si tiene alguna pregunta sobre nuestro servicio, llámenos al: </p>
+                         <p> Obtenga respuestas en línea rápidamente; nuestro equipo está listo para atender todas sus dudas, ya sea que necesite la guía mecánica de algún electrodoméstico, agendar una conexión o servicio, saber sobre la garantía de su equipo o simplemente verificar que su taller sea uno de nuestros talleres autorizados por la fábrica.</p>
                         
                     </div>
                     
  
-                    <div class="topmargin-sm row nomargin">
+                    <div class="topmargin-sm row nomargin col-xl-11">
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
@@ -68,7 +73,7 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 0">
                             <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
@@ -93,8 +98,9 @@
 
 
             <div class="col-12 text-center bottommargin-lg topmargin">
-                <h2>LE ESTAMOS ESPERANDO CON RESPUESTAS</h2>
-                <p>IESA Consierge de Servicio ofrece reparación, mantenimiento y servicio de expertos  para todos los electrodomésticos Sub-Zero, Wolf y Cove, así como servicio para electrodomésticos ASKO y Dexa.</p>
+                <h2>EL SERVICIO QUE USTED Y SUS ELECTRODOMÉSTICOS MERECEN</h2>
+                <p>Como especialistas en equipos sub-Zero, Wolf, Cove, Asko ,Dexa  apreciamos y sabemos lo valioso de su tiempo  por lo que hacemos lo posible  para minimizar las interrupciones en su hogar y horario.</p>
+
 
             </div>
 
@@ -103,12 +109,13 @@
 
             <div class="row col-padding catalogo topmargin">
                 
-                <div class="col-xl-5 offset-xl-1 col-lg-6 order-2 order-lg-1">
-                    <div class="topmargin-sm text-lg-right text-left">
+                <div class="col-xl-6 offset-xl-0 col-lg-6 order-2 order-lg-1">
+                    <div class="topmargin-sm text-lg-right text-left col-xl-11 offset-xl-1">
                         <h2>
                            AGENDE UNA CITA DE SERVICIO
                         </h2>
-                        <p>Nuestro objetivo es una experiencia de servicio perfecta en todo momento.</p>
+                        <p>Nuestros técnicos cuidadosamente seleccionados y entrenados directamente en fábrica, cuentan con altos estándares de rendimiento en la realización de  mantenimiento, diagnóstico y reparación de nuestros electrodomésticos.
+                        <br>Agende su cita y viva la experiencia de un servicio de guantes blancos.</p>
                         
                     </div>
 
@@ -140,7 +147,7 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div class="col-2 offset-lg-1" style="padding: 0 5px">
+                        <div class="col-2 offset-lg-1" style="padding: 0 0px">
                             <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">

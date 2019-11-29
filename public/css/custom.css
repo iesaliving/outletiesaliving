@@ -68,9 +68,7 @@ a:hover{
     margin-top: 80px!important;
 }
 
-.bottommargin-sm {
-    margin-bottom: 30px!important;
-}
+
 
 .leftmargin-xs {
   margin-left: 10px;
@@ -81,6 +79,14 @@ a:hover{
 }
 .bottommargin {
     margin-bottom: 50px!important;
+}
+
+.bottommargin-sm {
+    margin-bottom: 30px!important;
+}
+
+.bottommargin-xs {
+    margin-bottom: 10px!important;
 }
 
 .bottommargin-lg {
@@ -462,6 +468,11 @@ ul#menu a:hover {
 #container-btn-servicios{
   position: absolute;
   bottom: 30px;
+  top: auto;
+  max-width: 800px;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 
@@ -825,4 +836,20 @@ ul#menu a:hover {
 
 #carousel-showrooms .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #01bb9c!important;
+}
+
+#carouselExampleControls{
+  min-height: 20rem;
+}
+
+@media(max-width: 768px){
+  #carouselExampleControls{
+    min-height: 30rem;
+  }
+}
+
+@media(max-width: 548px){
+  #carouselExampleControls{
+    min-height: 42rem;
+  }
 }

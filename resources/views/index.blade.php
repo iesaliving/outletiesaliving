@@ -392,11 +392,11 @@
                 <div class="carousel-item active">
                   <div class="col-md-8 offset-md-2 col-10 offset-1 row">
                     <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
-                        <img src="{{ URL::asset('img/persona1.png')   }}">
+                        <img src="{{ URL::asset('img/persona2.png')   }}">
                     </div>
                     <div class="col-md-9 col-12">
-                        <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
-                        <p><b>María José López</b></p>
+                        <p class="light">“Llevo más de 10 años  en contacto con IESA y sus trabajadores, me  encuentro totalmente satisfecho con el trato que he recibido por parte de ellos, facilitan siempre la solución a cualquier problema que se presente y siempre lo hacen con una sonrisa y profesionalismo.   Los recomiendo ampliamente, es una empresa en la que se puede confiar.  Esto hablando de  la empresa, si tocamos el de tema de las marcas que representan, no tengo más que decir  que son las mejores a nivel mundial.”</p>
+                        <p><b>Fernando Pacheco - Boa Lab</b></p>
                     </div>
                       
                   </div>
@@ -404,11 +404,14 @@
                 <div class="carousel-item">
                   <div class="col-md-8 offset-md-2 col-10 offset-1 row">
                     <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
-                        <img src="{{ URL::asset('img/persona2.png')   }}">
+                        <img src="{{ URL::asset('img/persona1.png')   }}">
                     </div>
                     <div class="col-md-9 col-12">
-                        <p class="light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum arcu ac diam gravida interdum. Vestibulum ligula erat, sodales a purus quis, dapibus tempus dolor.</p>
-                        <p><b>Martin García</b></p>
+                        <p class="light">“Visitar su showroom es una experiencia increíble, todos te atienden con mucha calidez desde que se abren las puertas del elevador, un excelente servicio al cliente, resuelven tus dudas y siempre están dispuestos a ayudar.
+                            <br>
+                            100% recomendado, las marcas se dan a relucir tienen los mejores estándares de calidad”
+                        </p>
+                        <p><b>Ilse Ocampo </b></p>
                     </div>
                       
                   </div>
