@@ -71,20 +71,21 @@
                     <div class="col-12 text-center bottommargin-sm">
                         <h2 class="">FORMULARIO</h2>
                     </div>
-                    <form>
+                    <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                        @csrf
                         <div class="row nomargin">
                             <div class="form-group  col-12">
-                                <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
+                                <input required type="text" name="nombre" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
                             </div> 
                             <div class="form-group  col-md-12">
-                                <input type="text" class="form-control form-custom" placeholder="TELÉFONO">
+                                <input required type="text" name="tel" class="form-control form-custom" placeholder="TELÉFONO">
                             </div> 
                             <div class="form-group  col-md-12">
-                                <input type="text" class="form-control form-custom" placeholder="EMAIL">
+                                <input required type="email" name="email" class="form-control form-custom" placeholder="EMAIL">
                             </div> 
 
                             <div class="form-group  col-xl-4 offset-xl-4  col-md-4 offset-md-4 text-center topmargin-sm">
-                                <a class="btn btn-cyan btn-block" href=""><i style="margin-right: 15px" class="fa fa-paper-plane fa-2x"></i> ENVIAR</a>
+                                <button class="btn btn-cyan btn-block" type="submit"><img style="margin-right: 15px;width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
                             </div>    
                         </div>
                     </form>        

@@ -21,14 +21,20 @@ class MailController extends Controller
 
         $inputs = $request->all();
 
-
+       
         $rule=array(
-            'tel' => 'required|string',
-            'proyecto' => 'required|string',
             'nombre' => 'required|string',
+            'tel' => 'required|string',
             'email' => 'required|string|email',
-            'comentarios' => 'required|string',
         );
+
+        if (isset($inputs['showroom'])) {
+            $rule['showroom']='required|string';
+        }
+
+        if (isset($inputs['fecha'])) {
+            $rule['fecha']='required|string';
+        }
 
         $validator = \Validator::make($inputs,$rule);
  
@@ -39,13 +45,29 @@ class MailController extends Controller
         }
 
 
+        if (isset($inputs['email_envio'])) {
+            $emails = [$inputs['email_envio']];
+         }else{
+            $emails = ['contacto@subzero-wolf.mx'];
+
+         }
+            array_push($emails,'onmigregor@gmail.com');
+
+         if(isset($inputs['fecha'] )){
+            $titulo_mail='Cita Showroom';
+         }elseif(isset($inputs['demo'] )){
+            $titulo_mail='Cooking Demo';
+         }else {
+            $titulo_mail='Formulario';
+         }
 
 
-        $emails='onmigregor@gmail.com';
-        Mail::send('templeate.email', $request->all(), function($message) use ($emails) {
+        Mail::send('templeate.email', $inputs, function($message) use ($emails,$titulo_mail) {
             $message->to($emails);
-            $message->subject('Formulario - IESA');
+            $message->subject($titulo_mail.' - IESA');
         });
+
+            return redirect('/gracias');
     }
  
 }

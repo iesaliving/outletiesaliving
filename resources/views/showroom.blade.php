@@ -227,7 +227,7 @@
             </div>
 
             <div class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
-                <a class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
+                <a onclick="mover()" class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
             </div>
         </div>
 
@@ -238,28 +238,56 @@
             </div>
 
             <div class="col-12 nopadding">
-                <form>
+                <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                    @csrf
                     <div class="row nomargin">
                         <div class="form-group  col-12">
-                            <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
+                            <input required type="text" name="nombre" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
+                            @if($errors->has('nombre'))
+                                <div class="invalid-feeback">
+                                    {{$errors->first('nombre')}}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group  col-md-6">
-                            <input type="text" class="form-control form-custom" placeholder="TELÉFONO">
+                            <input required type="text" name="tel" class="form-control form-custom" placeholder="TELÉFONO">
+                            @if($errors->has('tel'))
+                                <div class="invalid-feeback">
+                                    {{$errors->first('tel')}}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group  col-md-6">
-                            <input type="text" class="form-control form-custom" placeholder="EMAIL">
+                            <input required type="email" name="email" class="form-control form-custom" placeholder="EMAIL">
+                            @if($errors->has('tel'))
+                                <div class="invalid-feeback">
+                                    {{$errors->first('email')}}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group  col-md-6">
-                            <select class="form-control form-custom">
-                                <option>SELECCIONAR SHOWROOM</option>
+                            <select required name="showroom" class="form-control form-custom">
+                                <option value=''>SELECCIONAR SHOWROOM</option>
+                                <option value='CIUDAD DE MÉXICO'>CIUDAD DE MÉXICO</option>
+                                <option value='MONTERREY'>MONTERREY</option>
                             </select>
+                            @if($errors->has('showroom'))
+                                <div class="invalid-feeback">
+                                    {{$errors->first('showroom')}}
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group  col-md-6">
-                            <input id="fecha" type="text" class="form-control form-custom" placeholder="CALENDARIO DE VISITAS">
+                            <input required id="fecha" name="fecha" type="text" class="form-control form-custom" placeholder="CALENDARIO DE VISITAS">
+                            @if($errors->has('fecha'))
+                                <div class="invalid-feeback">
+                                    {{$errors->first('fecha')}}
+                                </div>
+                            @endif
                         </div>
 
-                        <div class="form-group  col-lg-2 offset-lg-5 text-center topmargin-sm">
-                            <a class="btn btn-cyan btn-block" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
+                        <div class="form-group  col-xl-2 offset-xl-5 col-lg-4 offset-lg-4 text-center topmargin-sm">
+                            <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
                         </div>
                     </div>
                 </form>
@@ -277,18 +305,20 @@
                     <div class="justify-content-center align-self-center">
                         <h2>COOKING DEMO</h2>
                         <p>Experimente el alto rendimiento y los deliciosos resultados de los electrodomésticos en persona, y obtenga consejos confiables de los chefs que usan productos Sub-Zero, Wolf, Cove y Asko todos los días. Las demostraciones son solo una forma más de descubrir la cocina adecuada para usted.</p>
-                        <form>
+                        <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="demo" value="COOKING DEMO">
                             <div class="form-group">
-                                <input type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
+                                <input required name="nombre" type="text" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control form-custom" placeholder="EMAIL COMPLETO">
+                                <input required name="email" type="email" class="form-control form-custom" placeholder="EMAIL COMPLETO">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-custom" placeholder="TELÉFONO COMPLETO">
+                                <input required name="tel" type="text" class="form-control form-custom" placeholder="TELÉFONO COMPLETO">
                             </div>
                             <div class="col-md-12 nopadding">
-                                <a class="btn btn-block btn-cyan" href=""><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</a>
+                                <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
                             </div>
                         </form>
                     </div>
