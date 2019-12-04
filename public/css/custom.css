@@ -872,12 +872,25 @@ ul#menu a:hover {
 }
 
 #carouselExampleControls{
-  min-height: 20rem;
+  min-height: 11rem;
+  padding: 0 5%
 }
 
-@media(max-width: 768px){
+@media(max-width: 1400px){
   #carouselExampleControls{
-    min-height: 30rem;
+    min-height: 14rem;
+  }
+}
+
+@media(max-width: 1200px){
+  #carouselExampleControls{
+    min-height: 18rem;
+  }
+}
+
+@media(max-width: 900px){
+  #carouselExampleControls{
+    min-height: 25rem;
   }
 }
 

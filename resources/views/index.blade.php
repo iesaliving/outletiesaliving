@@ -11,6 +11,27 @@
         <div class="carousel-item active">
             @include('hero.triband')
         </div>
+        <div class="carousel-item">
+            @include('hero.subzero')
+        </div>
+        <div class="carousel-item">
+             @include('hero.wolf')
+        </div>
+        <div class="carousel-item">
+            @include('hero.exteriores')
+        </div>
+        <div class="carousel-item">
+            @include('hero.cove')
+        </div>
+        <div class="carousel-item">
+            @include('hero.asko')
+        </div>
+        <div class="carousel-item">
+            @include('hero.dexa')
+        </div>
+        <div class="carousel-item">
+            @include('hero.scotsman')
+        </div>
       </div>
     </div>
 </section>
@@ -367,7 +388,7 @@
         </div>
 
         <div id="testimoniales"  class="bg-gray">
-            <div class="col-12 text-center  ">
+            <div class="col-12 text-center bottommargin-sm  ">
                 <h2>TESTIMONIOS</h2>
 
             </div>
@@ -375,20 +396,8 @@
             <div id="carouselExampleControls" class="carousel slide margin-carrousel" data-ride="carousel">
               <div class="carousel-inner style">
                 <div class="carousel-item active">
-                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
-                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
-                        <img src="{{ URL::asset('img/persona2.png')   }}">
-                    </div>
-                    <div class="col-md-9 col-12">
-                        <p class="light">“Llevo más de 10 años  en contacto con IESA y sus trabajadores, me  encuentro totalmente satisfecho con el trato que he recibido por parte de ellos, facilitan siempre la solución a cualquier problema que se presente y siempre lo hacen con una sonrisa y profesionalismo.   Los recomiendo ampliamente, es una empresa en la que se puede confiar.  Esto hablando de  la empresa, si tocamos el de tema de las marcas que representan, no tengo más que decir  que son las mejores a nivel mundial.”</p>
-                        <p><b>Fernando Pacheco - Boa Lab</b></p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="col-md-8 offset-md-2 col-10 offset-1 row">
-                    <div class="col-6 offset-3 col-md-3 offset-md-0 bottommargin-sm">
+                  <div class="col-md-10 offset-md-1 col-10 offset-1 row">
+                    <div class="col-lg-2  offset-md-0 col-md-3 offset-md-0 col-6 offset-3  bottommargin-sm">
                         <img src="{{ URL::asset('img/persona1.png')   }}">
                     </div>
                     <div class="col-md-9 col-12">
@@ -396,11 +405,24 @@
                             <br>
                             100% recomendado, las marcas se dan a relucir tienen los mejores estándares de calidad”
                         </p>
-                        <p><b>Ilse Ocampo </b></p>
+                        <p class="nopadding"><b>Ilse Ocampo </b></p>
                     </div>
 
                   </div>
                 </div>
+                <div class="carousel-item ">
+                  <div class="col-md-10 offset-md-1 col-10 offset-1 row">
+                    <div class="col-lg-2  offset-md-0 col-md-3 offset-md-0 col-6 offset-3  bottommargin-sm">
+                        <img src="{{ URL::asset('img/persona2.png')   }}">
+                    </div>
+                    <div class="col-xl-10 col-md-9 col-12">
+                        <p class="light">“Llevo más de 10 años  en contacto con IESA y sus trabajadores, me  encuentro totalmente satisfecho con el trato que he recibido por parte de ellos, facilitan siempre la solución a cualquier problema que se presente y siempre lo hacen con una sonrisa y profesionalismo.   Los recomiendo ampliamente, es una empresa en la que se puede confiar.  Esto hablando de  la empresa, si tocamos el de tema de las marcas que representan, no tengo más que decir  que son las mejores a nivel mundial.”</p>
+                        <p class="nopadding"><b>Fernando Pacheco - Boa Lab</b></p>
+                    </div>
+
+                  </div>
+                </div>
+                
               </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                <i class="fa fa-chevron-left fa-2x"></i>

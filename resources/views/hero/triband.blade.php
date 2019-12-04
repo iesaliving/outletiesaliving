@@ -6,4 +6,4 @@
             <a href="{{ URL::to('/cove') }}"><img style="width:29%;margin-left: 15px" src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
         </div>
     </div>
-</div>s
+</div>
