@@ -80,10 +80,10 @@
                             <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
-                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
-                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
                             <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
@@ -154,10 +154,10 @@
                             <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
-                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
                         <div class="col-2" style="padding: 0 5px">
-                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
                             <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>

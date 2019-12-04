@@ -35,11 +35,29 @@ a:hover{
   bottom: 0;
 }
 
+#img-SubZero{
+  width: 14vw; 
+  margin-left: 15px
+}
+
+#img-wolf{
+  width: 12vw; 
+  margin-left: 5%
+}
 @media(max-width:991px ){
   .img-reloj{
     position: relative;
     width: 20px;
     bottom: 0;
+  }
+  #img-SubZero{
+    width: 30vw; 
+    margin-left: 0
+  }
+
+  #img-wolf{
+    width: 26vw; 
+    margin-left: 20px
   }
 }
 @media(max-width:768px ){
