@@ -73,22 +73,22 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div class="col-2" style="padding: 0 0">
+                        <div class="col-2" style="padding: 0 5px 0 0">
                             <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
                             <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
                         </div>
                     </div>
@@ -147,22 +147,22 @@
                     </div>
 
                     <div class="row nomargin">
-                        <div class="col-2 offset-lg-1" style="padding: 0 0px">
+                        <div class="col-2 offset-lg-1" style="padding: 0 5px 0 0">
                             <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
                             <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
                         </div>
-                        <div class="col-2" style="padding: 0 5px">
+                        <div class="col-2" style="padding: 0 10px">
                             <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
                         </div>
                     </div>

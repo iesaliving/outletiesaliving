@@ -67,9 +67,9 @@
                 <h5 style="margin-top:35px">¿Cómo hago válida mi garantía?</h5>
                 <p>Para activar la garantía de su equipo, existen las siguientes opciones:</p>
                 <ul>
-                    <li>-Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372</li>
-                    <li>-Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
-                    <li>-Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
+                    <li>Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372</li>
+                    <li>Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
+                    <li>Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
                 <h5 style="margin-top:35px">¿Qué incluye la conexión de mis equipos?</h5>
                 <p>La conexión de sus equipos incluye dos visitas; La primera es para hacer una inspección del espacio donde van a ser instalados los equipos y verificar que cumpla con la guía mecánica del fabricante. La segunda para la conexión de los equipos.
@@ -85,17 +85,17 @@
                 <p>Fuera de los destinos mencionados arriba, puede haber un cargo de traslado. Para solicitar un estimado existen las siguientes opciones:
                 </p>
                 <ul>
-                    <li>-Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372</li>
-                    <li>-Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
-                    <li>-Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
+                    <li>Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372</li>
+                    <li>Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
+                    <li>Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
                 <h5 style="margin-top:35px">¿Cómo puedo saber si lo que me está cobrando el técnico es lo correcto?</h5>
                 <p>Las tarifas de servicio para nuestros Centros Autorizados de Servicios están estipuladas por un tabulador</p>
                 <p>Si desea saber el costo de la reparación de su equipo con gusto lo puede solicitar a nuestro concierge de servicio:</p>
                 <ul>
-                    <li>-Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
-                    <li>-Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
-                    <li>-Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
+                    <li>Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
+                    <li>Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
+                    <li>Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
                 <h5 style="margin-top:35px">¿El servicio llega a mi ciudad?</h5>
                 <p>Grupo IESA proporciona servicio en toda América Latina, algunos lugares podrían generar un cargo por traslado del técnico.</p>
@@ -103,9 +103,9 @@
                 <p>Fuera de los destinos mencionados arriba, puede haber un cargo por traslado. Para solicitar un estimado existen las siguientes opciones:
                 </p>
                 <ul>
-                    <li>-Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
-                    <li>-Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
-                    <li>-Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
+                    <li>Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
+                    <li>Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
+                    <li>Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
             </div>
 
@@ -125,9 +125,9 @@
                 <p>En caso de detectar algún daño en algún equipo le sugerimos no recibirlo, nuestros camiones de entrega o la compañía fletera se encargarán de regresarlo a nuestro almacén y nuestro equipo logístico se encargará de tramitar la entrega de un sustituto.</p>
                 <p>Si no tuvo oportunidad de verificarlo durante la recepción, tiene 24 hrs adicionales para reportarlo a nuestro equipo de Concierge de Servicio </p>
                 <ul>
-                    <li>-Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
-                    <li>-Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
-                    <li>-Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
+                    <li>Llamar nuestro concierge de servicio al +52 (1) (81) 8389 4372 </li>
+                    <li>Llamar por lada sin costo dentro de la República Mexicana al 01 800 400 4372</li>
+                    <li>Por whatsapp al +52 (1) (81) 1803 6339 o enviando un correo electrónico a atencionalcliente@iesa.cc</li>
                 </ul>
             </div>
 
@@ -138,8 +138,8 @@
 
 @section('styles')
 <style type="text/css">
-    ul {
-        list-style: none
+    ul li{
+        font-weight: 100
     }
 </style>
 

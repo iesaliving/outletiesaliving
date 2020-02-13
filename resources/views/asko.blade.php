@@ -15,7 +15,7 @@
     
         <div id="container-catalogo" class="margin-10">
         
-            <div class="col-12 text-center bottommargin-lg">
+            <div id="check" class="col-12 text-center bottommargin-lg">
                 <p>
                     Electrodomésticos escandinavos ASKO; productos durables y de máxima calidad con soluciones innovadoras respetuosas con el medio ambiente y el uso económico de los recursos como agua y energía.
                 </p>

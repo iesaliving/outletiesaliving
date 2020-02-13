@@ -226,14 +226,14 @@
                 </div>
             </div>
 
-            <div class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
+            <div id="check" class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
                 <a onclick="mover()" class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
             </div>
         </div>
 
         <div id="formulario" class="margin-10">
 
-            <div class="text-center col-12">
+            <div  class="text-center col-12">
                 <h2>AGENDE SU CITA</h2>
             </div>
 
@@ -301,8 +301,8 @@
                         <img src="{{ URL::asset('img/showrooms/demo.jpg')}}">
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
-                    <div class="justify-content-center align-self-center">
+                <div id="cooking" class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
+                    <div  class="justify-content-center align-self-center">
                         <h2>COOKING DEMO</h2>
                         <p>Experimente el alto rendimiento y los deliciosos resultados de los electrodomésticos en persona, y obtenga consejos confiables de los chefs que usan productos Sub-Zero, Wolf, Cove y Asko todos los días. Las demostraciones son solo una forma más de descubrir la cocina adecuada para usted.</p>
                         <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">

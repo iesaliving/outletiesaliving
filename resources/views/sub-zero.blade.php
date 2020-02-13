@@ -17,9 +17,10 @@
     
         <div id="container-catalogo" class="margin-10">
 
-            <div class="col-12 text-center bottommargin-lg">
+            <div id="check"  class="col-12 text-center bottommargin-lg">
                 <p>Mientras Sub-Zero exista, los alimentos resistirán el paso del tiempo, lo mismo que la belleza y el rendimiento de su cocina. Construido y probado con los más altos estándares, Sub-Zero es algo más que sólo un refrigerador. Se trata de un sistema de conservación de los alimentos, con más de 70 años de pensamiento innovador que lo avalan. Mientras exista Sub-Zero, la comida tendrá un delicioso futuro.</p>
             </div>
+
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
                     <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">

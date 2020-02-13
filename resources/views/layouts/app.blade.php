@@ -80,13 +80,6 @@
     <!-- Custom scripts -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(window).on('load', function() { // makes sure the whole site is loaded 
-          $('#status').fadeOut(); // will first fade out the loading animation 
-          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-          //$('body').delay(350).css({'overflow':'visible'});
-        })
-    </script>
 
 
 
@@ -95,6 +88,7 @@
 
     <script async src="{{ asset('js/gallery.js') }}"></script>
     @yield('scripts')
+
 
     <script async type="text/javascript">
       $(document).ready(function(){
@@ -135,6 +129,14 @@
           $("html, body").animate({scrollTop:posicion.top+"px"},"slow");
       }
 
+    </script>
+
+    <script type="text/javascript">
+    $(window).on('load', function() { // makes sure the whole site is loaded 
+          $('#status').fadeOut(); // will first fade out the loading animation 
+          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+          //$('body').delay(350).css({'overflow':'visible'});
+        })
     </script>
 
 

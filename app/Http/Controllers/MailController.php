@@ -10,7 +10,6 @@ use Mail;
 class MailController extends Controller
 {
 
-    private $token = "738b2579c2f7c58df29b1c1f97b27a23";
     
     public function __construct()
     {

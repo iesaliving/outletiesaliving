@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="row col-padding catalogo topmargin-lg">
+            <div id="check" class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 d-flex col-xl-5  offset-xl-1 order-lg-1 order-2">
                     <div class="justify-content-center align-self-center">
 

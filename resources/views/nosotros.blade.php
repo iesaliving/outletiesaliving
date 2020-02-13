@@ -54,7 +54,7 @@
                 <h2>¿TE GUSTARÍA FORMAR PARTE DE NUESTRO EQUIPO DE TRABAJO?</h2>
                 <p>Piensa en lo emocionante que sería trabajar para una compañía dedicada a vender los mejores enseres de lujo del mundo, mejorando la vida en la cocina para miles de clientes. Somos una empresa impulsada por la innovación y la integridad, que se esfuerza por ser el mejor y brindar el mejor ambiente de trabajo. Si quieres trabajar con un líder, has llegado al lugar correcto.</p>
 
-                <p>Envíanos tu curriculum a: <a style="color: #01bb9c!important" href="cflores@iesa.cc">cflores@iesa.cc</a> adjuntando en el subject el puesto de tu interés.</p>
+                <p>Envíanos tu curriculum a: <a style="color: #01bb9c!important" href="mailto:cflores@iesa.cc">cflores@iesa.cc</a> adjuntando en el subject el puesto de tu interés.</p>
 
             </div>
         </div>

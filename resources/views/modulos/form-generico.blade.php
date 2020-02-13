@@ -1,5 +1,5 @@
     <div class="col-12 bottommargin-sm" >
-        <h2 class="light  text-center">¿EN QUÉ PODEMOS AYUDARLE?</h2>
+        <h2 class="light  text-center">CONTÁCTENOS Y PRONTO ESTAREMOS CON USTED</h2>
     </div>
 <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
     @csrf
@@ -33,7 +33,7 @@
             @endif
         </div>
         <div class="form-group  col-md-12">
-            <textarea  class="form-control form-custom" rows="5" name="comentarios" placeholder="COMENTARIOS"></textarea>
+            <textarea  class="form-control form-custom" rows="5" name="comentarios" placeholder="¿EN QUÉ PODEMOS AYUDARLE?"></textarea>
             @if($errors->has('comentarios'))
                 <div class="invalid-feeback">
                     {{$errors->first('comentarios')}}
