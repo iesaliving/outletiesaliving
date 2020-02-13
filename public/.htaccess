@@ -18,4 +18,10 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+
+    # IMPORTANTE PARA FUNCIONAMIENTO DE IFRAME
+    Header set X-Frame-Options ALLOW-FROM URL
+    #Header set X-Frame-Options: ALLOW-FROM URL
+    #X-Frame-Options: ALLOW-FROM URL
 </IfModule>
