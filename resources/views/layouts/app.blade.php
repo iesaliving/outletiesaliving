@@ -2,8 +2,11 @@
 <html dir="ltr" lang="es-MX">
 <head>
 <!-- Google Tag Manager -->
-
-
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMC6T84');</script>
 <!-- End Google Tag Manager -->
     <meta property="og:image" content="{{ asset('images/meta_image.png') }}" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -58,6 +61,11 @@
 
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMC6T84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <div id="preloader" style="z-index: 1000">
       <div id="status">&nbsp;</div>
   </div>
@@ -139,7 +147,7 @@
         })
     </script>
 
-
+    <script src="https://app3.salesmanago.pl/dynamic/o28qhomp7m09zozm/popups.js"></script>
 </body>
 </html>
 
