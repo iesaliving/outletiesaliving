@@ -44,6 +44,63 @@ a:hover{
   width: 12vw; 
   margin-left: 5%
 }
+
+
+#container-btn-redes{
+    bottom: 5%;
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+    transition: 1s
+}
+
+#container-btn-redes:hover .btn-fixed.hide{
+  transition: 1s;
+  position: relative;
+  display: block;
+}
+
+
+.btn-fixed{
+  margin-bottom: 15px;
+  transition: 1s;
+}
+
+.btn-fixed.hide{
+  position: absolute;
+  display: none;
+  transition: 1s;
+}
+.btn-fixed .details{
+  border-radius: 100px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #01bb9c;
+  cursor: pointer;
+}
+
+.btn-fixed i{
+  text-align: center;
+  top: 10px;
+  font-size: 27px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.btn-fixed img{
+    position: absolute;
+    width: 25px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+}
+
+
 @media(max-width:991px ){
   .img-reloj{
     position: relative;

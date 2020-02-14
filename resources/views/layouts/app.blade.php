@@ -54,6 +54,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   margin: -100px 0 0 -100px;
   /* is width and height divided by two */
 }
+
+
+
+
+
     </style>
 
 
@@ -70,8 +75,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="status">&nbsp;</div>
   </div>
 
-
-    
+<div id="container-btn-redes">
+  <a href="javascript:void(0)">
+    <div  class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="Catalogo">
+      <div class="details details-showroom">
+        <img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}">
+      </div>
+    </div>  
+  </a>
+  <a href="{{ URL::to('/showroom#check') }}">
+    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="Showroom">
+      <div class="details details-cita">
+        <img src="{{ URL::asset('img/icono-btn/showroon.png')   }}">
+      </div>
+    </div>  
+  </a>
+  <a target="_blank" rel="nofollow" href="https://wa.me/5218118021004?text=Deseo recibir información sobre sus productos">
+    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="WhatsApp">
+      <div class="details details-what">
+        <i style="" class="fa fa-whatsapp"></i>
+      </div>
+    </div>  
+  </a>
+  <a href="javascript:void(0)">
+    <div class="btn-fixed"  data-toggle="tooltip" data-placement="top" title="Contáctanos">
+      <div class="details details-contacto">
+        <i style="" class="fa fa-comments-o"></i>
+      </div>
+    </div>  
+  </a>
+</div>
 
     @include('elements.header')
 
