@@ -71,7 +71,7 @@
                     <div class="col-12 text-center bottommargin-sm">
                         <h2 class="">FORMULARIO</h2>
                     </div>
-                    <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                    <form id="form-contactanos" action="{{URL::to('/sumbit-contacto') }}" method="POST">
                         @csrf
                         <div class="row nomargin">
                             <div class="form-group  col-12">
