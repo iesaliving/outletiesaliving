@@ -72,7 +72,7 @@ class MailController extends Controller
     }
 
     public function submitContacto(Request $request){
-        $inputs = $request->all();
+        $inputs = $request->input();
 
         $rule=array(
             'nombre' => 'required|string',
@@ -88,10 +88,14 @@ class MailController extends Controller
              return Redirect::back()->withErrors($validator)->withInput();
         }
 
+
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
+        $var->setUtmSource($request->input('UTM_source'));
+        $var->setUtmCampaign($request->input('UTM_campaign'));
+        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
         $var->setTag('CONTACTO');
         $response=$var->upsert();
 

@@ -19,7 +19,15 @@ class SalesManago
     private $jsonUpdate;
     private $tag;
     private $contactId;
-    private $phone;
+    private $cMensaje;
+    private $cBrand;
+    private $cCiudad;
+    private $cFecha;
+    private $cUtmSource;
+    private $cUtmCampaign;
+    private $cUtmAnuncioId;
+
+
     /**
      * WebServiceManagerCurl constructor.
      * @param string $url
@@ -64,6 +72,34 @@ class SalesManago
 
     public function setTag($tag){
         $this->tag=$tag;
+    }
+
+    public function setMensaje($cMensaje){
+        $this->cMensaje = $cMensaje; ;
+    }
+
+    public function setBrand($setBrand){
+        $this->cBrand = $cBrand; ;
+    }
+
+    public function setCiudad($cCiudad){
+        $this->cCiudad = $cCiudad; ;
+    }
+
+    public function setFecha($cFecha){
+        $this->cFecha = $cFecha; ;
+    }
+
+    public function setUtmSource($cUtmSource){
+        $this->cUtmSource = $cUtmSource; ;
+    }
+
+    public function setUtmCampaign($cUtmCampaign){
+        $this->cUtmCampaign = $cUtmCampaign; ;
+    }
+
+    public function setUtmAnuncioId($cUtmAnuncioId){
+        $this->cUtmAnuncioId = $cUtmAnuncioId; ;
     }
 
 
@@ -166,8 +202,16 @@ class SalesManago
                     "email" : "'.$this->email.'",
                     "name" : "'.$this->name.'",
                     "phone" : "'.$this->phone.'"
-                    }
-                '.$this->jsonCustom.'
+                    },
+                  "properties" : {
+                    "custom.mensaje":"'.$this->cMensaje.'",
+                    "custom.brand":"'.$this->cBrand.'",
+                    "custom.ciudad":"'.$this->cCiudad.'",
+                    "custom.fecha":"'.$this->cFecha.'",
+                    "custom.UTM_Source":"'.$this->cUtmSource.'",
+                    "custom.UTM_Campaign":"'.$this->cUtmCampaign.'",
+                    "custom.UTM_AnuncioID":"'.$this->cUtmAnuncioId.'"
+                }
             }';
         return $this->curlSm($url,$json);
     }
@@ -181,7 +225,7 @@ class SalesManago
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
                 $response2 = curl_exec($ch);
                 curl_close($ch);
-
+dd($response2);
         return json_decode(stripslashes($response2),true);
     }
 
