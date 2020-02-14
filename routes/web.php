@@ -56,11 +56,16 @@ Route::get('/scotsman', 'MarcasController@Scotsman');
 
 
 
-Route::get('/gracias', function () {
-    return view('gracias');
-});
+
+/*********************GRACIASSSSS*******************/
 
 
 
-Route::post('/enviar-correo', 'MailController@enviar');
+Route::get('/gracias', 'GraciasController@GraciasDefault');
+
+Route::get('/gracias-Showroom', 'GraciasController@GraciasDefault');
+
+Route::get('/gracias-cookingdemo', 'GraciasController@GraciasDefault');
+
+Route::get('/gracias-catalogo', 'GraciasController@GraciasCat');
 

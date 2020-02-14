@@ -18,8 +18,8 @@
 
   <div class="text-center light topmargin-lg">
     <h2 class="light">Gracias</h2>
-    <p class="nomargin">Agradecemos de antemano el interés en nuestras marcas.</p>
-    <p>A la brevedad posible nos pondremos en contacto con usted para poder atender su petición.</p>
+    <p class="nomargin">{{$text1}}</p>
+    <p>{{$text2}}</p>
   </div>
         @include('modulos.carrousel')
 </section>
