@@ -18,6 +18,11 @@
                 <a href="mailto:marketing@iesa.cc"><p>marketing@iesa.cc</p></a>
                 
             </div>
+            @if(isset($footer))
+            <div class="col-12 nopadding topmargin bottommargin">
+                <a href="{{$footer}}" target="_blank" rel="nofollow"><h5>Website</h5></a>
+            </div>
+            @endif
         </div>
         <div class="col-xl-6 col-lg-4" style="overflow: hidden;">
             <iframe style="margin-top: -50px;margin-left: -25px;" src="https://www.google.com/maps/d/embed?mid=1wP4RZDXziZvqQ3M7nSutqMo-oSfra0VW" width="640" height="480"></iframe>

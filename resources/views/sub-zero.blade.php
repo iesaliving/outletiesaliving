@@ -61,9 +61,6 @@
                                 
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
-                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/full-size-refrigeration"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,12 +88,8 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm">
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
-                            </div>
-
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
-                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/counter-refrigerator"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -133,9 +126,6 @@
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
-                                <a target="_blank" rel="nofollow" class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/sub-zero/wine-cooler"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
-                            </div>
                         </div>
                     </div>
                 </div>

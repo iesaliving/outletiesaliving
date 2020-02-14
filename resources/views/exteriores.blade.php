@@ -53,10 +53,6 @@
                             <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
-
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,12 +77,8 @@
                         </div>
 
                         <div class="topmargin-sm row nomargin">
-                            <div class="col-lg-7 nopadding bottommargin-sm">
+                            <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm">
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
-                            </div>
-
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>
@@ -120,10 +112,6 @@
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
-                            </div>
-
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile nopaddingright">
-                                <a class="btn btn-block btn-cyan descubra-btn" href=""><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
                             </div>
                         </div>
                     </div>

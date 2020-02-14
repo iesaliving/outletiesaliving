@@ -39,40 +39,22 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/cocina-exterior', function () {
-    $email="contacto@subzero-wolf.mx";
-    return view('exteriores',compact('email'));
-});
 
-Route::get('/sub-zero', function () {
-    $email="contacto@subzero-wolf.mx";
-    return view('sub-zero',compact('email'));
-});
+Route::get('/sub-zero', 'MarcasController@Subzero');
 
-Route::get('/wolf', function () {
-    $email="contacto@subzero-wolf.mx";
-    return view('wolf',compact('email'));
-});
+Route::get('/wolf', 'MarcasController@Wolf');
 
-Route::get('/cove', function () {
-    $email="contacto@subzero-wolf.mx";
-    return view('cove',compact('email'));
-});
+Route::get('/cove', 'MarcasController@Cove');
 
-Route::get('/asko', function () {
-    $email="contacto@asko.com.mx";
-    return view('asko',compact('email'));
-});
+Route::get('/cocina-exterior', 'MarcasController@CocinaExt');
 
-Route::get('/scotsman', function () {
-    $email="contacto@scotsman.mx";
-    return view('scotsman',compact('email'));
-});
+Route::get('/asko', 'MarcasController@Asko');
 
-Route::get('/dexa', function () {
-    $email="contacto@dexa.mx";
-    return view('dexa',compact('email'));
-});
+Route::get('/dexa', 'MarcasController@Dexa');
+
+Route::get('/scotsman', 'MarcasController@Scotsman');
+
+
 
 Route::get('/gracias', function () {
     return view('gracias');

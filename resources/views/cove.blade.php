@@ -45,10 +45,6 @@
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Cove.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
-
-                            <div class="col-lg-5 bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="https://mx.subzero-wolf.com/es/cove/dishwashers" target="_blank" rel="nofollow"><img src="{{ URL::asset('img/icono-btn/web.png')   }}"><p>WEBSITE</p></a>
-                            </div>
                         </div>
                     </div>
                 </div>
