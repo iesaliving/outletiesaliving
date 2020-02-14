@@ -47,9 +47,9 @@ a:hover{
 
 
 #container-btn-redes{
-    bottom: 5%;
+    bottom: 0px;
     position: fixed;
-    right: 20px;
+    left: 20px;
     z-index: 100;
     transition: 1s
 }
