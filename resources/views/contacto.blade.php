@@ -1,4 +1,4 @@
-q@extends('layouts.app')
+@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Contacto')
 @section('content')
@@ -68,11 +68,27 @@ q@extends('layouts.app')
 
         <div class="row nomargin topmargin-lg">
             <div class="col-xl-7 col-lg-7 text-center">
+
                     <div class="col-12 text-center bottommargin-sm">
                         <h2 class="">FORMULARIO</h2>
                     </div>
                     <form id="form-contactanos" action="{{URL::to('/sumbit-contacto') }}" method="POST">
-                        <input type="hidden" name="tag" value="CONTACTO">
+                        <input type="hidden" name="utm_source" value="{{$utm['utm_source']}}">
+                        <input type="hidden" name="utm_campaign" value="{{$utm['utm_campaign']}}">
+                        <input type="hidden" name="utm_anuncio_id" value="{{$utm['utm_anuncio_id']}}">
+
+
+                     @if(isset($utm['source']))
+                        <input type="hidden" name="source"    id="source" value="{{(!empty($utm['source']))?$utm['source']:''}}">
+                    @endif
+
+                    @if(isset($utm['campaign']))
+                        <input type="hidden" name="campaign"   id="campaign" value="{{(!empty($utm['campaign']))?$utm['campaign']:''}}">
+                    @endif
+
+                    @if(isset($utm['anuncioId']))
+                        <input type="hidden" name="anuncioId"     id="anuncioId" value="{{(!empty($utm['anuncioId']))?$utm['anuncioId']:''}}">
+                    @endif
                         @csrf
                         <div class="row nomargin">
                             <div class="form-group  col-12">

@@ -73,7 +73,6 @@ class MailController extends Controller
 
     public function submitContacto(Request $request){
         $inputs = $request->input();
-
         $rule=array(
             'nombre' => 'required|string',
             'tel' => 'required|string',
@@ -94,9 +93,9 @@ class MailController extends Controller
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag('CONTACTO');
-        $var->setUtmSource($request->input('UTM_source'));
-        $var->setUtmCampaign($request->input('UTM_campaign'));
-        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
+        $var->setUtmSource($request->input('utm_source'));
+        $var->setUtmCampaign($request->input('utm_campaign'));
+        $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
         $response=$var->upsert();
 
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
@@ -133,9 +132,9 @@ class MailController extends Controller
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag('COOKING_DEMO');
-        $var->setUtmSource($request->input('UTM_source'));
-        $var->setUtmCampaign($request->input('UTM_campaign'));
-        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
+        $var->setUtmSource($request->input('utm_source'));
+        $var->setUtmCampaign($request->input('utm_campaign'));
+        $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
         $response=$var->upsert();
 
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
@@ -180,14 +179,57 @@ class MailController extends Controller
         $var->setTag($tag);
         $var->setCiudad($inputs['showroom']);
         $var->setFecha($inputs['fecha']);
-        $var->setUtmSource($request->input('UTM_source'));
-        $var->setUtmCampaign($request->input('UTM_campaign'));
-        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
+        $var->setUtmSource($request->input('utm_source'));
+        $var->setUtmCampaign($request->input('utm_campaign'));
+        $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
         $response=$var->upsert();
 
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect('/gracias-Showroom');
+
+         }else{
+            abort(404);
+         }
+        
+    }
+
+    public function submitBrand(Request $request){
+        $inputs = $request->input();
+       
+        $rule=array(
+            'nombre' => 'required|string',
+            'tel' => 'required|string',
+            'email' => 'required|string|email',
+            'cBrand' => 'required|string',
+        );
+
+        $validator = \Validator::make($inputs,$rule);
+ 
+
+        if ($validator->fails())
+        {   
+             return Redirect::back()->withErrors($validator)->withInput();
+        }
+
+
+        $tag=strtoupper(str_replace("-","_",$inputs['cBrand'])).'_CITA';
+
+        $var=new SalesManago();
+        $var->setSmEmail($inputs['email']);
+        $var->setSmNombre($inputs['nombre']);
+        $var->setSmPhone($inputs['tel']);
+        $var->setTag($tag);
+        $var->setBrand(ucwords($inputs['cBrand']));
+        $var->setMensaje($inputs['comentarios']);
+        $var->setUtmSource($request->input('utm_source'));
+        $var->setUtmCampaign($request->input('utm_campaign'));
+        $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
+
+        $response=$var->upsert();
+         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
+            
+            return redirect("/gracias/".$inputs['cBrand']);
 
          }else{
             abort(404);

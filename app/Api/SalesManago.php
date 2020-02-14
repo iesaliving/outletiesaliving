@@ -78,7 +78,7 @@ class SalesManago
         $this->cMensaje = $cMensaje; ;
     }
 
-    public function setBrand($setBrand){
+    public function setBrand($cBrand){
         $this->cBrand = $cBrand; ;
     }
 

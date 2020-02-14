@@ -69,7 +69,7 @@ Route::get('/gracias-cookingdemo', 'GraciasController@GraciasDefault');
 
 Route::get('/gracias-catalogo', 'GraciasController@GraciasCat');
 
-Route::get('/gracias/contacto', 'GraciasController@GraciasDefault');
+Route::get('/gracias/{control}', 'GraciasController@GraciasCat');
 
 
 
@@ -81,6 +81,8 @@ Route::post('/sumbit-contacto', 'MailController@submitContacto');
 Route::post('/sumbit-showroom', 'MailController@submitShowroom');
 
 Route::post('/submit-demo', 'MailController@submitDemo');
+
+Route::post('/submit-brand', 'MailController@submitBrand');
 
 
 

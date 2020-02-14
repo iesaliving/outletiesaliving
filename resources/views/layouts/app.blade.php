@@ -76,29 +76,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 <div id="container-btn-redes">
-  <a href="javascript:void(0)">
-    <div  class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="Catalogo">
+  <a href="{{ URL::to('/sub-zero#check') }}">
+    <div  class="btn-fixed hide"  data-toggle="tooltip" data-placement="right" title="Solictar Catálogo">
       <div class="details details-showroom">
         <img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}">
       </div>
     </div>  
   </a>
   <a href="{{ URL::to('/showroom#check') }}">
-    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="Showroom">
+    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="right" title="Agendar cita en Showroom">
       <div class="details details-cita">
         <img src="{{ URL::asset('img/icono-btn/showroon.png')   }}">
       </div>
     </div>  
   </a>
   <a target="_blank" rel="nofollow" href="https://wa.me/5218118021004?text=Deseo recibir información sobre sus productos">
-    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="top" title="WhatsApp">
+    <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="right" title="WhatsApp">
       <div class="details details-what">
         <i style="" class="fa fa-whatsapp"></i>
       </div>
     </div>  
   </a>
   <a href="javascript:void(0)">
-    <div class="btn-fixed"  data-toggle="tooltip" data-placement="top" title="Contáctanos">
+    <div class="btn-fixed"  data-toggle="tooltip" data-placement="right" title="Contáctanos">
       <div class="details details-contacto">
         <i style="" class="fa fa-comments-o"></i>
       </div>
@@ -134,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script async type="text/javascript">
       $(document).ready(function(){
 
-
+  $("body").tooltip({ selector: '[data-toggle=tooltip]' });
           $(".menu-trigger").click(function(){
             $("#menu-container").toggleClass("collapse");
           });
