@@ -238,7 +238,7 @@
             </div>
 
             <div class="col-12 nopadding">
-                <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                <form id="form-contactanos" action="{{URL::to('/sumbit-showroom') }}" method="POST">
                     @csrf
                     <div class="row nomargin">
                         <div class="form-group  col-12">

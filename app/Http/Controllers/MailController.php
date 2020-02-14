@@ -93,15 +93,62 @@ class MailController extends Controller
         $var->setSmEmail($inputs['email']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
+        $var->setTag('CONTACTO');
         $var->setUtmSource($request->input('UTM_source'));
         $var->setUtmCampaign($request->input('UTM_campaign'));
         $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
-        $var->setTag('CONTACTO');
         $response=$var->upsert();
 
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect('/gracias/contacto');
+
+         }else{
+            abort(404);
+         }
+        
+
+
+    }
+
+    public function submitShowroom(Request $request){
+        $inputs = $request->input();
+        $rule=array(
+            'nombre' => 'required|string',
+            'tel' => 'required|string',
+            'email' => 'required|string|email',
+            'showroom' => 'required|string',
+        );
+
+        $validator = \Validator::make($inputs,$rule);
+ 
+
+        if ($validator->fails())
+        {   
+             return Redirect::back()->withErrors($validator)->withInput();
+        }
+
+
+        if ($inputs['showroom']=='CIUDAD DE MÉXICO') {
+            $tag='SHOWROOM_CDMX';
+        }elseif($inputs['showroom']=='MONTERREY'){
+            $tag='SHOWROOM_MONTERREY';
+        }
+        $var=new SalesManago();
+        $var->setSmEmail($inputs['email']);
+        $var->setSmNombre($inputs['nombre']);
+        $var->setSmPhone($inputs['tel']);
+        $var->setTag($tag);
+        $var->setCiudad($inputs['showroom']);
+        $var->setFecha($inputs['fecha']);
+        $var->setUtmSource($request->input('UTM_source'));
+        $var->setUtmCampaign($request->input('UTM_campaign'));
+        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
+        $response=$var->upsert();
+
+         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
+            
+            return redirect('/gracias-Showroom');
 
          }else{
             abort(404);

@@ -225,7 +225,6 @@ class SalesManago
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
                 $response2 = curl_exec($ch);
                 curl_close($ch);
-dd($response2);
         return json_decode(stripslashes($response2),true);
     }
 

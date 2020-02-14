@@ -73,11 +73,14 @@ Route::get('/gracias/contacto', 'GraciasController@GraciasDefault');
 
 
 
-Route::get('/salesmanago', 'MailController@SalesManago');
 
 Route::post('/enviar-correo', 'MailController@enviar');
 
 Route::post('/sumbit-contacto', 'MailController@submitContacto');
+
+Route::post('/sumbit-showroom', 'MailController@submitShowroom');
+
+
 
 
 
