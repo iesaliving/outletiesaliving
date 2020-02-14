@@ -4,13 +4,24 @@
 @section('content')
 
 
-
 <section id="hero-desktop">
     @include('hero.cove')
 </section>
 <section id="hero-mobile">
     @include('hero-mobile.cove')    
 </section>
+
+
+
+<div class="modal fade" id="coveModal" tabindex="-1" role="dialog" aria-labelledby="coveModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:600px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Cove_Download.htm"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="container-gral">
     
@@ -43,7 +54,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Cove.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#coveModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>

@@ -75,8 +75,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="status">&nbsp;</div>
   </div>
 
+
+<!-- BTN BOTTOM-IZQUIERDA -->
 <div id="container-btn-redes">
-  <a href="{{ URL::to('/sub-zero#check') }}">
+  <a data-toggle="modal" data-target="#subZeroModal" href="javascript:void(0)">
     <div  class="btn-fixed hide"  data-toggle="tooltip" data-placement="right" title="Solictar Catálogo">
       <div class="details details-showroom">
         <img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}">
@@ -104,6 +106,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>  
   </a>
+</div>
+
+
+<!-- MODAL SUBZERO -->
+<div class="modal fade" id="subZeroModal" tabindex="-1" role="dialog" aria-labelledby="subZeroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:600px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Download.htm"></iframe>
+      </div>
+    </div>
+  </div>
 </div>
 
     @include('elements.header')

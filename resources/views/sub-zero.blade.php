@@ -13,15 +13,7 @@
 </section>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
-    <div class="modal-content">
-      <div class="modal-body">
-        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:450px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Download.htm"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- MODAL SUBZERO  ESTA EN LAYOUT.APP-->
 
 <section class="container-gral">
     
@@ -56,7 +48,7 @@
                             <div class="col-lg-7 nopadding bottommargin-sm">
                                <!--  <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a> -->
 
-                                <a target="_blank" data-toggle="modal" data-target="#exampleModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#subZeroModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
 
                                 
                             </div>
@@ -89,7 +81,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#subZeroModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +115,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#subZeroModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                         </div>
