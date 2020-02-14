@@ -1,4 +1,4 @@
-@extends('layouts.app')
+q@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Contacto')
 @section('content')
@@ -72,6 +72,7 @@
                         <h2 class="">FORMULARIO</h2>
                     </div>
                     <form id="form-contactanos" action="{{URL::to('/sumbit-contacto') }}" method="POST">
+                        <input type="hidden" name="tag" value="CONTACTO">
                         @csrf
                         <div class="row nomargin">
                             <div class="form-group  col-12">

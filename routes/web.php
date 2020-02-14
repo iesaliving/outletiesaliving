@@ -80,7 +80,7 @@ Route::post('/sumbit-contacto', 'MailController@submitContacto');
 
 Route::post('/sumbit-showroom', 'MailController@submitShowroom');
 
-
+Route::post('/submit-demo', 'MailController@submitDemo');
 
 
 

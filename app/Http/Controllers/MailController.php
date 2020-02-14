@@ -111,6 +111,45 @@ class MailController extends Controller
 
     }
 
+    public function submitDemo(Request $request){
+        $inputs = $request->input();
+        $rule=array(
+            'nombre' => 'required|string',
+            'tel' => 'required|string',
+            'email' => 'required|string|email',
+        );
+
+        $validator = \Validator::make($inputs,$rule);
+ 
+
+        if ($validator->fails())
+        {   
+             return Redirect::back()->withErrors($validator)->withInput();
+        }
+
+
+        $var=new SalesManago();
+        $var->setSmEmail($inputs['email']);
+        $var->setSmNombre($inputs['nombre']);
+        $var->setSmPhone($inputs['tel']);
+        $var->setTag('COOKING_DEMO');
+        $var->setUtmSource($request->input('UTM_source'));
+        $var->setUtmCampaign($request->input('UTM_campaign'));
+        $var->setUtmAnuncioId($request->input('UTM_AnuncioId'));
+        $response=$var->upsert();
+
+         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
+            
+            return redirect('/gracias-cookingdemo');
+
+         }else{
+            abort(404);
+         }
+        
+
+
+    }
+
     public function submitShowroom(Request $request){
         $inputs = $request->input();
         $rule=array(

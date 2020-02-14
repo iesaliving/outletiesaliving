@@ -305,7 +305,7 @@
                     <div  class="justify-content-center align-self-center">
                         <h2>COOKING DEMO</h2>
                         <p>Experimente el alto rendimiento y los deliciosos resultados de los electrodomésticos en persona, y obtenga consejos confiables de los chefs que usan productos Sub-Zero, Wolf, Cove y Asko todos los días. Las demostraciones son solo una forma más de descubrir la cocina adecuada para usted.</p>
-                        <form id="form-contactanos" action="{{URL::to('/enviar-correo') }}" method="POST">
+                        <form id="form-contactanos" action="{{URL::to('/submit-demo') }}" method="POST">
                         @csrf
                         <input type="hidden" name="demo" value="COOKING DEMO">
                             <div class="form-group">
