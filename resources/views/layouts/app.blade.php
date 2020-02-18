@@ -23,6 +23,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" onload="if(media!='all')media='all'">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+
     <style type="text/css">
 
 /* Preloader */
@@ -92,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>  
   </a>
-  <a target="_blank" rel="nofollow" href="https://wa.me/5218118021004?text=Deseo recibir información sobre sus productos">
+  <a target="_blank" rel="nofollow" href="https://wa.me/5215549509808?text=Deseo recibir información sobre sus productos">
     <div class="btn-fixed hide"  data-toggle="tooltip" data-placement="right" title="WhatsApp">
       <div class="details details-what">
         <i style="" class="fa fa-whatsapp"></i>
@@ -109,27 +111,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<!-- MODAL SUBZERO -->
-<div class="modal fade" id="subZeroModal" tabindex="-1" role="dialog" aria-labelledby="subZeroModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
-    <div class="modal-content">
-      <div class="modal-body">
-        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:520px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Download.htm"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
+
 
     @include('elements.header')
 
     @yield('content')
 
-     @include('elements.footer')
+    @include('elements.footer')
+
+    @include('modulos.modals')
 
 
 
 
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+   
 
 
     <!-- Custom scripts -->

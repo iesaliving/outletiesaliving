@@ -13,8 +13,6 @@
 </section>
 
 
-<!-- MODAL SUBZERO  ESTA EN LAYOUT.APP-->
-
 <section class="container-gral">
     
         <div id="container-catalogo" class="margin-10">

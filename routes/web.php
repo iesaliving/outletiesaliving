@@ -71,7 +71,7 @@ Route::get('/gracias-catalogo', 'GraciasController@GraciasCat');
 
 Route::get('/gracias/{control}', 'GraciasController@GraciasCat');
 
-
+Route::get('/gracias/contacto', 'GraciasController@GraciasDefault');
 
 
 Route::post('/enviar-correo', 'MailController@enviar');

@@ -43,7 +43,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding  bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                 <a target="_blank" data-toggle="modal" data-target="#scotsman" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>

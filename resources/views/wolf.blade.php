@@ -15,16 +15,6 @@
 </section>
 
 
-<div class="modal fade" id="wolfModal" tabindex="-1" role="dialog" aria-labelledby="wolfModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
-    <div class="modal-content">
-      <div class="modal-body">
-        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:520px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Wolf_Download.htm"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <section class="container-gral">
     

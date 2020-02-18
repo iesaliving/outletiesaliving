@@ -160,7 +160,7 @@
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#cocExtModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                 <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                 <a target="_blank" data-toggle="modal" data-target="#cocExtModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -269,7 +269,7 @@
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Asko.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                               <a target="_blank" data-toggle="modal" data-target="#askoModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                                <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/Dexa.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#dexaModal" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -371,7 +371,7 @@
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SCOTSMAN.pdf') }}" target="_blank"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a target="_blank" data-toggle="modal" data-target="#scotsman" class="btn btn-block btn-cyan solicitar-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
