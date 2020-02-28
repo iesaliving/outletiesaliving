@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request=null)
     {
+
+        
     
         $utm = array(
                         'utm_source' => $request->input('utm_source'),
@@ -32,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
                         'utm_anuncio_id' => $request->input('utm_anuncio_id'),
                     );
 
-         View::share('utm', $utm);
+        $popups= $request->input('popups');
+
+        View::share(['utm' => $utm, 'popups' => $popups]);
     }
 }
