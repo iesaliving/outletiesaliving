@@ -110,7 +110,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 </div>
 
-
+<!-- MODALS SALES MANAGO -->
+<div class="modal fade" id="catalogo" tabindex="-1" role="dialog" aria-labelledby="scotsmanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 850px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:850px; height:520px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src=""></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     @include('elements.header')
@@ -165,12 +174,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     $("#header").attr('style',  'background-color: #fff');  
               }
           });
+
+
+        $('.solicitar-btn').click(function () {
+            var url = $(this).attr('rel');
+            console.log($('#salesmanagoIframe').attr('src'))
+            $('#salesmanagoIframe').attr('src', url);
+             console.log($('#salesmanagoIframe').attr('src'))
+            setTimeout(mostrarModal, 1000);
+
+          });
         });
 
       function mover(){
           var elemento = $("#formulario");
           var posicion = elemento.position();
           $("html, body").animate({scrollTop:posicion.top+"px"},"slow");
+      }
+
+
+      function mostrarModal(){
+        $('#catalogo').modal('show'); 
       }
 
     </script>
