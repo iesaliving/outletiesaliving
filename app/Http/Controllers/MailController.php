@@ -90,6 +90,7 @@ class MailController extends Controller
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag('CONTACTO');
@@ -129,6 +130,7 @@ class MailController extends Controller
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag('COOKING_DEMO');
@@ -174,6 +176,7 @@ class MailController extends Controller
         }
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag($tag);
@@ -212,11 +215,13 @@ class MailController extends Controller
              return Redirect::back()->withErrors($validator)->withInput();
         }
 
+     
 
         $tag=strtoupper(str_replace("-","_",$inputs['cBrand'])).'_CITA';
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
         $var->setTag($tag);

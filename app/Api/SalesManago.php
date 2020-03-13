@@ -23,6 +23,7 @@ class SalesManago
     private $cBrand;
     private $cCiudad;
     private $cFecha;
+    private $estado;
     private $cUtmSource;
     private $cUtmCampaign;
     private $cUtmAnuncioId;
@@ -56,6 +57,10 @@ class SalesManago
 
     public function setSmNombre($name){
         $this->name=$name;
+    }
+
+    public function setEstado($estado){
+        $this->estado=$estado;
     }
 
     public function setSmEmail($email){
@@ -204,6 +209,7 @@ class SalesManago
                     "phone" : "'.$this->phone.'"
                     },
                   "properties" : {
+                    "custom.estado":"'.$this->estado.'",
                     "custom.mensaje":"'.$this->cMensaje.'",
                     "custom.brand":"'.$this->cBrand.'",
                     "custom.ciudad":"'.$this->cCiudad.'",

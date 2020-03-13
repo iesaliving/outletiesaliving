@@ -150,10 +150,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <script  type="text/javascript">
+
       $(document).ready(function(){
 
-              $(".menu-trigger").click(function(){
-            $("#menu-container").toggleClass("collapse");
+          $("[data-toggle=tooltip]").tooltip();
+
+          
+          $(".menu-trigger").click(function(){
+              $("#menu-container").toggleClass("collapse");
           });
 
 
