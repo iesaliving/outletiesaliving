@@ -27,6 +27,23 @@ Route::get('/showroom', function () {
     return view('showroom');
 });
 
+Route::get('/cita', function () {
+    return view('calendry-cita');
+});
+
+Route::get('/cookingdemo-cita', function () {
+    return view('calendry-cooking-demo-CDMX');
+});
+
+Route::get('/showroom-cita-cdmx', function () {
+    return view('calendry-showroom-CDMX');
+});
+
+Route::get('/showroom-cita-monterrey', function () {
+    return view('calendry-showroom-monterrey');
+});
+
+
 Route::get('/faq', function () {
     return view('faq-index');
 });

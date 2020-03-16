@@ -126,7 +126,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @yield('content')
 
-    @include('elements.footer')
+
+
+    @if(request()->segment('1')!="agendar-cita")
+
+    @endif
 
     @include('modulos.modals')
 
