@@ -200,7 +200,23 @@
 
 </section>
 
-<section style="width: 100%; height: 300px; background-image: url('{{ URL::asset('img/plum-wine/facebook.jpg')}}')">
+<section id="facebook-desktop" style="width: 100%; height: 300px; background-image: url('{{ URL::asset('img/plum-wine/facebook.jpg')}}')">
+            <div  class="container-gral h-100">
+                <div class="margin-10 h-100">
+                    <div class="h-100 d-flex">
+                        <div class="col-md-5 col-12 justify-content-center align-self-center">
+                            <h2 class="light">PLUM</h2>
+                        <div class="col-md-6 col-7  nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="javascript:void(0)" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</section>
+
+<section id="facebook-mobile" style="width: 100%; height: 300px; background-image: url('{{ URL::asset('img/plum-wine/facebook-mobile.jpg')}}')">
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
