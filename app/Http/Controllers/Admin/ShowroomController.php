@@ -104,10 +104,10 @@ class ShowroomController extends Controller
 
          // //IMAGE 
 
-        if (isset($request->title_d)) {
+        if (isset($request->id)) {
 
            
-            foreach($request->title_d as $key => $value) {
+            foreach($request->id as $key => $value) {
                    
                $showdetail = ShowroomDetail::findOrFail($request->id[$key]);
                $showdetail->showroom_id = $id;

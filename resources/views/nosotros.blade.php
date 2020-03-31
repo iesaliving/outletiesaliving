@@ -46,8 +46,6 @@
         @include('modulos.showrooms')
 
         @include('modulos.carrousel')
-
-
         
 </section>
 @endsection

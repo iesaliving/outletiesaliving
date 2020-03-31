@@ -160,13 +160,15 @@
                                                         <i class="fa fa-search"></i> <input type="file" accept=".png, .jpg, .jpeg" data-idimg="{{'blah'.$key}}" class="imgInp" id="{{'img'.$key}}" name="img[]" >
                                                     </span>
                                                 </span>
-                                                <input type="text" class="form-control" readonly>
+                                                <input type="text" class="form-control  @error('img.'.$key) is-invalid @enderror" readonly>
+
                                                  @error('img.'.$key)
                                                              <em class="invalid-feedback">
                                                                   {{ $message }}
                                                               </em>
                                                   @enderror
                                             </div>   
+                                            <span style = "color:red">Dimensones: 650 x 490</span>   
                                           </td>
                                            
                                         </tr>  
