@@ -5,7 +5,7 @@
 <form id="form-contactanos" action="{{URL::to('/submit-brand') }}" method="POST">
     @csrf
 
-    <input type="hidden" name="cBrand" value="{{request()->segment('1')}}">
+    <input type="hidden" name="cBrand" value="{{$tag}}}">
     <input type="hidden" name="utm_source" value="{{$utm['utm_source']}}">
     <input type="hidden" name="utm_campaign" value="{{$utm['utm_campaign']}}">
     <input type="hidden" name="utm_anuncio_id" value="{{$utm['utm_anuncio_id']}}">

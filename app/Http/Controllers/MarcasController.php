@@ -24,10 +24,11 @@ class MarcasController extends Controller
 
         $data = $this->datos('sub-zero');
         $hero = $this->image('sub-zero');
+        $tag ='Sub-Zero';
 
-        return view('web.brands',compact('email','footer','data','hero'));
+        return view('web.brands',compact('email','footer','data','hero','tag'));
 
-       // return view('sub-zero',compact('email','footer','data','hero'));
+       // return view('sub-zero',compact('email','footer','data','hero','tag'));
 
     }
 
@@ -38,9 +39,10 @@ class MarcasController extends Controller
 
         $data = $this->datos('wolf');
         $hero = $this->image('wolf');
+        $tag ='Wolf';
 
-        //return view('wolf',compact('email','footer','data','hero'));
-        return view('web.brands',compact('email','footer','data','hero'));
+        //return view('wolf',compact('email','footer','data','hero','tag'));
+        return view('web.brands',compact('email','footer','data','hero','tag'));
     }
 
     public function Cove(){
@@ -50,9 +52,10 @@ class MarcasController extends Controller
 
         $data = $this->datos('cove');
         $hero = $this->image('cove');
+        $tag ='Cove';
         
-        return view('web.cove',compact('email','footer','data','hero'));
-       // return view('cove',compact('email','footer','data','hero'));
+        return view('web.cove',compact('email','footer','data','hero','tag'));
+       // return view('cove',compact('email','footer','data','hero','tag'));
     }
 
     public function CocinaExt() {
@@ -62,9 +65,10 @@ class MarcasController extends Controller
 
         $data = $this->datos('cocina-exterior');
         $hero = $this->image('cocina-exterior');
+        $tag ='Cocina Exterior';
 
-       // return view('exteriores',compact('email','footer','data','hero'));
-       return view('web.brands',compact('email','footer','data','hero'));
+       // return view('exteriores',compact('email','footer','data','hero','tag'));
+       return view('web.brands',compact('email','footer','data','hero','tag'));
     }
 
     public function Asko() {
@@ -74,9 +78,10 @@ class MarcasController extends Controller
 
         $data = $this->datos('asko');
         $hero = $this->image('asko');
+        $tag ='Asko';
 
-       // return view('asko',compact('email','footer','data','hero'));
-       return view('web.brands',compact('email','footer','data','hero'));
+       // return view('asko',compact('email','footer','data','hero','tag'));
+       return view('web.brands',compact('email','footer','data','hero','tag'));
     }
 
     public function Dexa() {
@@ -86,9 +91,10 @@ class MarcasController extends Controller
 
         $data = $this->datos('dexa');
         $hero = $this->image('dexa');
+        $tag ='Dexa';
 
-       // return view('dexa',compact('email','footer','data','hero'));
-       return view('web.brands',compact('email','footer','data','hero'));
+       // return view('dexa',compact('email','footer','data','hero','tag'));
+       return view('web.brands',compact('email','footer','data','hero','tag'));
     }
 
     public function Scotsman() {
@@ -98,10 +104,11 @@ class MarcasController extends Controller
 
         $data = $this->datos('scotsman');
         $hero = $this->image('scotsman');
+        $tag ='Scotsman';
 
-        return view('web.scotsman',compact('email','footer','data','hero'));
+        return view('web.scotsman',compact('email','footer','data','hero','tag'));
 
-        //return view('scotsman',compact('email','footer','data','hero'));
+        //return view('scotsman',compact('email','footer','data','hero','tag'));
     }
 
     public function plumWine() {
@@ -111,8 +118,9 @@ class MarcasController extends Controller
 
         $data = $this->datos('plum-wine');
         $hero = $this->image('plum-wine');
+        $tag ='Plum Wine';
 
-        return view('web.plum-wine',compact('email','footer','data','hero'));
+        return view('web.plum-wine',compact('email','footer','data','hero','tag'));
     }
 
     public function datos($slug = null){
