@@ -29,7 +29,7 @@ class ShowroomRequest extends FormRequest
         ];
 
          if($this->file('img'))        
-            $rules = array_merge($rules, ['img.*'  => 'mimes:jpg,jpeg,png|dimensions:width=650,height=490']);
+            $rules = array_merge($rules, ['img.*'  => 'mimes:jpg,jpeg,png|dimensions:width=407,height=300']);
         
 
         return $rules;

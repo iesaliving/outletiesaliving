@@ -225,7 +225,10 @@
                                  <td> 
 
                                    <div class="form-group row">
-                                                <div class="col-9">
+
+                                    @if(isset($data) && $data->slug != 'plum-wine')
+                                          <div class="col-9">
+                                            {{ $data->slug }}
                                                   <input id="{{'title'.$key}}" name="title_d[]" type="text" class="form-control @error('title_d.'.$key) is-invalid @enderror" value="{{ old('title_d.'.$key, isset($detail->title) ? $detail->title : '') }}" maxlength="100" required="" placeholder="TITULO">
 
 
@@ -236,10 +239,12 @@
                                                  @enderror
                                              </div>
 
+                                      @endif
+
                                         <div class="col-2">
 
                                           <div class="custom-control custom-switch">
-                                           
+                                          
                                             <input type="checkbox" class="custom-control-input" name="feature[]" id="{{$key}}" value="1" onclick="ch('{{'f'.$key}}')"  {{ (isset($detail->features)) && ($detail->features == 1)  ? 'checked' : '' }}>
                                             <label class="custom-control-label" for="{{$key}}">Feature</label>
 

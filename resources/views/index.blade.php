@@ -410,7 +410,7 @@
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
                             <div class="col-xl-3 offset-xl-9 col-lg-3 offset-lg-9 col-4  nopadding">
-                                <a href="{{ URL::to('/dexa') }}"><img src="{{ asset('img/plum-wine/logo.png')   }}"></a>
+                                <a href="{{ URL::to('/plum-wine') }}"><img src="{{ asset('img/plum-wine/logo.png')   }}"></a>
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
@@ -421,10 +421,11 @@
 
                         <div class="topmargin-sm text-lg-right text-left">
                              <h2>
-                                PERFECTO PARA LOS AMANTES DEL VINO
+                                {{ isset($home[5]->title) ? $home[5]->title : 'PERFECTO PARA LOS AMANTES DEL VINO.'}}  
                             </h2>
                             <p>
-                                Plum, un artefacto diseñado para uso diario que preserva, identifica, enfría y sirve el vino que más le guste. Mediante la aguja de doble núcleo, Plum perfora automáticamente la lámina y el corcho de la botella extrayendo simultaneamente el vino e inyectando gas argón para evitar la oxidación.
+
+                                {!! isset($home[5]->text) ? $home[5]->text : '...' !!}
                             </p>
 
                         </div>
@@ -442,20 +443,15 @@
                 </div>
                 <div class="col-lg-6 d-flex col-padding-sm  order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
-                          <img class="img-fluid" src="{{ URL::asset('img/home/6.jpg')}}">
+                       
+                          <img class="img-fluid" src="{{ URL::asset(isset($home[5]->image) ? asset($home[5]->image) : 'img/home/6.jpg')}}">
                     </div>
                 </div>
             </div>
 
 
-
-
-
             <!-- HASTA ACA -->
             
-
-
-
 
         </div>
 
