@@ -303,7 +303,7 @@
 
 
             <div class="row col-padding catalogo topmargin">
-                <div class="col-xl-5 offset-xl-1 col-lg-6 container-descripcion d-flex  order-lg-2 order-1"  style="">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 container-descripcion d-flex  order-lg-2 order-2"  style="">
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
                             <div class="col-xl-1 offset-xl-11 col-lg-2 offset-lg-10 col-2  nopadding">
@@ -404,6 +404,55 @@
             </div>
 
 
+
+            <!-- JORGE ACA -->
+            <div class="row col-padding catalogo topmargin">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 container-descripcion d-flex  order-lg-2 order-2"  style="">
+                    <div class="justify-content-center align-self-center">
+                        <div class="row nomargin">
+                            <div class="col-xl-3 offset-xl-9 col-lg-3 offset-lg-9 col-4  nopadding">
+                                <a href="{{ URL::to('/dexa') }}"><img src="{{ asset('img/plum-wine/logo.png')   }}"></a>
+                            </div>
+                        </div>
+                        <div class="row  topmargin-sm container-icon left">
+                            <div>
+                                <img class="icon-catalogo-right" src="{{ asset('img/icono/vino.png')   }}">
+                            </div>
+                        </div>
+
+                        <div class="topmargin-sm text-lg-right text-left">
+                             <h2>
+                                PERFECTO PARA LOS AMANTES DEL VINO
+                            </h2>
+                            <p>
+                                Plum, un artefacto diseñado para uso diario que preserva, identifica, enfría y sierve el vino que más le guste. Mediante la aguja de doble núcleo, Plum perfora automáticamente la lámina y el corcho de la botella extrayendo simultaneamente el vino e inyectando gas argón para evitar la oxidación.
+                            </p>
+
+                        </div>
+
+                        <div class="topmargin-sm row nomargin">
+                            <div class="col-lg-5 col-8 nopadding bottommargin-sm">
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/plum-wine') }}"><img src="{{ asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                            </div>
+
+                            <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Plum_Wine_Download.htm" href="javascript:void(0)"><img src="{{ asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex col-padding-sm  order-lg-2 order-1">
+                    <div class="justify-content-center align-self-center">
+                          <img class="img-fluid" src="{{ URL::asset('img/home/6.jpg')}}">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- HASTA ACA -->
             
 
 

@@ -233,6 +233,7 @@ class MailController extends Controller
         $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
 
         $response=$var->upsert();
+dd($response);
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect("/gracias/".$inputs['cBrand']);

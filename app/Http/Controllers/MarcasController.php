@@ -104,6 +104,17 @@ class MarcasController extends Controller
         //return view('scotsman',compact('email','footer','data','hero'));
     }
 
+    public function plumWine() {
+
+        $footer='http://www.scotsman.mx/ ';
+        $email="contacto@scotsman.mx";
+
+        // $data = $this->datos('scotsman');
+        //$hero = $this->image('scotsman');
+
+        return view('plum-wine',compact('email','footer'/*,'data','hero'*/));
+    }
+
     public function datos($slug = null){
 
         $data   = Brand::where('slug', '=', $slug)->firstOrFail();

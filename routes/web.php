@@ -105,6 +105,11 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/optout', function () {
+    return view('optout');
+});
+
+
 
 Route::get('/sub-zero', 'MarcasController@Subzero');
 
@@ -119,6 +124,8 @@ Route::get('/asko', 'MarcasController@Asko');
 Route::get('/dexa', 'MarcasController@Dexa');
 
 Route::get('/scotsman', 'MarcasController@Scotsman');
+
+Route::get('/plum-wine', 'MarcasController@plumWine');
 
 
 

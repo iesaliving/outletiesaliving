@@ -26,7 +26,8 @@
                       <a class="dropdown-item" href="{{ URL::to('/asko')}}">Asko</a>
                       <a class="dropdown-item" href="{{ URL::to('/dexa')}}">Dexa</a>
                       <a class="dropdown-item" href="{{ URL::to('/scotsman')}}">Scotsman</a>
-                      <a class="dropdown-item" href="{{ URL::to('/cocina-exterior')}}">Cocina Exterior</a>    
+                      <a class="dropdown-item" href="{{ URL::to('/cocina-exterior')}}">Cocina Exterior</a> 
+                      <a class="dropdown-item" href="{{ URL::to('/plum-wine')}}">Plum Wine</a>     
                     </div>
                 </li>
                 <li class="nav-item">

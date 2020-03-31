@@ -63,7 +63,7 @@
 </div>
 
 
-<div class="modal fade" id="scotsman" tabindex="-1" role="dialog" aria-labelledby="scotsmanLabel" aria-hidden="true">
+<div class="modal fade" id="scotsmanModal" tabindex="-1" role="dialog" aria-labelledby="scotsmanLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document" style="max-width: 835px">
     <div class="modal-content">
       <div class="modal-body">
