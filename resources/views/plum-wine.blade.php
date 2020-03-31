@@ -150,7 +150,7 @@
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/plum-wine/agujas.png')   }}">
                 </div>
-                <div class="col-12 nopadding topmargin-sm">
+                <div class="col-lg-11 col-12 nopadding topmargin-sm">
                     <p class="light">Agujas motorizadas automáticamente perforan la tapa o corcho, preservando su vino con gas Argón. Un recipiente de argón recargable integrado conserva hasta 150 botellas.</p>
                 </div>
                 
@@ -160,7 +160,7 @@
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/plum-wine/botella.png')   }}">
                 </div>
-                <div class="col-12 nopadding topmargin-sm">
+                <div class="col-lg-11 col-12 nopadding topmargin-sm">
                     <p class="light">Plum trabaja con cualquier botella estándar de 750ml, de cualquier tipo de tapa o corcho, incluyendo corcho natural, corcho artificial o tapones de metal.</p>
                 </div>
                 
@@ -170,7 +170,7 @@
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/plum-wine/descorche.png')   }}">
                 </div>
-                <div class="col-12 nopadding topmargin-sm">
+                <div class="col-lg-11 col-12 nopadding topmargin-sm">
                     <p class="light">Las dos cámaras de enfriamiento de Plum están configuradas automáticamente para servir cada variedad de vino a la temperatura perfecta, por lo que puede tener Chardonnay a 10 grados y un Cabernet a 18 grados sin ningún problema.</p>
                 </div>
                 
@@ -180,7 +180,7 @@
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/plum-wine/botellas.png')   }}">
                 </div>
-                <div class="col-12 nopadding topmargin-sm">
+                <div class="col-lg-11 col-12 nopadding topmargin-sm">
                     <p class="light">Plum automáticamente identifica el año de producción, la variedad, la región, el lagar y el vino, creando una conexión directa con el arte de degustar sin salir de su hogar.</p>
                 </div>
                 
@@ -190,7 +190,7 @@
                 <div class="col-5 nopadding">
                     <img src="{{ URL::asset('img/plum-wine/tactil.png')   }}">
                 </div>
-                <div class="col-12 nopadding topmargin-sm">
+                <div class="col-lg-11 col-12 nopadding topmargin-sm">
                     <p class="light">La pantalla táctil de 7 pulgadas a full color de Plum se enciende cuando usted se acerca, mostrándole los diferentes vinos y permitiéndole servirse una copa o solo degustar el vino.</p>
                 </div>
                 
@@ -207,7 +207,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">PLUM</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="javascript:void(0)" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>
