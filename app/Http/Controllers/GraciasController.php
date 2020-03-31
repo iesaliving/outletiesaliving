@@ -19,6 +19,7 @@ class GraciasController extends Controller
         $text0='Gracias';
         $text1='Agradecemos de antemano el interés en nuestras marcas.';
         $text2='A la brevedad posible nos pondremos en contacto con usted para poder atender su petición.';
+        
         return view('gracias',compact('text0','text1','text2'));
     }
 

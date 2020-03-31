@@ -30,10 +30,12 @@ class BrandRequest extends FormRequest
             $rules = array_merge($rules, ['imgsoc'  => 'mimes:jpg,jpeg,png|dimensions:width=650,height=490']);
         
         if($this->file('imgs'))        
-            $rules = array_merge($rules, ['imgs.*'  => 'mimes:jpg,jpeg,png|dimensions:width=650,height=490']);
+            $rules = array_merge($rules, ['imgs.*'  => 'mimes:jpg,jpeg,png|dimensions:min_width=117,max_width=650,min_height=117,max_height=490']);
 
-    
-      
+        if($this->file('imglogo'))        
+            $rules = array_merge($rules, ['imgsoc'  => 'image|mimes:jpg,jpeg,png']);
+
+
         return $rules;
 
     }

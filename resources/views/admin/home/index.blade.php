@@ -7,7 +7,7 @@
 
 @php
  //dump($data->detail)
-dump($errors)
+//dump($errors)
 @endphp
 
 
