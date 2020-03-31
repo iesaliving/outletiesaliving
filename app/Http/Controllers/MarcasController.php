@@ -109,10 +109,10 @@ class MarcasController extends Controller
         $footer='http://www.scotsman.mx/ ';
         $email="contacto@scotsman.mx";
 
-        // $data = $this->datos('scotsman');
-        //$hero = $this->image('scotsman');
+        $data = $this->datos('plum-wine');
+        $hero = $this->image('plum-wine');
 
-        return view('plum-wine',compact('email','footer'/*,'data','hero'*/));
+        return view('web.plum-wine',compact('email','footer','data','hero'));
     }
 
     public function datos($slug = null){
