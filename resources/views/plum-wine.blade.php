@@ -38,7 +38,7 @@
 
                         <div class="topmargin-sm">
                             <p>
-                               Después de un largo día, disfrute de una copa de vino blanco o tinto sin desperdiciar ni una gota en el desagüe. Plum le permite poner dos botellas y servirse tanto como usted desee.
+                               Después de un largo día, disfrute de una copa de vino blanco o tinto sin desperdiciar ni una gota. Plum le permite poner dos botellas y servirse tanto como usted desee.
 
                             </p>
 
@@ -119,14 +119,14 @@
 
                         <div class="topmargin-sm text-lg-right text-left">
                             <h2>
-                                Usted merece la <br>botella "especial" 
+                                Usted merece esa <br>botella "especial" 
                             </h2>
 
                         </div>
 
                         <div class="topmargin-sm text-lg-right text-left">
                             <p>
-                              Todos tenemos botellas esperando por una ocasión especial que nunca llega. Con Plum, usted podrá disfrutar ese atesorado Bordeaux durante algunos días o incluso semanas
+                              Todos tenemos botellas esperando por una ocasión especial que nunca llega. Con Plum, usted podrá disfrutar ese atesorado Bordeaux durante algunos días o incluso semanas.
                             </p>
 
                         </div>
@@ -207,7 +207,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">PLUM</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="javascript:void(0)" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/PlumAppliance" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">PLUM</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="javascript:void(0)" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/PlumAppliance" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

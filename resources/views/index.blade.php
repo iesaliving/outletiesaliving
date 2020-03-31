@@ -425,7 +425,7 @@
                                 PERFECTO PARA LOS AMANTES DEL VINO
                             </h2>
                             <p>
-                                Plum, un artefacto diseñado para uso diario que preserva, identifica, enfría y sierve el vino que más le guste. Mediante la aguja de doble núcleo, Plum perfora automáticamente la lámina y el corcho de la botella extrayendo simultaneamente el vino e inyectando gas argón para evitar la oxidación.
+                                Plum, un artefacto diseñado para uso diario que preserva, identifica, enfría y sirve el vino que más le guste. Mediante la aguja de doble núcleo, Plum perfora automáticamente la lámina y el corcho de la botella extrayendo simultaneamente el vino e inyectando gas argón para evitar la oxidación.
                             </p>
 
                         </div>
