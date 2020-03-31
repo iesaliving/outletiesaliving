@@ -46,7 +46,7 @@
         </div>
         <div class="carousel-item">
             @include('hero.scotsman')
-        </div> -->
+        </div>
       </div>
     </div>
 </section>
@@ -55,32 +55,31 @@
     <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="4000">
 
       <div class="carousel-inner">
-         @foreach($images as $key => $img)
+        @foreach($images as $key => $img)
             @if($img->type=='MOBIL')
-                <div class="carousel-item {{$key == 0 ? 'active' : ''}}">
-
-                   <div class="container-hero-image-mobile" style="background-color: #e7e8ea;">
-                    <div>
-                        <img src="{{ asset($img->url.$img->name)}}">
-                    </div>
-                    <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
-                        <div class="justify-content-center align-self-center row nomargin">
-                            <div class="col-lg-4 col-12">
-                                <a href="{{ URL::to('/sub-zero') }}"><img  src="{{ asset('img/subzero/logo.png')}}"></a>
-                            </div>
-                            <div class="col-lg-4 col-12">
-                                <a href="{{ URL::to('/wolf') }}"><img  src="{{ asset('img/wolf/logo.png')}}"></a>
-                            </div>
-                            <div class="col-lg-4 col-12">
-                                <a href="{{ URL::to('/cove') }}"><img  src="{{ asset('img/cove/logo.png')}}"></a>
+                <div class="carousel-item active">
+                    <div class="container-hero-image-mobile" style="background-color: #e7e8ea;">
+                        <div>
+                            <img src="{{ asset( is_null($img->url) ? 'img/triband/mobile.jpg' : $img->url.$img->name)}}">
+                        </div>
+                        <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
+                            <div class="justify-content-center align-self-center row nomargin">
+                                <div class="col-lg-4 col-12">
+                                    <a href="{{ URL::to('/sub-zero') }}"><img  src="{{ asset('img/subzero/logo.png')}}"></a>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <a href="{{ URL::to('/wolf') }}"><img  src="{{ asset('img/wolf/logo.png')}}"></a>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <a href="{{ URL::to('/cove') }}"><img  src="{{ asset('img/cove/logo.png')}}"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                   
-                </div>
-            @endif
+          @endif
         @endforeach
+
         <div class="carousel-item">
             @include('hero-mobile.subzero')
         </div>

@@ -17,15 +17,9 @@ class AboutComposer {
                                  ['type', '<>','SLIDE']  
                     ])->orderBy('id')->get();
 
-         $logos    = \DB::table('images')
-                    ->where([
-                                 ['source','ABOUTUS'],
-                                 ['type','SLIDE']  
-                    ])->orderBy('id')->get();
 
         $view->with('about_us',  $about_us);
         $view->with('images',    $images);
-        $view->with('logos',    $logos);
- 
+       
 	}
 }
