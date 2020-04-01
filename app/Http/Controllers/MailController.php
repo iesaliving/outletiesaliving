@@ -216,7 +216,8 @@ class MailController extends Controller
              return Redirect::back()->withErrors($validator)->withInput();
         }
 
-     
+        
+
 
         $tag=strtoupper(str_replace("-","_",$inputs['cBrand'])).'_CITA';
 
@@ -235,7 +236,7 @@ class MailController extends Controller
         $response=$var->upsert();
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
-            return redirect("/gracias/".$inputs['cBrand']);
+              return redirect("/gracias/".str_replace(" ","-",strtolower($inputs['cBrand'])));
 
          }else{
             abort(404);
