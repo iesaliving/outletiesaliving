@@ -161,7 +161,16 @@ Route::post('/submit-brand', 'MailController@submitBrand');
 Route::get('/submit-calendry', 'MailController@submitCalendry');
 
 
+/**********ZOHO API**************************/
 
 
+Route::get('/zohoApi', 'ZohoV2Controller@getRecords');
+
+
+Route::post('/calificacion', 'ZohoV2Controller@confirmarCalificacion')->name('confirmarCalificacion');
+
+Route::get('/rating', function () {
+    return view('rating');
+});
 
 

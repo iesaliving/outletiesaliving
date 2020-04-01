@@ -15,7 +15,8 @@
         "intervention/image": "^2.5",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "yajra/laravel-datatables-oracle": "~9.0"
+        "yajra/laravel-datatables-oracle": "~9.0",
+        "zohocrm/php-sdk": "^2.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
