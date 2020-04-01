@@ -217,9 +217,10 @@ class MailController extends Controller
         }
 
         
+        $replace = array(' ', '-');
 
+        $tag=strtoupper(str_replace($replace,"_",$inputs['cBrand'])).'_CITA';
 
-        $tag=strtoupper(str_replace("-","_",$inputs['cBrand'])).'_CITA';
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
