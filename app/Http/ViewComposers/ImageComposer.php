@@ -3,6 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\Contracts\View\View;
+use App\Brand;
 
 class ImageComposer {
 
@@ -14,7 +15,10 @@ class ImageComposer {
                     ->orderBy('type')
                     ->get();
 
-        $view->with('imagen',  $imagen);
+        $brands = Brand::select('name','slug','logo','logo_txt')->get();
+
+        $view->with('imagen', $imagen);
+        $view->with('brands', $brands);
  
 	}
 }

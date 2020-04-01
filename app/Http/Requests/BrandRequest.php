@@ -20,6 +20,7 @@ class BrandRequest extends FormRequest
             'intro'           => 'required',
             'imgInp'          => 'nullable|image|mimes:jpeg,png,jpg|dimensions:width=1920,height=1080',
             'img_mobil'       => 'nullable|image|mimes:jpeg,png,jpg|dimensions:width=375,height=345',
+            'title_d.*'       => 'nullable|max:100'
 
         ];
 

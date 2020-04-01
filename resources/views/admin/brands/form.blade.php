@@ -226,20 +226,39 @@
 
                                    <div class="form-group row">
 
-                                    @if(isset($data) && $data->slug != 'plum-wine')
-                                          <div class="col-9">
-                                            {{ $data->slug }}
-                                                  <input id="{{'title'.$key}}" name="title_d[]" type="text" class="form-control @error('title_d.'.$key) is-invalid @enderror" value="{{ old('title_d.'.$key, isset($detail->title) ? $detail->title : '') }}" maxlength="100" required="" placeholder="TITULO">
+                                    @if(isset($data))
+
+                                      @if($data->slug == 'plum-wine' && $detail->features == 1)
+
+                                      <input id="{{'title'.$key}}" name="title_d[]" type="hidden" class="form-control @error('title_d.'.$key) is-invalid @enderror" value="..." maxlength="100"  placeholder="TITULO">
+
+                                                     @error('title_d.'.$key)
+                                                         <em class="invalid-feedback">
+                                                              {{ $message }}
+                                                          </em>
+                                                    @enderror
 
 
-                                                 @error('title_d.'.$key)
-                                                     <em class="invalid-feedback">
-                                                          {{ $message }}
-                                                      </em>
-                                                 @enderror
-                                             </div>
+                                      @else
 
+                                        <div class="col-9">
+                                                
+                                                      <input id="{{'title'.$key}}" name="title_d[]" type="text" class="form-control @error('title_d.'.$key) is-invalid @enderror" value="{{ old('title_d.'.$key, isset($detail->title) ? $detail->title : '') }}" maxlength="100" required="" placeholder="TITULO">
+
+
+                                                     @error('title_d.'.$key)
+                                                         <em class="invalid-feedback">
+                                                              {{ $message }}
+                                                          </em>
+                                                    @enderror
+                                        </div>  
+                                       @endif
+
+                                   
                                       @endif
+                              
+
+
 
                                         <div class="col-2">
 

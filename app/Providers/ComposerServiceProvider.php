@@ -19,7 +19,7 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer('aviso-privacidad', 'App\Http\ViewComposers\NoticePrivacyComposer');
         View::composer('modulos.carrousel', 'App\Http\ViewComposers\CarrouselComposer');
 
-        View::composer(['hero.asko','hero.cove','hero.dexa','hero.exteriores','hero.scotsman','hero.subzero','hero.wolf','hero-mobile.asko','hero-mobile.cove','hero-mobile.dexa','hero-mobile.exteriores','hero-mobile.scotsman','hero-mobile.subzero','hero-mobile.wolf'] , 'App\Http\ViewComposers\ImageComposer');
+        View::composer(['hero.asko','hero.cove','hero.dexa','hero.exteriores','hero.scotsman','hero.subzero','hero.wolf','hero-mobile.asko','hero-mobile.cove','hero-mobile.dexa','hero-mobile.exteriores','hero-mobile.scotsman','hero-mobile.subzero','hero-mobile.wolf','hero.plum-wine','hero-mobile.plum-wine'] , 'App\Http\ViewComposers\ImageComposer');
 
 
         //********ADMIN*********/
