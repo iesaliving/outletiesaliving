@@ -5,7 +5,7 @@
     <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
         <div class="justify-content-center align-self-center">
            
-            <a href="{{ URL::to('/plum-wine') }}"><img style="width: 200px;margin-top: 10px" src="{{ asset('img/plum-wine/logo.png')}}"></a>
+            <a href="{{ URL::to('/plum-wine') }}"><img style="width: 200px;margin-top: 10px" src="{{ URL::asset('img/cintillos/Plum.png')}}"></a>
 
             <h2 class="light h2-text" style="margin-top: 10px">UNA COPA DE VINO</h2>
             <h2 class="light nomargin">EN EL<b class="bold"><i> MOMENTO</i></b></h2>

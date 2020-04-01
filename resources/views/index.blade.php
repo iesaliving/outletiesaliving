@@ -47,6 +47,9 @@
         <div class="carousel-item">
             @include('hero.scotsman')
         </div>
+        <div class="carousel-item">
+            @include('hero.plum-wine')
+        </div>
       </div>
     </div>
 </section>
@@ -100,6 +103,9 @@
         </div>
         <div class="carousel-item">
             @include('hero-mobile.scotsman')
+        </div>
+        <div class="carousel-item">
+            @include('hero-mobile.plum-wine')
         </div>
       </div>
     </div>
