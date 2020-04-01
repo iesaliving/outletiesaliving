@@ -3,11 +3,11 @@
 @section('title', $data->name)
 @section('content')
 <section id="hero-desktop">
-      
+
 <div class="container-hero-image {{(request()->segment('1')==null)?'m-height':''}}" style="background-image: url('{{ asset($hero[0]->url.$hero[0]->name)}}');">
         <div class="col-12 nopadding h-100 d-flex aling">
             <div class="justify-content-center align-self-center col-md-5 gradient-hero">
-                <img style="width: 200px;margin-left: -15px;" src="{{ asset($data->logo)}}">
+                <img style="width: 200px;margin-left: -35px;" src="{{ asset($data->logo)}}">
                 <h2 class="light h2-text">{!! $data->logo_txt !!}</h2>
             </div>
         </div>

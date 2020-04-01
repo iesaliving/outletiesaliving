@@ -77,6 +77,7 @@ class BrandController extends Controller
         $brand->fill($request->all());
         $brand->save();
 
+
         $path = public_path("img/".$brand->slug);
 
         if(!\File::isDirectory($path)){
@@ -172,6 +173,7 @@ class BrandController extends Controller
         }
 
         } catch (Exception $e) {
+
             $notification = array(
             'message'    => 'Error!', 
             'alert_type' => 'error',);
