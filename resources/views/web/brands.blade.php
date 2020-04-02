@@ -21,7 +21,7 @@
 
                 @foreach($data->detail as $key => $detail)
 
-                     @if($detail->features==0)
+                   @if($detail->features==0)
 
                     @if($key%2==0)
 

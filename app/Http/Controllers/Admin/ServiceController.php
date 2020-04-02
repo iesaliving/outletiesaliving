@@ -182,7 +182,7 @@ class ServiceController extends Controller
 
            \DB::table('images')->where([
                   ['type', '=', 'HERO'],
-                  ['source', '=', 'HOME'],
+                  ['source', '=', 'SERVICES'],
               ])
               ->update(['url'   => "img/servicios/" ,'name'  => "hero".$extension]);
 
