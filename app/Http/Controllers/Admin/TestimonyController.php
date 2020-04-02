@@ -44,7 +44,7 @@ class TestimonyController extends Controller
 
            $extension = date('YmdHi').'.'.$request->file('imgInp')->getClientOriginalExtension();
 
-           \Image::make($request->file('imgInp'))->resize(184, 184)->save('img/testimonies/'.$testimony->id.'-'. $extension);
+           \Image::make($request->file('imgInp'))->save('img/testimonies/'.$testimony->id.'-'. $extension);
 
             $testimony = Testimony::findOrFail($testimony->id);
             $testimony->image = "img/testimonies/".$testimony->id."-". $extension;
@@ -85,7 +85,7 @@ class TestimonyController extends Controller
 
             $extension = date('YmdHi').'.'.$request->file('imgInp')->getClientOriginalExtension();
 
-            \Image::make($request->file('imgInp'))->resize(184, 184)->save('img/testimonies/'.$id.'-'. $extension);
+            \Image::make($request->file('imgInp'))->save('img/testimonies/'.$id.'-'. $extension);
 
             $testimony = Testimony::findOrFail($id);
             $testimony->image = 'img/testimonies/'.$id.'-'. $extension;
