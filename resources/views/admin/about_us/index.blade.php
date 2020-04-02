@@ -195,14 +195,14 @@
                                                           <i class="fa fa-search"></i> <input type="file" accept=".jpg, .jpeg" data-idimg="{{'slid'.$key}}" class="imgInp" id="{{'slide'.$key}}" name="slide[]" >
                                                       </span>
                                                   </span>
-                                                  <input type="text" class="form-control" readonly>
-                                                   @error('img.'.$key)
+                                                  <input type="text" class="form-control @error('slide.'.$key) is-invalid @enderror" readonly>
+                                                   @error('slide.'.$key)
                                                                <em class="invalid-feedback">
                                                                     {{ $message }}
                                                                 </em>
                                                     @enderror
                                               </div>
-                                              <span class = "text-center" style = "color:red">650 x 500</span> 
+                                              <span class = "text-center" style = "color:red">407 x 250</span> 
 
                                             </td>
                                             <td style="vertical-align: middle;"> 

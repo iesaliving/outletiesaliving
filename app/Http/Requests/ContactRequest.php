@@ -30,4 +30,20 @@ class ContactRequest extends FormRequest
       
         return $rules;
     }
+
+    public function messages()
+    {
+        return [
+            'imgInp.dimensions'    => ' El campo :attribute debe tener dimensiones de 1920 x 1080',
+            'img_mobil.dimensions' => ' El campo :attribute debe tener dimensiones de 375 x 345',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'imgInp'       => 'Imagen principal',
+            'img_mobil'    => 'Imagen mobil',
+        ];
+    }
 }

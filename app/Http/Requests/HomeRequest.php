@@ -33,4 +33,24 @@ class HomeRequest extends FormRequest
 
         return $rules;
     }
+
+
+
+    public function messages()
+    {
+        return [
+            'img.dimensions'       => ' El campo :attribute debe tener dimensiones de 650 x 590',
+            'imgInp.dimensions'    => ' El campo :attribute debe tener dimensiones de 1920 x 1080',
+            'img_mobil.dimensions' => ' El campo :attribute debe tener dimensiones de 375 x 345',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'img.*'     => 'Imagen',
+            'imgInp'    => 'Imagen principal',
+            'img_mobil' => 'Imagen mobil',
+        ];
+    }
 }
