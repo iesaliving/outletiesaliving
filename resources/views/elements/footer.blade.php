@@ -7,7 +7,7 @@
             <div class="col-12 nopadding topmargin">
                 <h5>IESA Latinoamérica</h5>
                 <a href="tel:+5218183894321"><p class="nomargin">Tel.: +52 (1) 81 8389 4321</p></a>
-                <a href="mailto:Jorge@iesa.cc"><p>Jorge@iesa.cc</p></a>
+                <a href="mailto:Jorge@iesa.cc"><p>ozayas@iesa.cc</p></a>
             </div>
 
 
