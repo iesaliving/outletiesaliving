@@ -98,7 +98,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">{{$data->social_txt}}</h2>
                         <div class="col-md-6 col-7 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="{{ $data->social_network }}" class="btn btn-block  btn-cyan btn-facebook"><i class="fa fa-facebook fa-2x"> </i>SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="{{ $data->social_network }}" class="btn btn-block btn-cyan btn-facebook"><img src="{{ asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

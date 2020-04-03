@@ -101,6 +101,42 @@
 
 </section>
 
+@if($data->slug == 'wolf')
+
+
+<section id="facebook-desktop" class="container-fb" style="background-image: url('{{ asset($data->social_img)}}') ;">
+            <div  class="container-gral h-100">
+                <div class="margin-10 h-100">
+                    <div class="h-100 d-flex">
+                        <div class="col-md-5 offset-md-7 col-12 justify-content-center align-self-center">
+                            <h2 class="light">{{$data->social_txt}}</h2>
+                        <div class="col-md-6 offset-md-6 col-7 nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="{{ $data->social_network }}" class="btn btn-block btn-cyan btn-facebook"><img src="{{ asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+</section>
+
+<section id="facebook-mobile" class="container-fb" style="background-image: url('{{ asset('img/wolf/facebook-mobile.jpg')}}') ;">
+            <div  class="container-gral h-100">
+                <div class="margin-10 h-100">
+                    <div class="h-100 d-flex">
+                        <div class="col-md-5 offset-md-7 col-12 justify-content-center align-self-center">
+                            <h2 class="light">{{$data->social_txt}}</h2>
+                        <div class="col-md-6 offset-md-6 col-7 nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="{{ $data->social_network }}" class="btn btn-block btn-cyan btn-facebook"><img src="{{ asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+</section>
+
+@else
 
 <section style="width: 100%; height: 300px; background-image: url('{{ asset($data->social_img)}}')">
             <div  class="container-gral h-100">
@@ -109,7 +145,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">{{$data->social_txt}}</h2>
                         <div class="col-md-6 col-7 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofllow" href="{{ $data->social_network }}" class="btn btn-block btn-cyan btn-facebook"><i class="fa fa-facebook fa-2x"> </i> SÍGUENOS</a>
+                            <a target="_blank" rel="nofllow" href="{{ $data->social_network }}" class="btn btn-block btn-cyan btn-facebook"><img src="{{ asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>
@@ -117,6 +153,9 @@
                 </div>
             </div>
 </section>
+
+@endif
+
 
 <section class="container-gral topmargin">
         @include('modulos.showrooms')
