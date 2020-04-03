@@ -16,7 +16,13 @@
 
                       @foreach($showdetail as $key => $showd)
 
+
+                       @if($showdetail->last()->image ===  $showd->image) 
+                       <div class="col-lg-4 offset-lg-0 col-md-6 col-sm-6 col-xs-6 offset-3 col-6 image">
+                        @else
+
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image">
+                          @endif
                           <div class="img-wrapper">
                            
                             <a href="{{ asset($showd->image) }}"><img src="{{ asset($showd->image) }}" class="img-responsive"></a>

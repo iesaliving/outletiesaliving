@@ -17,12 +17,14 @@ class ShowroomPageComposer {
         $headquarter = Headquarter::get();
 
         $detail = ShowroomDetail::where('showroom_id',0)->first();
-        $hero   = \DB::table('images')
-                    ->where([
-                                 ['source','SHOWROOM'],
-                                 ['type','HERO']  
-                    ])->orderBy('id')->first();
+        
 
+        $hero  = \DB::table('images')
+                    ->where('source','SHOWROOM')
+                    ->WhereIn('type',['HERO','MOBIL'])
+                    ->get();
+
+                   
          $slide = \DB::table('images')
                     ->where([
                                  ['source','SHOWROOM'],

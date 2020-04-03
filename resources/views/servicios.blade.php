@@ -5,11 +5,11 @@
 
 <section style="position: relative;">
     <div id="hero-desktop" class="col-12 nopadding">
-         <img src="{{ asset( isset($images) ? $images->url.$images->name : 'img/servicios/hero.jpg')}}" alt="Servicios">
+         <img src="{{ asset( isset($images) ? $images[0]->url.$images[0]->name : 'img/servicios/hero.jpg')}}" alt="Servicios">
     </div>
 
     <div id="hero-mobile" class="col-12 nopadding">
-        <img src="{{ asset( isset($images) ? $images->url.'mobile.jpg' : 'img/hero-servicio-mobile.jpg')}}" alt="hero-servicio-mobile">
+        <img src="{{ asset( isset($images) ? $images[1]->url.$images[1]->name : 'img/hero-servicio-mobile.jpg')}}" alt="hero-servicio-mobile">
     </div>
     <div id="container-btn-servicios">
         <div class="row nomargin">
