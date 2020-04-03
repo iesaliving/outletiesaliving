@@ -127,7 +127,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-xl-7 col-lg-6 col-padding-sm d-flex">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ asset('img/showrooms/demo.jpg')}}">
+                        <img src="{{ asset($detail->image)}}">
                     </div>
                 </div>
                 <div id="cooking" class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
