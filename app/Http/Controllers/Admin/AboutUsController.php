@@ -52,7 +52,7 @@ class AboutUsController extends Controller
 
             $extension =  date('YmdHi').'.'.$request->file('imgObj')->getClientOriginalExtension();
 
-           \Image::make($request->file('imgObj'))->resize(650, 500)->save('img/nosotros/hero.jpg');
+           \Image::make($request->file('imgObj'))->save('img/nosotros/hero.jpg');
         }
 
          $notification = array(
@@ -89,7 +89,7 @@ class AboutUsController extends Controller
 
            $extension = date('YmdHi').'.'.$request->file('imgObj')->getClientOriginalExtension();
 
-           \Image::make($request->file('imgObj'))->resize(650, 500)->save('img/nosotros/obj'.$extension);
+           \Image::make($request->file('imgObj'))->save('img/nosotros/obj'.$extension);
 
             $about_obj = AboutUs::find($id);
             $about_obj->imag_obj = 'img/nosotros/obj'.$extension;
@@ -142,7 +142,7 @@ class AboutUsController extends Controller
 
                         $extension = date('YmdHi').'.'.$request->file('slide')[$key]->getClientOriginalExtension();
 
-                         \Image::make($request->file('slide')[$key])->resize(407, 250)->save('img/nosotros/carrusel_'.$request->id_slide[$key].$extension);
+                         \Image::make($request->file('slide')[$key])->save('img/nosotros/carrusel_'.$request->id_slide[$key].$extension);
                           
                            $hero = Hero::findOrFail($request->id_slide[$key]);
                            $hero->url   = "img/nosotros/";
@@ -160,7 +160,7 @@ class AboutUsController extends Controller
 
                          $extension = date('YmdHi').'.'.$request->file('slide')[$key]->getClientOriginalExtension();
 
-                         \Image::make($request->file('slide')[$key])->resize(407, 250)->save('img/nosotros/carrusel_'.$hero->id.$extension);
+                         \Image::make($request->file('slide')[$key])->save('img/nosotros/carrusel_'.$hero->id.$extension);
 
                            $herou = Hero::findOrFail($hero->id);
                            $herou->url   = "img/nosotros/";

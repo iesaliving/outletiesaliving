@@ -34,10 +34,28 @@ class BrandRequest extends FormRequest
             $rules = array_merge($rules, ['imgs.*'  => 'mimes:jpg,jpeg,png|dimensions:min_width=117,max_width=650,min_height=117,max_height=490']);
 
         if($this->file('imglogo'))        
-            $rules = array_merge($rules, ['imgsoc'  => 'image|mimes:jpg,jpeg,png']);
+            $rules = array_merge($rules, ['imglogo'  => 'image|mimes:jpg,jpeg,png']);
 
 
         return $rules;
 
+    }
+
+    public function messages()
+    {
+        return [
+            'imgs.dimensions'    => ' El campo :attribute debe tener dimensiones de 117 x 490',
+            'imgInp.dimensions'    => ' El campo :attribute debe tener dimensiones de 1920 x 1080',
+            'img_mobil.dimensions' => ' El campo :attribute debe tener dimensiones de 375 x 345',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'imgs.*'       => 'Imagen',
+            'imgInp'       => 'Imagen principal',
+            'img_mobil'    => 'Imagen mobil',
+        ];
     }
 }

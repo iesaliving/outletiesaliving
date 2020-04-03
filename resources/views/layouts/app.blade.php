@@ -126,13 +126,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @yield('content')
 
-
-
     @if(request()->segment('1')!="agendar-cita")
 
     @endif
 
     @include('modulos.modals')
+
+    @include('elements.footer')
 
 
     <!-- Custom scripts -->

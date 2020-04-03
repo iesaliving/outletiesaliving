@@ -72,7 +72,7 @@ class FaqController extends Controller
 
             $extension = date('YmdHi').'.'.$request->file('logo')->getClientOriginalExtension();
 
-           \Image::make($request->file('logo'))->resize(120, 120)->save('img/faq/'.$data->slug.'-'.$extension);
+           \Image::make($request->file('logo'))->save('img/faq/'.$data->slug.'-'.$extension);
 
               $imgl = Faq::findOrFail($data->id);
               $imgl->image     = 'img/faq/'.$data->slug.'-'.$extension;
@@ -155,7 +155,7 @@ class FaqController extends Controller
 
             $extension =  date('YmdHi').'.'.$request->file('logo')->getClientOriginalExtension();
 
-           \Image::make($request->file('logo'))->resize(120, 120)->save('img/faq/'.$data->slug.'-'.$extension);
+           \Image::make($request->file('logo'))->save('img/faq/'.$data->slug.'-'.$extension);
 
               $imgl = Faq::findOrFail($data->id);
               $imgl->image     = 'img/faq/'.$data->slug.'-'.$extension;

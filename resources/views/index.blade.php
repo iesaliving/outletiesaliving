@@ -118,7 +118,7 @@
         @foreach($logos as $logo)
 
              <div class="item">
-                <a href="{{ URL::to($logo->slug) }}"><img class="img-fluid" src="{{ asset($logo->logo)}}"></a>
+                <a href="{{ URL::to($logo->slug) }}"><img src="{{ asset($logo->logo)}}"></a>
             </div>
 
         @endforeach

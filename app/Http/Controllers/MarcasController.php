@@ -24,9 +24,11 @@ class MarcasController extends Controller
 
         $data = $this->datos('sub-zero');
         $hero = $this->image('sub-zero');
-        $tag ='Sub-Zero';
+        $tag  ='Sub-Zero';
+        $herod = 'hero.subzero';
+        $herom = 'hero-mobile.subzero';
 
-        return view('web.brands',compact('email','footer','data','hero','tag'));
+        return view('web.brands',compact('email','footer','data','hero','tag','herod','herom'));
 
        // return view('sub-zero',compact('email','footer','data','hero','tag'));
 
@@ -40,9 +42,12 @@ class MarcasController extends Controller
         $data = $this->datos('wolf');
         $hero = $this->image('wolf');
         $tag ='Wolf';
+        $herod = 'hero.wolf';
+        $herom = 'hero-mobile.wolf';
+
+        return view('web.brands',compact('email','footer','data','hero','tag','herod','herom'));
 
         //return view('wolf',compact('email','footer','data','hero','tag'));
-        return view('web.brands',compact('email','footer','data','hero','tag'));
     }
 
     public function Cove(){
@@ -53,8 +58,9 @@ class MarcasController extends Controller
         $data = $this->datos('cove');
         $hero = $this->image('cove');
         $tag ='Cove';
-        
+
         return view('web.cove',compact('email','footer','data','hero','tag'));
+
        // return view('cove',compact('email','footer','data','hero','tag'));
     }
 
@@ -66,9 +72,13 @@ class MarcasController extends Controller
         $data = $this->datos('cocina-exterior');
         $hero = $this->image('cocina-exterior');
         $tag ='Cocina Exterior';
+        $herod = 'hero.exteriores';
+        $herom = 'hero-mobile.exteriores';
+
+        return view('web.brands',compact('email','footer','data','hero','tag','herod','herom'));
 
        // return view('exteriores',compact('email','footer','data','hero','tag'));
-       return view('web.brands',compact('email','footer','data','hero','tag'));
+       
     }
 
     public function Asko() {
@@ -79,9 +89,10 @@ class MarcasController extends Controller
         $data = $this->datos('asko');
         $hero = $this->image('asko');
         $tag ='Asko';
+        $herod = 'hero.asko';
+        $herom = 'hero-mobile.asko';
 
-       // return view('asko',compact('email','footer','data','hero','tag'));
-       return view('web.brands',compact('email','footer','data','hero','tag'));
+        return view('web.brands',compact('email','footer','data','hero','tag','herod','herom'));
     }
 
     public function Dexa() {
@@ -92,9 +103,10 @@ class MarcasController extends Controller
         $data = $this->datos('dexa');
         $hero = $this->image('dexa');
         $tag ='Dexa';
+        $herod = 'hero.dexa';
+        $herom = 'hero-mobile.dexa';
 
-       // return view('dexa',compact('email','footer','data','hero','tag'));
-       return view('web.brands',compact('email','footer','data','hero','tag'));
+        return view('web.brands',compact('email','footer','data','hero','tag','herod','herom'));
     }
 
     public function Scotsman() {

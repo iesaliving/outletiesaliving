@@ -89,7 +89,7 @@ class BrandController extends Controller
 
             $extension = date('YmdHi').'.'.$request->file('imglogo')->getClientOriginalExtension();
 
-           \Image::make($request->file('imglogo'))->resize(262, 102)->save('img/'.$brand->slug.'/logo'.$extension);
+           \Image::make($request->file('imglogo'))->save('img/'.$brand->slug.'/logo'.$extension);
 
             $bra = Brand::findOrFail($id);
             $bra->logo = 'img/'.$brand->slug.'/logo'.$extension;
