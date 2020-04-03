@@ -6,39 +6,61 @@
 
 
 <section id="hero-desktop">
-    <img src="{{ asset('img/Hero-Gracias.jpg')}}">
+    <img src="{{ asset('img/rating.jpg')}}">
 </section>
 
 <section id="hero-mobile">
-    <img src="{{ asset('img/hero-gracias-mobile.jpg')}}">
+    <img src="{{ asset('img/rating-mobile.jpg')}}">
 </section>
 
+
+@if(isset($data['mensaje']))
+
 <section class="container-gral">
-    
+
+
+
 
   <div class="text-center light topmargin-lg col-md-7 mx-auto">
-      <h2>HOLA, <span style="color: #01bb9c">NOMBRE</span></h2>
+      <h2>HOLA, <span style="color: #01bb9c">{{strtoupper($data['contactName'])}}</span></h2>
 
-      <h3  class="light topmargin-sm bottommargin-sm">NOS ENCANTARÍA CONOCER SU OPINIÓN ACERCA DE LA INSTALACION DEL EQUIPO <span style="color: #01bb9c;font-weight: 500">$MARCAS</span></h3>
+      <h3  class="light topmargin-sm bottommargin-sm">{!!$data['mensaje']!!}</h3>
+
+   
+  </div>
+
+</section>
+
+@else
+<section class="container-gral">
+
+
+
+
+
+  <div class="text-center light topmargin-lg col-md-7 mx-auto">
+      <h2>HOLA, <span style="color: #01bb9c">{{strtoupper($data['contactName'])}}</span></h2>
+
+      <h3  class="light topmargin-sm bottommargin-sm">NOS ENCANTARÍA CONOCER SU OPINIÓN ACERCA DE LA INSTALACIÓN {{($data['contadorMarcas'] > 1 ) ? 'DE LOS' : 'DEL' }} EQUIPO{{($data['contadorMarcas'] > 1 ) ? 'S' : '' }} <span style="color: #01bb9c;font-weight: 500">{{strtoupper($data['marca'])}}</span></h3>
 
       <p class="nomargin">Para nosotros es muy importante saber cómo podemos mejorar para usted.</p>
    
-      <p class="topmargin-sm">Por favor compartanos su evaluacion sobre la instalacion de sus equipos haciendo click en el número de estrellas que usted considere acertado.</p>
+      <p class="topmargin-sm">Por favor compártanos su evaluación sobre la instalación de sus equipos haciendo click en el número de estrellas que usted considere acertado.</p>
   </div>
 
 </section>
 
 <section  id="rating-funnel" style="background-image: url('{{ URL::asset('images/wizerlink/fondo-hero.jpg')}}');">
        <div id="ratingFunnel4">
-           <div class="col-md-10 offset-md-1  text-center">
+           <div class="col-md-10 offset-md-1  text-center topmargin">
                 <h3  class="light topmargin-sm bottommargin-sm">RATING TOTAL DEL SERVICIO DE INSTALACIÓN</h3>
                 <p>(CALIDAD, TIEMPO SERVICIO)</p>
                 <form id="form-cambios" action="{{ URL::route('confirmarCalificacion')}}" method="POST">
                      @csrf
-                    <input type="hidden" name="entregableId" value="">
-                    <div  class="col-lg-8 offset-lg-2 topmargin-sm container-input">
+                    <input type="hidden" name="prospectoId" value="{{$data['prospectoId']}}">
+                    <div  class="col-lg-8 offset-lg-2 topmargin-sm container-input nopadding">
                         <input type="hidden" name="calidad" id="calidad">
-                        <div class="col-12">
+                        <div class="col-12 nopadding">
                             <a href="javascript:void(0);"><i id="1"  class="fa fa-star fa-3x pm"></i></a>
                             <a  href="javascript:void(0);"><i id="2"  class="fa fa-star fa-3x pm"></i></a>
                             <a  href="javascript:void(0);"><i id="3"  class="fa fa-star fa-3x pm"></i></a>
@@ -46,9 +68,9 @@
                             <a  href="javascript:void(0);"><i id="5"  class="fa fa-star fa-3x pm"></i></a>
                         </div>
 
-                        <div class="form-group col-9 mx-auto topmargin">
+                        <div class="form-group col-md-9 mx-auto topmargin">
 
-                            <textarea class="form-control" placeholder="Mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" name="mensaje" placeholder="Mensaje" id="exampleFormControlTextarea1" rows="5"></textarea>
                         </div>
                         <div class="topmargin">
                           
@@ -59,7 +81,7 @@
                     </div>
 
                     <div class="col-md-2 mx-auto offset-md-2 text-center topmargin-sm">                                        
-                        <button type="submit" class="btn btn-block btn-cyan" href="javascript:void(0)"><img src="{{ asset('img/icono-btn/enviar.png')   }}"><p>ENVIAR</p></button>
+                        <button type="button"  id="btn-modal"  class="btn btn-block btn-cyan" href="javascript:void(0)"><img src="{{ asset('img/icono-btn/enviar.png')   }}"><p>ENVIAR</p></button>
                     </div>
 
                 </form>
@@ -78,21 +100,25 @@
       </div>
       <div class="modal-body">
         <div class="bottommargin text-center">
-            {!! trans('web/rating.modal-calif')!!}
+           <p>Si desea enviarnos su opinión acerca de la instalación del equipo, presione "OK". En caso de que desee modificar algo presione "Regresar".</p>
         </div>
           <div class="row nomargin">
                 <div class="col-6">
                     
-                    <button type="button" class="btn btn-secondary button-rounded btn-block" data-dismiss="modal"><b>{!! trans('web/rating.btn-ret')!!}</b></button>
+                    <button type="button" class="btn btn-secondary button-rounded btn-block" data-dismiss="modal"><b>REGRESAR</b></button>
                 </div>
                 <div class="col-6">
-                        <button type="submit" form="form-cambios" class="btn btn-secondary button-rounded btn-block button-blue" ><b>OK</b></button>
+                        <button type="submit" style="padding: .375rem .75rem;" form="form-cambios" class="btn btn-secondary button-rounded btn-block btn-cyan" ><b>OK</b></button>
                 </div>
           </div>
       </div>
     </div>
   </div>
 </div>
+
+@endif
+
+
 @endsection
 
 
@@ -100,6 +126,10 @@
 
 @section('styles')
 <style type="text/css">
+  button img {
+    width: 25px;
+    margin-right: 10px;
+  }
 
   .error{
     color: red
@@ -141,6 +171,13 @@
       }
     }
     @media(max-width: 768px){
+
+    #rating-funnel i.fa {
+        color: #d5d5d5;
+        margin: 0 0vw;
+        font-size: 10vw
+    }
+
     #rating-funnel{
         margin-top: 75px;
         height: 100%

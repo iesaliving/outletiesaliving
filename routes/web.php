@@ -133,7 +133,7 @@ Route::get('/plum-wine', 'MarcasController@plumWine');
 
 
 
-Route::get('/gracias', 'GraciasController@GraciasDefault');
+Route::get('/gracias', 'GraciasController@GraciasDefault')->name('gracias');
 
 Route::get('/gracias-Showroom', 'GraciasController@GraciasShowRoom');
 
@@ -166,8 +166,11 @@ Route::get('/submit-calendry', 'MailController@submitCalendry');
 
 Route::get('/zohoApi', 'ZohoV2Controller@getRecords');
 
+Route::get('/rating-funnel', 'ZohoV2Controller@ratingFunnel');
 
 Route::post('/calificacion', 'ZohoV2Controller@confirmarCalificacion')->name('confirmarCalificacion');
+
+
 
 Route::get('/rating', function () {
     return view('rating');
