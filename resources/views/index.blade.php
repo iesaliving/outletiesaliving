@@ -416,7 +416,7 @@
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
                             <div class="col-xl-3 offset-xl-9 col-lg-3 offset-lg-9 col-4  nopadding">
-                                <a href="{{ URL::to('/plum-wine') }}"><img src="{{ asset('img/plum-wine/logo.png')   }}"></a>
+                                <a href="{{ URL::to('/plum-wine') }}"><img src="{{ asset('img/cintillos/Plum.png')   }}"></a>
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
