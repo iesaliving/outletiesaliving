@@ -138,7 +138,26 @@
 
 @else
 
-<section style="width: 100%; height: 300px; background-image: url('{{ asset($data->social_img)}}')">
+    @if($data->slug == 'asko' or $data->slug == 'dexa')
+
+        <section class="container-fb" style="background-image: url('{{ asset($data->social_img)}}') ;">
+            <div  class="container-gral h-100">
+                <div class="margin-10 h-100">
+                    <div class="h-100 d-flex">
+                        <div class="col-12 justify-content-center align-self-center">
+                            <h2 class="light text-center">{{$data->social_txt}}</h2>
+                        <div class="col-md-2 offset-md-5 col-6 offset-3 text-center nopadding topmargin-sm">
+                            <a target="_blank" rel="nofollow" href="{{ $data->social_network }}" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+      </section>
+
+    @else
+      <section style="width: 100%; height: 300px; background-image: url('{{ asset($data->social_img)}}')">
             <div  class="container-gral h-100">
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
@@ -152,7 +171,15 @@
                     
                 </div>
             </div>
-</section>
+       </section>
+
+
+
+    @endif
+
+
+
+
 
 @endif
 

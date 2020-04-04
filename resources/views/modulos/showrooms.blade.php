@@ -15,10 +15,9 @@
                     @if(count($showdetail) > 0)
 
                       @foreach($showdetail as $key => $showd)
-
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image mx-auto">
                           <div class="img-wrapper">
-                           
+
                             <a href="{{ asset($showd->image) }}"><img src="{{ asset($showd->image) }}" class="img-responsive"></a>
                             <div class="img-overlay">
                               <i class="fa fa-plus-circle" aria-hidden="true"></i>

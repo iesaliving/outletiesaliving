@@ -13,7 +13,7 @@ class ServicesComposer {
         $detail  = ServiceDetail::get();
         
         $images  = \DB::table('images')
-                    ->where('source','SERVICES')->orderBy('type')->first();
+                    ->where('source','SERVICES')->orderBy('type')->get();
 
         $view->with('service', $service);
         $view->with('images',  $images);

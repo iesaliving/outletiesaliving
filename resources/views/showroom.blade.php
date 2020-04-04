@@ -3,11 +3,14 @@
 @section('title', 'Showroom')
 @section('content')
 
+
 <section id="hero-desktop">
-  <img src="{{ asset( isset($hero) ? $hero->url.$hero->name : 'img/showrooms/hero.jpg')}}">
-</section>
+        <img src="{{ asset( is_null($hero) ? 'img/showroom/hero.jpg' : $hero[0]->url.$hero[0]->name)}}">
+    </section>
+
 <section id="hero-mobile">
-  <img src="{{ asset( isset($hero->url) ? $hero->url.'mobile.jpg' : 'hero-showroom-mobile.jpg')}} ">
+  <img src="{{ asset( is_null($hero) ? 'img/showroom/mobile.jpg' : $hero[1]->url.$hero[1]->name)}}">
+
 </section>
 
 
