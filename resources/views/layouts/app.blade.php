@@ -23,6 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" onload="if(media!='all')media='all'">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 
     <style type="text/css">
