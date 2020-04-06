@@ -52,13 +52,13 @@
                             <img src="{{ asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href="{{'tel:'.$service->telf_st}}"><p class="nomargin"> {{$service->telf_st}}</p></a>
+                            <a href="{{ 'tel:+'.preg_replace('/[^0-9]/', '', $service->telf_st) }}"><p class="nomargin"> {{$service->telf_st}}</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
                         </div>
                         <div class="col-11 bottommargin-sm">
-                            <a href="{{'https://wa.me/'.$service->telw_st}}" target="_blank" ><p class="nomargin">{{$service->telw_st}}</p></a>
+                            <a href="{{ 'https://wa.me/'.preg_replace('/[^0-9]/', '', $service->telw_st) }}" target="_blank" ><p class="nomargin">{{$service->telw_st}}</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
                             <img src="{{ asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">
@@ -117,7 +117,7 @@
                     <div class="topmargin-sm">
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
-                               <a href="{{'tel:'.$service->telf_cs}}"><p class="nomargin"> {{$service->telf_cs}}</p></a>
+                               <a href="{{ 'tel:+'.preg_replace('/[^0-9]/', '', $service->telf_cs) }}"><p class="nomargin"> {{$service->telf_cs}}</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
                                 <img src="{{ asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
@@ -125,7 +125,7 @@
                         </div>
                         <div class="row nomargin col-12 nopadding">
                             <div class="order-lg-1 order-2 col-11 bottommargin-sm text-lg-right text-left">
-                                <a href="{{'https://wa.me/'.$service->telw_cs}}" target="_blank" ><p class="nomargin">{{$service->telw_cs}}</p></a>
+                                <a href="{{'https://wa.me/'.preg_replace('/[^0-9]/', '', $service->telw_cs)}}" target="_blank" ><p class="nomargin">{{$service->telw_cs}}</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
                                 <img src="{{ asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
