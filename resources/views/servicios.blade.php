@@ -136,7 +136,7 @@
                                <a href="{{'mailto:'.$service->email_cs}}"> <p class="nomargin">{{$service->email_cs}}</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ asset($service->imag_cs)}}" alt="{{$service->title_cs}}" style="margin-right: 15px;width: 20px">
+                                <img src="{{ asset('img/icono-btn/email.png')}}" alt="{{$service->title_cs}}" style="margin-right: 15px;width: 20px">
                             </div>
                         </div>
                     </div>

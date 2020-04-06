@@ -67,54 +67,43 @@ class ZohoV2Controller extends Controller
 
     }
 
-    public function ratingFunnel1(Request $request){
+    public function ratingFunnel(Request $request){
 
-        $data=$this->validarEntregable($request->input('entregableId'));
+
+///        dd($request->input('prospectoId'));
+        $data=$this->validarEntregable($request->input('prospectoId'));
 
 
         if (isset($data['mensaje'])) {
-              return view('propuesta-aprobacion.notificacion')->with('data',$data);
+              return view('rating')->with('data',$data);;
         }
 
        
-       return view('rating-funnel.rating-1')->with('data',$data);;
+       return view('rating')->with('data',$data);;
 
 
     }
-    public function calificacion(Request $request){
 
-        $data=$this->validarEntregable($request->entregableId);
-        if (isset($data['mensaje'])) {
-            return view('propuesta-aprobacion.notificacion')->with('data',$data);
-        }
-
-        return view('rating-funnel.rating-4')->with('entregableId',$request->entregableId);
-
-    }
 
     public function confirmarCalificacion(Request $request){
 
-        dd($request->input());
-        $data=$this->validarEntregable($request->input('entregableId'));
+        $data=$this->validarEntregable($request->input('prospectoId'));
         
 
         $date = Carbon::now();
         if (isset($data['mensaje'])) {
-            return view('propuesta-aprobacion.notificacion')->with('data',$data);
+            return view('rating')->with('data',$data);;
         }
 
 
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Entregables"); // to get the instance of the module
+        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // to get the instance of the module
         $inventoryRecords = array();
         /**
          * Following methods are being used only by same Inventory only  *
          */
-        $record = ZCRMRecord::getInstance("Entregables", $request->input('entregableId')); // to get the instance of the record
-        $record->setFieldValue("Rating_Calidad_del_entregable", $request->input('calidad'));
-        $record->setFieldValue("Rating_de_cliente", $request->input('project-manager'));
-        $record->setFieldValue("Rating_Tiempo_de_Entrega", $request->input('tiempo'));
-        $record->setFieldValue("Fecha_de_aprobaci_n_final", $date->format('Y-m-d'));
-        $record->setFieldValue("Categor_a", 'Aprobado por cliente');
+        $record = ZCRMRecord::getInstance("Deals", $request->input('prospectoId')); // to get the instance of the record
+        $record->setFieldValue("Rating_total_del_servicio_de_instalaci_n", $request->input('calidad'));
+        $record->setFieldValue("Mensaje_rating_de_instalaci_n", $request->input('mensaje'));
 
         array_push($inventoryRecords, $record); // pushing the record to the array
 
@@ -124,54 +113,7 @@ class ZohoV2Controller extends Controller
         
 
         if($zohoRespuesta[0]->getStatus()=='success'){
-            return redirect()->route('entregableCalifiGracias');
-        }else{
-            $data['mensaje']='POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
-            return view('propuesta-aprobacion.notificacion')->with('data',$data); 
-        }
-
-    }
-
-    public function cambiosEntregable(Request $request){
-
-        $data=$this->validarEntregable($request->entregableId);
-
-        if (isset($data['mensaje'])) {
-            return view('propuesta-aprobacion.notificacion')->with('data',$data);
-        }
-
-        return view('rating-funnel.rating-2')->with('entregableId',$request->entregableId);
-    }
-
-
-    public function confirmarCambiosEntregable(Request $request){
-
-        $data=$this->validarEntregable($request->input('entregableId'));
-        $date = Carbon::now();
-        if (isset($data['mensaje'])) {
-            return view('propuesta-aprobacion.notificacion')->with('data',$data);
-        }
-
-
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Entregables"); // to get the instance of the module
-        $inventoryRecords = array();
-        /**
-         * Following methods are being used only by same Inventory only  *
-         */
-        $record = ZCRMRecord::getInstance("Entregables", $request->input('entregableId')); // to get the instance of the record
-        $record->setFieldValue("Ajustes_solicitados_por_cliente", $request->input('mensaje'));
-        $record->setFieldValue("Fecha_de_solicitude_de_ajustes", $date->format('Y-m-d'));
-        $record->setFieldValue("Categor_a", 'Requiere ajuste');
-
-        array_push($inventoryRecords, $record); // pushing the record to the array
-
-        $trigger=array();//triggers to include
-        $responseIn = $moduleIns->updateRecords($inventoryRecords,$trigger);
-        $zohoRespuesta=$responseIn->getEntityResponses(); 
-        
-
-        if($zohoRespuesta[0]->getStatus()=='success'){
-             return redirect()->route('entregableCambiosGracias');
+            return redirect()->route('gracias');
         }else{
             $data['mensaje']='POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
             return view('propuesta-aprobacion.notificacion')->with('data',$data); 
@@ -180,28 +122,45 @@ class ZohoV2Controller extends Controller
     }
 
 
+    public function validarEntregable($prospectoId){
 
-    public function validarEntregable($entregableId){
-
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Entregables"); // To get module instance
-        $param_map = array("fields"=>"URL_de_entrega,Categor_a,Cuenta,Name,Contacto_que_aprueba"); // key-value pair containing all the params - optional
-        $response = $moduleIns->getRecord($entregableId,$param_map); // To get module record
+        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To get module instance
+        $param_map = array("fields"=>"Stage,Marca,Cuenta,Contact_Name,Rating_total_del_servicio_de_instalaci_n"); // key-value pair containing all the params - optional
+        $response = $moduleIns->getRecord($prospectoId,$param_map); // To get module record
         $record = $response->getData(); // To get response data
 
+
+        $marca=null;
+        foreach ($record->getFieldValue("Marca") as $key => $cadena) {
+            if ($key==0) {
+                $marca=$marca.' '. $cadena;
+            }else{
+                $marca=$marca.', '. $cadena;
+            }
+        }
+
+
             $data = array  (  
-                            'entregableId' =>$entregableId,
-                            'linkEntrega' => $record->getFieldValue("URL_de_entrega"),
-                            'status' => $record->getFieldValue("Categor_a"),
-                            'contactName' => $record->getFieldValue("Contacto_que_aprueba"),
+                            'prospectoId' =>$prospectoId,
+                            'marca' =>$marca,
+                            'contadorMarcas' =>count($record->getFieldValue("Marca")),
+                            'status' => $record->getFieldValue("Stage"),
+                            'rating' =>$record->getFieldValue("Rating_total_del_servicio_de_instalaci_n"),
+                            'contactName' => $record->getFieldValue("Contact_Name")->getLookupLabel(),
                         );
-        if($data['status']=='Por aprobación de cliente'){
+
+
+        if($data['status']=='Equipo Instalado' && $data['rating']===null ){
+
+        }elseif($data['status']=='Equipo Instalado' && !empty($data['rating'])){
+            $data['mensaje']='Ya hemos recibido tu rating. Si deseas comunicarte con nuestro equipo, contáctanos al <a ref="tel:+5215552809648">Tel.: +52 (1) 55 5280 9648</a>';
+
+        }elseif($data['status']!='Equipo Instalado'){
             
-        }elseif($data['status']=='Aprobado por cliente'){
-            $data['mensaje']='YA ESTE ENTREGABLE FUE APROBADO. SI NECESITAS REALIZAR ALGÚN CAMBIO, POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
-        }elseif($data['status']=='Requiere ajuste'){
-            $data['mensaje']='YA HEMOS RECIBIDO TU SOLICITUD DE CAMBIOS. SI NECESITAS CONTACTARNOS, POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
+            abort(404);     
+
         }else{
-            $data['mensaje']='ESTA PROPUESTA ESTA EN PROCESO SI NECESITAS ALGO, POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
+            abort(404);
         }
 
         return $data;
