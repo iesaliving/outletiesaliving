@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^outlet\.lafamiliaperfecta\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.outlet\.lafamiliaperfecta\.com$
+RewriteRule ^/?$ "http\:\/\/iesa\.cc\/outlet" [R=301,L]
+
