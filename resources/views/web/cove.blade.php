@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="topmargin-sm">
-                               {!! $detail->description !!} 
+                               <p>{!! $detail->description !!} </p>
                                 
                             </div>
 
@@ -70,13 +70,13 @@
 
                     @if($detail->features==1)
 
-                    <div class="bottommargin-sm col-md-4">
+                    <div class="bottommargin-sm col-md-4 image mx-auto">
                         <div class="col-5 nopadding ">
                             <img src="{{ asset($detail->image) }}">
                         </div>
                         <div class="col-12 nopadding topmargin-sm">
                             <p><b>{!! $detail->title !!}</b></p>
-                            <p class="light text-justify">{!! $detail->description !!} </p>
+                            <p class="light">{!! $detail->description !!} </p>
                         </div>
                         
                     </div>

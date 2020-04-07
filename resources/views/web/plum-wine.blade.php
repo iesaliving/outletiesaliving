@@ -44,7 +44,7 @@
 
                                     <div class="topmargin-sm">
                                         
-                                           {!! $detail->description !!} 
+                                          <p>{!! $detail->description !!} </p>
                                         
                                     </div>
 
@@ -76,7 +76,7 @@
 
                                         <div class="topmargin-sm text-lg-right text-left">
                                            
-                                               {!! $detail->description !!}
+                                              <p>{!! $detail->description !!} </p>
                                             
                                         </div>
 

@@ -8,9 +8,9 @@
             <div class="justify-content-center align-self-center">
                 <a href="{{ URL::to('/cove') }}"><img style="width: 200px;margin-left: -35px;" src="{{ asset('img/cove/logo.png')}}"></a>
                 <h2 class="light nomargin">LA ÚNICA</h2>
-                <h2 class="light nomargin">LAVAVAJILLAS CON</h2>
+                <h2 class="light nomargin">LAVAVAJILLAS CON </h2>
                 <h2 class="light nomargin"><b class="bold"><i>SUBZERO Y WOLF</i></b></h2>
-                <h2 class="light nomargin">EN SU<b class="bold"><i>ADN</i></b> </h2>
+                <h2 class="light nomargin">EN SU <b class="bold"><i>ADN</i></b> </h2>
             </div>
         </div>
     </div>
