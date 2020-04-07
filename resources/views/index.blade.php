@@ -4,6 +4,16 @@
 @section('content')
 
 
+<div style='display: none;'>
+<img src="{{ URL::asset('img/asko/hero.jpg')}}">
+<img src="{{ URL::asset('img/cove/hero.jpg')}}">
+<img src="{{ URL::asset('img/dexa/hero.jpg')}}">
+<img src="{{ URL::asset('img/exteriores/hero.jpg')}}">
+<img src="{{ URL::asset('img/plum-wine/hero.jpg')}}">
+<img src="{{ URL::asset('img/scotsman/hero.jpg')}}">
+<img src="{{ URL::asset('img/subzero/hero.jpg')}}">
+<img src="{{ URL::asset('img/wolf/hero.jpg')}}">
+</div>
 <section id="hero-desktop">
     <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="4000">
 
