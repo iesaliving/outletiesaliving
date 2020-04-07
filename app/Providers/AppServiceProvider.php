@@ -28,7 +28,8 @@ class AppServiceProvider extends ServiceProvider
                         'utm_campaign' => $request->input('utm_campaign'),
                         'utm_anuncio_id' => $request->input('utm_anuncio_id'),
                     );
+        $popups= $request->input('popups');
 
-         View::share('utm', $utm);
+        View::share(['utm' => $utm, 'popups' => $popups]);
     }
 }

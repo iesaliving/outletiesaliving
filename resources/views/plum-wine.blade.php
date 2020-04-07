@@ -205,7 +205,7 @@
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
-                            <h2 class="light">PLUM</h2>
+                            <h2 class="light">PLUM WINE</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
                             <a target="_blank" rel="nofollow" href="https://www.facebook.com/PlumAppliance" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
@@ -221,7 +221,7 @@
                 <div class="margin-10 h-100">
                     <div class="h-100 d-flex">
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
-                            <h2 class="light">PLUM</h2>
+                            <h2 class="light">PLUM WINE</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
                             <a target="_blank" rel="nofollow" href="https://www.facebook.com/PlumAppliance" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
                         </div>
