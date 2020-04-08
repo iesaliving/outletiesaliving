@@ -64,6 +64,24 @@ class GraciasController extends Controller
     }
 
 
+     public function GraciasOptin(Request $request){
+        $text0='Gracias';
+        $text1='';
+        $text2='';
+        
+        return view('gracias',compact('text0','text1','text2'));
+    }
+
+
+    public function GraciasOptout(Request $request){
+        $text0='Gracias';
+        $text1='Has sido dado de baja de la lista de correo.';
+        $text2='';
+        
+        return view('gracias',compact('text0','text1','text2'));
+    }
+
+
     
 
 

@@ -269,7 +269,7 @@ class MailController extends Controller
         $var->setSmcontactId($request->input('contactId'));
         $response=$var->unsubOptOut();
 
-        return redirect('/gracias');
+        return redirect()->route('graciasOptout');
 
     }
 

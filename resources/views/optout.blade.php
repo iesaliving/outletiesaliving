@@ -22,7 +22,7 @@
     
       <div class="col-md-6 mx-auto bottommargin-lg">
         <div class="bottommargin-sm">        
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ URL::to('/') }}"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
+          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ URL::route('graciasOptin') }}"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
         </div>
 
         <div class="bottommargin-sm">
