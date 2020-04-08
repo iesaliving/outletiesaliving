@@ -1,8 +1,11 @@
-@foreach($imagen as $key => $img)
-    @if($img->source == 'cove' && $img->type =='MOBIL' )
+
     <div class="container-hero-image-mobile" style="background-color: #e7e8ea;">
     	<div>
-    		<img src="{{ asset('img/cove/mobile.jpg')}}">
+        @foreach($imagen as $key => $img)
+                 @if($img->source == 'cove' && $img->type =='MOBIL' )
+                 <img src="{{ asset(is_null($img->url) ? 'img/cove/mobile.jpg' : $img->url.$img->name)}}">
+                 @endif
+            @endforeach
     	</div>
         <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
             <div class="justify-content-center align-self-center">
@@ -16,5 +19,3 @@
             </div>
         </div>
     </div>
-    @endif
-@endforeach
