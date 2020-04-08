@@ -2,15 +2,18 @@
     @if($img->source == 'dexa' && $img->type =='MOBIL' )
     <div class="container-hero-image-mobile" style="background-color: #e7e8ea;">
     	<div>
-    		<img src="{{ asset('img/dexa/mobile.jpg')}}">
+    		<img src="{{ asset(is_null($img->url) ? 'img/dexa/mobile.jpg' : $img->url.$img->name)}}">
     	</div>
         <div class="col-11 offset-1 col-padding d-flex {{(request()->segment('1')==null)?'m-height':''}}">
             <div class="justify-content-center align-self-center">
-                <a href="{{ URL::to('/dexa') }}"><img style="width: 200px;margin-left: -65px;" src="{{ asset('img/dexa/logo.png')}}"></a>
-                <h2 class="light nomargin">DEXA NON É</h2>
-                <h2 class="light nomargin">NORMALE...</h2>
-                <h2 class="light nomargin"><b class="bold"><i>COME TE!</i></b></h2>
-                <h5 class="light nomargin">DISEÑOS Y ELEMENTOS QUE<br> EXPRESAN UNA<br> PERSONALIDAD DIFERENTE</h5>
+
+                @foreach($brands as $key => $brand)
+                  @if($brand->slug == 'dexa')
+                    <a href="{{ URL::to('/dexa') }}"><img style="width: 200px;margin-left: -65px;" src="{{ asset(is_null($brand->logo) ? $brand->logo : 'img/dexa/logo.png')}}" ></a>
+                   {!! $brand->logo_txt !!}
+                  @endif
+                @endforeach
+
             </div>
         </div>
     </div>

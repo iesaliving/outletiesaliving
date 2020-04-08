@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="topmargin-sm">
-                                    {!! $detail->description !!} 
+                                    <p>{!! $detail->description !!} </p>
                                     
                                 </div>
 

@@ -6,10 +6,7 @@
                 @foreach($brands as $key => $brand)
                   @if($brand->slug == 'cove')
                     <a href="{{ URL::to('/'.$brand->slug) }}"><img style="width: 200px;margin-left: -35px;" src="{{ asset(is_null($brand->logo) ? $brand->logo : 'img/cove/logo.png')}}" ></a>
-                     <h2 class="light h2-text">LA ÚNICA</h2>
-                    <h2 class="light">LAVAVAJILLAS</h2>
-                    <h2 class="light">CON <b class="bold"><i>SUBZERO Y </i></b></h2>
-                    <h2 class="light"><b class="bold"><i>WOLF </i></b> EN SU <b class="bold"><i>ADN</i></b> </h2>
+                    {!! $brand->logo_txt !!}
                   @endif
                 @endforeach
             </div>

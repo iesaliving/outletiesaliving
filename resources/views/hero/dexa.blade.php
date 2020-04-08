@@ -6,9 +6,7 @@
 	        	@foreach($brands as $key => $brand)
                   @if($brand->slug == 'dexa')
 		            <a href="{{ URL::to('/dexa') }}"><img style="width: 200px;margin-left: -65px;margin-bottom: 10px" src="{{ asset(is_null($brand->logo) ? $brand->logo : 'img/dexa/logo.png')}}" ></a>
-		            <h2 class="light h2-text">DEXA NON É</h2>
-		            <h2 class="light">NORMALE...<b class="bold"><i>COME TE!</i></b></h2>
-		            <h5 class="light">DISEÑOS Y ELEMENTOS QUE EXPRESAN <br>UNA PERSONALIDAD DIFERENTE</h5>
+		           {!! $brand->logo_txt !!}
 		          @endif
                 @endforeach
 	        </div>

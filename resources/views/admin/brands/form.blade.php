@@ -277,7 +277,7 @@
                                         <div class="form-group row">
 
                                             <div class="col">
-                                                <textarea class="form-control  @error('description_d.'.$key) is-invalid @enderror" name="description_d[]" rows="2" maxlength="550" placeholder="{{ trans('global.description') }}">{{old('description_d.'.$key,isset($detail->description) ? $detail->description : '')}}</textarea>
+                                                <textarea class="{{ $data->slug == 'scotsman' ? 'ckeditor' : '' }} form-control  @error('description_d.'.$key) is-invalid @enderror" name="description_d[]" rows="2" maxlength="550" placeholder="{{ trans('global.description') }}">{{old('description_d.'.$key,isset($detail->description) ? $detail->description : '')}}</textarea>
 
                                                @error('description_d.'.$key)
                                                    <em class="invalid-feedback">
