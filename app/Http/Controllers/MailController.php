@@ -247,6 +247,51 @@ class MailController extends Controller
 
     }
 
+    public function optout(Request $request){
+
+        $request->input('smclient');
+
+        $this->getRecordSm($request->input('smclient'));
+
+         $datosSM=$this->getRecordSm($request->input('smclient'));
+
+
+        if (!empty($datosSM['contacts']) && $datosSM['contacts'] ==true )  {
+             return view('optout')->with('contactId',$datosSM['contacts'][0]['contactId']); 
+        }else{
+            abort(404);
+        }
+    }
+
+    public function submitOptout(Request $request){
+
+        $var=new SalesManago();
+        $var->setSmcontactId($request->input('contactId'));
+        $response=$var->unsubOptOut();
+
+        return redirect('/gracias');
+
+    }
+
+    public function submitOptoutPhone(Request $request){
+
+        $var=new SalesManago();
+        $var->setSmcontactId($request->input('contactId'));
+        $response=$var->unsubOptOutPhone();
+
+        return redirect('/gracias');
+
+    }
+
+
+    public function getRecordSm($id)
+    {
+        $var=new SalesManago();
+        $var->setSmcontactId($id);
+        $response=$var->getById();
+        return $response;
+    }
+
 
     public function submitCalendry(Request $request){
 

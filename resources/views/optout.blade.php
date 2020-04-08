@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('description', 'IESA')
-@section('title', 'Gracias')
+@section('title', 'Optout')
 @section('content')
 
 
@@ -22,15 +22,15 @@
     
       <div class="col-md-6 mx-auto">
         <div class="bottommargin-sm">        
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="javascript:void(0)"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
+          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ URL::to('/') }}"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
         </div>
 
         <div class="bottommargin-sm">
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="javascript:void(0)"><p>NO QUIERO RECIBIR MÁS MENSAJES</p></a>
+          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ url('/submit-optout?contactId='.$contactId) }}"><p>NO QUIERO RECIBIR MÁS MENSAJES</p></a>
         </div>
 
         <div class="bottommargin-sm">
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="javascript:void(0)"><p>NO QUIERO RECIBIR MÁS MENSAJES DE TEXTO</p></a>
+          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ url('/submit-optoutPhone?contactId='.$contactId) }}"><p>NO QUIERO RECIBIR MÁS MENSAJES DE TEXTO</p></a>
         </div>
       </div>
  

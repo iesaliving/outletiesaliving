@@ -265,6 +265,37 @@ class SalesManago
         return $this->curlSm($url,$json);
     }
 
+    public function unsubOptOut($url='https://app3.salesmanago.pl/api/contact/optout'){
+        
+
+        $json=    '{
+                "apiKey" : "'.$this->apiKey.'",
+                "async" : false,
+                "clientId" : "'.$this->clientId.'",
+                "sha": "'.$this->sha.'",
+                "requestTime" : 1327059355361,
+                "contactId" : "'.$this->contactId.'"
+                    }';
+
+        return $this->curlSm($url,$json);
+    }
+
+
+    public function unsubOptOutPhone($url='https://app3.salesmanago.pl/api/contact/phoneoptout'){
+        
+
+        $json=    '{
+                "apiKey" : "'.$this->apiKey.'",
+                "async" : false,
+                "clientId" : "'.$this->clientId.'",
+                "sha": "'.$this->sha.'",
+                "requestTime" : 1327059355361,
+                "contactId" : "'.$this->contactId.'"
+                    }';
+
+        return $this->curlSm($url,$json);
+    }
+
     private function curlSm($url,$json){
 
         $ch =   curl_init($url);

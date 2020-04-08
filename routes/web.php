@@ -105,10 +105,11 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/optout', function () {
-    return view('optout');
-});
+Route::get('/optout', 'MailController@optout');
 
+Route::get('/submit-optout', 'MailController@submitOptout');
+
+Route::get('/submit-optoutPhone', 'MailController@submitOptoutPhone');
 
 
 Route::get('/sub-zero', 'MarcasController@Subzero');
