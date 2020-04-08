@@ -148,6 +148,10 @@ Route::get('/gracias/{control}', 'GraciasController@GraciasDefault');
 
 Route::get('/gracias/contacto', 'GraciasController@GraciasDefault');
 
+Route::get('/gracias-rating', 'GraciasController@GraciasRating')->name('GraciasRating');
+
+
+
 
 Route::post('/enviar-correo', 'MailController@enviar');
 

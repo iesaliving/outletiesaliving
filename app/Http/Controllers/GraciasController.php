@@ -54,6 +54,15 @@ class GraciasController extends Controller
         return view('gracias',compact('text0','text1','text2'));
     }
 
+    public function GraciasRating(Request $request){
+
+        $data=session('dataGracias');
+        $text0='Ya hemos recibido tu rating. Si deseas comunicarte con nuestro equipo, contáctanos al <a href="tel:+5215552809648">Tel: +52 (1) 55 5280 9648</a>';
+        $text1='';
+        $text2='';
+        return view('gracias',compact('text0','text1','text2','data'));
+    }
+
 
     
 
