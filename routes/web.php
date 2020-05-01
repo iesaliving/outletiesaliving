@@ -68,6 +68,9 @@ Route::get('/showroom', function () {
     return view('showroom');
 });
 
+Route::get('/coronavirus-information', function () {
+    return view('covid-19');
+});
 
 Route::get('/cita', function () {
     return view('calendry-cita');

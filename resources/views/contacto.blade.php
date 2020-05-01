@@ -58,6 +58,14 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col">
+                <h2 id="text-contacto" class="text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
+                <div id="panel"></div>
+                <div id="map-canvas"></div>
+    	    </div>
+        </div>
+
         <div class="row nomargin topmargin-lg">
             <div class="col-xl-7 col-lg-7 text-center">
 
@@ -168,12 +176,25 @@
 @endsection
 
 
-@section('styles')
 
+@section('styles')
+    <link rel="stylesheet" href="{{URL::asset('css/storelocator.css')}}" />
+    <style>
+      #map-canvas, #panel { height: 500px; }
+      #panel { width: 300px; float: left; margin-right: 10px; }
+      #panel .feature-filter label { width: 130px; }
+      p.attribution, p.attribution a { color: #666; }
+      .store .hours { color: grey; }
+    </style>
 @endsection
 
 
 
 @section('scripts')
-
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRJ8mwP4Ftwk0_5PoBcnXIPLMxnhPHhI&libraries=places"></script>
+    <script src="{{URL::asset('js/store-locator/store-locator.min.js')}}"></script>
+    <script src="{{URL::asset('js/store-locator/medicare-static-ds.js')}}"></script>
+    <script src="{{URL::asset('js/store-locator/panel.js')}}"></script>
 @endsection
+
