@@ -80,7 +80,7 @@ data-notification-message="{{ Session::has('notification') ? json_encode(Session
 
 
                       </div>
-                    </li>
+              </li>
                     
         </ul>
     </header>

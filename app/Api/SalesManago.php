@@ -14,6 +14,7 @@ class SalesManago
     private $jsonGet    ;
     private $jsonCustom    ;
     private $name       ;
+    private $producto       ;
     private $email      ;
     private $company   ;
     private $jsonUpdate;
@@ -64,6 +65,10 @@ class SalesManago
 
     public function setSmNombre($name){
         $this->name=$name;
+    }
+
+    public function setProducto($producto){
+        $this->producto=$producto;
     }
 
     public function setEstado($estado){
@@ -258,7 +263,8 @@ class SalesManago
                     "custom.hora_showroom":"'.$this->cHoraShow.'",
                     "custom.UTM_Source":"'.$this->cUtmSource.'",
                     "custom.UTM_Campaign":"'.$this->cUtmCampaign.'",
-                    "custom.UTM_AnuncioID":"'.$this->cUtmAnuncioId.'"
+                    "custom.UTM_AnuncioID":"'.$this->cUtmAnuncioId.'",
+                    "custom.producto":"'.$this->producto.'"
                 }
             }';
 

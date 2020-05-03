@@ -72,6 +72,15 @@ return [
     'title'                                => 'Titulo',
     'roles'                                => 'Roles',
     'stored_record'                        => 'Registro Almacenado con exito!',
+    'leadsConvert'                         => 'Leads Convertido Exitosamente',
+    'rating_send'                          => 'Solicitud Rating Enviada Exitosamente',
+    'cook_demo'                            => 'Invitacion Enviada Exitosamente',
+    'precotizar'                           => 'Precotización Enviada Exitosamente',
+
+    
+
+
+
     'role'                                 => [
         'title'          => 'Roles',
         'title_singular' => 'Role',
