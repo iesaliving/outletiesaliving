@@ -57,13 +57,13 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h2 id="text-contacto" class="text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
-                <div id="panel"></div>
-                <div id="map-canvas"></div>
-    	    </div>
+ 
+        <div class="row justify-content-center">
+            <h2 id="text-contacto" class="col-12 text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-4" id="panel"></div>
+                <div class="col-md-8" id="map-canvas"></div>
+            </div>
         </div>
 
         <div class="row nomargin topmargin-lg">
@@ -181,10 +181,11 @@
     <link rel="stylesheet" href="{{URL::asset('css/storelocator.css')}}" />
     <style>
       #map-canvas, #panel { height: 500px; }
-      #panel { width: 300px; float: left; margin-right: 10px; }
+      /*
       #panel .feature-filter label { width: 130px; }
       p.attribution, p.attribution a { color: #666; }
       .store .hours { color: grey; }
+      */
     </style>
 @endsection
 

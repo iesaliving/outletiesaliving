@@ -11,6 +11,7 @@
   .storelocator-panel .store-list li,
   .storelocator-panel .directions-panel {
     padding: 5px;
+    list-style-type: none;
   }
   .storelocator-panel .directions-panel {
     font-size: 0.8em;
