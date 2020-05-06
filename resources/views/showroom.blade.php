@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('description', 'IESA')
-@section('title', 'Showroom')
+@section('description', 'Visite nuestro Showroom, un lugar para experimentar y dar vida a la visión de su cocina, acompañado de expertos en cocinas de lujo')
+@section('title', 'Visite Nuestro Showroom y experimente su nueva cocina')
 @section('content')
 
 
@@ -76,21 +76,21 @@
         </div>
     </div>
 
-        <div class="margin-10" id="carousel-showrooms">
-            <div class="owl-carousel owl-theme col-md-8 offset-md-2">
-                @foreach($slide as $slid)
-
-                     <div class="item">
-                        <div>
-                            <img src="{{ asset($slid->url.$slid->name)}}">
-                        </div>
-
-                    </div>
-
-                @endforeach
-               
-          </div>
-      </div>
+         <div class="margin-10" id="carousel-showrooms">
+             
+            <h2 class="text-center text-uppercase font-weight-light bottommargin">empieza aquí el tour virtual a nuestro showroom</h2>
+            <iframe
+                width="100%"
+                height="500"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyDnRJ8mwP4Ftwk0_5PoBcnXIPLMxnhPHhI&location=19.4284515,-99.1934873" allowfullscreen>
+            </iframe>
+       
+            <p class="text-center my-4" style="color: inherit; line-height: 1.3; font-weight: 300;">Le guiamos en el tour virtual, para que conozca todos los detalles de la mano de un especialista.</p>
+            <div id="check" class="offset-md-4 col-md-4">
+                <a class="text-uppercase btn btn-cyan btn-block descubra-btn" href="{{ URL::to('/llamada-cdmx') }}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>agendar llamada con especialista</p></a>
+            </div>
+        </div>
 
         <div id="lugar" class="margin-10">
             <div class="col-md-10 offset-md-1 text-center bottommargin">

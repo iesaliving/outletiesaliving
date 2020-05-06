@@ -1,5 +1,8 @@
 <header id="header-custom">
-
+    <div class="alert text-center border-0 mb-0 text-uppercase alert-light" role="alert">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <a class="text-danger" href="{{ URL::to('/coronavirus-information')}}"><b>una nota a nuestros clientes y socios sobre coronavirus.</b></a>
+    </div>
     <nav id="header" class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="{{ URL::to('/')}}"><img  src="{{ asset('img/logo-header.png')   }}" alt="Logo Wizerlink" ></a>
 

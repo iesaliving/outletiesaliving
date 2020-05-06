@@ -687,7 +687,7 @@ CREATE TABLE IF NOT EXISTS `showrooms` (
 --
 
 INSERT INTO `showrooms` (`id`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'VISITE NUESTRO SHOWROOM', '<p>Un lugar para comenzar, experimentar y dar vida a la visión de su cocina.</p><p>Visitar nuestro showroom no es un día de compras ordinario, es una experiencia interactiva que le ayuda a visualizar las posibilidades de su futura cocina. En un ambiente sin presiones, puede descubrir cómo se va a sentir, ver y a qué va a saber su cocina - guiado por un cordial experto en equipos que se enfoca a atender sus necesidades.</p>', NULL, '2020-03-31 12:37:27'),
+(1, 'VISITE NUESTRO SHOWROOM', '<p>Un lugar virtual para experimentar y dar vida a la visión de su cocina, desde la comodidad de su hogar.</p><p>Nuestro Showroom Virtual le brindará una experiencia interactiva que le ayudará a visualizar las posibilidades de su futura cocina. Relájese desde la comodidad de su hogar y realice un recorrido virtual sin presiones, guiado por la experiencia que hemos preparado para usted.</p>', NULL, '2020-03-31 12:37:27'),
 (2, 'UN LUGAR PARA COMENZAR, EXPERIMENTAR Y DAR VIDA A LA VISIÓN DE SU COCINA', 'Esta no es una compra ordinaria. Es una experiencia inmersiva para ayudarlo a darse cuenta de las posibilidades de su futura cocina. En un entorno sin presión, puede descubrir cómo se siente, se ve y sabe su cocina, guiado por un experto asesor cuyo único objetivo es atender la visita a sus necesidades.', '2020-03-17 16:20:28', '2020-03-17 18:17:55');
 
 -- --------------------------------------------------------
