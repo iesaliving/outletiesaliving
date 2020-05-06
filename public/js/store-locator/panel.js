@@ -99,8 +99,8 @@ storeLocator.Panel.prototype.init_ = function() {
   this.el_.append(this.filter_);
 
   if (this.settings_['locationSearch']) {
-    this.locationSearch_ = $('<div class="location-search"><label class="text-uppercase">' +
-        this.settings_['locationSearchLabel'] + '</label><input class="form-control form-custom"></div>');
+    this.locationSearch_ = $('<div class="location-search"><h4>' +
+        this.settings_['locationSearchLabel'] + '</h4><input></div>');
     this.filter_.append(this.locationSearch_);
 
     if (typeof google.maps.places != 'undefined') {
@@ -326,17 +326,17 @@ storeLocator.Panel.prototype.idle_ = function(map) {
  * @type {string}
  * @private
  */
-storeLocator.Panel.NO_STORES_HTML_ = '<li class="no-stores">There are no' +
-    ' stores in this area.</li>';
+storeLocator.Panel.NO_STORES_HTML_ = '<li class="no-stores">No hay dealers' +
+    ' en esta área.</li>';
 
 /**
  * @const
  * @type {string}
  * @private
  */
-storeLocator.Panel.NO_STORES_IN_VIEW_HTML_ = '<li class="no-stores">There are' +
-    ' no stores in this area. However, stores closest to you are' +
-    ' listed below.</li>';
+storeLocator.Panel.NO_STORES_IN_VIEW_HTML_ = '<li class="no-stores">No existen dealers' +
+    ' en esta área. A continuación ' +
+    ' se listan las más cercana.</li>';
 /**
  * Handler for stores_changed. Updates the list of stores.
  * @this storeLocator.Panel

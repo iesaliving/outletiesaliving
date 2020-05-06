@@ -14,7 +14,7 @@
                 <p class="mb-5">En vista del impacto del Coronavirus, en Grupo IESA estamos tomando una serie de previsiones para proteger la seguridad y la salud de todos nuestros clientes, aliados y empleados.</p>
                 
                 <h2 class="text-uppercase">Visitas al Showroom</h2>
-                <p class="mb-4">Estaremos brindando recorridos virtuales por nuestro Showroom y nuestros representantes de ventas seguirán disponibles para atender dudas vía telefónica y whatsapp. Visite la siguiente página para agendar su recorrido virtual <b><a  href="{{ URL::to('/showroom') }}" style="color: #01bb9c !important;" class="text-uppercase">[link]</a></b>.</p>
+                <p class="mb-4">Estaremos brindando recorridos virtuales por nuestro Showroom y nuestros representantes de ventas seguirán disponibles para atender dudas vía telefónica y whatsapp. Visite la siguiente página para agendar su recorrido virtual <b><a  href="{{ URL::to('/showroom') }}" style="color: #01bb9c !important;" class="text-uppercase">[a SHOWROOM]</a></b>.</p>
 
                 <h2 class="text-uppercase">Entregas y otras visitas</h2>
                 <p class="mb-4">Por favor, siga las normas de distanciamiento social una vez que entre a nuestras instalaciones e interactúe con nuestro equipo. Si puede ser atendido por teléfono, le invitamos a ser atendido vía telefónica.</p>
