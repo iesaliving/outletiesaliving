@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Yajra\DataTables\Facades\DataTables;
 use zcrmsdk\crm\exception\ZCRMException;
 use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FaqRequest;
@@ -51,8 +52,7 @@ class DealsController extends Controller
     public function table()
     {
 
-
-        if (Auth::user('email')->email=='admin@admin.com') {
+        if ((Gate::check('admin_zoho'))) {
             
             $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To 
             $param_map=array("page"=>0,"per_page"=>200); 

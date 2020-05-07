@@ -6,6 +6,7 @@ use Yajra\DataTables\Facades\DataTables;
 use zcrmsdk\crm\exception\ZCRMException;
 use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FaqRequest;
 use zcrmsdk\crm\crud\ZCRMRecord;
@@ -52,7 +53,8 @@ class LeadsController extends Controller
     public function table()
     {
 
-        if (Auth::user('email')->email=='admin@admin.com') {
+
+        if ((Gate::check('admin_zoho'))) {
             $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
             $criteria="Creado_Desde_Admin_Web:equals:true";//criteria to search for
             /* For VERSION <=2.0.6  $page=5;//page number

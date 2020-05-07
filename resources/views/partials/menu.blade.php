@@ -47,7 +47,7 @@
             </li>
              @endcanany
 
-             @canany(['user_management_access', 'admin_zoho','user_zoho'])
+             @canany(['admin_zoho','user_zoho','user_management_access'])
              <li class="nav-item nav-dropdown">
                 <a class="nav-link  nav-dropdown-toggle">
                     <i class="fa fa-bar-chart nav-icon">
@@ -133,6 +133,12 @@
                     Faq
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.notice_privacy.index') }}" class="nav-link {{ request()->is('admin/notice_privacy','admin/notice_privacy/*') ? 'active' : '' }}" >
+                   <i class="nav-icon fa fa-circle-o"></i>
+                    Aviso Privacidad
+                </a>
+            </li>
 
             @endcanany
 
@@ -155,12 +161,7 @@
             </li>
             @endcan
 
-             <li class="nav-item">
-                <a href="{{ route('admin.notice_privacy.index') }}" class="nav-link {{ request()->is('admin/notice_privacy','admin/notice_privacy/*') ? 'active' : '' }}" >
-                   <i class="nav-icon fa fa-circle-o"></i>
-                    Aviso Privacidad
-                </a>
-            </li>
+
 
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
