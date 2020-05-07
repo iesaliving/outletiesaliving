@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-04-2020 a las 15:40:41
+-- Tiempo de generación: 06-05-2020 a las 23:08:21
 -- Versión del servidor: 5.5.60-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `brands` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `logo_txt` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo_txt` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `intro` mediumtext COLLATE utf8mb4_unicode_ci,
   `social_network` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `social_img` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -72,14 +72,14 @@ CREATE TABLE IF NOT EXISTS `brands` (
 --
 
 INSERT INTO `brands` (`id`, `active`, `name`, `slug`, `logo`, `logo_txt`, `intro`, `social_network`, `social_img`, `social_txt`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Sub-Zero', 'sub-zero', 'img/subzero/sub-zero.png', '<p>EL ESPECIALISTA EN <strong>CONSERVACIÓN</strong></p>', '<p>Mientras Sub-Zero exista, los alimentos resistirán el paso del tiempo, lo mismo que la belleza y el rendimiento de su cocina. Construido y probado con los más altos estándares, Sub-Zero es algo más que sólo un refrigerador. Se trata de un sistema de conservación de los alimentos, con más de 70 años de pensamiento innovador que lo avalan. Mientras exista Sub-Zero, la comida tendrá un delicioso futuro.</p>', 'https://www.facebook.com/subzerowolf/', 'img/sub-zero/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMERICA', NULL, '2020-04-02 09:42:26'),
-(3, 1, 'Wolf', 'wolf', 'img/wolf/logo.png', '<p>EL ESPECIALISTA</p><p>EN <strong>COCCIÓN</strong></p>', '<p>Disfrute toda una vida cocinando con más emoción y satisfacción. Wolf destila una legendaria herencia profesional, potencia y clase en equipo de cocina, cuyo control preciso garantiza que el plato que tiene en mente, sea el plato que llegue a la mesa.</p>', 'https://www.facebook.com/subzerowolf/', 'img/wolf/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA', NULL, '2020-03-24 06:36:15'),
-(4, 1, 'cove', 'cove', 'img/cove/logo.png', '<p>LA ÚNICA LAVAVAJILLAS CON <strong>SUBZERO Y WOLF</strong> EN SU <strong>ADN</strong></p>', '<p>Las lavavajillas Cove proviene de los pioneros en conservación de alimentos Sub-Zero y cocción a precisión Wolf. Los electrodomésticos Cove están diseñados para adaptarse a los platos que más limpia – con ciclos que garantizan resultados impecables y un funcionamiento silencioso. Diseñado cuidadosamente con interiores ajustables, acabados exteriores personalizables y la mejor garantía y servicio disponibles. Cove es simplemente una forma más inteligente de lavar.</p>', 'https://www.facebook.com/subzerowolf/', 'img/cove/facebook.jpg', 'COVE', NULL, '2020-03-24 09:52:11'),
-(5, 1, 'Asko', 'asko', 'img/asko/logo.png', '<p>INSPIRADO EN ESCANDINAVIA</p>', '<p>Electrodomésticos escandinavos ASKO; productos durables y de máxima calidad con soluciones innovadoras respetuosas con el medio ambiente y el uso económico de los recursos como agua y energía.</p>', 'https://www.facebook.com/asko.russia/', 'img/asko/facebook.jpg', 'ASKO MÉXICO Y LATINOAMERICA', NULL, '2020-03-24 10:01:15'),
-(6, 1, 'Dexa', 'dexa', 'img/dexa/logo.png', '<p>DEXA NON É NORMALE<strong> ...COME TE!</strong>&nbsp;</p><p>DISEÑOS Y ELEMENTOS QUE EXPRESAN UNA PERSONALIDAD DIFERENTE</p>', '<h4>CREAMOS LO EXTRAORDINARIO</h4><p>&nbsp;Lo mejor de Italia en tu cocina.</p><p>Una marca propia de IESA, cuenta con productos de calidad con diseño italiano. Una Marca joven, audaz y divertida, aquí creamos nuestras experiencias rompiendo las reglas y reinventando lo cotidiano</p>', 'https://www.facebook.com/DEXA.MX/', 'img/dexa/facebook.jpg', 'DEXA', NULL, '2020-04-03 07:25:54'),
-(7, 1, 'Scotsman', 'scotsman', 'img/scotsman/logo.png', '<p>EL HIELO IDEAL <strong>EL LUJO DEFINITIVO</strong></p>', '<p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.</p>', NULL, NULL, NULL, NULL, '2020-03-24 10:21:55'),
-(8, 1, 'Cocina exterior', 'cocina-exterior', 'img/subzero/sub-zero.png', '<p>COCINA EXTERIOR</p>', '<p>Todo sabe mejor al aire libre. Sin embargo, el control del calor en la mayoría de los asadores puede convertir el cocinar en exteriores en una tarea imprecisa. Los asadores Wolf cambiar todo eso. Le dan el mismo tipo de control de precisión y facilidad de uso que sus contrapartes de interiores, las estufas, hornos y parrillas Wolf. Imagínese las jugosas posibilidades.</p>', 'https://www.facebook.com/subzerowolf/', 'img/exteriores/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMERICA', NULL, '2020-03-24 10:27:11'),
-(9, 1, 'Plum wine', 'plum-wine', 'img/plum-wine/logo.png', '<h2>UNA COPA DE VINO</h2><h2>EN EL<i><strong> MOMENTO</strong></i></h2><p><i><strong>PERFECTO</strong></i></p>', '<p>Plum es el primer electrodoméstico totalmente automático que conserva y enfría perfectamente el vino para que puedas disfrutarlo una copa a la vez.</p>', 'https://www.facebook.com/subzerowolf/', 'img/plum-wine/facebook.jpg', 'PLUM', '2020-03-31 08:29:12', '2020-03-31 11:22:18');
+(1, 1, 'Sub-Zero', 'sub-zero', 'img/subzero/sub-zero.png', '<h2 class="light h2-text">EL ESPECIALISTA</h2>\r\n            <h2 class="light">EN<b class="bold"><i>CONSERVACIÓN</i></b></h2>', '<p>Mientras Sub-Zero exista, los alimentos resistirán el paso del tiempo, lo mismo que la belleza y el rendimiento de su cocina. Construido y probado con los más altos estándares, Sub-Zero es algo más que sólo un refrigerador. Se trata de un sistema de conservación de los alimentos, con más de 70 años de pensamiento innovador que lo avalan. Mientras exista Sub-Zero, la comida tendrá un delicioso futuro.</p>', 'https://www.facebook.com/subzerowolf/', 'img/sub-zero/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMERICA', NULL, '2020-04-02 09:42:26'),
+(3, 1, 'Wolf', 'wolf', 'img/wolf/logo.png', ' <h2 class="light h2-text">EL ESPECIALISTA </h2>\r\n            <h2 class="light">EN <b class="bold"><i>COCCIÓN</i></b></h2>', '<p>Disfrute toda una vida cocinando con más emoción y satisfacción. Wolf destila una legendaria herencia profesional, potencia y clase en equipo de cocina, cuyo control preciso garantiza que el plato que tiene en mente, sea el plato que llegue a la mesa.</p>', 'https://www.facebook.com/subzerowolf/', 'img/wolf/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMÉRICA', NULL, '2020-03-24 06:36:15'),
+(4, 1, 'cove', 'cove', 'img/cove/logo.png', '<h2 class="light nomargin">LA ÚNICA</h2>\r\n<h2 class="light nomargin">LAVAVAJILLAS CON </h2>\r\n<h2 class="light nomargin"><b class="bold"><i>SUBZERO Y WOLF</i></b></h2>\r\n<h2 class="light nomargin">EN SU <b class="bold"><i>ADN</i></b> </h2>', '<p>Las lavavajillas Cove proviene de los pioneros en conservación de alimentos Sub-Zero y cocción a precisión Wolf. Los electrodomésticos Cove están diseñados para adaptarse a los platos que más limpia – con ciclos que garantizan resultados impecables y un funcionamiento silencioso. Diseñado cuidadosamente con interiores ajustables, acabados exteriores personalizables y la mejor garantía y servicio disponibles. Cove es simplemente una forma más inteligente de lavar.</p>', 'https://www.facebook.com/subzerowolf/', 'img/cove/facebook.jpg', 'COVE', NULL, '2020-03-24 09:52:11'),
+(5, 1, 'Asko', 'asko', 'img/asko/logo.png', '<h2 class="light h2-text">INSPIRADO EN</h2>\r\n      <h2 class="light"><b class="bold"><i>ESCANDINAVIA</i></b></h2>', '<p>Electrodomésticos escandinavos ASKO; productos durables y de máxima calidad con soluciones innovadoras respetuosas con el medio ambiente y el uso económico de los recursos como agua y energía.</p>', 'https://www.facebook.com/asko.russia/', 'img/asko/facebook.jpg', 'ASKO MÉXICO Y LATINOAMERICA', NULL, '2020-03-24 10:01:15'),
+(6, 1, 'Dexa', 'dexa', 'img/dexa/logo.png', ' <h2 class="light h2-text">DEXA NON É</h2>\r\n		            <h2 class="light">NORMALE...<b class="bold"><i>COME TE!</i></b></h2>\r\n <h5 class="light">DISEÑOS Y ELEMENTOS QUE EXPRESAN <br>UNA PERSONALIDAD DIFERENTE</h5>', '<h4>CREAMOS LO EXTRAORDINARIO</h4><p>&nbsp;Lo mejor de Italia en tu cocina.</p><p>Una marca propia de IESA, cuenta con productos de calidad con diseño italiano. Una Marca joven, audaz y divertida, aquí creamos nuestras experiencias rompiendo las reglas y reinventando lo cotidiano</p>', 'https://www.facebook.com/DEXA.MX/', 'img/dexa/facebook.jpg', 'DEXA', NULL, '2020-04-03 07:25:54'),
+(7, 1, 'Scotsman', 'scotsman', 'img/scotsman/logo.png', '<h2 class="light h2-text">EL HIELO IDEAL</h2>\r\n      <h2 class="light"><b class="bold"><i>EL LUJO DEFINITIVO</i></b></h2>', '<p>Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure y dure. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.</p>', NULL, NULL, NULL, NULL, '2020-03-24 10:21:55'),
+(8, 1, 'Cocina exterior', 'cocina-exterior', 'img/subzero/sub-zero.png', '<h2 class="light nomargin">COCINA <b class="bold"><i>EXTERIOR</i></b></h2>', '<p>Todo sabe mejor al aire libre. Sin embargo, el control del calor en la mayoría de los asadores puede convertir el cocinar en exteriores en una tarea imprecisa. Los asadores Wolf cambiar todo eso. Le dan el mismo tipo de control de precisión y facilidad de uso que sus contrapartes de interiores, las estufas, hornos y parrillas Wolf. Imagínese las jugosas posibilidades.</p>', 'https://www.facebook.com/subzerowolf/', 'img/exteriores/facebook.jpg', 'SUB-ZERO WOLF MÉXICO Y LATINOAMERICA', NULL, '2020-03-24 10:27:11'),
+(9, 1, 'Plum wine', 'plum-wine', 'img/plum-wine/logo.png', '<h2 class="light h2-text" style="margin-top: 10px">UNA COPA DE VINO</h2>\r\n<h2 class="light nomargin">EN EL<b class="bold"><i> MOMENTO</i></b></h2>\r\n<h2 ><b class="bold"><i>PERFECTO</i></b></h2>', '<p>Plum es el primer electrodoméstico totalmente automático que conserva y enfría perfectamente el vino para que puedas disfrutarlo una copa a la vez.</p>', 'https://www.facebook.com/subzerowolf/', 'img/plum-wine/facebook.jpg', 'PLUM', '2020-03-31 08:29:12', '2020-03-31 11:22:18');
 
 -- --------------------------------------------------------
 
@@ -272,7 +272,7 @@ INSERT INTO `home_pages` (`id`, `active`, `image`, `title`, `text`, `created_at`
 (2, 1, 'img/home/2.jpg', 'COCINA EXTERIOR', 'Todo sabe mejor al aire libre. Sin embargo, el control del calor en la mayoría de los asadores puede convertir el cocinar en exteriores en una tarea imprecisa. Los asadores Wolf cambiar todo eso. Le dan el mismo tipo de control de precisión y facilidad de uso que sus contrapartes de interiores, las estufas, hornos y parrillas Wolf. Imagínese las jugosas posibilidades.', NULL, '2020-04-03 10:59:07'),
 (3, 1, 'img/home/3.jpg', 'ENSERES DE LUJO INSPIRADOS EN ESCANDINAVIA', 'Electrodomésticos escandinavos ASKO; productos durables y de máxima calidad con soluciones innovadoras respetuosas con el medio ambiente y el uso económico de los recursos como agua y energía.', NULL, '2020-04-03 10:59:07'),
 (4, 1, 'img/home/4.jpg', 'Diseños y elementos que expresan una Personalidad diferente', 'Diseños espectaculares y funcionalidad sin igual, son los atributos de los productos de DEXA. Nuestra línea está pensada para integrarse al diseño de tu cocina ideal, pues con su variedad en estufas, parrillas, hornos, tarjas, campanas y llaves, le darás esa personalidad que tu cocina necesita.', NULL, '2020-04-03 10:59:07'),
-(5, 1, 'img/home/5.jpg', 'EL HIELO IDEAL EL LUJO DEFINITIVO probando', 'Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de un detalle, el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure más tiempo. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.', NULL, '2020-04-03 10:59:07'),
+(5, 1, 'img/home/5.jpg', 'EL HIELO IDEAL EL LUJO DEFINITIVO', 'Cuando se trata de lujo, los detalles marcan la diferencia. Tu bebida favorita no es la excepción. La adición de un detalle, el hielo ideal, hace que una bebida se mantenga más fría y el sabor dure más tiempo. No importa qué bebida prefiera, una cosa puede mejorarla: el hielo Scotsman, el ingrediente ideal.', NULL, '2020-04-03 10:59:07'),
 (6, 1, 'img/home/6.jpg', 'PERFECTO PARA LOS AMANTES DEL VINO', 'Plum, un artefacto diseñado para uso diario que preserva, identifica, enfría y sierve el vino que más le guste. Mediante la aguja de doble núcleo, Plum perfora automáticamente la lámina y el corcho de la botella extrayendo simultaneamente el vino e inyectando gas argón para evitar la oxidación.', NULL, '2020-04-03 10:59:07');
 
 -- --------------------------------------------------------
@@ -603,7 +603,8 @@ CREATE TABLE IF NOT EXISTS `role_user` (
 --
 
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
-(1, 1);
+(1, 1),
+(2, 2);
 
 -- --------------------------------------------------------
 
@@ -768,14 +769,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `session_id`, `name`, `user_name`, `email`, `email_verified_at`, `last_login`, `ip`, `blocked_date`, `active`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'qPeA71lks7mk9MC1XtNvrFoi9mE004bQS45sUZ20', 'Admin', 'Admin', 'admin@admin.com', NULL, '2020-04-03 11:10:24', '190.217.6.219', NULL, 1, '$2y$10$imU.Hdz7VauIT3LIMCMbsOXvaaTQg6luVqkhfkBcsUd.SJW2XSRKO', NULL, '2019-04-15 19:13:32', '2020-04-03 11:10:24', NULL);
+(1, 'cBvHtgwYXAKLLTOQ4JwxAJGRf2GmGjOSat8KBQE7', 'Admin', 'Admin', 'admin@admin.com', NULL, '2020-05-06 14:08:41', '37.190.107.35', NULL, 1, '$2y$10$imU.Hdz7VauIT3LIMCMbsOXvaaTQg6luVqkhfkBcsUd.SJW2XSRKO', NULL, '2019-04-15 19:13:32', '2020-05-06 14:08:41', NULL),
+(2, 'bIlPSlXzonoIJUd8bi0Ka3ryMmSBghVnuEHkD20z', 'Fernanda Martínez', NULL, 'fmartinez@iesa.cc', NULL, '2020-05-06 02:44:23', '190.153.46.186', NULL, 1, '$2y$10$uTQbsVLrsrSOe8J2Km5xL.M301J8..sgdgKQwziS8GeUh6MYIv..i', NULL, '2020-05-06 01:52:44', '2020-05-06 02:44:23', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -1018,7 +1020,7 @@ ALTER TABLE `testimonies`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --
