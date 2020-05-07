@@ -1,0 +1,1 @@
+INSERT INTO `roles` (`id`, `title`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'CRM Ventas', '2020-05-06 21:54:21', NULL, NULL), (NULL, 'CRM Admin', '2020-05-06 21:54:21', NULL, NULL);

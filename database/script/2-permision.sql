@@ -1,0 +1,1 @@
+INSERT INTO `permissions` (`id`, `title`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'web_administrator', '2020-05-06 22:00:13', NULL, NULL);
