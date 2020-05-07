@@ -14,6 +14,7 @@ class SalesManago
     private $jsonGet    ;
     private $jsonCustom    ;
     private $name       ;
+    private $producto       ;
     private $email      ;
     private $company   ;
     private $jsonUpdate;
@@ -64,6 +65,10 @@ class SalesManago
 
     public function setSmNombre($name){
         $this->name=$name;
+    }
+
+    public function setProducto($producto){
+        $this->producto=$producto;
     }
 
     public function setEstado($estado){
@@ -244,21 +249,22 @@ class SalesManago
                     "phone" : "'.$this->phone.'"
                     },
                   "properties" : {
-                    "custom.estado":"'.$this->estado.'",
-                    "custom.mensaje":"'.$this->cMensaje.'",
-                    "custom.brand":"'.$this->cBrand.'",
-                    "custom.ciudad":"'.$this->cCiudad.'",
-                    "custom.pais":"'.$this->cPais.'",
-                    "custom.fecha":"'.$this->cFecha.'",
-                    "custom.fecha_llamada":"'.$this->cFechaLlamada.'",
-                    "custom.fecha_cooking_demo":"'.$this->cFechaCooking.'",
-                    "custom.fecha_showroom":"'.$this->cFechaShowRoom.'",
-                    "custom.hora":"'.$this->cHora.'",
-                    "custom.hora_llamada":"'.$this->cHoraLlamada.'",
-                    "custom.hora_showroom":"'.$this->cHoraShow.'",
-                    "custom.UTM_Source":"'.$this->cUtmSource.'",
-                    "custom.UTM_Campaign":"'.$this->cUtmCampaign.'",
-                    "custom.UTM_AnuncioID":"'.$this->cUtmAnuncioId.'"
+                    "estado":"'.$this->estado.'",
+                    "mensaje":"'.$this->cMensaje.'",
+                    "brand":"'.$this->cBrand.'",
+                    "ciudad":"'.$this->cCiudad.'",
+                    "pais":"'.$this->cPais.'",
+                    "fecha":"'.$this->cFecha.'",
+                    "fecha_llamada":"'.$this->cFechaLlamada.'",
+                    "fecha_cooking_demo":"'.$this->cFechaCooking.'",
+                    "fecha_showroom":"'.$this->cFechaShowRoom.'",
+                    "hora":"'.$this->cHora.'",
+                    "hora_llamada":"'.$this->cHoraLlamada.'",
+                    "hora_showroom":"'.$this->cHoraShow.'",
+                    "UTM_Source":"'.$this->cUtmSource.'",
+                    "UTM_Campaign":"'.$this->cUtmCampaign.'",
+                    "UTM_AnuncioID":"'.$this->cUtmAnuncioId.'",
+                    "producto":"'.$this->producto.'"
                 }
             }';
 

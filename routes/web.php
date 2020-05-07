@@ -47,6 +47,81 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('faq', 'FaqController');
     Route::resource('services',  'ServiceController')->only(['index','store','update']);
 
+
+
+
+    Route::get('leads', 'LeadsController@index')->name('leads.index');
+
+    Route::get('leads/create', 'LeadsController@create')->name('leads.create');
+
+    Route::post('leads/store', 'LeadsController@store')->name('leads.store');
+
+    Route::get('leads/tabla', 'LeadsController@table')->name('leads.table');
+
+    Route::get('leads/edit', 'LeadsController@edit')->name('leads.edit');
+
+    Route::put('leads/update', 'LeadsController@update')->name('leads.update');
+
+    //Route::delete('leads/delete', 'LeadsController@delete')->name('leads.delete');
+
+    Route::get('leads/prospecto', 'LeadsController@prospecto')->name('leads.prospecto');
+
+    Route::get('campos', 'LeadsController@campos')->name('leads.campos');
+
+    Route::get('dealer', 'LeadsController@dealers')->name('leads.dealers');
+
+    Route::post('leads/storeProspecto', 'LeadsController@storeProspecto')->name('leads.storeProspecto');
+
+    Route::get('filterRepre', 'LeadsController@filterRepre')->name('leads.filterRepre');
+
+
+    Route::get('deals/campos', 'DealsController@campos')->name('deals.campos');
+
+    Route::get('deals', 'DealsController@index')->name('deals.index');
+
+    Route::get('deals/create', 'DealsController@create')->name('deals.create');
+
+    Route::post('deals/store', 'DealsController@store')->name('deals.store');
+
+    Route::get('deals/tabla', 'DealsController@table')->name('deals.table');
+
+    Route::get('deals/edit', 'DealsController@edit')->name('deals.edit');
+
+    Route::put('deals/update', 'DealsController@update')->name('deals.update');
+
+    //Route::delete('deals/delete', 'DealsController@delete')->name('deals.delete');
+
+    Route::get('deals/rating', 'DealsController@rating')->name('deals.rating');
+
+    Route::post('deals/storeRating', 'DealsController@storeRating')->name('leads.storeRating');
+
+    Route::get('deals/cookDemo', 'DealsController@cookDemo')->name('deals.cookDemo');
+
+    Route::post('deals/storeCookDemo', 'DealsController@storeCookDemo')->name('deals.storeCookDemo');
+
+    Route::get('deals/precotizar', 'DealsController@precotizar')->name('deals.precotizar');
+
+    Route::post('deals/storePreco', 'DealsController@storePreco')->name('deals.storePreco');
+
+    Route::get('campos', 'DealsController@campos')->name('deals.campos');
+
+    Route::get('dealer', 'DealsController@dealers')->name('deals.dealers');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 Auth::routes(['register' => false]);
