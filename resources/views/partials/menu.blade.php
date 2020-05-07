@@ -28,7 +28,7 @@
                         </a>
                     </li> -->
                     <li class="nav-item">
-                        <a href="{{ route('admin.roles.index') }}" class="nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.roles.index') }}" class="nav-link ml-3 {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
                             <i class="fa fa-briefcase nav-icon">
 
                             </i>
@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('admin.users.index') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.users.index') }}" class="nav-link ml-3 {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
                             <i class="fa fa-user nav-icon">
 
                             </i>
@@ -47,6 +47,44 @@
             </li>
              @endcanany
 
+             @canany(['admin_zoho','user_zoho','user_management_access'])
+             <li class="nav-item nav-dropdown">
+                <a class="nav-link  nav-dropdown-toggle">
+                    <i class="fa fa-bar-chart nav-icon">
+
+                    </i>
+                   Administrador Zoho
+                </a>
+                <ul class="nav-dropdown-items">
+                    <!-- <li class="nav-item">
+                        <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
+                            <i class="fa fa-unlock-alt nav-icon">
+
+                            </i>
+                            {{ trans('global.permission.title') }}
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="{{ route('admin.leads.index') }}" class="nav-link ml-3 {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                            <i class="fa fa-trophy nav-icon">
+
+                            </i>
+                            Leads
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.deals.index') }}" class="nav-link ml-3 {{ request()->is('admin/deals') || request()->is('admin/deals/*') ? 'active' : '' }}">
+                            <i class="fa fa-money nav-icon">
+
+                            </i>
+                            Prospectos
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            @endcanany
+
+            @canany(['web_administrator', 'contact_access','service_access'])
             <li class="nav-item">
                 <a href="{{ route('admin.home_page.index') }}" class="nav-link {{ request()->is('admin/home_page','admin/home_page/*') ? 'active' : '' }}" >
                    <i class="nav-icon fa fa-home"></i>
@@ -95,8 +133,14 @@
                     Faq
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.notice_privacy.index') }}" class="nav-link {{ request()->is('admin/notice_privacy','admin/notice_privacy/*') ? 'active' : '' }}" >
+                   <i class="nav-icon fa fa-circle-o"></i>
+                    Aviso Privacidad
+                </a>
+            </li>
 
-
+            @endcanany
 
             @can('service_access')
             <li class="nav-item">
@@ -117,12 +161,7 @@
             </li>
             @endcan
 
-             <li class="nav-item">
-                <a href="{{ route('admin.notice_privacy.index') }}" class="nav-link {{ request()->is('admin/notice_privacy','admin/notice_privacy/*') ? 'active' : '' }}" >
-                   <i class="nav-icon fa fa-circle-o"></i>
-                    Aviso Privacidad
-                </a>
-            </li>
+
 
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
