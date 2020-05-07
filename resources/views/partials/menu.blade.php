@@ -47,7 +47,7 @@
             </li>
              @endcanany
 
-             @canany(['admin_zoho','user_zoho','user_management_access'])
+             @canany(['admin_zoho','user_zoho'])
              <li class="nav-item nav-dropdown">
                 <a class="nav-link  nav-dropdown-toggle">
                     <i class="fa fa-bar-chart nav-icon">
