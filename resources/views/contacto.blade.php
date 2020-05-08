@@ -58,7 +58,7 @@
             </div>
         </div>
  
-        <div class="row justify-content-center">
+        <div id="dealers" class="row justify-content-center">
             <h2 id="text-contacto" class="col-12 text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
             <div class="row w-100 justify-content-center">
                 <div class="col-md-4" id="panel"></div>
@@ -197,5 +197,12 @@
     <script src="{{URL::asset('js/store-locator/store-locator.min.js')}}"></script>
     <script src="{{URL::asset('js/store-locator/medicare-static-ds.js')}}"></script>
     <script src="{{URL::asset('js/store-locator/panel.js')}}"></script>
+    <script>
+        if(location.hash.length){
+            $('html, body').animate({
+                scrollTop: $("#dealers").offset().top
+            }, 2000);
+        }
+    </script>
 @endsection
 
