@@ -76,6 +76,7 @@ class LeadsController extends Controller
             $records = $response->getData(); // To get response data
         }
 
+        //dd($records);
         $leads = array();
         foreach ($records as $key => $record) {
             $leads[$key] = array (  
@@ -105,46 +106,74 @@ class LeadsController extends Controller
 
         $LeadSources=$this->fields('4434756000000002609','Leads');//id Fiels Obtenidos de $this->campos()
 
+        $industries=$this->fields('4434756000000002613','Leads');//id Fiels Obtenidos de $this->campos()
+
+        $typesLeads=$this->fields('4434756000000270274','Leads');//id Fiels Obtenidos de $this->campos()
+        
+        $showroomCiudades=$this->fields('4434756000000298038','Leads');//id Fiels Obtenidos de $this->campos()
+
+        $nameRepres=$this->fields('4434756000000625332','Leads');//id Fiels Obtenidos de $this->campos()
+
         $dealers=$this->dealers();
 
         $repres=$this->representantes();
 
-        $nameRepres=$this->nombreRepresentantes();
 
         //dd($repres);
 
-        return view('admin.leads.form', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres'));
+        return view('admin.leads.form', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres', 'industries', 'typesLeads', 'showroomCiudades'));
     }
 
     public function store(Request $request){
 
         
-
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // to get the instance of the module
-        
         $records = array();
         $record = ZCRMRecord::getInstance(null, null); // THIS LINE
-        $record->setFieldValue("First_Name", $request->input('first_name'));
-        $record->setFieldValue("Last_Name", $request->input('last_name'));
-        $record->setFieldValue("Phone", $request->input('phone'));
-        $record->setFieldValue("Email", $request->input('email'));
-        $record->setFieldValue("Marca", $request->input('marca'));
-        $record->setFieldValue("Producto", $request->input('producto'));
-        $record->setFieldValue("Estado", $request->input('ubicacion'));
-        $record->setFieldValue("Lead_Status", $request->input('Estatus'));
-        $record->setFieldValue("Nombre_de_Arquitecto", $request->input('Nombre_de_Arquitecto'));
-        $record->setFieldValue("Phone_Arquitecto", $request->input('Phone_Arquitecto'));
-        $record->setFieldValue("Email_Arquitecto", $request->input('Email_Arquitecto'));
-        $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
+        $record->setFieldValue("First_Name", $request->input('First_Name'));
+        $record->setFieldValue("Last_Name", $request->input('Last_Name'));
+        $record->setFieldValue("Company", $request->input('Company'));
+        $record->setFieldValue("Designation", $request->input('Designation'));
+        $record->setFieldValue("Industry", $request->input('Industry'));
+        $record->setFieldValue("Lead_Status", $request->input('Lead_Status'));
+        $record->setFieldValue("Typo_de_Lead", $request->input('Typo_de_Lead'));
+        $record->setFieldValue("Marca", $request->input('Marca'));
+        $record->setFieldValue("Dealer", $request->input('Dealer'));
+        $record->setFieldValue("Producto", $request->input('Producto'));
+        $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
         $record->setFieldValue("Representante", $request->input('Representante'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
-
+        $record->setFieldValue("Phone", $request->input('Phone'));
+        $record->setFieldValue("Website", $request->input('Website'));
+        $record->setFieldValue("Mobile", $request->input('Mobile'));
+        $record->setFieldValue("Skype_ID", $request->input('Skype_ID'));
+        $record->setFieldValue("Email", $request->input('Email'));
+        $record->setFieldValue("Secondary_Email", $request->input('Secondary_Email'));
+        $record->setFieldValue("Nombre_de_Arquitecto", $request->input('Nombre_de_Arquitecto'));
+        $record->setFieldValue("Email_Arquitecto", $request->input('Email_Arquitecto'));
+        $record->setFieldValue("Apellido_de_Arquitecto", $request->input('Apellido_de_Arquitecto'));
+        $record->setFieldValue("Phone_Arquitecto", $request->input('Phone_Arquitecto'));
+        $record->setFieldValue("Country", $request->input('Country'));
+        $record->setFieldValue("Street", $request->input('Street'));
+        $record->setFieldValue("City", $request->input('City'));
+        $record->setFieldValue("Zip_Code", $request->input('Zip_Code'));
+        $record->setFieldValue("Estado", $request->input('Estado'));
+        $record->setFieldValue("Showroom_Ciudad", $request->input('Showroom_Ciudad'));
+        $record->setFieldValue("Fecha_de_cooking_demo",$this->FechaZoho($request->input('Fecha_de_cooking_demo')));
+        $record->setFieldValue("Fecha_de_visita_al_Showroom", $this->FechaZoho($request->input('Fecha_de_visita_al_Showroom')));
+        $record->setFieldValue("Description", $request->input('Description'));
+        $record->setFieldValue("Hora_de_visita_al_showroom", $request->input('Hora_de_visita_al_showroom'));
+        $record->setFieldValue("Hora_de_la_llamada", $request->input('Hora_de_la_llamada'));
+        $record->setFieldValue("Fecha_de_la_llamada", $this->FechaZoho($request->input('Fecha_de_la_llamada')));
+        $record->setFieldValue("UTM_Source", $request->input('UTM_Source'));
+        $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
+        $record->setFieldValue("UTM_Anuncio_ID", $request->input('UTM_Anuncio_ID'));
+        $record->setFieldValue("UTM_Campaign_Name", $request->input('UTM_Campaign_Name'));
         $record->setFieldValue("Creado_Desde_Admin_Web", true);
 
-        $record->setFieldValue("Dealer", $request->input('dealerId'));
-        $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
-        $record->setFieldValue("Description", $request->input('Description'));
 
+
+       // dump($record);
         
         array_push($records, $record); // pushing the record to the array
        // $duplicate_check_fields=array('Company');
@@ -153,7 +182,7 @@ class LeadsController extends Controller
         $responseIn = $moduleIns->createRecords($records,null,$lar_id,null); 
 
         $zohoRespuesta=$responseIn->getEntityResponses();
-        //dd($zohoRespuesta);
+      //  dd($zohoRespuesta);
 
 
         if($zohoRespuesta[0]->getStatus()!='success'){
@@ -171,7 +200,7 @@ class LeadsController extends Controller
             $var->setSmPhone($request->input('phone'));
             $var->setProducto($request->input('producto'));
             $var->setMensaje($request->input('Description'));
-            $var->setBrand(implode(",", $request->input('marca')));
+            $var->setBrand((!empty($request->input('Marca'))) ? implode(",", $request->input('Marca')) : '');
             //dd($var);
             $response=$var->upsert();
 
@@ -201,30 +230,58 @@ class LeadsController extends Controller
 
         $record= $this->validarLead($request->input('leadsId'));
 
+      //  (dump($record));
+
         $arrayData['leadsId']=$request->input('leadsId');
-        $arrayData['first_name']=$record->getFieldValue("First_Name");
-        $arrayData['last_name']=$record->getFieldValue("Last_Name");
-        $arrayData['phone']=$record->getFieldValue("Phone");
-        $arrayData['email']=$record->getFieldValue("Email");
-        $arrayData['marca']=$record->getFieldValue("Marca");
-        $arrayData['producto']=$record->getFieldValue("Producto");
-        $arrayData['ubicacion']=$record->getFieldValue("Estado");
-        $arrayData['estatu']=$record->getFieldValue("Lead_Status");
-        $arrayData['Nombre_de_Arquitecto']=$record->getFieldValue("Nombre_de_Arquitecto");
-        $arrayData['Phone_Arquitecto']=$record->getFieldValue("Phone_Arquitecto");
-        $arrayData['Email_Arquitecto']=$record->getFieldValue("Email_Arquitecto");
-        $arrayData['Lead_Source']=$record->getFieldValue("Lead_Source");
+        $arrayData['First_Name']=$record->getFieldValue("First_Name");
+        $arrayData['Last_Name']=$record->getFieldValue("Last_Name");
+        $arrayData['Company']=$record->getFieldValue("Company");
+        $arrayData['Designation']=$record->getFieldValue("Designation");
+        $arrayData['Industry']=$record->getFieldValue("Industry");
+        $arrayData['Lead_Status']=$record->getFieldValue("Lead_Status");
+        $arrayData['Typo_de_Lead']=$record->getFieldValue("Typo_de_Lead");
+        $arrayData['Marca']=$record->getFieldValue("Marca");
+        $arrayData['Dealer']=$record->getFieldValue("Dealer");
+        $arrayData['Producto']=$record->getFieldValue("Producto");
+        $arrayData['Nombre_de_vendedor_de_dealer']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
         $arrayData['Representante']=$record->getFieldValue("Representante");
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
-        if (method_exists($record->getFieldValue("Dealer"),'getEntityId')) {
-            $arrayData['dealerId']=$record->getFieldValue("Dealer")->getEntityId();
-        }else{
-            $arrayData['dealerId']=null;
-        }
-        $arrayData['Nombre_de_vendedor_de_dealer']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
+        $arrayData['Phone']=$record->getFieldValue("Phone");
+        $arrayData['Website']=$record->getFieldValue("Website");
+        $arrayData['Mobile']=$record->getFieldValue("Mobile");
+        $arrayData['Skype_ID']=$record->getFieldValue("Skype_ID");
+        $arrayData['Email']=$record->getFieldValue("Email");
+        $arrayData['Secondary_Email']=$record->getFieldValue("Secondary_Email");
+        $arrayData['Nombre_de_Arquitecto']=$record->getFieldValue("Nombre_de_Arquitecto");
+        $arrayData['Email_Arquitecto']=$record->getFieldValue("Email_Arquitecto");
+        $arrayData['Apellido_de_Arquitecto']=$record->getFieldValue("Apellido_de_Arquitecto");
+        $arrayData['Phone_Arquitecto']=$record->getFieldValue("Phone_Arquitecto");
+        $arrayData['Country']=$record->getFieldValue("Country");
+        $arrayData['Street']=$record->getFieldValue("Street");
+        $arrayData['City']=$record->getFieldValue("City");
+        $arrayData['Zip_Code']=$record->getFieldValue("Zip_Code");
+        $arrayData['Estado']=$record->getFieldValue("Estado");
+        $arrayData['Showroom_Ciudad']=$record->getFieldValue("Showroom_Ciudad");
+
+        $arrayData['Fecha_de_cooking_demo']= $this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_cooking_demo"));
+        $arrayData['Fecha_de_visita_al_Showroom']= $this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_visita_al_Showroom"));
         $arrayData['Description']=$record->getFieldValue("Description");
+        $arrayData['Hora_de_visita_al_showroom']=$record->getFieldValue("Hora_de_visita_al_showroom");
+        $arrayData['Hora_de_la_llamada']=$record->getFieldValue("Hora_de_la_llamada");
+        $arrayData['Fecha_de_la_llamada']=$this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_la_llamada"));
+        $arrayData['UTM_Source']=$record->getFieldValue("UTM_Source");
+        $arrayData['Lead_Source']=$record->getFieldValue("Lead_Source");
+        $arrayData['UTM_Anuncio_ID']=$record->getFieldValue("UTM_Anuncio_ID");
+        $arrayData['UTM_Campaign_Name']=$record->getFieldValue("UTM_Campaign_Name");
 
 
+        if (method_exists($record->getFieldValue("Dealer"),'getEntityId')) {
+            $arrayData['Dealer']=$record->getFieldValue("Dealer")->getEntityId();
+        }else{
+            $arrayData['Dealer']=null;
+        }
+
+       
         $data = (object) $arrayData;
 
         $marcas=$this->fields('4434756000000270255','Leads');//id Fiels Obtenidos de $this->campos()
@@ -235,19 +292,24 @@ class LeadsController extends Controller
 
         $LeadSources=$this->fields('4434756000000002609','Leads');//id Fiels Obtenidos de $this->campos()
 
+        $industries=$this->fields('4434756000000002613','Leads');//id Fiels Obtenidos de $this->campos()
+
+        $typesLeads=$this->fields('4434756000000270274','Leads');//id Fiels Obtenidos de $this->campos()
+        
+        $showroomCiudades=$this->fields('4434756000000298038','Leads');//id Fiels Obtenidos de $this->campos()
+
         $dealers=$this->dealers();
 
         $repres=$this->representantes();
 
-        $nameRepres=$this->nombreRepresentantes();
+        $nameRepres=$this->fields('4434756000000625332','Leads');//id Fiels Obtenidos de $this->campos()
 
 
-        
        //dd($data);
 
 
     
-        return view('admin.leads.form', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres'));
+        return view('admin.leads.form', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','industries','typesLeads','showroomCiudades','dealers', 'repres' ,'nameRepres'));
 
     }
 
@@ -261,23 +323,46 @@ class LeadsController extends Controller
         
         $records = array();
         $record = ZCRMRecord::getInstance("Leads", $leadsId);
-        $record->setFieldValue("First_Name", $request->input('first_name'));
-        $record->setFieldValue("Last_Name", $request->input('last_name'));
-        $record->setFieldValue("Phone", $request->input('phone'));
-        $record->setFieldValue("Email", $request->input('email'));
-        $record->setFieldValue("Marca", $request->input('marca'));
-        $record->setFieldValue("Producto", $request->input('producto'));
-        $record->setFieldValue("Estado", $request->input('ubicacion'));
-        $record->setFieldValue("Lead_Status", $request->input('Estatus'));
-        $record->setFieldValue("Nombre_de_Arquitecto", $request->input('Nombre_de_Arquitecto'));
-        $record->setFieldValue("Phone_Arquitecto", $request->input('Phone_Arquitecto'));
-        $record->setFieldValue("Email_Arquitecto", $request->input('Email_Arquitecto'));
-        $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
+        $record->setFieldValue("First_Name", $request->input('First_Name'));
+        $record->setFieldValue("Last_Name", $request->input('Last_Name'));
+        $record->setFieldValue("Company", $request->input('Company'));
+        $record->setFieldValue("Designation", $request->input('Designation'));
+        $record->setFieldValue("Industry", $request->input('Industry'));
+        $record->setFieldValue("Lead_Status", $request->input('Lead_Status'));
+        $record->setFieldValue("Typo_de_Lead", $request->input('Typo_de_Lead'));
+        $record->setFieldValue("Marca", $request->input('Marca'));
+        $record->setFieldValue("Dealer", $request->input('Dealer'));
+        $record->setFieldValue("Producto", $request->input('Producto'));
+        $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
         $record->setFieldValue("Representante", $request->input('Representante'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
-        $record->setFieldValue("Dealer", $request->input('dealerId'));
-        $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
+        $record->setFieldValue("Phone", $request->input('Phone'));
+        $record->setFieldValue("Website", $request->input('Website'));
+        $record->setFieldValue("Mobile", $request->input('Mobile'));
+        $record->setFieldValue("Skype_ID", $request->input('Skype_ID'));
+        $record->setFieldValue("Email", $request->input('Email'));
+        $record->setFieldValue("Secondary_Email", $request->input('Secondary_Email'));
+        $record->setFieldValue("Nombre_de_Arquitecto", $request->input('Nombre_de_Arquitecto'));
+        $record->setFieldValue("Email_Arquitecto", $request->input('Email_Arquitecto'));
+        $record->setFieldValue("Apellido_de_Arquitecto", $request->input('Apellido_de_Arquitecto'));
+        $record->setFieldValue("Phone_Arquitecto", $request->input('Phone_Arquitecto'));
+        $record->setFieldValue("Country", $request->input('Country'));
+        $record->setFieldValue("Street", $request->input('Street'));
+        $record->setFieldValue("City", $request->input('City'));
+        $record->setFieldValue("Zip_Code", $request->input('Zip_Code'));
+        $record->setFieldValue("Estado", $request->input('Estado'));
+        $record->setFieldValue("Showroom_Ciudad", $request->input('Showroom_Ciudad'));
+        $record->setFieldValue("Fecha_de_cooking_demo",$this->FechaZoho($request->input('Fecha_de_cooking_demo')));
+        $record->setFieldValue("Fecha_de_visita_al_Showroom", $this->FechaZoho($request->input('Fecha_de_visita_al_Showroom')));
         $record->setFieldValue("Description", $request->input('Description'));
+        $record->setFieldValue("Hora_de_visita_al_showroom", $request->input('Hora_de_visita_al_showroom'));
+        $record->setFieldValue("Hora_de_la_llamada", $request->input('Hora_de_la_llamada'));
+        $record->setFieldValue("Fecha_de_la_llamada", $this->FechaZoho($request->input('Fecha_de_la_llamada')));
+        $record->setFieldValue("UTM_Source", $request->input('UTM_Source'));
+        $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
+        $record->setFieldValue("UTM_Anuncio_ID", $request->input('UTM_Anuncio_ID'));
+        $record->setFieldValue("UTM_Campaign_Name", $request->input('UTM_Campaign_Name'));
+        $record->setFieldValue("Creado_Desde_Admin_Web", true);
 
 
         //dd($record);
@@ -304,7 +389,7 @@ class LeadsController extends Controller
             $var->setSmPhone($request->input('phone'));
             $var->setProducto($request->input('producto'));
             $var->setMensaje($request->input('Description'));
-            $var->setBrand(implode(",", $request->input('marca')));
+            $var->setBrand((!empty($request->input('Marca'))) ? implode(",", $request->input('Marca')) : '');
             $response=$var->upsert();
 
 
@@ -533,21 +618,12 @@ class LeadsController extends Controller
     public function campos()
     {
 
-
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
-        $response = $moduleIns->getFieldDetails("4434756000000270255"); // to get the field
-        $marcasZoho = $response->getData(); // to get the field data in form of ZCRMField instance.
+        $response = $moduleIns->getAllFields(); // to get the field
+        $fields = $response->getData(); // to get the array of ZCRMField instances
 
-        dd($marcasZoho->getPickListFieldValues());
+        dd($fields);
 
-        $marcas = array();
-
-        foreach ($marcasZoho->getPickListFieldValues() as $key => $marca) {
-                $marcas[$key]['displayValue']=$marca->getDisplayValue();
-                $marcas[$key]['actualValue']=$marca->getActualValue();
-        }
-
-        dd( $marcas);
     }
 
 
@@ -556,8 +632,7 @@ class LeadsController extends Controller
 
         $leadsId=base64_decode($leadsId);
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
-         $param_map = array("fields"=>"First_Name,Last_Name,Phone,Email,Marca,Producto,Estado,Lead_Status,Nombre_de_Arquitecto,Phone_Arquitecto,Email_Arquitecto,Lead_Source,Representante,Representante_email,Dealer,Nombre_de_vendedor_de_dealer,Description"); // key-value pair containing all the
-        $response = $moduleIns->getRecord($leadsId,$param_map); // To get module record
+        $response = $moduleIns->getRecord($leadsId); // To get module record
         $record = $response->getData(); // To get response data
 
         if ($leadsId=== $record->getEntityId()) {
@@ -706,6 +781,30 @@ class LeadsController extends Controller
                 break;
         }
         return $tagSM;
+    }
+
+
+    private function FechaZoho($fecha){
+        $new_data='';
+        if (!empty($fecha)) {
+
+            $old_date = explode('-', $fecha);
+            $new_data = $old_date[2].'-'.$old_date[1].'-'.$old_date[0];
+        }
+       return $new_data;
+
+    }
+
+     private function FechaCrmAdmin($fecha){
+        $new_data='';
+        if (!empty($fecha)) {
+
+            $old_date = explode('-', $fecha);
+            $new_data = $old_date[2].'-'.$old_date[1].'-'.$old_date[0];
+        }
+
+       return $new_data;
+
     }
    
 }

@@ -66,7 +66,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::get('leads/prospecto', 'LeadsController@prospecto')->name('leads.prospecto');
 
-    Route::get('campos', 'LeadsController@campos')->name('leads.campos');
+    Route::get('leads/campos', 'LeadsController@campos')->name('leads.campos');
 
     Route::get('dealer', 'LeadsController@dealers')->name('leads.dealers');
 
@@ -103,7 +103,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::post('deals/storePreco', 'DealsController@storePreco')->name('deals.storePreco');
 
-    Route::get('campos', 'DealsController@campos')->name('deals.campos');
 
     Route::get('dealer', 'DealsController@dealers')->name('deals.dealers');
 
