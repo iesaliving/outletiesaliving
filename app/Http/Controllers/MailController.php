@@ -298,6 +298,7 @@ class MailController extends Controller
 
         //dump(hash('md5', $request->input('event_type_name')));
 
+        dump($request->input('event_type_name'));
         $division=explode("T",$request->input('event_start_time'));
 
         $fecha=Carbon::createFromFormat('Y-m-d', $division[0]);
@@ -372,14 +373,18 @@ class MailController extends Controller
                         $gracias='gracias-Showroom';
                         break;
                   default:
-                      abort(404);
+                        $var->sethoraLlamada($division[1]);
+                        $var->setFechaLlamada($fecha->format('d-m-Y'));
+                        $var->setPais('Mexico');
+                        $var->setTag('LLAMADA');
+                        $gracias='gracias-llamada';
                       break;
               }    
 //         dd($var);
 
         $response=$var->upsert();
         //$code=$response;  
-        //dd($response)
+//        dd($response);
         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect($gracias);
