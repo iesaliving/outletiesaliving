@@ -128,14 +128,14 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="monto_estimado" class="col-md-12 col-form-label text-md-left">Monto estimado del orden de compra</label>
+                                <label for="Monto_estimado_del_orden_de_compra" class="col-md-12 col-form-label text-md-left">Monto estimado del orden de compra</label>
 
                                 <div class="col-md-12">
 
-                                    <input required id="monto_estimado" name="monto_estimado" type="text" class="form-control @error('monto_estimado') is-invalid @enderror" value="{{ old('monto_estimado', isset($data) ? $data->monto_estimado : '') }}" maxlength="100" required="">
+                                    <input required id="Monto_estimado_del_orden_de_compra" name="Monto_estimado_del_orden_de_compra" type="text" class="form-control @error('Monto_estimado_del_orden_de_compra') is-invalid @enderror" value="{{ old('Monto_estimado_del_orden_de_compra', isset($data) ? $data->Monto_estimado_del_orden_de_compra : '') }}" maxlength="100" required="">
       
 
-                                   @error('monto_estimado')
+                                   @error('Monto_estimado_del_orden_de_compra')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
@@ -459,7 +459,7 @@
                                       @foreach ($nameRepres as $nameRepre)
                                         <option 
                                         @if (isset($data))
-                                              @if ($data->Representante == $nameRepre['name'])
+                                              @if ($data->Representante ==$nameRepre['name'])
                                                 selected="selected" 
                                               @endif
                                             @endif
@@ -515,6 +515,498 @@
                                    @enderror                                  
                                 </div>
                           </div>
+
+                          <div class="col-12 mt-5">
+                            <h4>Contactar con Distribuidor</h4>
+                          </div>
+
+
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                
+                                <label for="Enviar_a_Dealer" class="col-md-12 col-form-label text-md-left">Contactar Distribuidor, enviar Precotización</label>
+                                <div class="col-md-12 ">
+
+                                    <label class="container">
+                                      <input type="checkbox" id="Enviar_a_Dealer" name="Enviar_a_Dealer" {{ ($data->Enviar_a_Dealer) ? 'checked' : '' }}>
+                                      <span class="checkmark"></span>
+                                    </label>
+      
+
+                                   @error('Enviar_a_Dealer')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Enlace_a_cotizacion" class="col-md-12 col-form-label text-md-left">Enlace a Precotización</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="Enlace_a_cotizacion" name="Enlace_a_cotizacion" type="text" class="form-control @error('Enlace_a_cotizacion') is-invalid @enderror" value="{{ old('Enlace_a_cotizacion', isset($data) ? $data->Enlace_a_cotizacion : '') }}" maxlength="100">
+      
+
+                                   @error('Enlace_a_cotizacion')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                  
+                                  
+                                  
+
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                
+                                <label for="Contactar_Dealer_y_cliente_con_info_adiccon_l" class="col-md-12 col-form-label text-md-left">Contactar Distribuidor y cliente, con info adicional</label>
+                                <div class="col-md-12 ">
+
+
+                                    <label class="container">
+                                      <input type="checkbox" id="Contactar_Dealer_y_cliente_con_info_adiccon_l" name="Contactar_Dealer_y_cliente_con_info_adiccon_l" {{ ($data->Contactar_Dealer_y_cliente_con_info_adiccon_l) ? 'checked' : '' }}>
+                                      <span class="checkmark"></span>
+                                    </label>
+      
+
+                                   @error('Contactar_Dealer_y_cliente_con_info_adiccon_l')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Enlace_a_informaci_n_addicion_l" class="col-md-12 col-form-label text-md-left">Enlace a información adicional</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="Enlace_a_informaci_n_addicion_l" name="Enlace_a_informaci_n_addicion_l" type="text" class="form-control @error('Enlace_a_informaci_n_addicion_l') is-invalid @enderror" value="{{ old('Enlace_a_informaci_n_addicion_l', isset($data) ? $data->Enlace_a_informaci_n_addicion_l : '') }}" maxlength="100">
+      
+
+                                   @error('Enlace_a_informaci_n_addicion_l')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+
+
+
+
+                          <div class="col-12 mt-5">
+                            <h4>Showroom</h4>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Showroom" class="col-md-12 col-form-label text-md-left">Estatus de Cooking Demo</label>
+                                  <div class="col-md-12">
+                                    <select required id="Showroom" name="Showroom" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
+                                      @foreach ($cityShowrooms as $cityShowroom)
+                                        <option 
+                                        @if (!empty($data->Lead_Source))
+                                              @if ($data->Showroom == $cityShowroom['displayValue'])
+                                                selected="selected" 
+                                              @endif
+                                            @endif
+                                            @if (old('LeadSource') ==  $cityShowroom['displayValue']) 
+                                              selected="selected" 
+                                            @endif 
+                                        value="{{$cityShowroom['displayValue']}}">
+                                        {{$cityShowroom['displayValue']}}
+                                      </option>
+                                      @endforeach
+                                      
+                                    </select>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Fecha_de_la_llamada" class="col-md-12 col-form-label text-md-left">Fecha de la llamada</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Fecha_de_la_llamada" name="Fecha_de_la_llamada" type="text" class="form-control @error('Fecha_de_la_llamada') is-invalid @enderror" value="{{ old('Fecha_de_la_llamada', isset($data) ? $data->Fecha_de_la_llamada : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Fecha_de_la_llamada')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Fecha_de_visita_al_Showroom" class="col-md-12 col-form-label text-md-left">Fecha de visita al Showroom</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Fecha_de_visita_al_Showroom" name="Fecha_de_visita_al_Showroom" type="text" class="form-control @error('Fecha_de_visita_al_Showroom') is-invalid @enderror" value="{{ old('Fecha_de_visita_al_Showroom', isset($data) ? $data->Fecha_de_visita_al_Showroom : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Fecha_de_visita_al_Showroom')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Hora_de_la_llamada" class="col-md-12 col-form-label text-md-left">Hora de la llamada</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Hora_de_la_llamada" name="Hora_de_la_llamada" type="text" class="form-control @error('Hora_de_la_llamada') is-invalid @enderror" value="{{ old('Hora_de_la_llamada', isset($data) ? $data->Hora_de_la_llamada : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Hora_de_la_llamada')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Hora_de_visita_al_showroom" class="col-md-12 col-form-label text-md-left">Hora de visita al showroom</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Hora_de_visita_al_showroom" name="Hora_de_visita_al_showroom" type="text" class="form-control @error('Hora_de_visita_al_showroom') is-invalid @enderror" value="{{ old('Hora_de_visita_al_showroom', isset($data) ? $data->Hora_de_visita_al_showroom : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Hora_de_visita_al_showroom')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          
+
+
+
+
+
+
+                          <div class="col-12 mt-5">
+                            <h4>Cooking Demo</h4>
+                          </div>
+
+
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                
+                                <label for="Invitar_a_Cooking_demo" class="col-md-12 col-form-label text-md-left">Invitar a Cooking demo</label>
+                                <div class="col-md-12 ">
+
+                                    <label class="container">
+                                      <input type="checkbox" id="Invitar_a_Cooking_demo" name="Invitar_a_Cooking_demo" {{($data->Invitar_a_Cooking_demo) ? 'checked' : '' }}>
+                                      <span class="checkmark"></span>
+                                    </label>
+      
+
+                                   @error('Invitar_a_Cooking_demo')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Fecha_de_cooking_demo" class="col-md-12 col-form-label text-md-left">Fecha de cooking demo</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Fecha_de_cooking_demo" name="Fecha_de_cooking_demo" type="text" class="form-control @error('Fecha_de_cooking_demo') is-invalid @enderror" value="{{ old('Fecha_de_cooking_demo', isset($data) ? $data->Fecha_de_cooking_demo : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Fecha_de_cooking_demo')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Estatus_de_Cooking_Demo" class="col-md-12 col-form-label text-md-left">Estatus de Cooking Demo</label>
+                                  <div class="col-md-12">
+                                    <select required id="Estatus_de_Cooking_Demo" name="Estatus_de_Cooking_Demo" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
+                                      @foreach ($EstatusCD as $EstatuCD)
+                                        <option 
+                                        @if (!empty($data->Lead_Source))
+                                              @if ($data->Estatus_de_Cooking_Demo == $EstatuCD['displayValue'])
+                                                selected="selected" 
+                                              @endif
+                                            @endif
+                                            @if (old('LeadSource') ==  $EstatuCD['displayValue']) 
+                                              selected="selected" 
+                                            @endif 
+                                        value="{{$EstatuCD['displayValue']}}">
+                                        {{$EstatuCD['displayValue']}}
+                                      </option>
+                                      @endforeach
+                                      
+                                    </select>
+                                </div>
+                            </div>
+                          </div>
+
+
+
+
+                          <div class="col-12 mt-5">
+                            <h4>Rating de la instalación</h4>
+                          </div>
+
+
+
+ 
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                
+                                <label for="Solictar_Rating_de_Instalaci_n" class="col-md-12 col-form-label text-md-left">Solictar Rating de Instalación</label>
+                                <div class="col-md-12 ">
+
+                                    <label class="container">
+                                      <input type="checkbox" id="Solictar_Rating_de_Instalaci_n" name="Solictar_Rating_de_Instalaci_n" {{ ($data->Solictar_Rating_de_Instalaci_n) ? 'checked' : '' }}>
+                                      <span class="checkmark"></span>
+                                    </label>
+      
+
+                                   @error('Solictar_Rating_de_Instalaci_n')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Mensaje_rating_de_instalaci_n" class="col-md-12 col-form-label text-md-left">Mensaje rating de instalación</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Mensaje_rating_de_instalaci_n" name="Mensaje_rating_de_instalaci_n" type="text" class="form-control @error('Mensaje_rating_de_instalaci_n') is-invalid @enderror" value="{{ old('Mensaje_rating_de_instalaci_n', isset($data) ? $data->Mensaje_rating_de_instalaci_n : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Mensaje_rating_de_instalaci_n')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Rating_total_del_servicio_de_instalaci_n" class="col-md-12 col-form-label text-md-left">Rating total del servicio de instalación</label>
+
+                                <div class="col-md-12">
+
+                                    <input required id="Rating_total_del_servicio_de_instalaci_n" name="Rating_total_del_servicio_de_instalaci_n" type="text" class="form-control @error('Rating_total_del_servicio_de_instalaci_n') is-invalid @enderror" value="{{ old('Rating_total_del_servicio_de_instalaci_n', isset($data) ? $data->Rating_total_del_servicio_de_instalaci_n : '') }}" maxlength="100" required="">
+      
+
+                                   @error('Rating_total_del_servicio_de_instalaci_n')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12 mt-5">
+                            <h4>Description Information</h4>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group row">
+                                <label for="Description" class="col-md-12 col-form-label text-md-left">Description</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="Description" name="Description" type="text" class="form-control @error('Description') is-invalid @enderror" value="{{ old('Description', isset($data) ? $data->Description : '') }}" maxlength="100">
+      
+
+                                   @error('Description')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12 mt-5">
+                            <h4>Información de Marketing</h4>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="UTM_Source" class="col-md-12 col-form-label text-md-left">UTM Source</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="UTM_Source" name="UTM_Source" type="text" class="form-control @error('UTM_Source') is-invalid @enderror" value="{{ old('UTM_Source', isset($data) ? $data->UTM_Source : '') }}" maxlength="100">
+      
+
+                                   @error('UTM_Source')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Lead_Source" class="col-md-12 col-form-label text-md-left">Origen de Lead</label>
+
+                                <div class="col-md-12">
+
+                                    <select id="Lead_Source" name="Lead_Source" class="form-control @error('Lead_Source') is-invalid @enderror" data-live-search="true">
+                                      @foreach ($LeadSources as $LeadSource)
+                                        <option 
+                                        @if (!empty($data->Lead_Source))
+                                              @if ($data->Lead_Source == $LeadSource['displayValue'])
+                                                selected="selected" 
+                                              @endif
+                                            @endif
+                                            @if (old('LeadSource') ==  $LeadSource['displayValue']) 
+                                              selected="selected" 
+                                            @endif 
+                                        value="{{$LeadSource['displayValue']}}">
+                                        {{$LeadSource['displayValue']}}
+                                      </option>
+                                      @endforeach
+                                      
+                                    </select>
+      
+
+                                   @error('Lead_Source')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="UTM_Anuncio_ID" class="col-md-12 col-form-label text-md-left">UTM Anuncio ID</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="UTM_Anuncio_ID" name="UTM_Anuncio_ID" type="text" class="form-control @error('UTM_Anuncio_ID') is-invalid @enderror" value="{{ old('UTM_Anuncio_ID', isset($data) ? $data->UTM_Anuncio_ID : '') }}" maxlength="100">
+      
+
+                                   @error('UTM_Anuncio_ID')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="UTM_Campaign_Name" class="col-md-12 col-form-label text-md-left">UTM Campaign Name</label>
+
+                                <div class="col-md-12">
+
+                                    <input id="UTM_Campaign_Name" name="UTM_Campaign_Name" type="text" class="form-control @error('UTM_Campaign_Name') is-invalid @enderror" value="{{ old('UTM_Campaign_Name', isset($data) ? $data->UTM_Campaign_Name : '') }}" maxlength="100">
+      
+
+                                   @error('UTM_Campaign_Name')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
                         </div>
 
            
@@ -536,6 +1028,76 @@
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
+<style type="text/css">
+  /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+
 @endsection
 
 
@@ -550,7 +1112,7 @@
 
 $(document).ready(function(){
   //  $('#cuanto').mask("##0.00");
-    $('#monto_estimado').mask("#,##0", {reverse: true});
+    $('#Monto_estimado_del_orden_de_compra').mask("#,##0", {reverse: true});
     $('select').selectpicker({noneSelectedText:'Selecione Marcas'});
 
     @if(isset($data))
@@ -571,5 +1133,37 @@ $(document).ready(function(){
             orientation: "bottom",
             minDate: dateToday
         });
+        $('#Fecha_de_cooking_demo').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: "dd-mm-yyyy",
+            startDate: '+1d',
+            autoclose: true,
+            todayHighlight: true,
+            orientation: "bottom",
+            minDate: dateToday
+        });
+
+        $('#Fecha_de_la_llamada').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: "dd-mm-yyyy",
+            startDate: '+1d',
+            autoclose: true,
+            todayHighlight: true,
+            orientation: "bottom",
+            minDate: dateToday
+        });
+
+        $('#Fecha_de_visita_al_Showroom').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: "dd-mm-yyyy",
+            startDate: '+1d',
+            autoclose: true,
+            todayHighlight: true,
+            orientation: "bottom",
+            minDate: dateToday
+        });
+
+
+        
     </script>
 @endsection
