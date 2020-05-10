@@ -74,14 +74,14 @@
                           </div>
                             <div class="col-md-8 mx-auto">
                                 <div class="form-group row">
-                                <label for="time" class="col-md-12 col-form-label text-md-left">Fecha de Cierre</label>
+                                <label for="Closing_Date" class="col-md-12 col-form-label text-md-left">Fecha de Cierre</label>
 
                                 <div class="col-md-12">
 
-                                    <input id="time" name="time" type="text" class="form-control @error('time') is-invalid @enderror" value="{{ old('time') }}" maxlength="100" required="">
+                                    <input id="Closing_Date" name="Closing_Date" type="text" class="form-control @error('Closing_Date') is-invalid @enderror" value="{{ old('Closing_Date') }}" maxlength="100" required="">
       
 
-                                   @error('time')
+                                   @error('Closing_Date')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
@@ -114,9 +114,9 @@
     <script>
         var dateToday = new Date();
         dateToday.setDate(dateToday.getDate() - 1);
-        $('#time').datepicker({
+        $('#Closing_Date').datepicker({
             uiLibrary: 'bootstrap4',
-            format: "dd/mm/yyyy",
+            format: "dd-mm-yyyy",
             startDate: '+1d',
             autoclose: true,
             todayHighlight: true,

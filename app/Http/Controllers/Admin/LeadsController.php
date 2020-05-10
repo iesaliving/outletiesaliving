@@ -689,27 +689,48 @@ class LeadsController extends Controller
 
     private function crearDeals($leadInfo,$accountId,$contactId,$input){
 
+
         $moduleDeals = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // to get the instance of the module
-
-        $old_date = explode('/', $input['time']);
-        $new_data = $old_date[2].'-'.$old_date[1].'-'.$old_date[0];
-
 
         $deals = array();
         $dealsInfo = ZCRMRecord::getInstance(null, null); // THIS LINE
         $dealsInfo->setFieldValue("Contact_Name", $contactId);
         $dealsInfo->setFieldValue("Account_Name", $accountId);
-        $dealsInfo->setFieldValue("Closing_Date", $new_data);
+        $dealsInfo->setFieldValue("Closing_Date", $this->FechaZoho($input['Closing_Date']));
         $dealsInfo->setFieldValue("Stage", $input['stage']);
+        $dealsInfo->setFieldValue("Contact_Apellido", $leadInfo->getFieldValue("Last_Name"));
 
         $dealsInfo->setFieldValue("Phone", $leadInfo->getFieldValue("Phone"));
         $dealsInfo->setFieldValue("Deal_Name", $leadInfo->getFieldValue("First_Name").' '.$leadInfo->getFieldValue("Last_Name"));
         $dealsInfo->setFieldValue("Producto", $leadInfo->getFieldValue("Producto"));
         $dealsInfo->setFieldValue("Estado", $leadInfo->getFieldValue("Estado"));
         $dealsInfo->setFieldValue("Lead_Source", $leadInfo->getFieldValue("Lead_Source"));
+        $dealsInfo->setFieldValue("Nombre_de_vendedor_de_dealer", $leadInfo->getFieldValue("Nombre_de_vendedor_de_dealer"));
+        
         $dealsInfo->setFieldValue("Marca", $leadInfo->getFieldValue("Marca"));
         $dealsInfo->setFieldValue("Representante", trim($leadInfo->getFieldValue("Representante")) );
         $dealsInfo->setFieldValue("Representante_email", trim($leadInfo->getFieldValue("Representante_email")) );
+
+        $dealsInfo->setFieldValue("UTM_Anuncio_ID", $leadInfo->getFieldValue("UTM_Anuncio_ID"));
+        $dealsInfo->setFieldValue("Lead_Source", $leadInfo->getFieldValue("Lead_Source"));
+        $dealsInfo->setFieldValue("UTM_Source", $leadInfo->getFieldValue("UTM_Source"));
+        $dealsInfo->setFieldValue("UTM_Campaign_Name", $leadInfo->getFieldValue("UTM_Campaign_Name"));
+
+
+        $dealsInfo->setFieldValue("Description", $leadInfo->getFieldValue("Description"));
+        $dealsInfo->setFieldValue("Showroom", $leadInfo->getFieldValue("Showroom_Ciudad"));
+
+        $dealsInfo->setFieldValue("Fecha_de_visita_al_Showroom", $leadInfo->getFieldValue("Fecha_de_visita_al_Showroom"));
+        $dealsInfo->setFieldValue("Fecha_de_la_llamada", $leadInfo->getFieldValue("Fecha_de_la_llamada"));
+        $dealsInfo->setFieldValue("Fecha_de_cooking_demo", $leadInfo->getFieldValue("Fecha_de_cooking_demo"));
+        
+        $dealsInfo->setFieldValue("Hora_de_visita_al_showroom", $leadInfo->getFieldValue("Hora_de_visita_al_showroom"));
+        $dealsInfo->setFieldValue("Hora_de_la_llamada", $leadInfo->getFieldValue("Hora_de_la_llamada"));
+
+
+ 
+ 
+
         if (method_exists($leadInfo->getFieldValue("Dealer"),'getEntityId')) {
         $dealsInfo->setFieldValue("Dealer2", $leadInfo->getFieldValue("Dealer")->getEntityId());
         }
@@ -718,7 +739,7 @@ class LeadsController extends Controller
         $lar_id=null; // THIS LINE
         $trigger=array();//trigger to include
         $response = $moduleDeals->createRecords($deals,null,$lar_id,null); 
-
+        dd($response);
         return $response;
     }
 
