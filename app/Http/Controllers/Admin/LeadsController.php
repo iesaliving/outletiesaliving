@@ -55,15 +55,20 @@ class LeadsController extends Controller
 
 
         if ((Gate::check('admin_zoho'))) {
-            $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
+           /* $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
             $criteria="Creado_Desde_Admin_Web:equals:true";//criteria to search for
-            /* For VERSION <=2.0.6  $page=5;//page number
-            $perPage=200;//records per page
-            $response = $moduleIns->searchRecordsByCriteria($criteria, $page, $perPage); // To get module records//string $searchWord word to be searched//number $page to get the list of records from the respective pages. Default value for page is 1.//number $perPage To get the list of records available per page. Default value for per page is 200.*/
-             $param_map=array("page"=>1,"per_page"=>200); // key-value pair containing all the parameters
+
+            $param_map=array("page"=>1,"per_page"=>200); // key-value pair containing all the parameters
             $response = $moduleIns->searchRecordsByCriteria($criteria,$param_map) ;// To get module records// $criteria to search for  to search for// $param_map-parameters key-value pair - optional
-            $records = $response->getData(); // To get response data
-            //dd($records);
+            $records = $response->getData(); // To get response data*/
+
+            $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To 
+            $param_map=array("page"=>0,"per_page"=>200); 
+           //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
+            $response = $moduleIns->getRecords($param_map); 
+            $records = $response->getData(); 
+
+
         }else{
             $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To get module instance
             $criteria="Representante_email:equals:".Auth::user('email')->email;
@@ -121,12 +126,13 @@ class LeadsController extends Controller
 
         //dd($repres);
 
-        return view('admin.leads.form', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres', 'industries', 'typesLeads', 'showroomCiudades'));
+        return view('admin.leads.create', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres', 'industries', 'typesLeads', 'showroomCiudades'));
     }
 
     public function store(Request $request){
 
         
+        //dump($request->input());
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // to get the instance of the module
         $records = array();
         $record = ZCRMRecord::getInstance(null, null); // THIS LINE
@@ -173,7 +179,7 @@ class LeadsController extends Controller
 
 
 
-       // dump($record);
+       //dd($record);
         
         array_push($records, $record); // pushing the record to the array
        // $duplicate_check_fields=array('Company');
@@ -182,7 +188,7 @@ class LeadsController extends Controller
         $responseIn = $moduleIns->createRecords($records,null,$lar_id,null); 
 
         $zohoRespuesta=$responseIn->getEntityResponses();
-      //  dd($zohoRespuesta);
+       //dd($zohoRespuesta);
 
 
         if($zohoRespuesta[0]->getStatus()!='success'){
@@ -193,12 +199,12 @@ class LeadsController extends Controller
 
             /******* SALES MANAGO ************/
             $var=new SalesManago();
-            $var->setSmEmail($request->input('email'));
-            $var->setEstado($request->input('ubicacion'));
-            $var->setSmNombre($request->input('first_name')." ".$request->input('last_name'));
-            $var->setTag($this->asignarTagSM ($request->input('Estatus')));
-            $var->setSmPhone($request->input('phone'));
-            $var->setProducto($request->input('producto'));
+            $var->setSmEmail($request->input('Email'));
+            $var->setEstado($request->input('Estado'));
+            $var->setSmNombre($request->input('First_Name')." ".$request->input('Last_Name'));
+            $var->setTag($this->asignarTagSM ($request->input('Lead_Source')));
+            $var->setSmPhone($request->input('Phone'));
+            $var->setProducto($request->input('Producto'));
             $var->setMensaje($request->input('Description'));
             $var->setBrand((!empty($request->input('Marca'))) ? implode(",", $request->input('Marca')) : '');
             //dd($var);
@@ -309,7 +315,7 @@ class LeadsController extends Controller
 
 
     
-        return view('admin.leads.form', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','industries','typesLeads','showroomCiudades','dealers', 'repres' ,'nameRepres'));
+        return view('admin.leads.update', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','industries','typesLeads','showroomCiudades','dealers', 'repres' ,'nameRepres'));
 
     }
 
@@ -382,23 +388,25 @@ class LeadsController extends Controller
 
             /******* SALES MANAGO ************/
             $var=new SalesManago();
-            $var->setSmEmail($request->input('email'));
-            $var->setEstado($request->input('ubicacion'));
-            $var->setSmNombre($request->input('first_name')." ".$request->input('last_name'));
-            $var->setTag($this->asignarTagSM ($request->input('Estatus')));
-            $var->setSmPhone($request->input('phone'));
-            $var->setProducto($request->input('producto'));
+            $var->setSmEmail($request->input('Email'));
+            $var->setEstado($request->input('Estado'));
+            $var->setSmNombre($request->input('First_Name')." ".$request->input('Last_Name'));
+            $var->setTag($this->asignarTagSM ($request->input('Lead_Source')));
+            $var->setSmPhone($request->input('Phone'));
+            $var->setProducto($request->input('Producto'));
             $var->setMensaje($request->input('Description'));
             $var->setBrand((!empty($request->input('Marca'))) ? implode(",", $request->input('Marca')) : '');
+            //dd($var);
             $response=$var->upsert();
-
 
 
             $varArq=new SalesManago();
             $varArq->setSmNombre($request->input('Nombre_de_Arquitecto'));
             $varArq->setSmPhone($request->input('Phone_Arquitecto'));
             $varArq->setSmEmail($request->input('Email_Arquitecto'));
-            //$varArq->setTag('ARQUITECTO');
+            $varArq->setTag('ARQUITECTO');
+            $response=$varArq->upsert();
+            /******* SALES MANAGO ************/
             
             $response=$varArq->upsert();
             /******* SALES MANAGO ************/
@@ -739,7 +747,7 @@ class LeadsController extends Controller
         $lar_id=null; // THIS LINE
         $trigger=array();//trigger to include
         $response = $moduleDeals->createRecords($deals,null,$lar_id,null); 
-        dd($response);
+        //dd($response);
         return $response;
     }
 
