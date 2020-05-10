@@ -79,7 +79,7 @@ class DealsController extends Controller
                                     'contactName' => $record->getFieldValue("Contact_Name")->getLookupLabel(),
                                     'stage' => $records[$key]->getFieldValue('Stage'), 
                                     'representante' => $records[$key]->getFieldValue('Representante'),
-                                    'email' =>$this->getContact($records[$key]->getFieldValue("Contact_Name")->getEntityId()),
+                                    'email' =>$this->getContactEmail($records[$key]->getFieldValue("Contact_Name")->getEntityId()),
                                 );
 
             $time=explode('T', $records[$key]->getCreatedTime());
@@ -189,7 +189,7 @@ class DealsController extends Controller
 
         $record= $this->validarDeals($request->input('dealsId'));
 
-
+       // dd($record);
 
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['Deal_Name']=$record->getFieldValue("Deal_Name");
@@ -276,8 +276,11 @@ class DealsController extends Controller
 
         $nameRepres=$this->nombreRepresentantes();
 
+        $contactInfo=$this->getContactInfo($record->getFieldValue("Contact_Name")->getEntityId());
 
-        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','nameRepres','dealers','data','LeadSources','EstatusCD','cityShowrooms'));
+        //dd($contactInfo);
+
+        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','nameRepres','dealers','data','LeadSources','EstatusCD','cityShowrooms','contactInfo'));
 
 
     }
@@ -400,7 +403,7 @@ class DealsController extends Controller
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['contact_Name']=$record->getFieldValue("Contact_Name")->getLookupLabel();
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
-        $arrayData['email']=$this->getContact($record->getFieldValue("Contact_Name")->getEntityId());
+        $arrayData['email']=$this->getContactEmail($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
             $arrayData['dealerId']=null;
         }
@@ -464,7 +467,7 @@ class DealsController extends Controller
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['contact_Name']=$record->getFieldValue("Contact_Name")->getLookupLabel();
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
-        $arrayData['email']=$this->getContact($record->getFieldValue("Contact_Name")->getEntityId());
+        $arrayData['email']=$this->getContactEmail($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
             $arrayData['dealerId']=null;
         }
@@ -532,7 +535,7 @@ class DealsController extends Controller
         $arrayData['Enlace_a_cotizacion']=$record->getFieldValue("Enlace_a_cotizacion");
         $arrayData['Enlace_a_informaci_n_addicion_l']=$record->getFieldValue("Enlace_a_informaci_n_addicion_l");
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
-        $arrayData['email']=$this->getContact($record->getFieldValue("Contact_Name")->getEntityId());
+        $arrayData['email']=$this->getContactEmail($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
             $arrayData['Dealer2']=null;
         }
@@ -813,7 +816,7 @@ class DealsController extends Controller
         return $responseIn;
     }
 
-    public function getContact($contactId){
+    public function getContactEmail($contactId){
 
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Contacts"); // To get module instance
         $param_map = array("fields"=>"Email"); // key-value pair containing all the params - optional
@@ -822,6 +825,26 @@ class DealsController extends Controller
         $record = $response->getData(); // To get response data
 
         return $record->getFieldValue("Email");
+
+    }
+
+    public function getContactInfo($contactId){
+
+        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Contacts"); // To get module instance
+        //$param_map = array("fields"=>"Email"); // key-value pair containing all the params - optional
+        //$header_map = array("header_name"=>"header_value"); // key-value pair containing all the headers - optional
+        $response = $moduleIns->getRecord($contactId,); // To get module record
+        $record = $response->getData(); // To get response data
+
+        
+        $info = array   (
+                            'Full_Name' => $record->getFieldValue("Full_Name"), 
+                            'Phone' => $record->getFieldValue("Phone"), 
+                            'Email' => $record->getFieldValue("Email"), 
+                        );
+        $data = (object) $info;
+
+        return $data;
 
     }
 

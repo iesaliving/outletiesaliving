@@ -29,6 +29,14 @@
       </div>
 
                 <div class="card-body">
+                      <div class="col-12 mb-3">
+                        <h4> Persona de contacto</h4>
+                        <div class="col-10 offset-1">
+                          <h5><b>Nombre Completo: {{$contactInfo->Full_Name}}</b></h5>
+                          <h5>Email Contacto: {{$contactInfo->Email}}</h5>
+                          <h5>Teléfono: {{$contactInfo->Phone}}</h5>
+                        </div>
+                      </div>
                       <div class="col-12">
                         <h4> Informacion de prospecto</h4>
                       </div>
