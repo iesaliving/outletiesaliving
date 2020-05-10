@@ -35,7 +35,7 @@
 
                         <div class="row col-12">
                           <div class="col-12 mt-5">
-                            <h4>Lead Information</h4>
+                            <h4>Información Principal</h4>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group row">
@@ -59,7 +59,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="" class="col-md-12 col-form-label text-md-left">Lead Owner</label>
+                                <label for="" class="col-md-12 col-form-label text-md-left">Propietario de Lead</label>
 
                                 <div class="col-md-12">
 
@@ -101,7 +101,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Company" class="col-md-12 col-form-label text-md-left">Company</label>
+                                <label for="Company" class="col-md-12 col-form-label text-md-left">Empresa</label>
 
                                 <div class="col-md-12">
 
@@ -121,7 +121,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Designation" class="col-md-12 col-form-label text-md-left">Title</label>
+                                <label for="Designation" class="col-md-12 col-form-label text-md-left">Título</label>
 
                                 <div class="col-md-12">
 
@@ -141,7 +141,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Industry" class="col-md-12 col-form-label text-md-left">Industry</label>
+                                <label for="Industry" class="col-md-12 col-form-label text-md-left">Sector</label>
 
                                 <div class="col-md-12">
 
@@ -176,7 +176,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Estatus" class="col-md-12 col-form-label text-md-left">Lead Status</label>
+                                <label for="Estatus" class="col-md-12 col-form-label text-md-left">Estado de Lead</label>
 
                                 <div class="col-md-12">
 
@@ -357,7 +357,7 @@
                                <label for="Representante" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
                                 <div class="col-md-12">
                                     <select id="Representante" name="Representante" class="form-control @error('name') is-invalid @enderror" data-live-search="true" >
-                                      <option value="">Selecione Representante</option>
+                                      <option value="">Seleccione Representante</option>
                                       @foreach ($nameRepres as $nameRepre)
                                         <option 
                                         @if (!empty($data->Representante))
@@ -390,7 +390,7 @@
                               <label for="Representante" class="col-md-12 col-form-label text-md-left">Email del Representante</label>
                                 <div class="col-md-12">
                                     <select id="Representante_email" name="Representante_email" class="form-control @error('email') is-invalid @enderror" data-live-search="true">
-                                      <option value="">Selecione Email</option>
+                                      <option value="">Seleccione Email</option>
                                       @foreach ($repres as $repre)
                                         <option 
                                         @if (!empty($data->Representante_email))
@@ -445,7 +445,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Website" class="col-md-12 col-form-label text-md-left">Website</label>
+                                <label for="Website" class="col-md-12 col-form-label text-md-left">Sitio web</label>
 
                                 <div class="col-md-12">
 
@@ -465,7 +465,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Mobile" class="col-md-12 col-form-label text-md-left">Mobile</label>
+                                <label for="Mobile" class="col-md-12 col-form-label text-md-left">Móvil</label>
 
                                 <div class="col-md-12">
 
@@ -526,7 +526,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Secondary_Email" class="col-md-12 col-form-label text-md-left">Secondary Email</label>
+                                <label for="Secondary_Email" class="col-md-12 col-form-label text-md-left">Correo electrónico secundario</label>
 
                                 <div class="col-md-12">
 
@@ -636,12 +636,12 @@
 
 
                           <div class="col-12 mt-5">
-                            <h4>Address Information</h4>
+                            <h4> Información de la dirección</h4>
                           </div>
 
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Country" class="col-md-12 col-form-label text-md-left">Country</label>
+                                <label for="Country" class="col-md-12 col-form-label text-md-left">País</label>
 
                                 <div class="col-md-12">
 
@@ -661,7 +661,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Street" class="col-md-12 col-form-label text-md-left">Street</label>
+                                <label for="Street" class="col-md-12 col-form-label text-md-left">Calle</label>
 
                                 <div class="col-md-12">
 
@@ -681,7 +681,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="City" class="col-md-12 col-form-label text-md-left">City</label>
+                                <label for="City" class="col-md-12 col-form-label text-md-left">Ciudad</label>
 
                                 <div class="col-md-12">
 
@@ -702,7 +702,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Zip_Code" class="col-md-12 col-form-label text-md-left">Zip Code</label>
+                                <label for="Zip_Code" class="col-md-12 col-form-label text-md-left">Código postal </label>
 
                                 <div class="col-md-12">
 
@@ -761,7 +761,7 @@
 
 
                           <div class="col-12 mt-5">
-                            <h4>Description Information</h4>
+                            <h4>Información de la descripción </h4>
                           </div>
 
 
@@ -1098,7 +1098,7 @@ $(document).ready(function(){
 
   //  $('#cuanto').mask("##0.00");
     $('.telefono').mask("999999999900");
-    $('select').selectpicker({noneSelectedText:'Selecione Marcas'});
+    $('select').selectpicker({noneSelectedText:'Seleccione Marcas'});
 
     @if(isset($data))
       var marcaJS = @json($data->Marca);

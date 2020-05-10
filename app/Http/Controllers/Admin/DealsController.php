@@ -524,26 +524,29 @@ class DealsController extends Controller
 
         $record= $this->validarDeals($request->input('dealsId'));
 
+      //  dump($record);
+        
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['contact_Name']=$record->getFieldValue("Contact_Name")->getLookupLabel();
         $arrayData['Email_de_Dealer']=$record->getFieldValue("Email_de_Dealer");
-        $arrayData['Enlace_a_cotizacion ']=$record->getFieldValue("Enlace_a_cotizacion");
-        $arrayData['Enlace_a_informaci_n_addicion_l ']=$record->getFieldValue("Enlace_a_informaci_n_addicion_l");
+        $arrayData['Enlace_a_cotizacion']=$record->getFieldValue("Enlace_a_cotizacion");
+        $arrayData['Enlace_a_informaci_n_addicion_l']=$record->getFieldValue("Enlace_a_informaci_n_addicion_l");
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
         $arrayData['email']=$this->getContact($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
-            $arrayData['dealerId']=null;
+            $arrayData['Dealer2']=null;
         }
 
         if (method_exists($record->getFieldValue("Dealer2"),'getEntityId')) {
-            $arrayData['dealerId']=$record->getFieldValue("Dealer2")->getEntityId();
+            $arrayData['Dealer2']=$record->getFieldValue("Dealer2")->getEntityId();
         }else{
-            $arrayData['dealerId']=null;
+            $arrayData['Dealer2']=null;
         }
         $dealers=$this->dealers();
 
         $data = (object) $arrayData;
 
+         //dd($data);
 
         return view('admin.deals.precotizar', compact('data','dealers'));
         
@@ -560,6 +563,8 @@ class DealsController extends Controller
 
         $record = ZCRMRecord::getInstance("Deals", $dealsId);
         $record->setFieldValue("Enviar_a_Dealer", true);
+        $record->setFieldValue("Dealer2", $request->input('Dealer2'));
+        
         $record->setFieldValue("Contactar_Dealer_y_cliente_con_info_adiccon_l", true);
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
         $record->setFieldValue("Enlace_a_cotizacion", $request->input('Enlace_a_cotizacion'));
@@ -574,6 +579,7 @@ class DealsController extends Controller
         $responseIn = $moduleIns->updateRecords($records,null,$lar_id,null); 
 
         $zohoRespuesta=$responseIn->getEntityResponses();
+        //dd($zohoRespuesta);
 
 
 

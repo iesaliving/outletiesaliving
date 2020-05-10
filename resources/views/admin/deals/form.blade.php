@@ -15,10 +15,17 @@
  <div class="card">
       <div class="card-header">{{isset($data->dealsId) ?  trans('global.update') : trans('global.register')}} Prospecto 
                               @if(isset($data->dealsId))
-                                <a class="btn  mx-1 float-right btn-success fa fa-trophy" href="{{ route('admin.deals.rating', ['dealsId'=>$data->dealsId]) }}"></a>
-                                <a class="btn  mx-1 float-right btn-warning fa fa-shopping-basket" href="{{ route('admin.deals.cookDemo', ['dealsId'=>$data->dealsId]) }}"></a>
-                                <a class="btn  mx-1 float-right btn-secondary fa fa-file-text" href="{{ route('admin.deals.precotizar', ['dealsId'=>$data->dealsId]) }}"></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Solicitar Rating" class="btn  mx-1 float-right  btn-success" href="{{ route('admin.deals.rating', ['dealsId'=>$data->dealsId]) }}">  <img class="icono-btn" src="{{ asset('img/admin/icono/rating.png')}}"></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Invitar Cooking Demo" class="btn  mx-1 float-right btn-warning " href="{{ route('admin.deals.cookDemo', ['dealsId'=>$data->dealsId]) }}"><img class="icono-btn" src="{{ asset('img/admin/icono/cookingDemo.png')}}" ></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Contactar Cliente con Distribuidor y enviar Per-Cotización" class="btn  mx-1 float-right btn-secondary" href="{{ route('admin.deals.precotizar', ['dealsId'=>$data->dealsId]) }}"><img class="icono-btn" src="{{ asset('img/admin/icono/preCotizacion.png')}}"></a>
                               @endif()
+
+
+              
+
+            
+
+
       </div>
 
                 <div class="card-body">
@@ -202,7 +209,7 @@
                           </div>
                            <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Contact_Apellido" class="col-md-12 col-form-label text-md-left">Contact Apellido</label>
+                                <label for="Contact_Apellido" class="col-md-12 col-form-label text-md-left">Apellido del Contacto</label>
 
                                 <div class="col-md-12">
 
@@ -363,7 +370,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="marca" class="col-md-12 col-form-label text-md-left">Fase</label>
+                                <label for="marca" class="col-md-12 col-form-label text-md-left">Marca</label>
 
                                 <div class="col-md-12">
 
@@ -524,29 +531,6 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                
-                                <label for="Enviar_a_Dealer" class="col-md-12 col-form-label text-md-left">Contactar Distribuidor, enviar Precotización</label>
-                                <div class="col-md-12 ">
-
-                                    <label class="container">
-                                      <input type="checkbox" id="Enviar_a_Dealer" name="Enviar_a_Dealer" {{ ($data->Enviar_a_Dealer) ? 'checked' : '' }}>
-                                      <span class="checkmark"></span>
-                                    </label>
-      
-
-                                   @error('Enviar_a_Dealer')
-                                       <em class="invalid-feedback">
-                                            {{ $message }}
-                                        </em>
-                                   @enderror
-
-                                  
-                                </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-6">
-                            <div class="form-group row">
                                 <label for="Enlace_a_cotizacion" class="col-md-12 col-form-label text-md-left">Enlace a Precotización</label>
 
                                 <div class="col-md-12">
@@ -560,38 +544,12 @@
                                         </em>
                                    @enderror
 
-                                  
-                                  
-                                  
-                                  
+
 
                                 </div>
                             </div>
                           </div>
 
-                          <div class="col-md-6">
-                            <div class="form-group row">
-                                
-                                <label for="Contactar_Dealer_y_cliente_con_info_adiccon_l" class="col-md-12 col-form-label text-md-left">Contactar Distribuidor y cliente, con info adicional</label>
-                                <div class="col-md-12 ">
-
-
-                                    <label class="container">
-                                      <input type="checkbox" id="Contactar_Dealer_y_cliente_con_info_adiccon_l" name="Contactar_Dealer_y_cliente_con_info_adiccon_l" {{ ($data->Contactar_Dealer_y_cliente_con_info_adiccon_l) ? 'checked' : '' }}>
-                                      <span class="checkmark"></span>
-                                    </label>
-      
-
-                                   @error('Contactar_Dealer_y_cliente_con_info_adiccon_l')
-                                       <em class="invalid-feedback">
-                                            {{ $message }}
-                                        </em>
-                                   @enderror
-
-                                  
-                                </div>
-                            </div>
-                          </div>
 
                           <div class="col-md-6">
                             <div class="form-group row">
@@ -623,7 +581,7 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="Showroom" class="col-md-12 col-form-label text-md-left">Estatus de Cooking Demo</label>
+                                <label for="Showroom" class="col-md-12 col-form-label text-md-left">Showroom Ciudad</label>
                                   <div class="col-md-12">
                                     <select required id="Showroom" name="Showroom" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
                                       @foreach ($cityShowrooms as $cityShowroom)
@@ -738,30 +696,6 @@
                           </div>
 
 
-
-                          <div class="col-md-6">
-                            <div class="form-group row">
-                                
-                                <label for="Invitar_a_Cooking_demo" class="col-md-12 col-form-label text-md-left">Invitar a Cooking demo</label>
-                                <div class="col-md-12 ">
-
-                                    <label class="container">
-                                      <input type="checkbox" id="Invitar_a_Cooking_demo" name="Invitar_a_Cooking_demo" {{($data->Invitar_a_Cooking_demo) ? 'checked' : '' }}>
-                                      <span class="checkmark"></span>
-                                    </label>
-      
-
-                                   @error('Invitar_a_Cooking_demo')
-                                       <em class="invalid-feedback">
-                                            {{ $message }}
-                                        </em>
-                                   @enderror
-
-                                  
-                                </div>
-                            </div>
-                          </div>
-
                           <div class="col-md-6">
                             <div class="form-group row">
                                 <label for="Fecha_de_cooking_demo" class="col-md-12 col-form-label text-md-left">Fecha de cooking demo</label>
@@ -816,31 +750,6 @@
 
 
 
- 
-
-                          <div class="col-md-6">
-                            <div class="form-group row">
-                                
-                                <label for="Solictar_Rating_de_Instalaci_n" class="col-md-12 col-form-label text-md-left">Solictar Rating de Instalación</label>
-                                <div class="col-md-12 ">
-
-                                    <label class="container">
-                                      <input type="checkbox" id="Solictar_Rating_de_Instalaci_n" name="Solictar_Rating_de_Instalaci_n" {{ ($data->Solictar_Rating_de_Instalaci_n) ? 'checked' : '' }}>
-                                      <span class="checkmark"></span>
-                                    </label>
-      
-
-                                   @error('Solictar_Rating_de_Instalaci_n')
-                                       <em class="invalid-feedback">
-                                            {{ $message }}
-                                        </em>
-                                   @enderror
-
-                                  
-                                </div>
-                            </div>
-                          </div>
-
                           <div class="col-md-6">
                             <div class="form-group row">
                                 <label for="Mensaje_rating_de_instalaci_n" class="col-md-12 col-form-label text-md-left">Mensaje rating de instalación</label>
@@ -881,13 +790,15 @@
                             </div>
                           </div>
 
+
+
                           <div class="col-12 mt-5">
-                            <h4>Description Information</h4>
+                            <h4>Información de la descripción </h4>
                           </div>
 
                           <div class="col-md-12">
                             <div class="form-group row">
-                                <label for="Description" class="col-md-12 col-form-label text-md-left">Description</label>
+                                <label for="Description" class="col-md-12 col-form-label text-md-left">Descripción</label>
 
                                 <div class="col-md-12">
 
@@ -1029,6 +940,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
 <style type="text/css">
+
+
+.icono-btn{
+        width: 25px
+    }
+
   /* The container */
 .container {
   display: block;
@@ -1119,6 +1036,14 @@ $(document).ready(function(){
       var marcaJS = @json($data->marca);
       $('#marca').selectpicker('val', marcaJS);
     @endif
+
+    $(function () {
+      $("body").tooltip({
+        selector: '[data-toggle="tooltip"]',
+        container: 'body'
+      });
+    })
+
 
 
 });

@@ -2,7 +2,7 @@
 @section('title', 'Precotizacion')
 @section('breadcrumb')   
    <li class="breadcrumb-item"> <a href="{{ route('admin.deals.index') }}"> Prospectos </a> </li>
-   <li class="breadcrumb-item active" aria-current="page"> Solicitar Precotizacion </li>
+   <li class="breadcrumb-item active" aria-current="page"> Contactar Cliente con Distribuidor y enviar Per-Cotización </li>
 @endsection
 @section('content')
 
@@ -13,7 +13,7 @@
 
 
  <div class="card">
-      <div class="card-header">Solicitar Precotizacion</div>
+      <div class="card-header">Contactar Cliente con Distribuidor y enviar Per-Cotización</div>
 
                 <div class="card-body">
 
@@ -35,17 +35,17 @@
 
                                   <div class="col-md-12">
 
-                                      <select disabled id="dealerId" name="dealerId" class="form-control @error('dealer') is-invalid @enderror" required>
+                                      <select id="Dealer2" name="Dealer2" class="form-control @error('dealer') is-invalid @enderror" required>
                                         <option value="">Seleccione Dealer</option>
                                         @foreach ($dealers as $dealer)
 
                                           <option 
                                             @if (isset($data))
-                                              @if ($data->dealerId == $dealer['dealerId'])
+                                              @if ($data->Dealer2 == $dealer['dealerId'])
                                                 selected="selected" 
                                               @endif
                                             @endif
-                                            @if (old('dealerId') ==  $dealer['dealerId']) 
+                                            @if (old('Dealer2') ==  $dealer['dealerId']) 
                                               selected="selected" 
                                             @endif 
 
@@ -88,7 +88,7 @@
 
                                 <div class="col-md-12">
 
-                                   <input id="Enlace_a_cotizacion" name="Enlace_a_cotizacion" type="text" class="form-control @error('Enlace_a_cotizacion') is-invalid @enderror" value="{{ old('Enlace_a_cotizacion')}}" m required="">
+                                   <input id="Enlace_a_cotizacion" name="Enlace_a_cotizacion" type="url" class="form-control @error('Enlace_a_cotizacion') is-invalid @enderror" value="{{ old('Enlace_a_cotizacion', isset($data) ? $data->Enlace_a_cotizacion : '') }}"  required="">
       
 
                                    @error('Email_de_Dealer')
@@ -151,7 +151,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input id="Enlace_a_informaci_n_addicion_l" name="Enlace_a_informaci_n_addicion_l" type="text" class="form-control @error('Enlace_a_informaci_n_addicion_l') is-invalid @enderror" value="{{ old('Enlace_a_informaci_n_addicion_l') }}" maxlength="100" required="">
+                                    <input id="Enlace_a_informaci_n_addicion_l" name="Enlace_a_informaci_n_addicion_l" type="url" class="form-control @error('Enlace_a_informaci_n_addicion_l') is-invalid @enderror"  value="{{ old('Enlace_a_informaci_n_addicion_l', isset($data) ? $data->Enlace_a_informaci_n_addicion_l : '') }}" maxlength="100" required="">
       
 
                                    @error('email')
@@ -205,15 +205,22 @@
 
 
 @endsection
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+
+@endsection
 
 @section('scripts')
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function(){
 
-
+            $('select').selectpicker({noneSelectedText:'Selecione Marcas'});
             var form = $( "#form-envio" );
             form.validate({
                 messages: {

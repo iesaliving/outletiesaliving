@@ -2,7 +2,7 @@
 @section('title', 'Rating')
 @section('breadcrumb')   
    <li class="breadcrumb-item"> <a href="{{ route('admin.deals.index') }}"> Prospectos </a> </li>
-   <li class="breadcrumb-item active" aria-current="page"> Invitación Cook Demo </li>
+   <li class="breadcrumb-item active" aria-current="page"> Invitación Cooking Demo </li>
 @endsection
 @section('content')
 
