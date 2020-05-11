@@ -13,7 +13,7 @@
 
 
  <div class="card">
-      <div class="card-header">Invitación Cook Demo</div>
+      <div class="card-header">Invitación Cooking Demo</div>
 
                 <div class="card-body">
 
