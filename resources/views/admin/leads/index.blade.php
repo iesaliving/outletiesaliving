@@ -66,6 +66,7 @@
                     url: '{{asset("js/vendor/lang.json")}}'
                 },
                 processing: true,
+                pageLength: 50,
                 serverSide: false,
                 responsive: true,
                 ajax: {
