@@ -151,6 +151,15 @@ Route::get('/gracias/{control}', 'GraciasController@GraciasDefault');
 
 Route::get('/gracias/contacto', 'GraciasController@GraciasDefault');
 
+Route::get('/gracias-rating', 'GraciasController@GraciasRating')->name('GraciasRating');
+
+Route::get('/gracias-optin', 'GraciasController@graciasOptin')->name('graciasOptin');
+
+Route::get('/gracias-optout', 'GraciasController@graciasOptout')->name('graciasOptout');
+
+
+
+
 
 Route::post('/enviar-correo', 'MailController@enviar');
 

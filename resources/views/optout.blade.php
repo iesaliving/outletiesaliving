@@ -5,14 +5,14 @@
 
 
 
-<section style="padding:25vw 0 ;background-image: url({{ URL::asset('img/sobre.png')}});">
+<section class="padding-opt-put" style=";background-image: url({{ URL::asset('img/sobre.png')}});">
   <div class="col-md-12 text-center">
     <h2>LAMENTAMOS QUE QUIERAS</h2>
     <h2 style="font-weight: 900"><b><i>DARTE DE BAJA</i></b></h2>
   </div>
 </section>
 
-<section class="container-gral">
+<section class="container-gral" style="margin-bottom: 150px">
     
 
   <div class="text-center light topmargin-lg col-md-7 mx-auto">
@@ -20,32 +20,39 @@
       <h2 class="light"> ELIGE UNA DE LAS OPCIONES DISPONIBLES</h2>
     </div>
     
-      <div class="col-md-6 mx-auto">
+      <div class="col-md-6 mx-auto bottommargin-lg">
         <div class="bottommargin-sm">        
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ URL::to('/') }}"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
+          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ URL::route('graciasOptin') }}"><p>QUIERO SEGUIR RECIBIENDO MENSAJES</p></a>
         </div>
 
         <div class="bottommargin-sm">
           <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ url('/submit-optout?contactId='.$contactId) }}"><p>NO QUIERO RECIBIR MÁS MENSAJES</p></a>
         </div>
 
-        <div class="bottommargin-sm">
-          <a class="btn btn-block btn-cyan solicitar-btn" rel="" href="{{ url('/submit-optoutPhone?contactId='.$contactId) }}"><p>NO QUIERO RECIBIR MÁS MENSAJES DE TEXTO</p></a>
-        </div>
       </div>
  
-      <p class="nomargin"></p>
-   
-      <p class="topmargin-sm"></p>
   </div>
 </section>
 @endsection
 
 
 @section('styles')
-<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+<style type="text/css">
+  .padding-opt-put{
+    padding:10vw 0 8vw 
+  }
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+  @media(max-width: 991px){
+    .padding-opt-put{
+      padding:16vw 0;
+    }
+
+  @media(max-width: 768px){
+    .padding-opt-put{
+      padding:35vw 0 25vw;
+    }
+  }
+</style>
 
 @endsection
 

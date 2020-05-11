@@ -102,7 +102,7 @@ class ZohoV2Controller extends Controller
          * Following methods are being used only by same Inventory only  *
          */
         $record = ZCRMRecord::getInstance("Deals", $request->input('prospectoId')); // to get the instance of the record
-        $record->setFieldValue("Rating_total_del_servicio_de_instalaci_n", $request->input('calidad'));
+       $record->setFieldValue("Rating_total_del_servicio_de_instalaci_n", $request->input('calidad'));
         $record->setFieldValue("Mensaje_rating_de_instalaci_n", $request->input('mensaje'));
 
         array_push($inventoryRecords, $record); // pushing the record to the array
@@ -113,7 +113,14 @@ class ZohoV2Controller extends Controller
         
 
         if($zohoRespuesta[0]->getStatus()=='success'){
-            return redirect()->route('gracias');
+            $dataGracias= array (    
+                                        'contactId' => $data['prospectoId'],
+                                        'nombre'    => $data['contactName'],
+                                        );
+
+
+            $request->session()->flash('dataGracias', $dataGracias);
+            return redirect()->route('GraciasRating');
         }else{
             $data['mensaje']='POR FAVOR COMUNÍCATE CON TU CONTACTO DIRECTO DE WIZERLINK.';
             return view('propuesta-aprobacion.notificacion')->with('data',$data); 
@@ -153,7 +160,7 @@ class ZohoV2Controller extends Controller
         if($data['status']=='Equipo Instalado' && $data['rating']===null ){
 
         }elseif($data['status']=='Equipo Instalado' && !empty($data['rating'])){
-            $data['mensaje']='Ya hemos recibido tu rating. Si deseas comunicarte con nuestro equipo, contáctanos al <a ref="tel:+5215552809648">Tel.: +52 (1) 55 5280 9648</a>';
+            $data['mensaje']='Ya hemos recibido tu rating. Si deseas comunicarte con nuestro equipo, contáctanos al <a href="tel:+5215552809648">Tel.: +52 (1) 55 5280 9648</a>';
 
         }elseif($data['status']!='Equipo Instalado'){
             

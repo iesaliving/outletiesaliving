@@ -17,7 +17,13 @@
     
 
   <div class="text-center light topmargin-lg col-md-7 mx-auto">
-      <h2 class="light">{{$text0}}</h2>
+
+    @if(isset($data))
+      <h2 style="color: #01bb9c">{{$data['nombre']}}</h2>
+    @endif
+
+      <h2 class="light">{!!$text0!!}</h2>
+
     @if(request()->segment('1')=='gracias-cookingdemo')
       <h3 style="color: #01bb9c" class="light topmargin-sm bottommargin-sm">{{$text1}}</h3>
     @else
