@@ -171,7 +171,7 @@ class LeadsController extends Controller
             $var->setSmEmail($request->input('Email'));
             $var->setEstado($request->input('Estado'));
             $var->setSmNombre($request->input('First_Name')." ".$request->input('Last_Name'));
-            $var->setTag($this->asignarTagSM ($request->input('Lead_Source')));
+            $var->setTag($this->asignarTagSM ($request->input('Lead_Status')));
             $var->setSmPhone($request->input('Phone'));
             $var->setProducto($request->input('Producto'));
             $var->setMensaje($request->input('Description'));
@@ -360,7 +360,7 @@ class LeadsController extends Controller
             $var->setSmEmail($request->input('Email'));
             $var->setEstado($request->input('Estado'));
             $var->setSmNombre($request->input('First_Name')." ".$request->input('Last_Name'));
-            $var->setTag($this->asignarTagSM ($request->input('Lead_Source')));
+            $var->setTag($this->asignarTagSM ($request->input('Lead_Status')));
             $var->setSmPhone($request->input('Phone'));
             $var->setProducto($request->input('Producto'));
             $var->setMensaje($request->input('Description'));
