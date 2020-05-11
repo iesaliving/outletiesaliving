@@ -230,6 +230,9 @@ $(document).ready(function(){
                     Enlace_a_informaci_n_addicion_l:{
                         required: "Este campo es Requerido"
                     },
+                    Dealer2:{
+                        required: "Este campo es Requerido"
+                    },
                 },
 
             });

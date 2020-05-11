@@ -188,7 +188,7 @@ class DealsController extends Controller
 
         $record= $this->validarDeals($request->input('dealsId'));
 
-//        dd($record);
+   //dd($record);
 
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['Deal_Name']=$record->getFieldValue("Deal_Name");
@@ -497,6 +497,7 @@ class DealsController extends Controller
         $record = ZCRMRecord::getInstance("Deals", $dealsId);
         $record->setFieldValue("Invitar_a_Cooking_demo", true);
         $record->setFieldValue("Fecha_de_cooking_demo", $new_data);
+        $record->setFieldValue("Estatus_de_Cooking_Demo", "Invitado");
 
         //dd($record);
         
