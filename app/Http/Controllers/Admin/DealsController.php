@@ -54,42 +54,17 @@ class DealsController extends Controller
 
         if ((Gate::check('admin_zoho'))) {
             
-            $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To 
-            $param_map=array("page"=>0,"per_page"=>200); 
-           //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
-            $response = $moduleIns->getRecords($param_map); 
-            $records = $response->getData(); 
+            $records=$this->armarTablaAdmin();
+
         }else{
-            $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To get module instance
-            $criteria="Representante_email:equals:".Auth::user('email')->email;
-            //criteria to search for
-            /* For VERSION <=2.0.6  $page=5;//page number
-            $perPage=200;//records per page
-            $response = $moduleIns->searchRecordsByCriteria($criteria, $page, $perPage); // To get module records//string $searchWord word to be searched//number $page to get the list of records from the respective pages. Default value for page is 1.//number $perPage To get the list of records available per page. Default value for per page is 200.*/
-             $param_map=array("page"=>1,"per_page"=>200); // key-value pair containing all the parameters
-            $response = $moduleIns->searchRecordsByCriteria($criteria,$param_map) ;// To get module records// $criteria to search for  to search for// $param_map-parameters key-value pair - optional
-            $records = $response->getData(); // To get response data
+
+            $records=$this->armarTablaUser();
+
         }
 
-        //dd($records);
-        $deals = array();
-        foreach ($records as $key => $record) {
-            $deals[$key] = array (  
-                                    'id' => base64_encode($records[$key]->getEntityId()),
-                                    'contactName' => $record->getFieldValue("Contact_Name")->getLookupLabel(),
-                                    'stage' => $records[$key]->getFieldValue('Stage'), 
-                                    'representante' => $records[$key]->getFieldValue('Representante'),
-                                    'email' =>$this->getContactEmail($records[$key]->getFieldValue("Contact_Name")->getEntityId()),
-                                );
+     
+        $respuesta['data'] = $records;
 
-            $time=explode('T', $records[$key]->getCreatedTime());
-            $fecha=explode('-', $time[0]);
-            $deals[$key]['fecha']=$fecha[2].'-'.$fecha[1].'-'.$fecha[0];
-        }
-        //dd($deals);
-       // dd($records);
-
-        $respuesta['data'] = $deals;
         echo json_encode($respuesta);
     }
 
@@ -922,7 +897,98 @@ class DealsController extends Controller
 
     }
 
-   
+    private function armarTablaAdmin(){
+        $data = array();
+        $page=1;
+        $code=200;
+        while ($code==200) {
+            
+            try{   
+                # code...
+                $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To 
+                $param_map=array("page"=>$page,"per_page"=>200); 
+                //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
+                $response = $moduleIns->getRecords($param_map); 
+                $records[$page-1] = $response->getData(); 
+
+                $deals[$page-1] = array();
+                foreach ($records[$page-1] as $key => $record) {
+      
+
+                    $deals[$page-1][$key] = array (  
+                                                'id' => base64_encode($records[$page-1][$key]->getEntityId()),
+                                                'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
+                                                'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
+                                                'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                                'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
+                                        );
+
+                    $time=explode('T', $records[$page-1][$key]->getCreatedTime());
+                    $fecha=explode('-', $time[0]);
+                    $deals[$page-1][$key]['fecha']=$fecha[2].'-'.$fecha[1].'-'.$fecha[0];
+                }
+
+                //dump('inicio ciclo');
+                //dump($data);
+                //dump($deals[$page-1]);
+                $data= array_merge($data, $deals[$page-1]);
+               // dump('fin ciclo');
+                $code=$response->getHttpStatusCode();
+                $page++;
+            }
+            catch(ZCRMException $e){
+                $code=$e->getCode();
+            }
+        }
+        return $data;
+    }
+
+    private function armarTablaUser(){
+        $data = array();
+        $page=1;
+        $code=200;
+        while ($code==200) {
+            
+            try{   
+                # code...
+                $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Deals"); // To get module instance
+                $criteria="Representante_email:equals:".Auth::user('email')->email;
+
+                $param_map=array("page"=>$page,"per_page"=>200); // key-value pair containing all the parameters
+                $response = $moduleIns->searchRecordsByCriteria($criteria,$param_map) ;// To get module records// $criteria to search for  to search for// $param_map-parameters key-value pair - optional
+                $records[$page-1] = $response->getData(); 
+
+                $deals[$page-1] = array();
+                foreach ($records[$page-1] as $key => $record) {
+      
+
+                    $deals[$page-1][$key] = array (  
+                                                'id' => base64_encode($records[$page-1][$key]->getEntityId()),
+                                                'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
+                                                'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
+                                                'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                                'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
+                                        );
+
+                    $time=explode('T', $records[$page-1][$key]->getCreatedTime());
+                    $fecha=explode('-', $time[0]);
+                    $deals[$page-1][$key]['fecha']=$fecha[2].'-'.$fecha[1].'-'.$fecha[0];
+                }
+
+                //dump('inicio ciclo');
+                //dump($data);
+                //dump($deals[$page-1]);
+                $data= array_merge($data, $deals[$page-1]);
+               // dump('fin ciclo');
+                $code=$response->getHttpStatusCode();
+                $page++;
+            }
+            catch(ZCRMException $e){
+                $code=$e->getCode();
+            }
+        }
+        return $data;
+    }
 
 
 }
