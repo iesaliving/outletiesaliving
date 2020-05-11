@@ -141,13 +141,12 @@ class DealsController extends Controller
         $record->setFieldValue("Contact_Apellido", $request->input('Contact_Apellido'));
         $record->setFieldValue("Estado", $request->input('ubicacion'));
         $record->setFieldValue("Next_Step", $request->input('Next_Step'));
-        $record->setFieldValue("Dealer2", $request->input('dealerId'));
+        $record->setFieldValue("Dealer2", $request->input('Dealer2'));
         $record->setFieldValue("Marca", $request->input('marca'));
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
         $record->setFieldValue("Producto", $request->input('producto'));
         $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
         $record->setFieldValue("Representante", $request->input('Representante'));
-        $record->setFieldValue("Dealer", $request->input('dealerId'));
         $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('dealer_name'));
         $record->setFieldValue("Representante", $request->input('Representante'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
@@ -189,7 +188,7 @@ class DealsController extends Controller
 
         $record= $this->validarDeals($request->input('dealsId'));
 
-       // dd($record);
+//        dd($record);
 
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['Deal_Name']=$record->getFieldValue("Deal_Name");
@@ -197,13 +196,13 @@ class DealsController extends Controller
         $arrayData['Monto_estimado_del_orden_de_compra']=$record->getFieldValue("Monto_estimado_del_orden_de_compra");
         $arrayData['Closing_Date']=$this->FechaCrmAdmin($record->getFieldValue("Closing_Date"));
         $arrayData['Contact_Apellido']=$record->getFieldValue("Contact_Apellido");
-        $arrayData['ubicacion']=$record->getFieldValue("Estado");
+        $arrayData['Estado']=$record->getFieldValue("Estado");
         $arrayData['Next_Step']=$record->getFieldValue("Next_Step");
-        $arrayData['marca']=$record->getFieldValue("Marca");
+        $arrayData['Marca']=$record->getFieldValue("Marca");
         $arrayData['Email_de_Dealer']=$record->getFieldValue("Email_de_Dealer");
-        $arrayData['producto']=$record->getFieldValue("Producto");
+        $arrayData['Producto']=$record->getFieldValue("Producto");
         $arrayData['Representante']=$record->getFieldValue("Representante");
-        $arrayData['dealer_name']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
+        $arrayData['Nombre_de_vendedor_de_dealer']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
         $arrayData['Description']=$record->getFieldValue("Description");
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
         $arrayData['Rating_total_del_servicio_de_instalaci_n']=$record->getFieldValue("Rating_total_del_servicio_de_instalaci_n");
@@ -223,9 +222,9 @@ class DealsController extends Controller
         }
 
         if (method_exists($record->getFieldValue("Dealer2"),'getEntityId')) {
-            $arrayData['dealerId']=$record->getFieldValue("Dealer2")->getEntityId();
+            $arrayData['Dealer2']=$record->getFieldValue("Dealer2")->getEntityId();
         }else{
-            $arrayData['dealerId']=null;
+            $arrayData['Dealer2']=null;
         }
 
         if (method_exists($record->getFieldValue("Account_Name"),'getEntityId')) {
@@ -306,12 +305,14 @@ class DealsController extends Controller
         $record->setFieldValue("Contact_Apellido", $request->input('Contact_Apellido'));
         $record->setFieldValue("propietario", $request->input('propietario'));
         $record->setFieldValue("type", $request->input('type'));
-        $record->setFieldValue("ubicacion", $request->input('ubicacion'));
+        $record->setFieldValue("Estado", $request->input('Estado'));
         $record->setFieldValue("Next_Step", $request->input('Next_Step'));
-        $record->setFieldValue("dealerId", $request->input('dealerId'));
-        $record->setFieldValue("marca", $request->input('marca'));
+        $record->setFieldValue("Dealer2", $request->input('Dealer2'));
+        $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
+        
+        $record->setFieldValue("Marca", $request->input('Marca'));
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
-        $record->setFieldValue("producto", $request->input('producto'));
+        $record->setFieldValue("Producto", $request->input('Producto'));
         $record->setFieldValue("dealer_name", $request->input('dealer_name'));
         $record->setFieldValue("Representante", $request->input('Representante'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
@@ -323,6 +324,7 @@ class DealsController extends Controller
         $record->setFieldValue("Contactar_Dealer_y_cliente_con_info_adiccon_l", ($request->input('Contactar_Dealer_y_cliente_con_info_adiccon_l')=='on') ? true : false );
        
         $record->setFieldValue("Enlace_a_informaci_n_addicion_l", $request->input('Enlace_a_informaci_n_addicion_l'));
+        $record->setFieldValue("Enlace_a_cotizacion", $request->input('Enlace_a_cotizacion'));
         $record->setFieldValue("Showroom", $request->input('Showroom'));
         $record->setFieldValue("Fecha_de_la_llamada", $this->FechaZoho($request->input('Fecha_de_la_llamada')));
         $record->setFieldValue("Fecha_de_visita_al_Showroom", $this->FechaZoho($request->input('Fecha_de_visita_al_Showroom')));
@@ -348,7 +350,7 @@ class DealsController extends Controller
 
 
 
-        dump($record);
+        //dd($record);
         
         array_push($records, $record); // pushing the record to the array
        // $duplicate_check_fields=array('Company');
@@ -358,7 +360,7 @@ class DealsController extends Controller
 
         $zohoRespuesta=$responseIn->getEntityResponses();
 
-        dd($zohoRespuesta);
+        //dd($zohoRespuesta);
 
         if($zohoRespuesta[0]->getStatus()!='success'){
            abort(404);
@@ -405,7 +407,7 @@ class DealsController extends Controller
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
         $arrayData['email']=$this->getContactEmail($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
-            $arrayData['dealerId']=null;
+            $arrayData['email']=null;
         }
 
 
@@ -463,13 +465,13 @@ class DealsController extends Controller
 
         $record= $this->validarDeals($request->input('dealsId'));
 
-
+        //dd($record);
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['contact_Name']=$record->getFieldValue("Contact_Name")->getLookupLabel();
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
         $arrayData['email']=$this->getContactEmail($record->getFieldValue("Contact_Name")->getEntityId());
         }else{
-            $arrayData['dealerId']=null;
+            $arrayData['email']=null;
         }
 
 
@@ -833,7 +835,7 @@ class DealsController extends Controller
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Contacts"); // To get module instance
         //$param_map = array("fields"=>"Email"); // key-value pair containing all the params - optional
         //$header_map = array("header_name"=>"header_value"); // key-value pair containing all the headers - optional
-        $response = $moduleIns->getRecord($contactId,); // To get module record
+        $response = $moduleIns->getRecord($contactId); // To get module record
         $record = $response->getData(); // To get response data
 
         

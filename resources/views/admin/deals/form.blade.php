@@ -147,7 +147,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Monto_estimado_del_orden_de_compra" name="Monto_estimado_del_orden_de_compra" type="text" class="form-control @error('Monto_estimado_del_orden_de_compra') is-invalid @enderror" value="{{ old('Monto_estimado_del_orden_de_compra', isset($data) ? $data->Monto_estimado_del_orden_de_compra : '') }}" maxlength="100" required="">
+                                    <input id="Monto_estimado_del_orden_de_compra" name="Monto_estimado_del_orden_de_compra" type="text" class="form-control @error('Monto_estimado_del_orden_de_compra') is-invalid @enderror" value="{{ old('Monto_estimado_del_orden_de_compra', isset($data) ? $data->Monto_estimado_del_orden_de_compra : '') }}" maxlength="100">
       
 
                                    @error('Monto_estimado_del_orden_de_compra')
@@ -221,7 +221,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Contact_Apellido" name="Contact_Apellido" type="text" class="form-control @error('Contact_Apellido') is-invalid @enderror" value="{{ old('Contact_Apellido', isset($data) ? $data->Contact_Apellido : '') }}" maxlength="100" required="">
+                                    <input id="Contact_Apellido" name="Contact_Apellido" type="text" class="form-control @error('Contact_Apellido') is-invalid @enderror" value="{{ old('Contact_Apellido', isset($data) ? $data->Contact_Apellido : '') }}" maxlength="100">
       
 
                                    @error('Contact_Apellido')
@@ -263,7 +263,7 @@
 
                                 <div class="col-md-12">
 
-                                    <select required id="" name="type" class="form-control @error('marca') is-invalid @enderror" required>
+                                    <select id="" name="type" class="form-control @error('marca') is-invalid @enderror" required>
                                       <option id="">Consumidor</option>
                                     </select>
       
@@ -281,19 +281,19 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="ubicacion" class="col-md-12 col-form-label text-md-left">Ubicación</label>
+                                <label for="Estado" class="col-md-12 col-form-label text-md-left">Ubicación</label>
 
                                 <div class="col-md-12">
 
-                                    <select required id="ubicacion" name="ubicacion" class="form-control @error('ubicacion') is-invalid @enderror" required>
+                                    <select id="Estado" name="Estado" class="form-control @error('Estado') is-invalid @enderror">
                                       @foreach ($ubicaciones as $ubicacion)
                                         <option 
                                         @if (isset($data))
-                                            @if ($data->ubicacion == $ubicacion['displayValue'])
+                                            @if ($data->Estado == $ubicacion['displayValue'])
                                               selected="selected" 
                                             @endif
                                           @endif
-                                          @if (old('ubicacion') ==  $ubicacion['displayValue']) 
+                                          @if (old('Estado') ==  $ubicacion['displayValue']) 
                                             selected="selected" 
                                           @endif 
                                         value="{{$ubicacion['displayValue']}}">
@@ -321,7 +321,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Next_Step" name="Next_Step" type="text" class="form-control @error('Next_Step') is-invalid @enderror" value="{{ old('Next_Step', isset($data) ? $data->Next_Step : '') }}" maxlength="100" required="">
+                                    <input id="Next_Step" name="Next_Step" type="text" class="form-control @error('Next_Step') is-invalid @enderror" value="{{ old('Next_Step', isset($data) ? $data->Next_Step : '') }}" maxlength="100">
       
 
                                    @error('Next_Step')
@@ -341,21 +341,21 @@
 
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="dealerId" class="col-md-12 col-form-label text-md-left">Nombre de Distribuidor</label>
+                                <label for="Dealer2" class="col-md-12 col-form-label text-md-left">Nombre de Distribuidor</label>
 
                                 <div class="col-md-12">
 
-                                    <select required id="dealerId" name="dealerId" class="form-control @error('dealer') is-invalid @enderror" required>
+                                    <select required id="Dealer2" name="Dealer2" class="form-control @error('dealer') is-invalid @enderror" required>
                                       <option value="">Seleccione Distribuidor</option>
                                       @foreach ($dealers as $dealer)
 
                                         <option 
                                           @if (isset($data))
-                                            @if ($data->dealerId == $dealer['dealerId'])
+                                            @if ($data->Dealer2 == $dealer['dealerId'])
                                               selected="selected" 
                                             @endif
                                           @endif
-                                          @if (old('dealerId') ==  $dealer['dealerId']) 
+                                          @if (old('Dealer2') ==  $dealer['dealerId']) 
                                             selected="selected" 
                                           @endif 
 
@@ -382,7 +382,7 @@
 
                                 <div class="col-md-12">
 
-                                    <select required id="marca" name="marca[]" multiple="" class="form-control @error('marca') is-invalid @enderror" required data-live-search="true">
+                                    <select required id="Marca" name="Marca[]" multiple="" class="form-control @error('Marca') is-invalid @enderror" required data-live-search="true">
                                       @foreach ($marcas as $marca)
 
                                         <option value="{{$marca['actualValue']}}">{{$marca['displayValue']}}
@@ -391,7 +391,7 @@
                                     </select>
       
 
-                                   @error('marca')
+                                   @error('Marca')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
@@ -424,14 +424,14 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="producto" class="col-md-12 col-form-label text-md-left">Producto</label>
+                                <label for="Producto" class="col-md-12 col-form-label text-md-left">Producto</label>
 
                                 <div class="col-md-12">
 
-                                    <input required id="producto" name="producto" type="text" class="form-control @error('producto') is-invalid @enderror" value="{{ old('producto', isset($data) ? $data->producto : '') }}" maxlength="100" required="">
+                                    <input id="Producto" name="Producto" type="text" class="form-control @error('Producto') is-invalid @enderror" value="{{ old('Producto', isset($data) ? $data->Producto : '') }}" maxlength="100">
       
 
-                                   @error('producto')
+                                   @error('Producto')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
@@ -446,14 +446,14 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                                <label for="dealer_name" class="col-md-12 col-form-label text-md-left">Nombre de vendedor del Distribuidor</label>
+                                <label for="Nombre_de_vendedor_de_dealer" class="col-md-12 col-form-label text-md-left">Nombre de vendedor del Distribuidor</label>
 
                                 <div class="col-md-12">
 
-                                    <input required id="dealer_name" name="dealer_name" type="text" class="form-control @error('dealer_name') is-invalid @enderror" value="{{ old('dealer_name', isset($data) ? $data->dealer_name : '') }}" maxlength="100" required="">
+                                    <input  id="Nombre_de_vendedor_de_dealer" name="Nombre_de_vendedor_de_dealer" type="text" class="form-control @error('Nombre_de_vendedor_de_dealer') is-invalid @enderror" value="{{ old('Nombre_de_vendedor_de_dealer', isset($data) ? $data->Nombre_de_vendedor_de_dealer : '') }}" maxlength="100">
       
 
-                                   @error('dealer_name')
+                                   @error('Nombre_de_vendedor_de_dealer')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
@@ -469,7 +469,7 @@
                             <div class="form-group row">
                                <label for="Representante" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
                                 <div class="col-md-12">
-                                    <select required id="Representante" name="Representante" class="form-control @error('name') is-invalid @enderror" required data-live-search="true">
+                                    <select id="Representante" name="Representante" class="form-control @error('name') is-invalid @enderror" data-live-search="true">
                                       <option value="">Selecione Representante</option>
                                       @foreach ($nameRepres as $nameRepre)
                                         <option 
@@ -502,7 +502,7 @@
                             <div class="form-group row">
                               <label for="Representante" class="col-md-12 col-form-label text-md-left">Email del Representante</label>
                                 <div class="col-md-12">
-                                    <select required id="Representante_email" name="Representante_email" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
+                                    <select id="Representante_email" name="Representante_email" class="form-control @error('email') is-invalid @enderror" data-live-search="true">
                                       <option value="">Selecione Email</option>
                                       @foreach ($repres as $repre)
                                         <option 
@@ -543,7 +543,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input id="Enlace_a_cotizacion" name="Enlace_a_cotizacion" type="text" class="form-control @error('Enlace_a_cotizacion') is-invalid @enderror" value="{{ old('Enlace_a_cotizacion', isset($data) ? $data->Enlace_a_cotizacion : '') }}" maxlength="100">
+                                    <input id="Enlace_a_cotizacion" name="Enlace_a_cotizacion" type="url" class="form-control @error('Enlace_a_cotizacion') is-invalid @enderror" value="{{ old('Enlace_a_cotizacion', isset($data) ? $data->Enlace_a_cotizacion : '') }}" maxlength="100">
       
 
                                    @error('Enlace_a_cotizacion')
@@ -565,7 +565,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input id="Enlace_a_informaci_n_addicion_l" name="Enlace_a_informaci_n_addicion_l" type="text" class="form-control @error('Enlace_a_informaci_n_addicion_l') is-invalid @enderror" value="{{ old('Enlace_a_informaci_n_addicion_l', isset($data) ? $data->Enlace_a_informaci_n_addicion_l : '') }}" maxlength="100">
+                                    <input id="Enlace_a_informaci_n_addicion_l" name="Enlace_a_informaci_n_addicion_l" type="url" class="form-control @error('Enlace_a_informaci_n_addicion_l') is-invalid @enderror" value="{{ old('Enlace_a_informaci_n_addicion_l', isset($data) ? $data->Enlace_a_informaci_n_addicion_l : '') }}" maxlength="100">
       
 
                                    @error('Enlace_a_informaci_n_addicion_l')
@@ -591,7 +591,7 @@
                             <div class="form-group row">
                                 <label for="Showroom" class="col-md-12 col-form-label text-md-left">Showroom Ciudad</label>
                                   <div class="col-md-12">
-                                    <select required id="Showroom" name="Showroom" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
+                                    <select id="Showroom" name="Showroom" class="form-control @error('email') is-invalid @enderror" data-live-search="true">
                                       @foreach ($cityShowrooms as $cityShowroom)
                                         <option 
                                         @if (!empty($data->Lead_Source))
@@ -618,7 +618,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Fecha_de_la_llamada" name="Fecha_de_la_llamada" type="text" class="form-control @error('Fecha_de_la_llamada') is-invalid @enderror" value="{{ old('Fecha_de_la_llamada', isset($data) ? $data->Fecha_de_la_llamada : '') }}" maxlength="100" required="">
+                                    <input id="Fecha_de_la_llamada" name="Fecha_de_la_llamada" type="text" class="form-control @error('Fecha_de_la_llamada') is-invalid @enderror" value="{{ old('Fecha_de_la_llamada', isset($data) ? $data->Fecha_de_la_llamada : '') }}" maxlength="100">
       
 
                                    @error('Fecha_de_la_llamada')
@@ -638,7 +638,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Fecha_de_visita_al_Showroom" name="Fecha_de_visita_al_Showroom" type="text" class="form-control @error('Fecha_de_visita_al_Showroom') is-invalid @enderror" value="{{ old('Fecha_de_visita_al_Showroom', isset($data) ? $data->Fecha_de_visita_al_Showroom : '') }}" maxlength="100" required="">
+                                    <input  id="Fecha_de_visita_al_Showroom" name="Fecha_de_visita_al_Showroom" type="text" class="form-control @error('Fecha_de_visita_al_Showroom') is-invalid @enderror" value="{{ old('Fecha_de_visita_al_Showroom', isset($data) ? $data->Fecha_de_visita_al_Showroom : '') }}" maxlength="100">
       
 
                                    @error('Fecha_de_visita_al_Showroom')
@@ -658,7 +658,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Hora_de_la_llamada" name="Hora_de_la_llamada" type="text" class="form-control @error('Hora_de_la_llamada') is-invalid @enderror" value="{{ old('Hora_de_la_llamada', isset($data) ? $data->Hora_de_la_llamada : '') }}" maxlength="100" required="">
+                                    <input  id="Hora_de_la_llamada" name="Hora_de_la_llamada" type="text" class="form-control @error('Hora_de_la_llamada') is-invalid @enderror" value="{{ old('Hora_de_la_llamada', isset($data) ? $data->Hora_de_la_llamada : '') }}" maxlength="100">
       
 
                                    @error('Hora_de_la_llamada')
@@ -678,7 +678,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Hora_de_visita_al_showroom" name="Hora_de_visita_al_showroom" type="text" class="form-control @error('Hora_de_visita_al_showroom') is-invalid @enderror" value="{{ old('Hora_de_visita_al_showroom', isset($data) ? $data->Hora_de_visita_al_showroom : '') }}" maxlength="100" required="">
+                                    <input id="Hora_de_visita_al_showroom" name="Hora_de_visita_al_showroom" type="text" class="form-control @error('Hora_de_visita_al_showroom') is-invalid @enderror" value="{{ old('Hora_de_visita_al_showroom', isset($data) ? $data->Hora_de_visita_al_showroom : '') }}" maxlength="100" >
       
 
                                    @error('Hora_de_visita_al_showroom')
@@ -710,7 +710,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Fecha_de_cooking_demo" name="Fecha_de_cooking_demo" type="text" class="form-control @error('Fecha_de_cooking_demo') is-invalid @enderror" value="{{ old('Fecha_de_cooking_demo', isset($data) ? $data->Fecha_de_cooking_demo : '') }}" maxlength="100" required="">
+                                    <input id="Fecha_de_cooking_demo" name="Fecha_de_cooking_demo" type="text" class="form-control @error('Fecha_de_cooking_demo') is-invalid @enderror" value="{{ old('Fecha_de_cooking_demo', isset($data) ? $data->Fecha_de_cooking_demo : '') }}" maxlength="100">
       
 
                                    @error('Fecha_de_cooking_demo')
@@ -728,7 +728,7 @@
                             <div class="form-group row">
                                 <label for="Estatus_de_Cooking_Demo" class="col-md-12 col-form-label text-md-left">Estatus de Cooking Demo</label>
                                   <div class="col-md-12">
-                                    <select required id="Estatus_de_Cooking_Demo" name="Estatus_de_Cooking_Demo" class="form-control @error('email') is-invalid @enderror" required data-live-search="true">
+                                    <select  id="Estatus_de_Cooking_Demo" name="Estatus_de_Cooking_Demo" class="form-control @error('email') is-invalid @enderror" data-live-search="true">
                                       @foreach ($EstatusCD as $EstatuCD)
                                         <option 
                                         @if (!empty($data->Lead_Source))
@@ -764,7 +764,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Mensaje_rating_de_instalaci_n" name="Mensaje_rating_de_instalaci_n" type="text" class="form-control @error('Mensaje_rating_de_instalaci_n') is-invalid @enderror" value="{{ old('Mensaje_rating_de_instalaci_n', isset($data) ? $data->Mensaje_rating_de_instalaci_n : '') }}" maxlength="100" required="">
+                                    <input id="Mensaje_rating_de_instalaci_n" name="Mensaje_rating_de_instalaci_n" type="text" class="form-control @error('Mensaje_rating_de_instalaci_n') is-invalid @enderror" value="{{ old('Mensaje_rating_de_instalaci_n', isset($data) ? $data->Mensaje_rating_de_instalaci_n : '') }}" maxlength="100">
       
 
                                    @error('Mensaje_rating_de_instalaci_n')
@@ -784,7 +784,7 @@
 
                                 <div class="col-md-12">
 
-                                    <input required id="Rating_total_del_servicio_de_instalaci_n" name="Rating_total_del_servicio_de_instalaci_n" type="text" class="form-control @error('Rating_total_del_servicio_de_instalaci_n') is-invalid @enderror" value="{{ old('Rating_total_del_servicio_de_instalaci_n', isset($data) ? $data->Rating_total_del_servicio_de_instalaci_n : '') }}" maxlength="100" required="">
+                                    <input id="Rating_total_del_servicio_de_instalaci_n" name="Rating_total_del_servicio_de_instalaci_n" type="text" class="form-control @error('Rating_total_del_servicio_de_instalaci_n') is-invalid @enderror" value="{{ old('Rating_total_del_servicio_de_instalaci_n', isset($data) ? $data->Rating_total_del_servicio_de_instalaci_n : '') }}" maxlength="100" >
       
 
                                    @error('Rating_total_del_servicio_de_instalaci_n')
@@ -1041,8 +1041,8 @@ $(document).ready(function(){
     $('select').selectpicker({noneSelectedText:'Selecione Marcas'});
 
     @if(isset($data))
-      var marcaJS = @json($data->marca);
-      $('#marca').selectpicker('val', marcaJS);
+      var marcaJS = @json($data->Marca);
+      $('#Marca').selectpicker('val', marcaJS);
     @endif
 
     $(function () {
