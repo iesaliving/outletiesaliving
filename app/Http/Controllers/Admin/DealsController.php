@@ -919,7 +919,7 @@ class DealsController extends Controller
                                                 'id' => base64_encode($records[$page-1][$key]->getEntityId()),
                                                 'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
                                                 'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
-                                                'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                               // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                                 'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
                                         );
 
@@ -966,7 +966,7 @@ class DealsController extends Controller
                                                 'id' => base64_encode($records[$page-1][$key]->getEntityId()),
                                                 'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
                                                 'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
-                                                'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                               // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                                 'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
                                         );
 
