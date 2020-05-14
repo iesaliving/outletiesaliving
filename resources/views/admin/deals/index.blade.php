@@ -50,18 +50,26 @@
 @endsection
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.21/sorting/date-uk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"></script>
 @parent
 <script>
 
     $(document).ready(function() {
   
 
+        $.fn.dataTable.moment( 'D-M-Y');
 
 
         $('#table').DataTable({
                 language: {
                     url: '{{asset("js/vendor/lang.json")}}'
                 },
+                order: [[ 3, "desc" ]],       
+                columnDefs: [
+                    { type: 'date-uk', targets: 0 }
+                ],
                 processing: true,
                 serverSide: false,
                 responsive: true,
@@ -154,7 +162,7 @@
         })
 
 
-        });  
+    });  
 
 </script>
 @endsection
