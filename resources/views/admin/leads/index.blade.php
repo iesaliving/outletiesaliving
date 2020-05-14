@@ -47,10 +47,15 @@
 @endsection
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.21/sorting/date-uk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"></script>
 @parent
 <script>
 
     $(document).ready(function() {
+
+    $.fn.dataTable.moment( 'D-M-Y');
 
     $(function () {
             $("body").tooltip({
@@ -63,10 +68,18 @@
                 language: {
                     url: '{{asset("js/vendor/lang.json")}}'
                 },
+                 columnDefs: [
+       { type: 'date-uk', targets: 0 }
+     ],
                 processing: true,
                 pageLength: 50,
                 serverSide: false,
                 responsive: true,
+
+                  columnDefs: [{
+                      type: 'de_datetime',
+                      targets: 0
+                    }],
                 ajax: {
                         "url":  '{{ route("admin.leads.table") }}',
                         "type": "get"
