@@ -64,10 +64,12 @@ class LeadsController extends Controller
 
         }
 
-     
         $respuesta['data'] = $records;
+       // dd($respuesta['data']);
 
         echo json_encode($respuesta);
+
+
     }
 
     public function create(){
@@ -826,11 +828,11 @@ class LeadsController extends Controller
                 foreach ($records[$page-1] as $key => $record) {
                     $leads[$page-1][$key] = array (  
                                             'id' => base64_encode($records[$page-1][$key]->getEntityId()),
-                                            'nombre' => $records[$page-1][$key]->getFieldValue('First_Name'),
-                                            'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
+                                            'Full_Name' => $records[$page-1][$key]->getFieldValue('Full_Name'),
+                                            //'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
                                             'email' => $records[$page-1][$key]->getFieldValue('Email'), 
                                             'status' => $records[$page-1][$key]->getFieldValue('Lead_Status'), 
-                                            'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                           // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                         );
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());
@@ -873,11 +875,11 @@ class LeadsController extends Controller
                 foreach ($records[$page-1] as $key => $record) {
                     $leads[$page-1][$key] = array (  
                                             'id' => base64_encode($records[$page-1][$key]->getEntityId()),
-                                            'nombre' => $records[$page-1][$key]->getFieldValue('First_Name'),
-                                            'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
+                                            'Full_Name' => $records[$page-1][$key]->getFieldValue('Full_Name'),
+                                            //'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
                                             'email' => $records[$page-1][$key]->getFieldValue('Email'), 
                                             'status' => $records[$page-1][$key]->getFieldValue('Lead_Status'), 
-                                            'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                           // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                         );
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());

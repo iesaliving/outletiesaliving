@@ -19,12 +19,10 @@
             <table id="table" class=" table table-bordered table-striped datatable">
                 <thead>
                 <tr class="text-center">
-                    <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>Nombre</th>            
                     <th>Correo Electrónico</th>
                     <th>Estado</th>
                     <th>Fecha de Creación</th>
-                    <th>Representante</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -74,12 +72,11 @@
                         "type": "get"
                         },
                 columns: [
-                    {data: 'nombre', name: 'nombre'},
-                    {data: 'apellido', name: 'apellido'},
+                    {data: 'Full_Name', name: 'Full_Name'},
                     {data: 'email', name: 'email'},
                     {data: 'status', name: 'status'},
                     {data: 'fecha', name: 'fecha'},
-                    {data: 'representante', name: 'representante'},
+                   // {data: 'representante', name: 'representante'},
 
                     { data: null, className: 'd-inline-flex-td',   render: function ( data, type, row ) {
                         var urlEditar = '{{ route("admin.leads.edit", "leadsId=:id") }}';
