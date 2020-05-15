@@ -24,6 +24,7 @@
                     <th>Email</th>
                     <th>Estado</th>
                     <th>Fecha de Creación</th>
+                    <th>Representante</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -82,7 +83,7 @@
                     {data: 'email', name: 'email'},
                     {data: 'stage', name: 'stage'},
                     {data: 'fecha', name: 'fecha'},
-                    //{data: 'representante', name: 'representante'},
+                    {data: 'Reps', name: 'Reps'},
 
                     { data: null, className: 'd-inline-flex-td',   render: function ( data, type, row ) {
                         var urlEditar = '{{ route("admin.deals.edit", "dealsId=:id") }}';

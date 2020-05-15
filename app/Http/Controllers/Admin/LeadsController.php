@@ -577,27 +577,6 @@ class LeadsController extends Controller
         return $repres;
     }
 
-    public function nombreRepresentantes()
-    {
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Sales_reps"); // To 
-        $param_map=array("page"=>0,"per_page"=>200); 
-       //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
-        $response = $moduleIns->getRecords($param_map); 
-        $records = $response->getData(); 
-        
-        $repres = array();
-        foreach ($records as $key => $dealer) {
-            $repres[$key]['repreId']=$dealer->getEntityId();
-            $repres[$key]['name']=$dealer->getFieldValue("Name");
-
-        }
-
-
-        return $repres;
-    }
-
-
-
     public function campos()
     {
 

@@ -62,8 +62,8 @@ class DealsController extends Controller
 
         }
 
-     
         $respuesta['data'] = $records;
+        //dd($respuesta['data']);
 
         echo json_encode($respuesta);
     }
@@ -86,9 +86,7 @@ class DealsController extends Controller
 
         $repres=$this->representantes();
 
-        $nameRepres=$this->nombreRepresentantes();
-
-        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','nameRepres','dealers'));
+        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers'));
     }
 
     public function store(Request $request){
@@ -121,9 +119,8 @@ class DealsController extends Controller
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
         $record->setFieldValue("Producto", $request->input('producto'));
         $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
-        $record->setFieldValue("Representante", $request->input('Representante'));
+        $record->setFieldValue("Reps", $request->input('Reps'));
         $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('dealer_name'));
-        $record->setFieldValue("Representante", $request->input('Representante'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
         $record->setFieldValue("UTM_Source", $request->input('UTM_Source'));
         $record->setFieldValue("Lead_Source", $request->input('Lead_Source'));
@@ -176,7 +173,6 @@ class DealsController extends Controller
         $arrayData['Marca']=$record->getFieldValue("Marca");
         $arrayData['Email_de_Dealer']=$record->getFieldValue("Email_de_Dealer");
         $arrayData['Producto']=$record->getFieldValue("Producto");
-        $arrayData['Representante']=$record->getFieldValue("Representante");
         $arrayData['Nombre_de_vendedor_de_dealer']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
         $arrayData['Description']=$record->getFieldValue("Description");
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
@@ -188,6 +184,12 @@ class DealsController extends Controller
         $arrayData['Fecha_de_cooking_demo']=$this->FechaCrmAdmin($record->getFieldValue("Fecha_de_cooking_demo"));
         $arrayData['Estatus_de_Cooking_Demo']=$record->getFieldValue("Estatus_de_Cooking_Demo");
         $arrayData['Invitar_a_Cooking_demo']=$record->getFieldValue("Invitar_a_Cooking_demo");
+
+        if (method_exists($record->getFieldValue("Reps"),'getEntityId')) {
+            $arrayData['Reps']=$record->getFieldValue("Reps")->getEntityId();
+        }else{
+            $arrayData['Reps']=null;
+        }
 
 
         if (method_exists($record->getFieldValue("Contact_Name"),'getEntityId')) {
@@ -248,13 +250,12 @@ class DealsController extends Controller
         
         $repres=$this->representantes();
 
-        $nameRepres=$this->nombreRepresentantes();
 
         $contactInfo=$this->getContactInfo($record->getFieldValue("Contact_Name")->getEntityId());
 
         //dd($contactInfo);
 
-        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','nameRepres','dealers','data','LeadSources','EstatusCD','cityShowrooms','contactInfo'));
+        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers','data','LeadSources','EstatusCD','cityShowrooms','contactInfo'));
 
 
     }
@@ -289,7 +290,7 @@ class DealsController extends Controller
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
         $record->setFieldValue("Producto", $request->input('Producto'));
         $record->setFieldValue("dealer_name", $request->input('dealer_name'));
-        $record->setFieldValue("Representante", $request->input('Representante'));
+        $record->setFieldValue("Reps", $request->input('Reps'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
         
         $record->setFieldValue("Enviar_a_Dealer",($request->input('Enviar_a_Dealer')=='on') ? true : false );
@@ -750,32 +751,14 @@ class DealsController extends Controller
         $records = $response->getData(); 
         
         $repres = array();
-
         foreach ($records as $key => $dealer) {
             $repres[$key]['repreId']=$dealer->getEntityId();
             $repres[$key]['email']=$dealer->getFieldValue("Email");
-
-        }
-
-        return $repres;
-    }
-
-    public function nombreRepresentantes()
-    {
-        $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Sales_reps"); // To 
-        $param_map=array("page"=>0,"per_page"=>200); 
-       //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
-        $response = $moduleIns->getRecords($param_map); 
-        $records = $response->getData(); 
-        
-        $repres = array();
-        foreach ($records as $key => $dealer) {
-            $repres[$key]['repreId']=$dealer->getEntityId();
             $repres[$key]['name']=$dealer->getFieldValue("Name");
 
         }
 
-
+     //  dd($repres);
         return $repres;
     }
 
@@ -919,9 +902,10 @@ class DealsController extends Controller
                                                 'id' => base64_encode($records[$page-1][$key]->getEntityId()),
                                                 'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
                                                 'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
-                                               // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                                 'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
                                         );
+
+                    $deals[$page-1][$key]['Reps']= method_exists( $records[$page-1][$key]->getFieldValue('Reps'), 'getLookupLabel') ? $records[$page-1][$key]->getFieldValue('Reps')->getLookupLabel() : null ;
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());
                     $fecha=explode('-', $time[0]);
@@ -966,9 +950,9 @@ class DealsController extends Controller
                                                 'id' => base64_encode($records[$page-1][$key]->getEntityId()),
                                                 'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
                                                 'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
-                                               // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
                                                 'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
                                         );
+                    $deals[$page-1][$key]['Reps']= method_exists( $records[$page-1][$key]->getFieldValue('Reps'), 'getLookupLabel') ? $records[$page-1][$key]->getFieldValue('Reps')->getLookupLabel() : null ;
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());
                     $fecha=explode('-', $time[0]);

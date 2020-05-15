@@ -464,25 +464,24 @@
                             </div>
                           </div>
 
-
                           <div class="col-md-6">
                             <div class="form-group row">
-                               <label for="Representante" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
+                               <label for="Reps" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
                                 <div class="col-md-12">
-                                    <select id="Representante" name="Representante" class="form-control @error('name') is-invalid @enderror" data-live-search="true">
-                                      <option value="">Selecione Representante</option>
-                                      @foreach ($nameRepres as $nameRepre)
+                                    <select id="Reps" name="Reps" class="form-control @error('name') is-invalid @enderror" data-live-search="true" >
+                                      <option value="">Seleccione Representante</option>
+                                      @foreach ($repres as $repre)
                                         <option 
                                         @if (isset($data))
-                                              @if ($data->Representante ==$nameRepre['name'])
+                                              @if ($data->Reps == $repre['repreId'])
                                                 selected="selected" 
                                               @endif
                                             @endif
-                                            @if (old('LeadSource') ==  $nameRepre['name']) 
+                                            @if (old('LeadSource') ==  $repre['repreId']) 
                                               selected="selected" 
                                             @endif 
-                                        value="{{$nameRepre['name']}}">
-                                        {{$nameRepre['name']}}
+                                        value="{{$repre['repreId']}}">
+                                        {{$repre['name']}}
                                       </option>
                                       @endforeach
                                       
@@ -490,7 +489,7 @@
                                 </div>
       
 
-                                   @error('name')
+                                   @error('Reps')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
