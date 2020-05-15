@@ -88,22 +88,18 @@ class LeadsController extends Controller
         
         $showroomCiudades=$this->fields('4434756000000298038','Leads');//id Fiels Obtenidos de $this->campos()
 
-        $nameRepres=$this->fields('4434756000000625332','Leads');//id Fiels Obtenidos de $this->campos()
-
         $dealers=$this->dealers();
 
         $repres=$this->representantes();
 
 
-        //dd($repres);
-
-        return view('admin.leads.create', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres','nameRepres', 'industries', 'typesLeads', 'showroomCiudades'));
+        return view('admin.leads.create', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
     }
 
     public function store(Request $request){
 
         
-        //dump($request->input());
+       // dump($request->input());
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // to get the instance of the module
         $records = array();
         $record = ZCRMRecord::getInstance(null, null); // THIS LINE
@@ -118,7 +114,7 @@ class LeadsController extends Controller
         $record->setFieldValue("Dealer", $request->input('Dealer'));
         $record->setFieldValue("Producto", $request->input('Producto'));
         $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
-        $record->setFieldValue("Representante", $request->input('Representante'));
+        $record->setFieldValue("Rep", $request->input('Rep'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
         $record->setFieldValue("Phone", $request->input('Phone'));
         $record->setFieldValue("Website", $request->input('Website'));
@@ -149,8 +145,6 @@ class LeadsController extends Controller
         $record->setFieldValue("Creado_Desde_Admin_Web", true);
 
 
-
-       //dd($record);
         
         array_push($records, $record); // pushing the record to the array
        // $duplicate_check_fields=array('Company');
@@ -164,7 +158,6 @@ class LeadsController extends Controller
 
         if($zohoRespuesta[0]->getStatus()!='success'){
            abort(404);
-
 
         }
 
@@ -221,7 +214,14 @@ class LeadsController extends Controller
         $arrayData['Dealer']=$record->getFieldValue("Dealer");
         $arrayData['Producto']=$record->getFieldValue("Producto");
         $arrayData['Nombre_de_vendedor_de_dealer']=$record->getFieldValue("Nombre_de_vendedor_de_dealer");
-        $arrayData['Representante']=$record->getFieldValue("Representante");
+        
+
+        if (method_exists($record->getFieldValue("Rep"),'getEntityId')) {
+            $arrayData['Rep']=$record->getFieldValue("Rep")->getEntityId();
+        }else{
+            $arrayData['Rep']=null;
+        }
+
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
         $arrayData['Phone']=$record->getFieldValue("Phone");
         $arrayData['Website']=$record->getFieldValue("Website");
@@ -279,14 +279,11 @@ class LeadsController extends Controller
 
         $repres=$this->representantes();
 
-        $nameRepres=$this->fields('4434756000000625332','Leads');//id Fiels Obtenidos de $this->campos()
+       // dump($data);
 
+        //dd($repres);
 
-       //dd($data);
-
-
-    
-        return view('admin.leads.update', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','industries','typesLeads','showroomCiudades','dealers', 'repres' ,'nameRepres'));
+        return view('admin.leads.update', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
 
     }
 
@@ -311,7 +308,7 @@ class LeadsController extends Controller
         $record->setFieldValue("Dealer", $request->input('Dealer'));
         $record->setFieldValue("Producto", $request->input('Producto'));
         $record->setFieldValue("Nombre_de_vendedor_de_dealer", $request->input('Nombre_de_vendedor_de_dealer'));
-        $record->setFieldValue("Representante", $request->input('Representante'));
+        $record->setFieldValue("Rep", $request->input('Rep'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
         $record->setFieldValue("Phone", $request->input('Phone'));
         $record->setFieldValue("Website", $request->input('Website'));
@@ -432,7 +429,12 @@ class LeadsController extends Controller
         $arrayData['Phone_Arquitecto']=$record->getFieldValue("Phone_Arquitecto");
         $arrayData['Email_Arquitecto']=$record->getFieldValue("Email_Arquitecto");
         $arrayData['Lead_Source']=$record->getFieldValue("Lead_Source");
-        $arrayData['Representante']=$record->getFieldValue("Representante");
+        
+        if (method_exists($record->getFieldValue("Rep"),'getEntityId')) {
+            $arrayData['Rep']=$record->getFieldValue("Rep")->getEntityId();
+        }else{
+            $arrayData['Rep']=null;
+        }
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
         if (method_exists($record->getFieldValue("Dealer"),'getEntityId')) {
             $arrayData['dealerId']=$record->getFieldValue("Dealer")->getEntityId();
@@ -455,6 +457,7 @@ class LeadsController extends Controller
 
 
         $leadInfo= $this->validarLead($request->input('leadsId'));
+
 
         //dd($leadInfo);
         $responseAcc=$this->crearCuenta($leadInfo);
@@ -563,13 +566,14 @@ class LeadsController extends Controller
         $records = $response->getData(); 
         
         $repres = array();
-
         foreach ($records as $key => $dealer) {
             $repres[$key]['repreId']=$dealer->getEntityId();
             $repres[$key]['email']=$dealer->getFieldValue("Email");
+            $repres[$key]['name']=$dealer->getFieldValue("Name");
 
         }
 
+     //  dd($repres);
         return $repres;
     }
 
@@ -687,7 +691,7 @@ class LeadsController extends Controller
         $dealsInfo->setFieldValue("Nombre_de_vendedor_de_dealer", $leadInfo->getFieldValue("Nombre_de_vendedor_de_dealer"));
         
         $dealsInfo->setFieldValue("Marca", $leadInfo->getFieldValue("Marca"));
-        $dealsInfo->setFieldValue("Representante", trim($leadInfo->getFieldValue("Representante")) );
+        $dealsInfo->setFieldValue("Reps", $leadInfo->getFieldValue("Rep")->getEntityId()) ;
         $dealsInfo->setFieldValue("Representante_email", trim($leadInfo->getFieldValue("Representante_email")) );
 
         $dealsInfo->setFieldValue("UTM_Anuncio_ID", $leadInfo->getFieldValue("UTM_Anuncio_ID"));
@@ -708,7 +712,6 @@ class LeadsController extends Controller
 
 
  
- 
 
         if (method_exists($leadInfo->getFieldValue("Dealer"),'getEntityId')) {
         $dealsInfo->setFieldValue("Dealer2", $leadInfo->getFieldValue("Dealer")->getEntityId());
@@ -718,7 +721,6 @@ class LeadsController extends Controller
         $lar_id=null; // THIS LINE
         $trigger=array();//trigger to include
         $response = $moduleDeals->createRecords($deals,null,$lar_id,null); 
-        //dd($response);
         return $response;
     }
 
@@ -822,8 +824,6 @@ class LeadsController extends Controller
                 //$header_map = array("if-modified-since"=>"2019-09-15T15:26:49+05:30"); 
                 $response = $moduleIns->getRecords($param_map); 
                 $records[$page-1] = $response->getData(); 
-
-
                 $leads[$page-1] = array();
                 foreach ($records[$page-1] as $key => $record) {
                     $leads[$page-1][$key] = array (  
@@ -832,12 +832,16 @@ class LeadsController extends Controller
                                             //'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
                                             'email' => $records[$page-1][$key]->getFieldValue('Email'), 
                                             'status' => $records[$page-1][$key]->getFieldValue('Lead_Status'), 
-                                           // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                            //'Rep' =>
                                         );
+
+
+                    $leads[$page-1][$key]['Rep']= method_exists( $records[$page-1][$key]->getFieldValue('Rep'), 'getLookupLabel') ? $records[$page-1][$key]->getFieldValue('Rep')->getLookupLabel() : null ;
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());
                     $fecha=explode('-', $time[0]);
                     $leads[$page-1][$key]['fecha']=$fecha[2].'-'.$fecha[1].'-'.$fecha[0];
+            
                 }
 
                 //dump('inicio ciclo');
@@ -870,7 +874,6 @@ class LeadsController extends Controller
                 $response = $moduleIns->searchRecordsByCriteria($criteria,$param_map) ;// To get module records// $criteria to search for  to search for// $param_map-parameters key-value pair - optional
                 $records[$page-1] = $response->getData(); 
 
-
                 $leads[$page-1] = array();
                 foreach ($records[$page-1] as $key => $record) {
                     $leads[$page-1][$key] = array (  
@@ -879,12 +882,16 @@ class LeadsController extends Controller
                                             //'apellido' => $records[$page-1][$key]->getFieldValue('Last_Name'),
                                             'email' => $records[$page-1][$key]->getFieldValue('Email'), 
                                             'status' => $records[$page-1][$key]->getFieldValue('Lead_Status'), 
-                                           // 'representante' => $records[$page-1][$key]->getFieldValue('Representante'),
+                                            //'Rep' =>
                                         );
+
+
+                    $leads[$page-1][$key]['Rep']= method_exists( $records[$page-1][$key]->getFieldValue('Rep'), 'getLookupLabel') ? $records[$page-1][$key]->getFieldValue('Rep')->getLookupLabel() : null ;
 
                     $time=explode('T', $records[$page-1][$key]->getCreatedTime());
                     $fecha=explode('-', $time[0]);
                     $leads[$page-1][$key]['fecha']=$fecha[2].'-'.$fecha[1].'-'.$fecha[0];
+            
                 }
 
                 //dump('inicio ciclo');

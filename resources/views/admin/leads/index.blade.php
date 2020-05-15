@@ -23,6 +23,7 @@
                     <th>Correo Electrónico</th>
                     <th>Estado</th>
                     <th>Fecha de Creación</th>
+                    <th>Representante</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -83,6 +84,8 @@
                     {data: 'email', name: 'email'},
                     {data: 'status', name: 'status'},
                     {data: 'fecha', name: 'fecha'},
+                    {data: 'Rep', name: 'Rep'},
+
                    // {data: 'representante', name: 'representante'},
 
                     { data: null, className: 'd-inline-flex-td',   render: function ( data, type, row ) {

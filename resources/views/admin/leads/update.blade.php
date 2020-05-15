@@ -354,22 +354,22 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
-                               <label for="Representante" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
+                               <label for="Rep" class="col-md-12 col-form-label text-md-left">Nombre de Representante</label>
                                 <div class="col-md-12">
-                                    <select id="Representante" name="Representante" class="form-control @error('name') is-invalid @enderror" data-live-search="true" >
+                                    <select id="Rep" name="Rep" class="form-control @error('name') is-invalid @enderror" data-live-search="true" >
                                       <option value="">Seleccione Representante</option>
-                                      @foreach ($nameRepres as $nameRepre)
+                                      @foreach ($repres as $repre)
                                         <option 
-                                        @if (!empty($data->Representante))
-                                              @if ($data->Representante == $nameRepre['actualValue'])
+                                        @if (isset($data))
+                                              @if ($data->Rep == $repre['repreId'])
                                                 selected="selected" 
                                               @endif
                                             @endif
-                                            @if (old('Representante') ==  $nameRepre['actualValue']) 
+                                            @if (old('LeadSource') ==  $repre['repreId']) 
                                               selected="selected" 
                                             @endif 
-                                        value="{{$nameRepre['actualValue']}}">
-                                        {{$nameRepre['actualValue']}}
+                                        value="{{$repre['repreId']}}">
+                                        {{$repre['name']}}
                                       </option>
                                       @endforeach
                                       
