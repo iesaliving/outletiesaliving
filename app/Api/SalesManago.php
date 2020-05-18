@@ -265,7 +265,12 @@ class SalesManago
                     "UTM_Campaign":"'.$this->cUtmCampaign.'",
                     "UTM_AnuncioID":"'.$this->cUtmAnuncioId.'",
                     "producto":"'.$this->producto.'"
-                }
+                },
+                "trigger": [
+                    "approval",
+                    "workflow",
+                    "blueprint"
+                    ]
             }';
 
         return $this->curlSm($url,$json);

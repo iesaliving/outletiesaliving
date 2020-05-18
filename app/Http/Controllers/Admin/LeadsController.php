@@ -348,7 +348,7 @@ class LeadsController extends Controller
         $responseIn = $moduleIns->updateRecords($records,null,$lar_id,null); 
 
         $zohoRespuesta=$responseIn->getEntityResponses();
-        dd($zohoRespuesta);
+       // dd($zohoRespuesta);
         
         if($zohoRespuesta[0]->getStatus()!='success'){
            abort(404);
