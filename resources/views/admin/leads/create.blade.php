@@ -403,7 +403,7 @@
 
                                 <div class="col-md-12">
 
-                                    <select id="dealerId" name="dealerId" class="form-control @error('dealer') is-invalid @enderror" data-live-search="true">
+                                    <select id="Dealer" name="Dealer" class="form-control @error('dealer') is-invalid @enderror" data-live-search="true">
                                       <option value="">Seleccione Distribuidor</option>
                                       @foreach ($dealers as $dealer)
 

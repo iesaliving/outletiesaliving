@@ -200,7 +200,7 @@ class LeadsController extends Controller
 
         $record= $this->validarLead($request->input('leadsId'));
 
-      //  (dump($record));
+
 
         $arrayData['leadsId']=$request->input('leadsId');
         $arrayData['First_Name']=$record->getFieldValue("First_Name");
@@ -290,7 +290,7 @@ class LeadsController extends Controller
     public function update(Request $request){
         
 
-        //dd($request->input());
+       /// dd($request->input());
 
         $leadsId=base64_decode($request->input('leadsId'));
         $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); 
@@ -348,7 +348,7 @@ class LeadsController extends Controller
         $responseIn = $moduleIns->updateRecords($records,null,$lar_id,null); 
 
         $zohoRespuesta=$responseIn->getEntityResponses();
-
+        dd($zohoRespuesta);
         
         if($zohoRespuesta[0]->getStatus()!='success'){
            abort(404);
