@@ -76,7 +76,7 @@
         </div>
     </div>
 
-         <div class="margin-10" id="carousel-showrooms">
+         <div class="margin-10" id="check">
              
             <h2 class="text-center text-uppercase font-weight-light bottommargin">empieza aquí el tour virtual a nuestro showroom</h2>
             <iframe
@@ -87,7 +87,7 @@
             </iframe>
        
             <p class="text-center my-4" style="color: inherit; line-height: 1.3; font-weight: 300;">Le guiamos en el tour virtual, para que conozca todos los detalles de la mano de un especialista.</p>
-            <div id="check" class="offset-md-4 col-md-4">
+            <div class="offset-md-4 col-md-4">
                 <a class="text-uppercase btn btn-cyan btn-block descubra-btn" href="{{ URL::to('/llamada-cdmx') }}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>agendar llamada con especialista</p></a>
             </div>
         </div>
@@ -120,7 +120,7 @@
 
             </div>
 
-            <div id="check" class="col-xl-4 col-lg-6 mx-auto">
+            <div class="col-xl-4 col-lg-6 mx-auto">
                 <a class="btn btn-cyan btn-block descubra-btn" href="{{ URL::to('/cita') }}"><img src="{{ asset('img/icono-btn/agenda.png')   }}"><p>AGENDAR CITA EN SHOWROOM</p></a>
             </div>
         </div>
