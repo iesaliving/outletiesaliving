@@ -106,7 +106,7 @@
                                 <a data-toggle="tooltip" data-placement="top" title="Solicitar Rating" class="btn  mx-1 btn-success" href="`+rating+`"><img class="icono-btn" src="{{ asset('img/admin/icono/rating.png')}}"></a>
                                 <a data-toggle="tooltip" data-placement="top" title="Invitar Cooking Demo"
                                  class="btn  mx-1 btn-warning" href="`+cookDemo+`"><img class="icono-btn" src="{{ asset('img/admin/icono/cookingDemo.png')}}"></a>
-                                <a data-toggle="tooltip" data-placement="top" title="Contactar Cliente con Distribuidor y enviar Per-Cotización" class="btn  mx-1 btn-secondary" href="`+precotizar+`"><img class="icono-btn" src="{{ asset('img/admin/icono/preCotizacion.png')}}"></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Contactar Cliente con Distribuidor y enviar Pre-Cotización" class="btn  mx-1 btn-secondary" href="`+precotizar+`"><img class="icono-btn" src="{{ asset('img/admin/icono/preCotizacion.png')}}"></a>
 
                                 
                                 `

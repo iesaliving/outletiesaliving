@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2020 a las 03:51:47
+-- Tiempo de generación: 21-05-2020 a las 01:30:17
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.5
 
@@ -24,44 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `roles`
+-- Estructura de tabla para la tabla `role_user`
 --
 
-CREATE TABLE `roles` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
+CREATE TABLE `role_user` (
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `role_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `roles`
+-- Volcado de datos para la tabla `role_user`
 --
 
-INSERT INTO `roles` (`id`, `title`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Admin', '2019-04-15 19:13:32', '2019-04-15 19:13:32', NULL),
-(2, 'User', '2019-04-15 19:13:32', '2019-04-15 19:13:32', NULL);
+INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
+(1, 1),
+(2, 3),
+(3, 4);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `roles`
+-- Indices de la tabla `role_user`
 --
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `role_user`
+  ADD KEY `role_user_user_id_foreign` (`user_id`),
+  ADD KEY `role_user_role_id_foreign` (`role_id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- Restricciones para tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `roles`
+-- Filtros para la tabla `role_user`
 --
-ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `role_user`
+  ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
+  ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,7 +2,7 @@
 @section('title', 'Precotizacion')
 @section('breadcrumb')   
    <li class="breadcrumb-item"> <a href="{{ route('admin.deals.index') }}"> Prospectos </a> </li>
-   <li class="breadcrumb-item active" aria-current="page"> Contactar Cliente con Distribuidor y enviar Per-Cotización </li>
+   <li class="breadcrumb-item active" aria-current="page"> Contactar Cliente con Distribuidor y enviar Pre-Cotización </li>
 @endsection
 @section('content')
 
@@ -13,7 +13,7 @@
 
 
  <div class="card">
-      <div class="card-header">Contactar Cliente con Distribuidor y enviar Per-Cotización</div>
+      <div class="card-header">Contactar Cliente con Distribuidor y enviar Pre-Cotización</div>
 
                 <div class="card-body">
 

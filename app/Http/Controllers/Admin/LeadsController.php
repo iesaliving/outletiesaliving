@@ -670,7 +670,6 @@ class LeadsController extends Controller
         $dealsInfo->setFieldValue("Nombre_de_vendedor_de_dealer", $leadInfo->getFieldValue("Nombre_de_vendedor_de_dealer"));
         
         $dealsInfo->setFieldValue("Marca", $leadInfo->getFieldValue("Marca"));
-        $dealsInfo->setFieldValue("Reps", $leadInfo->getFieldValue("Rep")->getEntityId()) ;
         $dealsInfo->setFieldValue("Representante_email", trim($leadInfo->getFieldValue("Representante_email")) );
 
         $dealsInfo->setFieldValue("UTM_Anuncio_ID", $leadInfo->getFieldValue("UTM_Anuncio_ID"));
@@ -693,8 +692,14 @@ class LeadsController extends Controller
  
 
         if (method_exists($leadInfo->getFieldValue("Dealer"),'getEntityId')) {
-        $dealsInfo->setFieldValue("Dealer2", $leadInfo->getFieldValue("Dealer")->getEntityId());
+            $dealsInfo->setFieldValue("Dealer2", $leadInfo->getFieldValue("Dealer")->getEntityId());
         }
+
+        if (method_exists($leadInfo->getFieldValue("Rep"),'getEntityId')) {
+            $dealsInfo->setFieldValue("Reps", $leadInfo->getFieldValue("Rep")->getEntityId()) ;
+        }
+
+
         array_push($deals, $dealsInfo); // pushing the record to the array
            // $duplicate_check_fields=array('Company');
         $lar_id=null; // THIS LINE

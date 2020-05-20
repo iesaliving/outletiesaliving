@@ -17,7 +17,7 @@
                               @if(isset($data->dealsId))
                                 <a data-toggle="tooltip" data-placement="top" title="Solicitar Rating" class="btn  mx-1 float-right  btn-success" href="{{ route('admin.deals.rating', ['dealsId'=>$data->dealsId]) }}">  <img class="icono-btn" src="{{ asset('img/admin/icono/rating.png')}}"></a>
                                 <a data-toggle="tooltip" data-placement="top" title="Invitar Cooking Demo" class="btn  mx-1 float-right btn-warning " href="{{ route('admin.deals.cookDemo', ['dealsId'=>$data->dealsId]) }}"><img class="icono-btn" src="{{ asset('img/admin/icono/cookingDemo.png')}}" ></a>
-                                <a data-toggle="tooltip" data-placement="top" title="Contactar Cliente con Distribuidor y enviar Per-Cotización" class="btn  mx-1 float-right btn-secondary" href="{{ route('admin.deals.precotizar', ['dealsId'=>$data->dealsId]) }}"><img class="icono-btn" src="{{ asset('img/admin/icono/preCotizacion.png')}}"></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Contactar Cliente con Distribuidor y enviar Pre-Cotización" class="btn  mx-1 float-right btn-secondary" href="{{ route('admin.deals.precotizar', ['dealsId'=>$data->dealsId]) }}"><img class="icono-btn" src="{{ asset('img/admin/icono/preCotizacion.png')}}"></a>
                               @endif()
 
 
