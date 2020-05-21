@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lafamiliap/public_html/laravelApp
+    - export DEPLOYPATH=/home/lafamiliap/public_html/laravelApp/
     - /bin/cp artisan $DEPLOYPATH
     - /bin/cp ZCRMClientLibrary.log $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
