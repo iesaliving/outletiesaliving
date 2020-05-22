@@ -1,21 +1,22 @@
 ---
-    deployment:
-      tasks:
-        - export DEPLOYPATH=/home/lafamiliap/public_html/laravelApp
-        - /bin/cp artisan $DEPLOYPATH
-        - /bin/cp ZCRMClientLibrary.log $DEPLOYPATH
-        - /bin/cp composer.json $DEPLOYPATH
-        - /bin/cp phpunit.xml $DEPLOYPATH
-        - /bin/cp server.php $DEPLOYPATH
-        - /bin/cp webpack.mix.js $DEPLOYPATH
-        - /bin/cp -R app $DEPLOYPATH
-        - /bin/cp -R bootstrap $DEPLOYPATH
-        - /bin/cp -R config $DEPLOYPATH
-        - /bin/cp -R database $DEPLOYPATH
-        - /bin/cp -R resources $DEPLOYPATH
-        - /bin/cp -R routes $DEPLOYPATH
-        - /bin/cp -R storage $DEPLOYPATH
-        - /bin/cp -R test $DEPLOYPATH
-        - /bin/cp -R public_html/js /home/lafamiliap/public_html/
-        - /bin/cp -R public_html/css /home/lafamiliap/public_html/
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lafamiliap/public_html/laravelApp/
+    - /bin/cp artisan $DEPLOYPATH
+    - /bin/cp ZCRMClientLibrary.log $DEPLOYPATH
+    - /bin/cp composer.json $DEPLOYPATH
+    - /bin/cp phpunit.xml $DEPLOYPATH
+    - /bin/cp server.php $DEPLOYPATH
+    - /bin/cp webpack.mix.js $DEPLOYPATH
+    - /bin/cp -R app $DEPLOYPATH
+    - /bin/cp -R bootstrap $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
+    - /bin/cp -R routes $DEPLOYPATH
+    - /bin/cp -R storage $DEPLOYPATH
+    - /bin/cp -R test $DEPLOYPATH
+    - /bin/cp -R public_html/js /home/lafamiliap/public_html/
+    - /bin/cp -R public_html/css /home/lafamiliap/public_html/
+    - /bin/cp -R public_html/img /home/lafamiliap/public_html/
     
