@@ -61,7 +61,7 @@ class UsersController extends Controller
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
-    public function update(StoreUserRequest $request, User $user)
+    public function update(UpdateUserRequest $request, User $user)
     {
         abort_unless(\Gate::allows('user_edit'), 403);
 

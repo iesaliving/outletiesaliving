@@ -19,7 +19,7 @@ class UpdateUserRequest extends FormRequest
                 'required',
             ],
             'email'   => [
-                'required',
+                'required','email','unique:users,email,'.$this->user->id,
             ],
             'roles.*' => [
                 'integer',
