@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // se registra el comando cron
+        'App\Console\Commands\UpdateLeadDaily'
     ];
 
     /**
@@ -26,6 +27,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->command('lead:day')
+        ->everyMinute()
+        ->sendOutputTo(storage_path('logs/inspire.log'), true);
     }
 
     /**
