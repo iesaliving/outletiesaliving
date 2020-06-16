@@ -31,18 +31,40 @@ class HomeController extends Controller
     public function test()
     {
         $salesmanago = new SalesManago();
-        $yesterday =Carbon::createFromDate('2020', '5', '27', "America/Mexico_City");
-        //dd($yesterday);
-        $connect =  $salesmanago->getCredentials();
-        //$connect["requestTime"] = Carbon::now()->timestamp;
-       // $connect["email"] = array("jumaroa@gmail.com");
-        //$connect["from"] = $yesterday->copy()->startOfDay();
-        //$connect["to"] =  $yesterday->endOfDay();
+        // Carbon::createFromDate(2020,5,14); // pasar fecha especifica en Tz Mexico_City -5
+        $today = Carbon::today();// => Fecha de Hoy en Tz Mexico_City -5
+
+        // request API 
+        $reqContactListCreated =  $salesmanago->getCredentials(); // api_key, secret_key, sha
+        $reqContactListCreated["requestTime"] = Carbon::now()->timestamp * 1000;
+        $reqContactListCreated["owner"] = 'sleal@iesa.cc';
+        $reqContactListCreated["from"] = $today->copy()->startOfDay()->timestamp * 1000; // hoy a las 12:00: am (inicio del dia)
+        $reqContactListCreated["to"] =  Carbon::now()->timestamp * 1000; // hoy hora actual.
+        //work 
+        //$reqContactListCreated["from"] = $today->copy()->startOfDay();//->format('Y-m-d H:i');
+        //$reqContactListCreated["to"] =  Carbon::now();//->format('Y-m-d H:i');
+
+        // response API 
+        $resContactListCreated = $salesmanago->curlSm("https://app3.salesmanago.pl/api/contact/createdContacts", json_encode($reqContactListCreated));
         
-        //return $connect;
-       //$response = $salesmanago->curlSm("https://app3.salesmanago.pl/api/contact/createdContacts", json_encode($connect));
-       $response = $salesmanago->curlSm("https://app3.salesmanago.pl/api/contact/list", json_encode($connect));
-       //dd($response);
-       return $response;
+        if(!empty($resContactListCreated) && $resContactListCreated["success"]){
+            if(sizeof($resContactListCreated["createdContacts"]) > 0){
+                $contactsIds = array();
+                foreach($resContactListCreated["createdContacts"] as $created){
+                    array_push($contactsIds, $created["email"]);
+                }
+
+                $reqDataContactCreated = $salesmanago->getCredentials();
+                $reqDataContactCreated["requestTime"] = Carbon::now()->timestamp * 1000;
+                $reqDataContactCreated["email"] = array("valo_379@hotmail.com", "therasmus12041204@gmail.com");//$contactsIds;
+                $reqDataContactCreated["owner"]  = $reqContactListCreated["owner"];
+                //return $contactsIds;
+                $resDataContactListCreated = $salesmanago->curlSm("https://app3.salesmanago.pl/api/contact/list", json_encode($reqDataContactCreated));
+                
+                return $resDataContactListCreated;
+            }
+            return 'no hay data disponible';
+        }
+        return 'error en la consulta';
     }
 }
