@@ -51,16 +51,17 @@ class UpdateLeadDaily extends Command
      */
     public function handle()
     {
-        //
+        /*
         $modulo = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); // To 
         $param_map=array("page" => 1, "per_page"=>10); 
         $response = $modulo->getRecords($param_map);
         $leads = $response->getData();
         
         foreach($leads as $lead){
-
+            
             $this->info("Lead ". $lead->getFieldValue('Full_Name') );
         }
+        */
 
     }
 }

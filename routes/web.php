@@ -129,6 +129,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/test', 'HomeController@test')->name('test');
+
 Route::get('/nosotros', function () {
 
     return view('nosotros');
