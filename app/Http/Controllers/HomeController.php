@@ -37,7 +37,7 @@ class HomeController extends Controller
         // request API 
         $reqContactListCreated =  $salesmanago->getCredentials(); // api_key, secret_key, sha
         $reqContactListCreated["requestTime"] = Carbon::now()->timestamp * 1000;
-        $reqContactListCreated["owner"] = 'sleal@iesa.cc';
+        $reqContactListCreated["owner"] = 'Auxiliarmkt@iesa.cc';
         $reqContactListCreated["from"] = $today->copy()->startOfDay()->timestamp * 1000; // hoy a las 12:00: am (inicio del dia)
         $reqContactListCreated["to"] =  Carbon::now()->timestamp * 1000; // hoy hora actual.
         //work 
@@ -51,14 +51,14 @@ class HomeController extends Controller
             if(sizeof($resContactListCreated["createdContacts"]) > 0){
                 $contactsIds = array();
                 foreach($resContactListCreated["createdContacts"] as $created){
-                    array_push($contactsIds, $created["email"]);
+                    array_push($contactsIds, strtolower($created["email"]));
                 }
 
                 $reqDataContactCreated = $salesmanago->getCredentials();
                 $reqDataContactCreated["requestTime"] = Carbon::now()->timestamp * 1000;
-                $reqDataContactCreated["email"] = array("valo_379@hotmail.com", "therasmus12041204@gmail.com");//$contactsIds;
+                $reqDataContactCreated["email"] = $contactsIds;//array("valo_379@hotmail.com", "therasmus12041204@gmail.com");//$contactsIds;
                 $reqDataContactCreated["owner"]  = $reqContactListCreated["owner"];
-                //return $contactsIds;
+                //return $reqDataContactCreated;
                 $resDataContactListCreated = $salesmanago->curlSm("https://app3.salesmanago.pl/api/contact/list", json_encode($reqDataContactCreated));
                 
                 return $resDataContactListCreated;
