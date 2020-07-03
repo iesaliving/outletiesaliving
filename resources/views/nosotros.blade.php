@@ -3,13 +3,22 @@
 @section('title', 'Nosotros')
 @section('content')
 
-<section id="hero-desktop">
-        <img src="{{ asset( is_null($images) ? 'img/nosotros/hero.jpg' : $images[0]->url.$images[0]->name)}}">
-    </section>
+<section id="hero-desktop" class="position-relative">
+  <video class="w-100 m-auto" playsinline autoplay muted loop style="max-height: 650px; min-width: 100%; object-fit: fill;" >
+    <source src="{{asset('video/iesa-living.mp4')}}" type="video/mp4">
+  </video>
+    <div class="position-absolute col-md-5 gradient-hero-cove" style="top: 40%; padding: 4% 4% 4% 5.3%;">
+        <h2 class="h2-text text-uppercase bold">Trabajamos por y para su satisfacción</h2>
+        <h5 class="light text-uppercase">En La Familia Perfecta contamos con un equipo especializado en satisfacer sus necesidades. </h5>
+    </div>
+  <!--<img src="{{ asset( is_null($images) ? 'img/nosotros/hero.jpg' : $images[0]->url.$images[0]->name)}}"> --->
+</section>
 
 <section id="hero-mobile">
-  <img src="{{ asset( is_null($images) ? 'img/nosotros/mobile.jpg' : $images[1]->url.$images[1]->name)}}">
-
+  <video class="w-100" playsinline autoplay muted loop height="600">
+    <source src="{{asset('video/iesa-living.mp4')}}" type="video/mp4">
+  </video>
+  <!-- <img src="{{ asset( is_null($images) ? 'img/nosotros/mobile.jpg' : $images[1]->url.$images[1]->name)}}"> --->
 </section>
 
 <section class="container-gral" style="padding-top: 4px" >

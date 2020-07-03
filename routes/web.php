@@ -148,7 +148,7 @@ Route::get('/coronavirus-information', function () {
 
 Route::get('/cita', function () {
     return view('calendry-cita');
-})->name('cita');
+});
 
 Route::get('/cookingdemo-cita', function () {
     return view('calendry-cooking-demo-CDMX');
