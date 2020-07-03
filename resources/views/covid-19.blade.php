@@ -9,27 +9,32 @@
         @include('hero-mobile.covid')    
     </section>
     <section class="container-gral">
-        <div id="container-catalogo" class="margin-10">
+         <div id="container-catalogo" class="margin-10" style="margin-top: 9%;">
             <div class="col-12 bottommargin-lg">
-                <p class="mb-5">En vista del impacto del Coronavirus, en Grupo IESA estamos tomando una serie de previsiones para proteger la seguridad y la salud de todos nuestros clientes, aliados y empleados.</p>
-                
-                <h2 class="text-uppercase">Visitas al Showroom</h2>
-                <p class="mb-4">Estaremos brindando recorridos virtuales por nuestro Showroom y nuestros representantes de ventas seguirán disponibles para atender dudas vía telefónica y whatsapp. Visite la siguiente página para agendar su recorrido virtual a <b><a  href="{{ URL::to('/showroom#check') }}" style="color: #01bb9c !important;" class="text-uppercase">[SHOWROOM]</a></b>.</p>
+                <div class="text-center mb-5" >
+                    <h2 class="font-weight-normal">Nuestras salas de exhibición están abiertas para <br> visitas en persona.</h2>
+                    <h4 class="font-weight-normal">Para garantizar su seguridad tomamos las siguientes precauciones:</h4>
+                </div>
+                <ul class="bullet-color-iesa">
+                    <li class="mb-3">Para limitar el número total de visitantes en la sala de exposición, solo celebraremos dos citas a la vez.</li>
+                    
+                    <li class="mb-3">Se requerirá que todos los visitantes usen una máscara facial. Si no tiene uno, le proporcionaremos una máscara.</li>
 
-                <h2 class="text-uppercase">Entregas y otras visitas</h2>
-                <p class="mb-4">Por favor, siga las normas de distanciamiento social una vez que entre a nuestras instalaciones e interactúe con nuestro equipo. Si puede ser atendido por teléfono, le invitamos a ser atendido vía telefónica.</p>
-                
+                    <li class="mb-3">Entendemos que interactuar con los electrodomésticos es una gran parte de la experiencia y queremos que todos estén seguros. Si desea tocar los electrodomésticos, le pedimos que use guantes, los cuales se le proporcionarán.</li>
 
-                <h2 class="text-uppercase">Trabajo desde casa</h2>
-                <p class="mb-4">Todo nuestro equipo en posibilidad de trabajar desde sus hogares, lo estarán haciendo, así que estaremos operando con el personal mínimo necesario en nuestras instalaciones. Por favor, tenga en consideración esto si nuestro tiempo de respuesta es más lento que lo habitual.</p>
+                    <li class="mb-3">Se les pide los visitantes que practiquen el distanciamiento social.</li>
 
-                <h2 class="text-uppercase">Eventos y viajes</h2>
-                <p class="mb-4">Todos los eventos públicos e internos de la compañía y los viajes corporativos están suspendidos hasta el momento en el que sea seguro retomarlos.</p>
-                <p class="mb-4">No obstante, seguimos disponibles para ayudar a nuestros clientes y aliados con cualquier duda o requerimiento, por favor contáctenos al [Número telefónico]. Nuestro equipo recibirá su llamada y remitirá sus solicitudes al departamento necesario.</p>
+                    <li class="mb-3">No estaremos sirviendo comida o bebidas en este momento.</li>
+
+                    <li class="mb-3">Después de cada cita, las pantallas y los electrodomésticos que se tocaron se desinfectarán. </li>
+
+                    <li class="mb-3">En este momento, pedimos que los niños no visiten las salas de exhibición.</li>
+                </ul>
+              
+                <p class="mb-4">Además de las citas en persona, se seguirán ofreciendo nuestras citas virtuales a través de medios digitales. Para hacer una cita, ya sea en persona o virtual, visite nuestro sistema de <a style="color: #01bb9c !important;" href="{{url('/cita')}}">programación en línea</a> o llámenos al <a href="tel:+5215552809648">+52 (1) 55 5280 9648</a>.</p>
                 <p><b>De antemano los agradecemos, <br/> <span  style="color: #01bb9c !important;">Grupo IESA</span></b></p>
             </div>   
         </div>
-
     </section>
 @endsection
 

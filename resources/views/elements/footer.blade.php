@@ -25,7 +25,7 @@
             @endif
         </div>
         <div class="col-xl-6 col-lg-4" style="overflow: hidden;">
-            <iframe style="margin-top: -50px;margin-left: -25px;" src="https://www.google.com/maps/d/embed?mid=1wP4RZDXziZvqQ3M7nSutqMo-oSfra0VW" width="640" height="480"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.627723761257!2d-99.1934275!3d19.4284845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201ff11a77f6d%3A0x18848b36c0d7d2d9!2sIESA!5e0!3m2!1ses-419!2sve!4v1592579972142!5m2!1ses-419!2sve" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
         <div class="col-xl-3 col-lg-4 topmargin nopadding">
             <div class="row nomargin col-12 nopadding">

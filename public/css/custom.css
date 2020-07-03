@@ -519,8 +519,18 @@ ul#menu a:hover {
 #footer-iesa i{
   color: #01bb9c
 }
-
-
+.bullet-color-iesa {
+  list-style: none;
+}
+.bullet-color-iesa li::before {
+  content: "\2022"; 
+  color: #01bb9c;
+  font-weight: bold; 
+  display: inline-block;
+  font-size: 1.5rem; 
+  width: 1em; 
+  margin-left: -1em; 
+}
 
 /*HERO-IMAGE*/
 @media(max-width: 768px){

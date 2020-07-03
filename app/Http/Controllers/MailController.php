@@ -376,7 +376,7 @@ class MailController extends Controller
                         $var->sethoraLlamada($division[1]);
                         $var->setFechaLlamada($fecha->format('d-m-Y'));
                         $var->setPais('Mexico');
-                        $var->setTag('LLAMADA');
+                        $var->setTag('LLAMADA_MEXICO');
                         $gracias='gracias-llamada';
                       break;
               }    
