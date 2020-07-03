@@ -3,14 +3,10 @@
 @section('title', 'Nosotros')
 @section('content')
 
-<section id="hero-desktop" class="position-relative">
+<section id="hero-desktop">
   <video class="w-100 m-auto" playsinline autoplay muted loop style="max-height: 650px; min-width: 100%; object-fit: fill;" >
     <source src="{{asset('video/iesa-living.mp4')}}" type="video/mp4">
   </video>
-    <div class="position-absolute col-md-5 gradient-hero-cove" style="top: 40%; padding: 4% 4% 4% 5.3%;">
-        <h2 class="h2-text text-uppercase bold">Trabajamos por y para su satisfacción</h2>
-        <h5 class="light text-uppercase">En La Familia Perfecta contamos con un equipo especializado en satisfacer sus necesidades. </h5>
-    </div>
   <!--<img src="{{ asset( is_null($images) ? 'img/nosotros/hero.jpg' : $images[0]->url.$images[0]->name)}}"> --->
 </section>
 
