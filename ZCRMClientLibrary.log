@@ -13622,3 +13622,7 @@ Trace::#0 C:\xampp\htdocs\IESA\vendor\zohocrm\php-sdk\src\crm\api\response\Commo
 #52 C:\xampp\htdocs\IESA\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #53 C:\xampp\htdocs\IESA\public\index.php(55): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #54 {main}
+2020-07-09 14:39:49 INFO: Access Token has expired. Hence refreshing.
+2020-07-09 16:01:50 INFO: Access Token has expired. Hence refreshing.
+2020-07-09 17:29:48 INFO: Access Token has expired. Hence refreshing.
+2020-07-09 18:40:17 INFO: Access Token has expired. Hence refreshing.

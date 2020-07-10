@@ -100,21 +100,17 @@ class HomeController extends Controller
             array_push($emails, $contact->email);
         }
         */
-        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com");
+        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com");
         if(sizeof($emails) > 0) // si hay correos para crear
         {
             $contactsList = $salesManago->getContactService()->listByEmails("Auxiliarmkt@iesa.cc", array(
+                // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                 "email" => $emails
             )); 
-            //*/
-            
-            //dd($contactsList);
-            //$collection = collect($contactsList->contacts[0]->properties);
-            //dd($collection->firstWhere('name', 'text'));
-
+    
             //* sync zoho
             // generate access token 
-            $configuration = array(
+            ZCRMRestClient::initialize(array(
                 "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
                 "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
                 "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
@@ -126,52 +122,63 @@ class HomeController extends Controller
                 "accounts_url"=>"https://accounts.zoho.com",
                 "persistence_handler_class"=>"",
                 "apibaseurl"=>"www.zohoapis.com"
-            );
-    
-            ZCRMRestClient::initialize($configuration);
+            ));
     
             $moduleLeads = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); 
             //dd($moduleLeads->getAllFields());
             $records = array();
+           
             if($contactsList && sizeof($contactsList->contacts) > 0){
                 foreach($contactsList->contacts as $contact)
                 {
 
-                    $fullname = explode(" ", $contact->name);
+                    $fullname = explode(" ", trim($contact->name));
                     $custom = collect($contact->properties);
+                   
                     $record = ZCRMRecord::getInstance(null, null);
                     $record->setFieldValue("Email", $contact->email);
                     $record->setFieldValue("Full_Name", $contact->name);
-                    $record->setFieldValue("First_Name", $fullname[0]);
                     
-                    if(isset( $fullname[1])){
-                        $record->setFieldValue("Last_Name", $fullname[1]);
+                    switch(sizeof($fullname)){
+                        case 2: // array("Pedro", "Gonzalez")
+                            $record->setFieldValue("First_Name", $fullname[0]);
+                            $record->setFieldValue("Last_Name", $fullname[1]);
+                        break;
+                        case 3:// array("Juan", "Pedro","Gonzalez")
+                            $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
+                            $record->setFieldValue("Last_Name", $fullname[2]);
+                        break;
+                        default: // array("Juan", "Juan") // Last_Name Required ZOHO
+                            $record->setFieldValue("First_Name", $contact->name);
+                            $record->setFieldValue("Last_Name", $contact->name);
+                        break;
                     }
-                    
+    
                     $record->setFieldValue("Phone", $contact->phone);
                     
-                    if(isset($custom->firstWhere('name', 'mensaje')->value)){
+                    if(!empty($custom->firstWhere('name', 'mensaje')->value)){
                         $record->setFieldValue("Description", $custom->firstWhere('name', 'mensaje')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'estado')->value)){
+                    if(!empty($custom->firstWhere('name', 'estado')->value)){
                         $record->setFieldValue("Estado", $custom->firstWhere('name', 'estado')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'brand')->value)){
+                    if(!empty($custom->firstWhere('name', 'brand')->value)){
                         $record->setFieldValue("Marca", explode( ",",$custom->firstWhere('name', 'brand')->value));    
                     }
 
-                    if(isset($custom->firstWhere('name', 'pais')->value)){
+                    if(!empty($custom->firstWhere('name', 'pais')->value)){
                         $record->setFieldValue("Pais", $custom->firstWhere('name', 'pais')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'producto')->value)){
+                    if(!empty($custom->firstWhere('name', 'producto')->value)){
                         $record->setFieldValue("Producto", $custom->firstWhere('name', 'producto')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'fecha_showroom')->value)){
-                        $record->setFieldValue("Fecha_de_visita_al_Showroom", $custom->firstWhere('name', 'fecha_showroom')->value );
+                    if(isset($custom->firstWhere('name', 'fecha_showroom')->value)){                        
+                        $dateShowroom = explode('-', $custom->firstWhere('name', 'fecha_showroom')->value);
+                        $record->setFieldValue("Fecha_de_visita_al_Showroom", Carbon::create($dateShowroom[2], $dateShowroom[1], $dateShowroom[0])->format('Y-m-d'));
                     }
 
                     if(isset($custom->firstWhere('name', 'hora_showroom')->value)){
@@ -179,7 +186,8 @@ class HomeController extends Controller
                     }
 
                     if(isset($custom->firstWhere('name', 'fecha_cooking_demo')->value)){
-                        $record->setFieldValue("Fecha_de_cooking_demo", $custom->firstWhere('name', 'fecha_cooking_demo')->value);
+                        $dateCookingDemo = explode('-', $custom->firstWhere('name', 'fecha_cooking_demo')->value);
+                        $record->setFieldValue("Fecha_de_cooking_demo", Carbon::create($dateCookingDemo[2], $dateCookingDemo[1], $dateCookingDemo[0])->format('Y-m-d'));
                     }
 
                     if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
@@ -190,17 +198,27 @@ class HomeController extends Controller
                         $record->setFieldValue("Hora_de_la_llamada", $custom->firstWhere('name', 'hora_llamada')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'UTM AnuncioID')->value)){
-                        $record->setFieldValue("UTM_Anuncio_ID", $custom->firstWhere('name', 'UTM AnuncioID')->value );
+                    if(!empty($custom->firstWhere('name', 'UTM_AnuncioID')->value)){
+                        $record->setFieldValue("UTM_Anuncio_ID", $custom->firstWhere('name', 'UTM_AnuncioID')->value );
                     }
 
-                    if(isset($custom->firstWhere('name', 'UTM Campaign Name')->value)){
-                        $record->setFieldValue("UTM_Campaign_Name", $custom->firstWhere('name', 'UTM Campaign Name')->value);
+                    if(!empty($custom->firstWhere('name', 'UTM_Campaign')->value)){
+                        $record->setFieldValue("UTM_Campaign_Name", $custom->firstWhere('name', 'UTM_Campaign')->value);
                     }
 
-                    if(isset($custom->firstWhere('name', 'UTM Source')->value)){
-                        $record->setFieldValue("UTM_Source", $custom->firstWhere('name', 'UTM Source')->value );
-                    }                    
+                    if(!empty($custom->firstWhere('name', 'UTM_Source')->value)){
+                        $record->setFieldValue("UTM_Source", $custom->firstWhere('name', 'UTM_Source')->value );
+                    } 
+                    
+                    if(!empty($contact->contactFunnels)){
+                        // Visita a ShowRoom Agendada => VISITA_A_SHOWROOM_AGENDADA
+                        $leadSouce = strtoupper($contact->contactFunnels[0]->salesStage);
+                        if($leadSouce !== "LLAMADA AGENDADA" || $leadSouce !== "COOKING DEMO AGENDADO" || $leadSouce !== "VISITA A SHOWROOM AGENDADA"){
+                            $leadSouce = strtoupper("lead nuevo");
+                        }
+                        $record->setFieldValue("Lead_Source",  $leadSouce);
+                    }
+
                     array_push($records, $record);
                 }
                 //$response = $moduleLeads->createRecords($records);
