@@ -107,7 +107,7 @@ class HomeController extends Controller
                 // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                 "email" => $emails
             )); 
-    
+            
             //* sync zoho
             // generate access token 
             ZCRMRestClient::initialize(array(
