@@ -7,56 +7,26 @@
         <title>@yield('title')</title>
 
         <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" onload="if(media!='all')media='all'">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" onload="if(media!='all')media='all'">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
+            body,html {
+                height: 100%;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .code {
-                border-right: 2px solid;
-                font-size: 26px;
-                padding: 0 15px 0 15px;
-                text-align: center;
-            }
-
-            .message {
-                font-size: 18px;
-                text-align: center;
-            }
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 2rem;
+                }
+            }        
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="code">
-                @yield('code')
-            </div>
-
-            <div class="message" style="padding: 10px;">
-                @yield('message')
-            </div>
-        </div>
+    <body class="d-flex justify-content-center">
+        <div class="align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
+            <img class="mb-4" src="{{asset('img/logo-header.png')}}" alt="logo" width="150">
+            @yield('content')
+        </div>    
     </body>
 </html>
