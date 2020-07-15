@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use zcrmsdk\crm\crud\ZCRMRecord;
 use Illuminate\Http\Request;
-//use App\Api\SalesManago;
 use Pixers\SalesManagoAPI\Client;
 use Pixers\SalesManagoAPI\SalesManago;
 use zcrmsdk\oauth\ZohoOAuth;
@@ -79,7 +78,7 @@ class HomeController extends Controller
     */
 
 
-    public function test(Request $request){
+    public function sales(Request $request){
         $client = new Client('o28qhomp7m09zozm', "https://app3.salesmanago.pl/api/", 'kvi2rweud3qlrov3h7lvwbisf8lhcs47', 'nzl7tyqare1ac1rxoeba0vqf7du7pj6o');
         // Then - initialize SalesManago Services Locator
         $salesManago = new SalesManago($client);
@@ -100,8 +99,6 @@ class HomeController extends Controller
             array_push($emails, $contact->email);
         }
         */
-
-        /*
         $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com");
         if(sizeof($emails) > 0) // si hay correos para crear
         {
@@ -109,7 +106,7 @@ class HomeController extends Controller
                 // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                 "email" => $emails
             )); 
-            dd($contactsList);
+            //dd($contactsList);
             //* sync zoho
             // generate access token 
             ZCRMRestClient::initialize(array(
@@ -127,7 +124,6 @@ class HomeController extends Controller
             ));
     
             $moduleLeads = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); 
-            //dd($moduleLeads->getAllFields());
             $records = array();
            
             if($contactsList && sizeof($contactsList->contacts) > 0){
@@ -215,10 +211,12 @@ class HomeController extends Controller
                     if(!empty($contact->contactFunnels)){
                         // Visita a ShowRoom Agendada => VISITA_A_SHOWROOM_AGENDADA
                         $leadSouce = strtoupper($contact->contactFunnels[0]->salesStage);
-                        if($leadSouce !== "LLAMADA AGENDADA" || $leadSouce !== "COOKING DEMO AGENDADO" || $leadSouce !== "VISITA A SHOWROOM AGENDADA"){
-                            $leadSouce = strtoupper("lead nuevo");
+                        
+                        if($leadSouce !== "LLAMADA AGENDADA" && $leadSouce !== "COOKING DEMO AGENDADO" && $leadSouce !== "VISITA A SHOWROOM AGENDADA"){
+                            $leadSouce = "Lead Nuevo";
                         }
-                        $record->setFieldValue("Lead_Source",  $leadSouce);
+                    
+                        $record->setFieldValue("Lead_Status",  $leadSouce);
                     }
 
                     array_push($records, $record);
@@ -232,87 +230,151 @@ class HomeController extends Controller
             }
             return "no se encontraron user en este periodo";
             //*/ // salesmanago end script
-
-
-            // zoho script 
-
-            ZCRMRestClient::initialize(array(
-                "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
-                "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
-                "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
-                "currentUserEmail"=>"sleal@iesa.cc",
-                "sandbox"=>"false",
-                "apiVersion"=>"v2",
-                "access_type"=>"offline",
-                "accounts_url"=>"https://accounts.zoho.com",
-                "persistence_handler_class"=>"",
-                "apibaseurl"=>"www.zohoapis.com"
-            ));
-            
-            $oAuthClient = ZohoOAuth::getClientInstance();
+     
+        }
     
-            // $grantToken = "1000.8a78d62bbb9b9e9403435a4f82b89d3b.79e73683898c9d339cb9b733e66f2165";
-            // $oAuthTokens = $oAuthClient->generateAccessToken($grantToken); 
-            // dd($oAuthTokens);
-    
-            $userIdentifier = "sleal@iesa.cc"; 
-            $oAuthTokens = $oAuthClient->getAccessToken($userIdentifier);
-            
-            //dd($oAuthTokens);
-    
-            // $zohoV2UserEmail="sleal@iesa.cc"
-            // return $oAuthClient->getAccessToken($zohoV2UserEmail);
-    
-            $url = "https://www.zohoapis.com/crm/v2/coql";
-            $json = array (
-                "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
-                from Leads
-                where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
-            );
-            /*$json = array (
-                "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
-                from Leads
-                where Modified_Time between '2020-07-14T13:51:08-05:00' and  '2020-07-14T15:51:08-05:00'"
-            );*/
-    
-             $ch =   curl_init($url);
-             //curl_setopt($ch, CURLOPT_HTTPHEADER,$this->headers);
-             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Authorization: Zoho-oauthtoken '.$oAuthTokens ));
-             curl_setopt($ch, CURLOPT_POST, 1); 
-             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json)); 
-             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
-             $response2 = curl_exec($ch);
-             curl_close($ch);
-    
-            //dd(Carbon::now()->toIso8601String());
-            $contactsZoho = json_decode($response2);
-
-            //dd($contactsZoho);
-            if($contactsZoho){
-                $listModified = array(); 
-                /*
-                foreach( $contactsZoho->data as $contactZoho){
-                    array_push($listModified,$salesManago->getContactService()->update("sleal@iesa.cc", $contactZoho->Email,  array( 
-                        "email" =>  $contactZoho->Email,
-                        "phone" => $contactZoho->Phone,
-                    )));
-                }*/
-                $update = $salesManago->getContactService()->update("Auxiliarmkt@iesa.cc", "jeanpaul@mailinator.com",  array( 
-                   "name" => "prueba de reemplazo", "email" => "jeanpaul@mailinator.com"       
-                ));
-                dd($update);
-            }
-            echo "no hay datos";
-            // */
-            
-            /* 
-            $moduleIns = ZCRMRestClient::getInstance()->getModuleInstance("Leads");
-            dd($moduleIns->getAllFields());
-            */
-
-        //}
-        
-      
     }
-}
+
+    public function zoho(Request $request){
+        // zoho script 
+        $client = new Client('o28qhomp7m09zozm', "https://app3.salesmanago.pl/api/", 'kvi2rweud3qlrov3h7lvwbisf8lhcs47', 'nzl7tyqare1ac1rxoeba0vqf7du7pj6o');
+        // Then - initialize SalesManago Services Locator
+        $salesManago = new SalesManago($client);
+
+        ZCRMRestClient::initialize(array(
+            "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
+            "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
+            "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
+            "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
+            "currentUserEmail"=>"sleal@iesa.cc",
+            "sandbox"=>"false",
+            "apiVersion"=>"v2",
+            "access_type"=>"offline",
+            "accounts_url"=>"https://accounts.zoho.com",
+            "persistence_handler_class"=>"",
+            "apibaseurl"=>"www.zohoapis.com"
+        ));
+        
+        $oAuthClient = ZohoOAuth::getClientInstance();
+
+        // $grantToken = "1000.8a78d62bbb9b9e9403435a4f82b89d3b.79e73683898c9d339cb9b733e66f2165";
+        // $oAuthTokens = $oAuthClient->generateAccessToken($grantToken); 
+        // dd($oAuthTokens);
+
+        $userIdentifier = "sleal@iesa.cc"; 
+        $oAuthTokens = $oAuthClient->getAccessToken($userIdentifier);
+        
+        //dd($oAuthTokens);
+
+        // $zohoV2UserEmail="sleal@iesa.cc"
+        // return $oAuthClient->getAccessToken($zohoV2UserEmail);
+
+        $url = "https://www.zohoapis.com/crm/v2/coql";
+        $json = array (
+            "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
+            from Leads
+            where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
+        );
+        /*$json = array (
+            "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
+            from Leads
+            where Modified_Time between '2020-07-14T13:51:08-05:00' and  '2020-07-14T15:51:08-05:00'"
+        );*/
+
+         $ch =   curl_init($url);
+         //curl_setopt($ch, CURLOPT_HTTPHEADER,$this->headers);
+         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Authorization: Zoho-oauthtoken '.$oAuthTokens ));
+         curl_setopt($ch, CURLOPT_POST, 1); 
+         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($json)); 
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  
+         $response2 = curl_exec($ch);
+         curl_close($ch);
+
+        //dd(Carbon::now()->toIso8601String());
+        $contactsZoho = json_decode($response2);
+
+        //dd($contactsZoho);
+        if($contactsZoho){
+            $listModified = array(); 
+            
+            foreach( $contactsZoho->data as $contactZoho){
+              
+                $contact = array();
+                $contact["contact"]["name"] = $contactZoho->Full_Name;
+                //$contact["async"] = false;
+                
+                if(!empty($contactZoho->Phone)){
+                    $contact["contact"]["phone"] = $contactZoho->Phone;
+                }
+                
+                if(!empty($contactZoho->Estado)){
+                    $contact["properties"]["estado"] = $contactZoho->Estado;
+                }
+
+                if(!empty($contactZoho->Description)){
+                    $contact["properties"]["mensaje"] = $contactZoho->Description;
+                }
+                
+                if(!empty($contactZoho->Producto)){
+                    $contact["properties"]["producto"] = $contactZoho->Producto;
+                }
+
+                if(!empty($contactZoho->Fecha_de_visita_al_Showroom)){
+                    $contact["properties"]["fecha_showroom"] = $contactZoho->Fecha_de_visita_al_Showroom;
+                }
+                
+                if(!empty($contactZoho->Hora_de_visita_al_showroom)){
+                    $contact["properties"]["hora_showroom"] = $contactZoho->Hora_de_visita_al_showroom;     
+                }
+                
+                if(!empty($contactZoho->Fecha_de_cooking_demo)){
+                    $contact["properties"]["fecha_cooking_demo"] = $contactZoho->Fecha_de_cooking_demo;
+                }
+                
+                if(!empty($contactZoho->Fecha_de_la_llamada)){
+                    $contact["properties"]["fecha_llamada"] = $contactZoho->Fecha_de_la_llamada;
+                }
+
+                if(!empty($contactZoho->Hora_de_la_llamada)){
+                    $contact["properties"]["hora_llamada"] = $contactZoho->Hora_de_la_llamada;
+                }
+
+                if(!empty($contactZoho->UTM_Campaign_Name)){
+                    $contact["properties"]["UTM_Campaign"] = $contactZoho->UTM_Campaign_Name;
+                }
+
+                if(!empty($contactZoho->UTM_Source)){
+                    $contact["properties"]["UTM_Source"] = $contactZoho->UTM_Source;
+                }
+
+                if(!empty($contactZoho->UTM_Anuncio_ID)){
+                    $contact["properties"]["UTM_AnuncioID"] = $contactZoho->UTM_Anuncio_ID;
+                }
+
+                if($contactZoho->Email == "jeanpierre@mailinator.com"){
+                    dd($salesManago->getContactService()->update("Auxiliarmkt@iesa.cc",$contactZoho->Email, $contact));
+                }
+                dd($contact);
+                //array_push($listModified, $salesManago->getContactService()->update("Auxiliarmkt@iesa.cc",$contactZoho->Email, $contact));
+                //dd($salesManago->getContactService()->update("Auxiliarmkt@iesa.cc",$contactZoho->Email, $contact));
+            }
+            
+            //dd($listModified);
+            /* funciona 
+            $update = $salesManago->getContactService()->update("Auxiliarmkt@iesa.cc", "jeanpaul@mailinator.com",  array( 
+                "contact" => array(
+                    "name" => "jeanpaul III", 
+                    "phone" => "04245555555"
+                ),
+                "properties" => array(
+                    "brand" => "Asko",
+                    "estado" => "Guerrero",
+                    "mensaje" => "prueba de Zoho a Sales"
+                    )
+                )); 
+                dd($update);
+                */
+        }
+        echo "no hay datos";
+    }
+}  

@@ -129,7 +129,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/test', 'HomeController@test')->name('test');
+Route::get('/sales', 'HomeController@sales')->name('sales');
+Route::get('/zoho', 'HomeController@zoho')->name('zoho');
 
 Route::get('/nosotros', function () {
 
