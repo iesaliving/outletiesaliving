@@ -16,5 +16,8 @@ deployment:
     - /bin/cp -R routes $DEPLOYPATH
     - /bin/cp -R storage $DEPLOYPATH
     - /bin/cp -R test $DEPLOYPATH
-    - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp -R public_html/js /home/iesaliving/public_html/
+    - /bin/cp -R public_html/css /home/iesaliving/public_html/
+    - /bin/cp -R public_html/img /home/iesaliving/public_html/
+    - /bin/cp -R public_html/video /home/iesaliving/public_html/
     
