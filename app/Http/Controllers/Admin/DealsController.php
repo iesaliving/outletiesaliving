@@ -897,12 +897,12 @@ class DealsController extends Controller
                 $deals[$page-1] = array();
                 foreach ($records[$page-1] as $key => $record) {
       
-
+                    $contactName = $records[$page-1][$key]->getFieldValue("Contact_Name");
                     $deals[$page-1][$key] = array (  
                                                 'id' => base64_encode($records[$page-1][$key]->getEntityId()),
-                                                'contactName' => $records[$page-1][$key]->getFieldValue("Contact_Name")->getLookupLabel(),
+                                                'contactName' => empty($records[$page-1][$key]->getFieldValue("Contact_Name")) ? $contactName : $contactName->getLookupLabel(),
                                                 'stage' => $records[$page-1][$key]->getFieldValue('Stage'), 
-                                                'email' =>$this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
+                                                'email' => empty($records[$page-1][$key]->getFieldValue("Contact_Name")) ? $contactName : $this->getContactEmail($records[$page-1][$key]->getFieldValue("Contact_Name")->getEntityId()),
                                         );
 
                     $deals[$page-1][$key]['Reps']= method_exists( $records[$page-1][$key]->getFieldValue('Reps'), 'getLookupLabel') ? $records[$page-1][$key]->getFieldValue('Reps')->getLookupLabel() : null ;
