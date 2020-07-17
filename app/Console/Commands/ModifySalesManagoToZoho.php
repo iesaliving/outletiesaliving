@@ -61,12 +61,11 @@ class ModifySalesManagoToZoho extends Command
         $lastLog = $logs->last();
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
-        
+        /*
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial->timestamp * 1000,
             "to" => $today
         ));
-
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
         //dd($contacts);
 
@@ -75,14 +74,15 @@ class ModifySalesManagoToZoho extends Command
             // array("email1@mailinator.com", "email2@mailinator.com" ....)
             array_push($emails, $contact->email);
         }
-        //$emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
+        */
+        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para crear
         {
             // inicializacion de zoho
             ZCRMRestClient::initialize(array(
                 "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
+                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
                 "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
                 "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
                 "currentUserEmail"=>"sleal@iesa.cc",
@@ -126,6 +126,10 @@ class ModifySalesManagoToZoho extends Command
                             case 3:// array("Juan", "Pedro","Gonzalez")
                                 $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
                                 $record->setFieldValue("Last_Name", $fullname[2]);
+                            break;
+                            case 4:// array("Juan", "Pedro","Gonzalez")
+                                $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
+                                $record->setFieldValue("Last_Name", $fullname[2]." ".$fullname[3]);
                             break;
                             default: // array("Juan", "Juan") // Last_Name Required ZOHO
                             $record->setFieldValue("First_Name", $contact->name);
@@ -211,14 +215,14 @@ class ModifySalesManagoToZoho extends Command
                     
                     $logs_sync->save();
                     echo "Sales to Zoho Modify ". count($emails)."\n";
-                    $this->zoho();
+                    //$this->zoho();
                     //dd($records);
-                    /*
+                    //*
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
                     
                     $zoho_response= $response->getEntityResponses();
-                    dd($zoho_response);
-                    */
+                    // dd($zoho_response);
+                    //*/
                 }
             }     
         }else{
@@ -244,7 +248,7 @@ class ModifySalesManagoToZoho extends Command
 
         ZCRMRestClient::initialize(array(
             "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-            "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
+            "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
             "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
             "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
             "currentUserEmail"=>"sleal@iesa.cc",
@@ -277,16 +281,18 @@ class ModifySalesManagoToZoho extends Command
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
 
         $url = "https://www.zohoapis.com/crm/v2/coql";
+        /*
         $json = array (
             "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
             from Leads
             where Modified_Time between '".$fechaInicial->toIso8601String()."' and  '". $startDate->toIso8601String() ."'"
         );
-        /*$json = array (
+        */
+        $json = array (
             "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
             from Leads
             where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
-        );*/
+        );
 
          $ch =   curl_init($url);
          //curl_setopt($ch, CURLOPT_HTTPHEADER,$this->headers);
@@ -312,6 +318,10 @@ class ModifySalesManagoToZoho extends Command
                 
                 if(!empty($contactZoho->Phone)){
                     $contact["contact"]["phone"] = $contactZoho->Phone;
+                }
+                
+                if(count($contactZoho->Marca) > 0 ){
+                    $contact["properties"]["brand"] = implode(",", $contactZoho->Marca);
                 }
                 
                 if(!empty($contactZoho->Estado)){
@@ -358,9 +368,9 @@ class ModifySalesManagoToZoho extends Command
                     $contact["properties"]["UTM_AnuncioID"] = $contactZoho->UTM_Anuncio_ID;
                 }
                 //dd($contactZoho);
-                array_push($listModified, $contact);
+                //array_push($listModified, $contact);
                 array_push($emails, $contactZoho->Email);
-                //array_push($listModified, $salesManago->getContactService()->update("sleal@iesa.cc",$contactZoho->Email, $contact));    
+                array_push($listModified, $salesManago->getContactService()->update("sleal@iesa.cc",$contactZoho->Email, $contact));    
             }
             
             $logs_sync = new LogsSync;

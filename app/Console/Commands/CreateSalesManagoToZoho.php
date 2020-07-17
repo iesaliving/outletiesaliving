@@ -55,7 +55,7 @@ class CreateSalesManagoToZoho extends Command
         $lastLog = $logs->last();
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
-        
+        /*
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial->timestamp * 1000,
             "to" => $today
@@ -70,14 +70,15 @@ class CreateSalesManagoToZoho extends Command
             // array("email1@mailinator.com", "email2@mailinator.com" ....)
             array_push($emails, $contact->email);
         }
-        //$emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
+        */
+        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para crear
         {
             // inicializacion de zoho
             ZCRMRestClient::initialize(array(
                 "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token', // this path is 
+                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
                 "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
                 "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
                 "currentUserEmail"=>"sleal@iesa.cc",
@@ -120,6 +121,10 @@ class CreateSalesManagoToZoho extends Command
                                 $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
                                 $record->setFieldValue("Last_Name", $fullname[2]);
                             break;
+                            case 4:// array("Juan", "Pedro","Gonzalez")
+                                $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
+                                $record->setFieldValue("Last_Name", $fullname[2]." ".$fullname[3]);
+                            break;
                             default: // array("Juan", "Juan") // Last_Name Required ZOHO
                                 $record->setFieldValue("First_Name", $contact->name);
                                 $record->setFieldValue("Last_Name", $contact->name);
@@ -150,7 +155,7 @@ class CreateSalesManagoToZoho extends Command
     
                         if(isset($custom->firstWhere('name', 'fecha_showroom')->value)){                        
                             $dateShowroom = explode('-', $custom->firstWhere('name', 'fecha_showroom')->value);
-                            $record->setFieldValue("Fecha_de_visita_al_Showroom", Carbon::create($dateShowroom[2], $dateShowroom[1], $dateShowroom[0])->format('Y-m-d'));
+                            $record->setFieldValue("Fecha_de_visita_al_Showroom", $dateShowroom[2]."-".$dateShowroom[1]."-".$dateShowroom[0]);
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_showroom')->value)){
@@ -159,7 +164,7 @@ class CreateSalesManagoToZoho extends Command
     
                         if(isset($custom->firstWhere('name', 'fecha_cooking_demo')->value)){
                             $dateCookingDemo = explode('-', $custom->firstWhere('name', 'fecha_cooking_demo')->value);
-                            $record->setFieldValue("Fecha_de_cooking_demo", Carbon::create($dateCookingDemo[2], $dateCookingDemo[1], $dateCookingDemo[0])->format('Y-m-d'));
+                            $record->setFieldValue("Fecha_de_cooking_demo",  $dateCookingDemo[2]."-".$dateCookingDemo[1]."-".$dateCookingDemo[0]);
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
@@ -208,12 +213,12 @@ class CreateSalesManagoToZoho extends Command
                     //dd($records);
                     echo "con ".count($emails)." registros nuevos \n";
                     
-                    /*
+                    //*
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
             
                     $zoho_response= $response->getEntityResponses();
-                    dd($zoho_response);
-                    */
+                    //dd($zoho_response);
+                    //*/
                 }
             }     
         }else{
