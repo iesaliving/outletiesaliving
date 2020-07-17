@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -43,7 +43,7 @@ class HomeController extends Controller
         //condicional para evaluar ultima fecha log
 
       //  $fechaInicial = Carbon::now()->startOfDay()->timestamp * 1000; // inicia todo los dias a las 12:00:00am del dia actual
-        $startDate = Carbon::now()->timestamp * 1000;
+        $today = Carbon::now()->timestamp * 1000;
         $logs = LogsSync::where('origin',2)->get();
         $lastLog = $logs->last();
         
@@ -51,7 +51,7 @@ class HomeController extends Controller
         
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial->timestamp * 1000,
-            "to" => $startDate
+            "to" => $today
         ));
 
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
@@ -207,6 +207,17 @@ class HomeController extends Controller
                     */
                 }
             }     
+        }else{
+            $logs_sync = new LogsSync;
+            $logs_sync->startDate = $fechaInicial;
+            $logs_sync->endDate = Carbon::now();
+            $logs_sync->mails = json_encode('[]');
+            $logs_sync->cant = 0;
+            $logs_sync->origin = 2;//1 create 2 update
+            
+            $logs_sync->save();
+            dd('Sin registros nuevos');
+
         }
     
     }
@@ -219,7 +230,7 @@ class HomeController extends Controller
         //condicional para evaluar ultima fecha log
         
         //  $fechaInicial = Carbon::now()->startOfDay()->timestamp * 1000; // inicia todo los dias a las 12:00:00am del dia actual
-        $startDate = Carbon::now()->timestamp * 1000;
+        $today = Carbon::now()->timestamp * 1000;
         $logs = LogsSync::where('origin',1)->get();
         $lastLog = $logs->last();
         
@@ -227,7 +238,7 @@ class HomeController extends Controller
         
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial->timestamp * 1000,
-            "to" => $startDate
+            "to" => $today
         ));
     
     
@@ -385,6 +396,17 @@ class HomeController extends Controller
                     */
                 }
             }     
+        }else{
+            $logs_sync = new LogsSync;
+            $logs_sync->startDate = $fechaInicial;
+            $logs_sync->endDate = Carbon::now();
+            $logs_sync->mails = json_encode('[]');
+            $logs_sync->cant = 0;
+            $logs_sync->origin = 1;//1 create 2 update
+            
+            $logs_sync->save();
+            dd('Sin registros nuevos');
+
         }
     
     }

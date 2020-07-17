@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use zcrmsdk\crm\crud\ZCRMRecord;
 use Pixers\SalesManagoAPI\Client;
 use Pixers\SalesManagoAPI\SalesManago;
 use Carbon\Carbon;
@@ -43,15 +44,13 @@ class CreateSalesManagoToZoho extends Command
      */
     public function handle()
     {
-        //
         $client = new Client('o28qhomp7m09zozm', "https://app3.salesmanago.pl/api/", 'kvi2rweud3qlrov3h7lvwbisf8lhcs47', 'nzl7tyqare1ac1rxoeba0vqf7du7pj6o');
         // inicializar salesmanago
         $salesManago = new SalesManago($client);
         //condicional para evaluar ultima fecha log
         
         //  $fechaInicial = Carbon::now()->startOfDay()->timestamp * 1000; // inicia todo los dias a las 12:00:00am del dia actual
-        $startDate = Carbon::now()->timestamp * 1000;
-        
+        $today = Carbon::now()->timestamp * 1000;
         $logs = LogsSync::where('origin',1)->get();
         $lastLog = $logs->last();
         
@@ -59,7 +58,7 @@ class CreateSalesManagoToZoho extends Command
         
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial->timestamp * 1000,
-            "to" => $startDate
+            "to" => $today
         ));
     
     
@@ -205,18 +204,30 @@ class CreateSalesManagoToZoho extends Command
                     $logs_sync->origin = 1;//1 create 2 update
                     
                     $logs_sync->save();
+
                     //dd($records);
-                    echo "SI REGISTRA";
+                    echo "con ".count($emails)." registros nuevos \n";
                     
                     /*
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
-                    
+            
                     $zoho_response= $response->getEntityResponses();
                     dd($zoho_response);
                     */
                 }
             }     
+        }else{
+            $logs_sync = new LogsSync;
+            $logs_sync->startDate = $fechaInicial;
+            $logs_sync->endDate = Carbon::now();
+            $logs_sync->mails = json_encode('[]');
+            $logs_sync->cant = 0;
+            $logs_sync->origin = 1;//1 create 2 update
+            
+            $logs_sync->save();
+            echo "Sin registros nuevos \n";
+
         }
-        
+       
     }
 }
