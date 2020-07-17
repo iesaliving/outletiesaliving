@@ -72,3 +72,40 @@
     </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="AskoHornoPiroliticoOPS8636SModal" tabindex="-1" role="dialog" aria-labelledby="AskoHornoPiroliticoOPS8636SLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:500px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent; max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_ASKO_HORNOS_PIROLÍTICO_OPS8636S.htm"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="AskoHornoVaporOCS8683SModal" tabindex="-1" role="dialog" aria-labelledby="AskoHornoVaporOCS8683SLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:500px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent; max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_ASKO_HORNO_VAPOR_OCS8683S.htm"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="AskoParillaGasHG1986SBModal" tabindex="-1" role="dialog" aria-labelledby="AskoParillaGasHG1986SBLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:500px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent; max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_ASKO_PARRILLA_GAS_HG1986SB.htm"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
