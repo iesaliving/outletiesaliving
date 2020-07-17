@@ -48,10 +48,10 @@ class HomeController extends Controller
         $logs = LogsSync::where('origin',2)->get();
         $lastLog = $logs->last();
         
-        $fechaInicial = ($lastLog) ?  $lastLog->endDate : Carbon::now()->startOfDay()->timestamp * 1000;
+        $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
-            "from" => $fechaInicial,
+            "from" => $fechaInicial->timestamp * 1000,
             "to" => $startDate
         ));
 
@@ -192,7 +192,7 @@ class HomeController extends Controller
                     
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
-                    $logs_sync->endDate = Carbon::now()->timestamp * 1000;
+                    $logs_sync->endDate = Carbon::now();
                     $logs_sync->mails = json_encode($emails);
                     $logs_sync->cant = count($emails);
                     $logs_sync->origin = 2;//1 create 2 update
@@ -224,10 +224,10 @@ class HomeController extends Controller
         $logs = LogsSync::where('origin',1)->get();
         $lastLog = $logs->last();
         
-        $fechaInicial = ($lastLog) ?  $lastLog->endDate : Carbon::now()->startOfDay()->timestamp * 1000;
+        $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
-            "from" => $fechaInicial,
+            "from" => $fechaInicial->timestamp * 1000,
             "to" => $startDate
         ));
     
@@ -368,7 +368,7 @@ class HomeController extends Controller
                     
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
-                    $logs_sync->endDate = Carbon::now()->timestamp * 1000;
+                    $logs_sync->endDate = Carbon::now();
                     $logs_sync->mails = json_encode($emails);
                     $logs_sync->cant = count($emails);
                     $logs_sync->origin = 1;//1 create 2 update

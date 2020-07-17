@@ -15,8 +15,10 @@ class CreateLogsSyncTable extends Migration
     {
         Schema::create('logs_sync', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('startDate');
-            $table->string('endDate');
+            //$table->string('startDate');
+            //$table->string('endDate');
+            $table->dateTime('startDate');
+            $table->dateTime('endDate');
             $table->json('mails');
             $table->integer('cant');
             $table->integer('origin');//1create 2update
