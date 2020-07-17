@@ -11,6 +11,7 @@ use GuzzleHttp\Client as GzClient;
 use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
+use App\LogsSync;
 
 class HomeController extends Controller
 {
@@ -43,10 +44,14 @@ class HomeController extends Controller
         //condicional para evaluar ultima fecha log
 
         $fechaInicial = Carbon::now()->startOfDay()->timestamp * 1000; // inicia todo los dias a las 12:00:00am del dia actual
+        $logs = LogsSync::where('origin',2)->get();
+        $lastLog = $logs->last();
         
+        ($lastLog) ? $startDate = $lastLog->endDate : $startDate = Carbon::now()->timestamp * 1000;
+
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial,
-            "to" => Carbon::now()->timestamp * 1000
+            "to" => $startDate
         ));
 
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
@@ -183,6 +188,16 @@ class HomeController extends Controller
                     
                         array_push($records, $record);
                     }
+                    
+                    $logs_sync = new LogsSync;
+                    $logs_sync->startDate = $startDate;
+                    $logs_sync->endDate = Carbon::now()->timestamp * 1000;
+                    $logs_sync->mails = json_encode($emails);
+                    $logs_sync->cant = count($emails);
+                    $logs_sync->origin = 2;//1 create 2 update
+                    
+                    $logs_sync->save();
+
                     dd($records);
                     /*
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
@@ -201,16 +216,22 @@ class HomeController extends Controller
         $client = new Client('o28qhomp7m09zozm', "https://app3.salesmanago.pl/api/", 'kvi2rweud3qlrov3h7lvwbisf8lhcs47', 'nzl7tyqare1ac1rxoeba0vqf7du7pj6o');
         // inicializar salesmanago
         $salesManago = new SalesManago($client);
-        
         //condicional para evaluar ultima fecha log
-
+        
         $fechaInicial = Carbon::now()->startOfDay()->timestamp * 1000; // inicia todo los dias a las 12:00:00am del dia actual
+       
+
+        $logs = LogsSync::where('origin',1)->get();
+        $lastLog = $logs->last();
+        
+        ($lastLog) ? $startDate = $lastLog->endDate : $startDate = Carbon::now()->timestamp * 1000;
         
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
             "from" => $fechaInicial,
-            "to" => Carbon::now()->timestamp * 1000
+            "to" => $startDate
         ));
-
+        
+        
         $contacts = $contactResponse->createdContacts; // obtiene la lista de contactos (email, id) creados en el rango 
         //dd($contacts);
 
@@ -344,7 +365,19 @@ class HomeController extends Controller
     
                         array_push($records, $record);
                     }
+                    
+                    $logs_sync = new LogsSync;
+                    $logs_sync->startDate = $startDate;
+                    $logs_sync->endDate = Carbon::now()->timestamp * 1000;
+                    $logs_sync->mails = json_encode($emails);
+                    $logs_sync->cant = count($emails);
+                    $logs_sync->origin = 1;//1 create 2 update
+                    
+                    $logs_sync->save();
+
                     dd($records);
+                    
+                    
                     /*
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
             
