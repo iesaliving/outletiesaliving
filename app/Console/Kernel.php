@@ -14,7 +14,11 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // se registra el comando cron
-        'App\Console\Commands\UpdateLeadDaily'
+        //'App\Console\Commands\UpdateLeadDaily'
+        'App\Console\Commands\CreateSalesManagoToZoho',
+        'App\Console\Commands\ModifySalesManagoToZoho',
+        'App\Console\Commands\ModifyZohoToSalesManago'
+        
     ];
 
     /**
@@ -27,9 +31,6 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('lead:day')
-        ->everyMinute()
-        ->sendOutputTo(storage_path('logs/inspire.log'), true);
     }
 
     /**

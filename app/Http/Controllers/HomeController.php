@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Pixers\SalesManagoAPI\Client;
 use Pixers\SalesManagoAPI\SalesManago;
 use zcrmsdk\oauth\ZohoOAuth;
-use GuzzleHttp\Client as GzClient;
 use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
