@@ -12,9 +12,11 @@
         "bugsnag/bugsnag-laravel": "^2.15",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.5",
         "intervention/image": "^2.5",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
+        "pixers/salesmanago-api": "1.1.1",
         "yajra/laravel-datatables-oracle": "~9.0",
         "zohocrm/php-sdk": "^2.1"
     },

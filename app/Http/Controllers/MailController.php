@@ -73,6 +73,7 @@ class MailController extends Controller
     }
 
     public function submitContacto(Request $request){
+        dd($request);
         $inputs = $request->input();
         $rule=array(
             'nombre' => 'required|string',

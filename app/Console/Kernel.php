@@ -13,7 +13,12 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // se registra el comando cron
+        //'App\Console\Commands\UpdateLeadDaily'
+        'App\Console\Commands\CreateSalesManagoToZoho',
+        'App\Console\Commands\ModifySalesManagoToZoho',
+        'App\Console\Commands\ModifyZohoToSalesManago'
+        
     ];
 
     /**
