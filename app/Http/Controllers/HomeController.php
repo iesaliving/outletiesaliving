@@ -425,16 +425,22 @@ class HomeController extends Controller
         // $zohoV2UserEmail="sleal@iesa.cc"
         // return $oAuthClient->getAccessToken($zohoV2UserEmail);
 
+        $startDate = Carbon::now();//->timestamp * 1000;
+        $logs = LogsSync::where('origin', 3)->get();
+        $lastLog = $logs->last();
+        
+        $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
+
         $url = "https://www.zohoapis.com/crm/v2/coql";
         $json = array (
             "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
             from Leads
-            where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
+            where Modified_Time between '".$fechaInicial->toIso8601String()."' and  '". $startDate->toIso8601String() ."'"
         );
         /*$json = array (
             "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
             from Leads
-            where Modified_Time between '2020-07-14T13:51:08-05:00' and  '2020-07-14T15:51:08-05:00'"
+            where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
         );*/
 
          $ch =   curl_init($url);
@@ -448,11 +454,11 @@ class HomeController extends Controller
 
         //dd(Carbon::now()->toIso8601String());
         $contactsZoho = json_decode($response2);
-
+        
         //dd($contactsZoho);
         if($contactsZoho){
             $listModified = array(); 
-            
+            $emails = array();
             foreach( $contactsZoho->data as $contactZoho){
               
                 $contact = array();
@@ -506,11 +512,22 @@ class HomeController extends Controller
                 if(!empty($contactZoho->UTM_Anuncio_ID)){
                     $contact["properties"]["UTM_AnuncioID"] = $contactZoho->UTM_Anuncio_ID;
                 }
-                array_push($listModified, $salesManago->getContactService()->update("sleal@iesa.cc",$contactZoho->Email, $contact));
-                
+                //dd($contactZoho);
+                array_push($listModified, $contact);
+                array_push($emails, $contactZoho->Email);
+                //array_push($listModified, $salesManago->getContactService()->update("sleal@iesa.cc",$contactZoho->Email, $contact));    
             }
             
+            $logs_sync = new LogsSync;
+            $logs_sync->startDate = $fechaInicial;
+            $logs_sync->endDate = Carbon::now();
+            $logs_sync->mails = json_encode($emails);
+            $logs_sync->cant = count($emails);
+            $logs_sync->origin = 3;//1 create 2 update 3 (zoho)
+            $logs_sync->save();
+            
             dd($listModified);
+            
         }
         echo "no hay datos";
     }
