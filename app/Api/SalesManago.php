@@ -3,7 +3,7 @@
 
 
 namespace App\Api;
-
+use Carbon\Carbon;
 class SalesManago
 {
     private $apiKey     ;
@@ -54,9 +54,43 @@ class SalesManago
         $this->clientId     ='o28qhomp7m09zozm';
         $this->apiSecret    ='kvi2rweud3qlrov3h7lvwbisf8lhcs47';
         $this->sha          =sha1($this->apiKey.$this->clientId.$this->apiSecret);
-        $this->ownerMail    ='sleal@iesa.cc';
         $this->headers     = array( "Content-Type: application/json;charset=UTF-8" ,"Accept: application/json, application/json" );
+        // $this->ownerMail    = 'sleal@iesa.cc';
+        /*
+        $this->apiKey       ='ond2v4qqja08wq6mea8ab2uvcugtzv2l';
+        $this->clientId     ='6xonvzrzp5924kfy';
+        $this->apiSecret    ='j0an6c30h0tlwjao6ckwiir857rz2f1a';
+        $this->sha          =sha1($this->apiKey.$this->clientId.$this->apiSecret);
+        $this->ownerMail    ='marco@wizerlink.com';
+        $this->headers     = array( "Content-Type: application/json;charset=UTF-8" ,"Accept: application/json, application/json" );
+        */
     }
+
+    public function getCredentials(){
+        return array(
+            "clientId" => $this->clientId,
+            "apiKey" => $this->apiKey,
+           // "email" =>  array("nerellymartinezclark@gmail.com"),
+           // "apiSecret" =>  $this->apiSecret,
+           //"owner" => $this->ownerMail,
+            "sha" => $this->sha,
+            
+        );
+        /*
+        $json=    '{
+            "clientId": "'.$this->clientId.'",
+            "apiKey": "'.$this->apiKey.'",
+            "sha": "'.$this->sha.'",
+            "owner": "'.$this->ownerMail.'",
+            "from" : "'.Carbon::now("America/Mexico_City")->startOfDay()->timestamp.'",
+            "to" : "'.Carbon::now("America/Mexico_City")->endOfDay()->timestamp.'"
+                }';
+
+        return $this->curlSm($url,$json);
+        */
+        
+    }
+
 
 
     public function setSmcontactId($contactId){
@@ -307,7 +341,7 @@ class SalesManago
         return $this->curlSm($url,$json);
     }
 
-    private function curlSm($url,$json){
+    public function curlSm($url,$json){
 
         $ch =   curl_init($url);
                 curl_setopt($ch, CURLOPT_HTTPHEADER,$this->headers);
