@@ -106,6 +106,16 @@
   </div>
 </div>
 
+<div class="modal fade" id="AskoHornoMicroondasOM8483SModal" tabindex="-1" role="dialog" aria-labelledby="AskoHornoMicroondasOM8483SLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:80vh; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent; max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_ASKO_HORNO_MICROONDAS_OM8483S.htm"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
