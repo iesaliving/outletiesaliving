@@ -108,7 +108,7 @@ class SalesManago
     public function setEstado($estado){
         $this->estado=$estado;
     }
-
+    
     public function setSmEmail($email){
         $this->email=$email;
     }

@@ -89,9 +89,9 @@ class MailController extends Controller
              return Redirect::back()->withErrors($validator)->withInput();
         }
 
-
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setPais($inputs['pais']);
         $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
@@ -225,6 +225,7 @@ class MailController extends Controller
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setPais($inputs['pais']);
         $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
@@ -234,8 +235,8 @@ class MailController extends Controller
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
         $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
-
         $response=$var->upsert();
+        
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
               return redirect("/gracias/".str_replace(" ","-",strtolower($inputs['cBrand'])));
