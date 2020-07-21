@@ -1,0 +1,68 @@
+{
+    "dealers" : [
+        {
+            "nombre": "BOA Luxury Projects",
+            "direccion1": "102A, Tabasco 311, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX, México",
+            "estado": 1,
+            "ciudad": 2,
+            "categoria": 3
+        },
+        {
+            "nombre": "KITCHEN & BATH COLLECTION",
+            "direccion1": "Blvd. Riviera Nayarit #1480 Local 8 Col. Nuevo Vallarta, Bahía de Banderas, Nayarit CP: 63735",
+            "estado": 3,
+            "ciudad": 4,
+            "categoria": 1
+        },
+        {
+            "nombre": "Benneti Casa",
+            "direccion1": "Bosques de la Reforma 1813, Lomas del Chamizal, Cuajimalpa de Morelos",
+            "estado": 1,
+            "ciudad": 2,
+            "categoria": 1
+        },
+        {
+            "nombre": "Cocinas Gaudí San Pedro",
+            "direccion1": "Local 202 Plaza Chipinque, Av. Manuel Gómez Morín 938, Comercial Gómez Morin, Jerónimo Siller, 66266 San Pedro Garza García, N.L., México",
+            "estado": 2,
+            "ciudad": 1,
+            "categoria": 2
+        }
+    ],
+    "estados": [
+        {
+            "id": 1,
+            "nombre": "CDMX"
+        },
+        {
+            "id": 2,
+            "nombre": "MONTERREY"
+        },
+        {
+            "id": 3,
+            "nombre": "RIVIERA"
+        }
+    ],
+    "ciudades": [
+        {
+            "id": 1,
+            "nombre": "NUEVO LEÓN",
+            "estado": 2
+        },
+        {
+            "id": 2,
+            "nombre": "CDMX",
+            "estado": 1
+        },
+        {
+            "id": 3,
+            "nombre": "CDMX 2",
+            "estado": 1
+        },
+        {
+            "id": 4,
+            "nombre": "NUEVO VALLARTA",
+            "estado": 3
+        }
+    ]
+}
