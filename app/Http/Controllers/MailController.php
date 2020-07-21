@@ -73,7 +73,7 @@ class MailController extends Controller
     }
 
     public function submitContacto(Request $request){
-        dd($request);
+        //dd($request);
         $inputs = $request->input();
         $rule=array(
             'nombre' => 'required|string',
@@ -299,7 +299,7 @@ class MailController extends Controller
 
         //dump(hash('md5', $request->input('event_type_name')));
 
-        dump($request->input('event_type_name'));
+        //dump($request->input('event_type_name'));
         $division=explode("T",$request->input('event_start_time'));
 
         $fecha=Carbon::createFromFormat('Y-m-d', $division[0]);
@@ -315,7 +315,7 @@ class MailController extends Controller
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
         $var->setUtmAnuncioId($request->input('utm_medium'));
-
+        
 
         switch (hash('md5', $request->input('event_type_name'))) {
                    
@@ -381,16 +381,16 @@ class MailController extends Controller
                         $gracias='gracias-llamada';
                       break;
               }    
-//         dd($var);
 
         $response=$var->upsert();
         //$code=$response;  
-//        dd($response);
+        //dd($response);
         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect($gracias);
 
          }else{
+            
             abort(404);
          }
     }

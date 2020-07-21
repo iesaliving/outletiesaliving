@@ -55,7 +55,7 @@ class SalesManago
         $this->apiSecret    ='kvi2rweud3qlrov3h7lvwbisf8lhcs47';
         $this->sha          =sha1($this->apiKey.$this->clientId.$this->apiSecret);
         $this->headers     = array( "Content-Type: application/json;charset=UTF-8" ,"Accept: application/json, application/json" );
-        // $this->ownerMail    = 'sleal@iesa.cc';
+        $this->ownerMail    = 'sleal@iesa.cc';
         /*
         $this->apiKey       ='ond2v4qqja08wq6mea8ab2uvcugtzv2l';
         $this->clientId     ='6xonvzrzp5924kfy';
