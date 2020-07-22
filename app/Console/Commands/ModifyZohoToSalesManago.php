@@ -51,7 +51,7 @@ class ModifyZohoToSalesManago extends Command
   
           ZCRMRestClient::initialize(array(
               "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-              "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
+              "token_persistence_path"=> storage_path('token2'), // this path is 
               "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
               "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
               "currentUserEmail"=>"sleal@iesa.cc",
@@ -94,7 +94,8 @@ class ModifyZohoToSalesManago extends Command
           $json = array (
               "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
               from Leads
-              where Email in('jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com')"
+              where Email in('Marco@wizerlink.net','MMendoza.mkt@gmail.com','mendozaweffer@gmail.com','Administracion@wizerlink.net','Jane@wizerlink.net','Jane@wizerlink.com','Projects@wizerlink.com',
+            'jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com', 'sem@ctrl-ad.com','leads.webforms@gmail.com','uniquemx.mkt@gmail.com')"
           );
   
            $ch =   curl_init($url);
@@ -119,9 +120,9 @@ class ModifyZohoToSalesManago extends Command
                   $contact["contact"]["name"] = $contactZoho->Full_Name;
                   $contact["async"] = false;
                   
-                  if(!empty($contactZoho->Phone)){
-                      $contact["contact"]["phone"] = $contactZoho->Phone;
-                  }
+                if(!empty($contactZoho->Phone) && $contactZoho->Phone !== "0000000000"){
+                    $contact["contact"]["phone"] = $contactZoho->Phone;
+                }
                   
                 if(count($contactZoho->Marca) > 0 ){
                     $contact["properties"]["brand"] = implode(",", $contactZoho->Marca);

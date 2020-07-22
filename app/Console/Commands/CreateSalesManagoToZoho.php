@@ -71,14 +71,29 @@ class CreateSalesManagoToZoho extends Command
             array_push($emails, $contact->email);
         }
         */
-        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
+        $emails = array(
+            "sem@ctrl-ad.com",
+            "leads.webforms@gmail.com",
+            "uniquemx.mkt@gmail.com",
+            "Marco@wizerlink.com",
+            "Marco@wizerlink.net",
+            "MMendoza.mkt@gmail.com",
+            "mendozaweffer@gmail.com",
+            "administracion@wizerlink.net",
+            "jane@wizerlink.net",
+            "jane@wizerlink.com",
+            "projects@wizerlink.com",
+            "jeanpierre@mailinator.com", 
+            "jeanpaul@mailinator.com", 
+            "scarlet@mailinator.com"  
+        ); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para crear
         {
             // inicializacion de zoho
             ZCRMRestClient::initialize(array(
                 "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
+                "token_persistence_path"=> storage_path('token2'), // this path is 
                 "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
                 "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
                 "currentUserEmail"=>"sleal@iesa.cc",
@@ -95,12 +110,11 @@ class CreateSalesManagoToZoho extends Command
 
             $loteEmails = array_chunk($emails, 50);
             foreach($loteEmails as $lote){
-
-                $infoContactos = $salesManago->getContactService()->listByEmails("sleal@iesa.cc", array(
+                $infoContactos = $salesManago->getContactService()->listByEmails("Auxiliarmkt@iesa.cc", array(
                     // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                     "email" => $lote
                 )); 
-
+                
                 if($infoContactos && sizeof($infoContactos->contacts) > 0){
                     foreach($infoContactos->contacts as $contact)
                     {
@@ -114,20 +128,20 @@ class CreateSalesManagoToZoho extends Command
                         
                         switch(sizeof($fullname)){
                             case 2: // array("Pedro", "Gonzalez")
-                                $record->setFieldValue("First_Name", $fullname[0]);
-                                $record->setFieldValue("Last_Name", $fullname[1]);
+                                $record->setFieldValue("First_Name", trim($fullname[0]));
+                                $record->setFieldValue("Last_Name", trim($fullname[1]));
                             break;
                             case 3:// array("Juan", "Pedro","Gonzalez")
-                                $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
-                                $record->setFieldValue("Last_Name", $fullname[2]);
+                                $record->setFieldValue("First_Name", trim($fullname[0]." ".$fullname[1]));
+                                $record->setFieldValue("Last_Name", trim($fullname[2]));
                             break;
                             case 4:// array("Juan", "Pedro","Gonzalez")
-                                $record->setFieldValue("First_Name", $fullname[0]." ".$fullname[1]);
-                                $record->setFieldValue("Last_Name", $fullname[2]." ".$fullname[3]);
+                                $record->setFieldValue("First_Name", trim($fullname[0]." ".$fullname[1]));
+                                $record->setFieldValue("Last_Name", trim($fullname[2]." ".$fullname[3]));
                             break;
                             default: // array("Juan", "Juan") // Last_Name Required ZOHO
-                                $record->setFieldValue("First_Name", $contact->name);
-                                $record->setFieldValue("Last_Name", $contact->name);
+                                $record->setFieldValue("First_Name", trim($contact->name));
+                                $record->setFieldValue("Last_Name", trim($contact->name));
                             break;
                         }
         
@@ -168,7 +182,8 @@ class CreateSalesManagoToZoho extends Command
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
-                            $record->setFieldValue("Fecha_de_la_llamada", $custom->firstWhere('name', 'fecha_llamada')->value );
+                            $dateCall = explode('-', $custom->firstWhere('name', 'fecha_llamada')->value);
+                            $record->setFieldValue("Fecha_de_la_llamada",  $dateCall[2]."-".$dateCall[1]."-".$dateCall[0] );
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_llamada')->value)){
@@ -217,7 +232,7 @@ class CreateSalesManagoToZoho extends Command
                     $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
             
                     $zoho_response= $response->getEntityResponses();
-                    //dd($zoho_response);
+                    dd($zoho_response);
                     //*/
                 }
             }     
@@ -231,7 +246,6 @@ class CreateSalesManagoToZoho extends Command
             
             $logs_sync->save();
             echo "Sin registros nuevos \n";
-
         }
        
     }
