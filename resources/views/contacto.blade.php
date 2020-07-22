@@ -96,10 +96,11 @@
                             </div>
                             <div class="form-group  col-12">
                                 <select required class="form-control form-custom" id="pais" name="pais"> 
-                                    <option value="" disabled selected>PAIS</option>
+                                    <option value="" disabled selected>PAÍS</option>
                                     <option value="México">México</option>
                                     <option value="Colombia">Colombia</option>
                                     <option value="Panamá">Panamá</option>
+                                    <option value="Otro">Otro</option>
                                 </select>
                             </div>
                             <div class="form-group  col-12">
@@ -240,7 +241,7 @@
                         break;
                 
                     default:
-                        $('#estado').html(`<option value="" disabled selected>ESTADO</option>`);
+                        $('#estado').html(`<option value="" disabled selected>Otro</option>`);
                         break;
                 }
 
