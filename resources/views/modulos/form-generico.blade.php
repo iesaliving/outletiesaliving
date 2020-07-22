@@ -82,11 +82,6 @@
 </form>
 
 @section('scripts')
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRJ8mwP4Ftwk0_5PoBcnXIPLMxnhPHhI&libraries=places"></script>
-    <script src="{{URL::asset('js/store-locator/store-locator.min.js')}}"></script>
-    <script src="{{URL::asset('js/store-locator/medicare-static-ds.js')}}"></script>
-    <script src="{{URL::asset('js/store-locator/panel.js')}}"></script>
     <script>
         if(location.hash.length){
             $('html, body').animate({
