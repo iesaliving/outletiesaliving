@@ -75,14 +75,29 @@ class ModifySalesManagoToZoho extends Command
             array_push($emails, $contact->email);
         }
         */
-        $emails = array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com"); // data hardcode test
+        $emails = array(
+            "sem@ctrl-ad.com",
+            "leads.webforms@gmail.com",
+            "uniquemx.mkt@gmail.com",
+            "Marco@wizerlink.com",
+            "Marco@wizerlink.net",
+            "MMendoza.mkt@gmail.com",
+            "mendozaweffer@gmail.com",
+            "Administracion@wizerlink.net",
+            "Jane@wizerlink.net",
+            "Jane@wizerlink.com",
+            "Projects@wizerlink.com",
+            "jeanpierre@mailinator.com", 
+            "jeanpaul@mailinator.com", 
+            "scarlet@mailinator.com"
+        ); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para crear
         {
             // inicializacion de zoho
             ZCRMRestClient::initialize(array(
                 "client_id"=>"1000.8I0OBMDRJ1ZMWX9T19X47YVVQ7PT6H",
-                "token_persistence_path"=> 'C:\xampp\htdocs\IESA\storage\token2', // this path is 
+                "token_persistence_path"=> storage_path('token2'), // this path is 
                 "client_secret"=>"f5f87419d96e9bce999e108588af8eab175b23d8a4",
                 "redirect_uri"=>"http://www.lafamiliaperfecta.com/",
                 "currentUserEmail"=>"sleal@iesa.cc",
