@@ -178,8 +178,10 @@ class ModifySalesManagoToZoho extends Command
                         }
 
                         if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
-                            $record->setFieldValue("Fecha_de_la_llamada", $custom->firstWhere('name', 'fecha_llamada')->value );
+                            $dateCall = explode('-', $custom->firstWhere('name', 'fecha_llamada')->value);
+                            $record->setFieldValue("Fecha_de_la_llamada",  $dateCall[2]."-".$dateCall[1]."-".$dateCall[0] );
                         }
+    
                         
                         if(isset($custom->firstWhere('name', 'hora_llamada')->value)){
                             $record->setFieldValue("Hora_de_la_llamada", $custom->firstWhere('name', 'hora_llamada')->value);
