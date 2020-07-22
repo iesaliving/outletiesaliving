@@ -1,12 +1,9 @@
-
-
-
 <!-- MODAL SUBZERO -->
 <div class="modal fade" id="subZeroModal" tabindex="-1" role="dialog" aria-labelledby="subZeroModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:520px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Wolf_Cove_Home_Download.htm"></iframe>
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:80vh; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Wolf_Cove_Home_Download.htm"></iframe>
       </div>
     </div>
   </div>
@@ -16,7 +13,7 @@
   <div class="modal-dialog modal-lg" role="document" style="max-width: 860px">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:520px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Wolf_Download.htm"></iframe>
+        <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:800px; height:80vh; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent; max-width:100%;" src="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Wolf.htm"></iframe>
       </div>
     </div>
   </div>
@@ -115,7 +112,3 @@
     </div>
   </div>
 </div>
-
-
-
-

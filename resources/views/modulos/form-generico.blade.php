@@ -13,7 +13,7 @@
         <input type="hidden" name="email_envio" value="{{$email}}">
     @endif
     <div class="row nomargin">
-        <div class="form-group  col-md-6 col-12">
+        <div class="form-group col-md-12 col-12">
             <input required type="text" class="form-control form-custom" name="nombre" placeholder="NOMBRE COMPLETO">
             @if($errors->has('nombre'))
             <div class="invalid-feeback">
