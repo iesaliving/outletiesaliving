@@ -166,7 +166,7 @@ class ModifySalesManagoToZoho extends Command
                         }
 
                         if(!empty($custom->firstWhere('name', 'pais')->value)){
-                            $record->setFieldValue("Pais", $custom->firstWhere('name', 'pais')->value);
+                            $record->setFieldValue("Country", $custom->firstWhere('name', 'pais')->value);
                         }
                     
                         if(!empty($custom->firstWhere('name', 'producto')->value)){

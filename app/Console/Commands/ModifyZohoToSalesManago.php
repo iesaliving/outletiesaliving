@@ -92,7 +92,7 @@ class ModifyZohoToSalesManago extends Command
           );
           */
           $json = array (
-              "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
+              "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Country , Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time
               from Leads
               where Email in('Marco@wizerlink.net','MMendoza.mkt@gmail.com','mendozaweffer@gmail.com','Administracion@wizerlink.net','Jane@wizerlink.net','Jane@wizerlink.com','Projects@wizerlink.com',
             'jeanpierre@mailinator.com', 'jeanpaul@mailinator.com', 'scarlet@mailinator.com', 'sem@ctrl-ad.com','leads.webforms@gmail.com','uniquemx.mkt@gmail.com')"
@@ -114,6 +114,7 @@ class ModifyZohoToSalesManago extends Command
           if($contactsZoho){
               $listModified = array(); 
               $emails = array();
+              //dd($contactsZoho);
               foreach( $contactsZoho->data as $contactZoho){
                 
                   $contact = array();
@@ -124,10 +125,13 @@ class ModifyZohoToSalesManago extends Command
                     $contact["contact"]["phone"] = $contactZoho->Phone;
                 }
                   
-                if(count($contactZoho->Marca) > 0 ){
+                if(isset($contactZoho->Marca) && sizeof($contactZoho->Marca) > 0 ){
                     $contact["properties"]["brand"] = implode(",", $contactZoho->Marca);
                 }
 
+                if(isset($contactZoho->Country) && !empty($contactZoho->Country)){
+                    $contact["properties"]["pais"] = $contactZoho->Country;
+                }
                   if(!empty($contactZoho->Estado)){
                       $contact["properties"]["estado"] = $contactZoho->Estado;
                   }
