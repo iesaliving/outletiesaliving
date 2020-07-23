@@ -305,12 +305,12 @@ class MailController extends Controller
         //dump($division);
 
         //dump($fecha->format('d-m-Y'));
-        dd($input);
+        
         $var=new SalesManago();
         $var->setSmEmail($request->input('invitee_email'));
         $var->setSmNombre($request->input('invitee_full_name'));
-        $var->setSmPhone($request->input('question_0'));
-        $var->setMensaje($request->input('answer_1'));
+        $var->setSmPhone($request->input('answer_1'));
+        $var->setMensaje($request->input('answer_2'));
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
         $var->setUtmAnuncioId($request->input('utm_medium'));
