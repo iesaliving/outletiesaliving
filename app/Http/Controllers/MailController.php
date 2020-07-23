@@ -305,7 +305,7 @@ class MailController extends Controller
         //dump($division);
 
         //dump($fecha->format('d-m-Y'));
-        //dd($input);
+        dd($input);
         $var=new SalesManago();
         $var->setSmEmail($request->input('invitee_email'));
         $var->setSmNombre($request->input('invitee_full_name'));
