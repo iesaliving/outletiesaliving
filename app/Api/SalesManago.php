@@ -283,11 +283,11 @@ class SalesManago
                     "phone" : "'.$this->phone.'"
                     },
                   "properties" : {
-                    "estado":"'.$this->estado.'",
+                    "Estado":"'.$this->estado.'",
                     "mensaje":"'.$this->cMensaje.'",
                     "brand":"'.$this->cBrand.'",
                     "ciudad":"'.$this->cCiudad.'",
-                    "pais":"'.$this->cPais.'",
+                    "Pais":"'.$this->cPais.'",
                     "fecha":"'.$this->cFecha.'",
                     "fecha_llamada":"'.$this->cFechaLlamada.'",
                     "fecha_cooking_demo":"'.$this->cFechaCooking.'",

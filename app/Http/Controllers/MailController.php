@@ -296,8 +296,6 @@ class MailController extends Controller
 
 
     public function submitCalendry(Request $request){
-
-
         //dump(hash('md5', $request->input('event_type_name')));
 
         //dump($request->input('event_type_name'));
@@ -307,11 +305,11 @@ class MailController extends Controller
         //dump($division);
 
         //dump($fecha->format('d-m-Y'));
-
+        //dd($input);
         $var=new SalesManago();
         $var->setSmEmail($request->input('invitee_email'));
         $var->setSmNombre($request->input('invitee_full_name'));
-        $var->setSmPhone('');
+        $var->setSmPhone($request->input('question_0'));
         $var->setMensaje($request->input('answer_1'));
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
