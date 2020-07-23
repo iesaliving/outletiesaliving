@@ -216,6 +216,7 @@ Route::get('/plum-wine', 'MarcasController@plumWine');
 
 
 Route::get('/gracias', 'GraciasController@GraciasDefault')->name('gracias');
+Route::get('/gracias/cotizacion', 'GraciasController@GraciasCotizacion');
 
 Route::get('/gracias-Showroom', 'GraciasController@GraciasShowRoom');
 

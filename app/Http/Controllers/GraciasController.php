@@ -22,6 +22,14 @@ class GraciasController extends Controller
         
         return view('gracias',compact('text0','text1','text2'));
     }
+    
+    public function GraciasCotizacion(Request $request){
+        $text0='Gracias';
+        $text1='Agradecemos de antemano el interés en nuestras marcas.';
+        $text2='A la brevedad posible nos pondremos en contacto con usted para poder brindarles la cotización.';
+        
+        return view('gracias',compact('text0','text1','text2'));
+    }
 
     public function GraciasCat(Request $request){
         $text0='GRACIAS';
