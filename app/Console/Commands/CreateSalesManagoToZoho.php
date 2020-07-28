@@ -55,38 +55,18 @@ class CreateSalesManagoToZoho extends Command
         $lastLog = $logs->last();
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
-        /*
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
-            "from" => $fechaInicial->timestamp * 1000,
-            "to" => $today
+            "from" => Carbon::createFromDate(2020, 7, 20)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
+            "to" => Carbon::createFromDate(2020, 7, 22)->startOfDay()->timestamp * 1000//$today
         ));
     
-    
         $contacts = $contactResponse->createdContacts; // obtiene la lista de contactos (email, id) creados en el rango 
-        //dd($contacts);
-
+        
         $emails = array(); 
         foreach($contacts as $contact){
             // array("email1@mailinator.com", "email2@mailinator.com" ....)
             array_push($emails, $contact->email);
         }
-        */
-        $emails = array(
-            "sem@ctrl-ad.com",
-            "leads.webforms@gmail.com",
-            "uniquemx.mkt@gmail.com",
-            "Marco@wizerlink.com",
-            "Marco@wizerlink.net",
-            "MMendoza.mkt@gmail.com",
-            "mendozaweffer@gmail.com",
-            "administracion@wizerlink.net",
-            "jane@wizerlink.net",
-            "jane@wizerlink.com",
-            "projects@wizerlink.com",
-            "jeanpierre@mailinator.com", 
-            "jeanpaul@mailinator.com", 
-            "scarlet@mailinator.com"  
-        ); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para crear
         {
@@ -106,25 +86,29 @@ class CreateSalesManagoToZoho extends Command
             ));
             
             $moduleLeads = ZCRMRestClient::getInstance()->getModuleInstance("Leads"); 
+            //dd($moduleLeads->getAllFields()); // ver nombre de los campos
             $records = array();
 
-            $loteEmails = array_chunk($emails, 50);
+            $loteEmails = array_chunk($emails, 50); // de 50 en 50
             foreach($loteEmails as $lote){
                 $infoContactos = $salesManago->getContactService()->listByEmails("Auxiliarmkt@iesa.cc", array(
                     // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                     "email" => $lote
                 )); 
                 
+                //dd($infoContactos->contacts[19]); //    
                 if($infoContactos && sizeof($infoContactos->contacts) > 0){
                     foreach($infoContactos->contacts as $contact)
                     {
-    
-                        $fullname = explode(" ", trim($contact->name));
+                        //***VALIDACIONES*** First_Name (max 40 caracteres), Last_Name (requerido))
+                        $nombreDepurado = empty($contact->name)? "NO ASIGNADO": trim(substr($contact->name, 0, 39));
+                        $fullname = explode(" ", $nombreDepurado);
                         $custom = collect($contact->properties);
                        
                         $record = ZCRMRecord::getInstance(null, null);
                         $record->setFieldValue("Email", $contact->email);
-                        $record->setFieldValue("Full_Name", $contact->name);
+                        //$record->setFieldValue("Full_Name", $nombreDepurado);
+                        $record->setFieldValue("SalesManago_Contact_ID", $contact->id);
                         
                         switch(sizeof($fullname)){
                             case 2: // array("Pedro", "Gonzalez")
@@ -151,16 +135,16 @@ class CreateSalesManagoToZoho extends Command
                             $record->setFieldValue("Description", $custom->firstWhere('name', 'mensaje')->value);
                         }
     
-                        if(!empty($custom->firstWhere('name', 'estado')->value)){
-                            $record->setFieldValue("Estado", $custom->firstWhere('name', 'estado')->value);
+                        if(!empty($custom->firstWhere('name', 'Estado')->value)){
+                            $record->setFieldValue("Estado", $custom->firstWhere('name', 'Estado')->value);
                         }
     
                         if(!empty($custom->firstWhere('name', 'brand')->value)){
                             $record->setFieldValue("Marca", explode( ",",$custom->firstWhere('name', 'brand')->value));    
                         }
     
-                        if(!empty($custom->firstWhere('name', 'pais')->value)){
-                            $record->setFieldValue("Country", $custom->firstWhere('name', 'pais')->value);
+                        if(!empty($custom->firstWhere('name', 'Pais')->value)){
+                            $record->setFieldValue("Country", $custom->firstWhere('name', 'Pais')->value);
                         }
     
                         if(!empty($custom->firstWhere('name', 'producto')->value)){
@@ -168,22 +152,22 @@ class CreateSalesManagoToZoho extends Command
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_showroom')->value)){                        
-                            $dateShowroom = explode('-', $custom->firstWhere('name', 'fecha_showroom')->value);
-                            $record->setFieldValue("Fecha_de_visita_al_Showroom", $dateShowroom[2]."-".$dateShowroom[1]."-".$dateShowroom[0]);
+                            $dateShowroom =  Carbon::parse($custom->firstWhere('name', 'fecha_showroom')->value);
+                            $record->setFieldValue("Fecha_de_visita_al_Showroom", $dateShowroom->format("Y-m-d"));
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_showroom')->value)){
-                            $record->setFieldValue("Hora_de_visita_al_showroom", $custom->firstWhere('name', 'hora_showroom')->value );
+                            $record->setFieldValue("Hora_de_visita_al_showroom", $custom->firstWhere('name', 'hora_showroom')->value);
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_cooking_demo')->value)){
-                            $dateCookingDemo = explode('-', $custom->firstWhere('name', 'fecha_cooking_demo')->value);
-                            $record->setFieldValue("Fecha_de_cooking_demo",  $dateCookingDemo[2]."-".$dateCookingDemo[1]."-".$dateCookingDemo[0]);
+                            $dateCookingDemo = Carbon::parse($custom->firstWhere('name', 'fecha_cooking_demo')->value);
+                            $record->setFieldValue("Fecha_de_cooking_demo",  $dateCookingDemo->format("Y-m-d"));
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
-                            $dateCall = explode('-', $custom->firstWhere('name', 'fecha_llamada')->value);
-                            $record->setFieldValue("Fecha_de_la_llamada",  $dateCall[2]."-".$dateCall[1]."-".$dateCall[0] );
+                            $dateCall = Carbon::parse($custom->firstWhere('name', 'fecha_llamada')->value);
+                            $record->setFieldValue("Fecha_de_la_llamada", $dateCall->format("Y-m-d") );
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_llamada')->value)){
@@ -215,7 +199,7 @@ class CreateSalesManagoToZoho extends Command
     
                         array_push($records, $record);
                     }
-                    
+                    //dd($records);
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
                     $logs_sync->endDate = Carbon::now();
@@ -246,7 +230,6 @@ class CreateSalesManagoToZoho extends Command
             
             $logs_sync->save();
             echo "Sin registros nuevos \n";
-        }
-       
+        } 
     }
 }

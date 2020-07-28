@@ -61,32 +61,18 @@ class ModifySalesManagoToZoho extends Command
         $lastLog = $logs->last();
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
-        /*
+        
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
-            "from" => $fechaInicial->timestamp * 1000,
-            "to" => $today
+            "from" => Carbon::createFromDate(2020, 7, 20)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
+            "to" => Carbon::createFromDate(2020, 7, 27)->endOfDay()->timestamp * 1000//$today
         ));
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
-        //dd($contacts);
 
         $emails = array(); 
         foreach($contacts as $contact){
             // array("email1@mailinator.com", "email2@mailinator.com" ....)
-            array_push($emails, $contact->email);
+            array_push($emails, $contact->id);
         }
-        */
-        $emails = array(
-            '0fe7d50d-97ce-4725-828f-f1f43bc78f5e',
-            '1ae96687-76d2-45bd-8506-d84d86ad414f',
-            'ca5bdffc-f24f-4417-a5ac-01adb1e3437c',
-            'c5c45fa4-5b89-4b7e-93c1-956dd5cfe864',
-            '8f51b548-882f-47ee-b2f3-683239283c44',
-            '42813018-1d1f-415b-bc44-3980a0dce3fe',
-            '3ab1c66f-d251-48df-bb73-dccae86f0927',
-            'ebdb064a-280b-4960-8920-98c94be24bc6',
-            '3c178c82-1131-4c32-960a-d027a395799e',
-            '64cf98f8-d560-4a5a-a2d4-0514a8d55669'
-        ); // data hardcode test
         
         if(sizeof($emails) > 0) // si hay correos para modificar
         {
@@ -117,43 +103,19 @@ class ModifySalesManagoToZoho extends Command
                     // ejm:  $emails => array("jeanpierre@mailinator.com", "jeanpaul@mailinator.com", "scarlet@mailinator.com")
                     "contactId" => $lote
                 )); 
-                
+                //dd($infoContactos);
                 if($infoContactos && sizeof($infoContactos->contacts) > 0){
                     foreach($infoContactos->contacts as $salecontact)
                     {
-                        
-                        /*
-                        // pensar logica con calma para comprobar si el mas actualizado es sales o zoho
-                        $criteria="SalesManago_Contact_ID:equals:".$salecontact->id;
-                        $responseCriteria = $moduleLeads->searchRecordsByCriteria($criteria);
-
-                        $data = $responseCriteria->getData();
-                        $zohoContact = sizeof($data)? array_shift($data): null;
-                        
-                        $zohoRecienteAManago = (Carbon::parse($zohoContact->getModifiedTime())->timestamp * 1000) > $salecontact->modifiedOn;
-                        $ultimoEmail =  $zohoRecienteAManago ? $zohoContact->getFieldValue("Email"): $salecontact->email;
-                        $ultimoNombre =  $zohoRecienteAManago ? $zohoContact->getFieldValue("Full_Name"): $salecontact->name;
-                        //dd($salecontact, $zohoContact, (Carbon::parse($zohoContact->getModifiedTime())->timestamp * 1000), $salecontact->modifiedOn, (Carbon::parse($zohoContact->getModifiedTime())->timestamp * 1000) > $salecontact->modifiedOn, $ultimoEmail, $ultimoNombre);
-                        
-                        if($zohoRecienteAManago){
-                            $modificaUltimoSales = array();
-                            $modificaUltimoSales["contact"]["name"] = $ultimoNombre;
-                            //$modificaUltimoSales["contact"]["email"] = $ultimoEmail;
-                            $modificaUltimoSales["newEmail "] = $ultimoEmail;
-                            $modificaUltimoSales["async"] = false;
-                            //dd($modificaUltimoSales, $salecontact->email);
-                            $salesManago->getContactService()->upsert("sleal@iesa.cc",$salecontact->email, $modificaUltimoSales);
-                        }*/
-                      
+                                  
                         $custom = collect($salecontact->properties);
                        
                         $toZoho = ZCRMRecord::getInstance(null, null);
                         $toZoho->setFieldValue("SalesManago_Contact_ID", $salecontact->id);
-                        //$toZoho->setFieldValue("Email", $salecontact->email);
+                        $toZoho->setFieldValue("Email", $salecontact->email);
 
                         // restrinjo a q registre 40 caracteres
-                        
-                        $nameComplete = trim(substr($salecontact->name, 0, 39)); 
+                        $nameComplete = empty($contact->name)? "NO ASIGNADO": trim(substr($salecontact->name, 0, 39)); 
                         $toZoho->setFieldValue("Full_Name", $nameComplete);
                         $fullname = explode(" ", $nameComplete);                   
                         switch(sizeof($fullname)){
@@ -198,8 +160,8 @@ class ModifySalesManagoToZoho extends Command
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_showroom')->value)){                        
-                            $dateShowroom = explode('-', $custom->firstWhere('name', 'fecha_showroom')->value);
-                            $toZoho->setFieldValue("Fecha_de_visita_al_Showroom",  Carbon::createFromDate($dateShowroom[0], $dateShowroom[1], $dateShowroom[2])->format("Y-m-d"));
+                            $dateShowroom =  Carbon::parse($custom->firstWhere('name', 'fecha_showroom')->value);
+                            $record->setFieldValue("Fecha_de_visita_al_Showroom", $dateShowroom->format("Y-m-d"));
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_showroom')->value)){
@@ -207,13 +169,13 @@ class ModifySalesManagoToZoho extends Command
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_cooking_demo')->value)){
-                            $dateCookingDemo = explode('-', $custom->firstWhere('name', 'fecha_cooking_demo')->value);
-                            $toZoho->setFieldValue("Fecha_de_cooking_demo", Carbon::createFromDate($dateCookingDemo[0], $dateCookingDemo[1], $dateCookingDemo[2])->format("Y-m-d"));
+                            $dateCookingDemo = Carbon::parse($custom->firstWhere('name', 'fecha_cooking_demo')->value);
+                            $record->setFieldValue("Fecha_de_cooking_demo",  $dateCookingDemo->format("Y-m-d"));
                         }
     
                         if(isset($custom->firstWhere('name', 'fecha_llamada')->value)){
-                            $dateCall = explode('-', $custom->firstWhere('name', 'fecha_llamada')->value);
-                            $toZoho->setFieldValue("Fecha_de_la_llamada",   Carbon::createFromDate($dateCall[0], $dateCall[1], $dateCall[2])->format("Y-m-d"));
+                            $dateCall = Carbon::parse($custom->firstWhere('name', 'fecha_llamada')->value);
+                            $record->setFieldValue("Fecha_de_la_llamada", $dateCall->format("Y-m-d") );
                         }
     
                         if(isset($custom->firstWhere('name', 'hora_llamada')->value)){
@@ -246,6 +208,7 @@ class ModifySalesManagoToZoho extends Command
                     
                         array_push($recordsZoho, $toZoho);
                     }
+                    //dd($recordsZoho);
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
                     $logs_sync->endDate = Carbon::now();
@@ -263,8 +226,7 @@ class ModifySalesManagoToZoho extends Command
                     $zoho_response= $response->getEntityResponses();
                     dd($zoho_response);
                     //*/
-                }
-           
+                }     
             }     
         }else{
             $logs_sync = new LogsSync;
@@ -276,9 +238,7 @@ class ModifySalesManagoToZoho extends Command
             
             $logs_sync->save();
             echo "Sin registros nuevos Sales to Zoho \n";
-
         }
-    
     }
 
 }
