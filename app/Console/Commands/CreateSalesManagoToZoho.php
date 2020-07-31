@@ -57,7 +57,7 @@ class CreateSalesManagoToZoho extends Command
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
             "from" => Carbon::createFromDate(2020, 7, 20)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
-            "to" => Carbon::createFromDate(2020, 7, 22)->startOfDay()->timestamp * 1000//$today
+            "to" => Carbon::createFromDate(2020, 7, 31)->startOfDay()->timestamp * 1000//$today
         ));
     
         $contacts = $contactResponse->createdContacts; // obtiene la lista de contactos (email, id) creados en el rango 
@@ -101,7 +101,7 @@ class CreateSalesManagoToZoho extends Command
                     foreach($infoContactos->contacts as $contact)
                     {
                         //***VALIDACIONES*** First_Name (max 40 caracteres), Last_Name (requerido))
-                        $nombreDepurado = empty($contact->name)? "NO ASIGNADO": trim(substr($contact->name, 0, 39));
+                        $nombreDepurado = !empty($contact->name)? trim(substr($contact->name, 0, 39)):"NO ASIGNADO";
                         $fullname = explode(" ", $nombreDepurado);
                         $custom = collect($contact->properties);
                        
