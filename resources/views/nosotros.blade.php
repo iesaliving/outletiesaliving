@@ -21,16 +21,18 @@
     
         <div id="container-catalogo" class="margin-10">
 
+            {{--
             <div class="col-12 text-center bottommargin-lg">
                 <h2>TRABAJAMOS POR Y PARA SU SATISFACCIÓN</h2>
                 <p>En IESA LIVING contamos con un equipo especializado en satisfacer sus necesidades.</p>
                 <p>Nuestro personal cuenta con la capacidad de brindarle la atención que merece, con el respaldo de nuestra experiencia y nuestra filosofía de dar el mejor servicio con los mejores resultados para usted y su familia.</p>
             </div>
-            {{--<div class="col-12 text-center bottommargin-lg">
+            --}}
+            <div class="col-12 text-center bottommargin-lg">
                 <h2>{{ $about_us->title}}</h2>
                 <p>{!! $about_us->description !!}</p>
 
-            </div>--}}
+            </div>
   
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
