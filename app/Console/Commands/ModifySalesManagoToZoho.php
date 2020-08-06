@@ -64,7 +64,7 @@ class ModifySalesManagoToZoho extends Command
         
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
             "from" => Carbon::createFromDate(2020, 7, 20)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
-            "to" => Carbon::createFromDate(2020, 7, 31)->endOfDay()->timestamp * 1000//$today
+            "to" => Carbon::createFromDate($today)->endOfDay()->timestamp * 1000//$today
         ));
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
 
