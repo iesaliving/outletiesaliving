@@ -92,7 +92,7 @@ class ModifyZohoToSalesManago extends Command
        $json = array (
            "select_query" => "select Full_Name, Email, Phone, Description, Estado, Marca, Producto, Fecha_de_visita_al_Showroom, Hora_de_visita_al_showroom, Fecha_de_cooking_demo, Fecha_de_la_llamada, Hora_de_la_llamada, UTM_Anuncio_ID, UTM_Campaign_Name, UTM_Source, Lead_Source, Created_Time, Modified_Time, SalesManago_Contact_ID
            from Leads
-           where Modified_Time between '".Carbon::createFromDate(2020, 7, 28)->startOfDay()->toIso8601String()."' and  '". Carbon::now()->endOfDay()->toIso8601String() ."'"
+           where Modified_Time between '".Carbon::createFromDate(2020, 7, 16)->startOfDay()->toIso8601String()."' and  '". Carbon::now()->endOfDay()->toIso8601String() ."'"
        );//Carbon::createFromDate(2020, 7, 31)->
        /*
        $json = array (
