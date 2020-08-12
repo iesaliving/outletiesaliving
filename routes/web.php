@@ -1,10 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 // Route::redirect('/', '/login');
 
 //
 
- Route::redirect('/home', '/admin');
+Auth::routes(['register' => false]);
+
+Route::redirect('/home', '/admin');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -107,23 +111,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('dealer', 'DealsController@dealers')->name('deals.dealers');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
 
-Auth::routes(['register' => false]);
 
 Route::get('/', function () {
     return view('index');
@@ -264,3 +253,7 @@ Route::get('/rating', function () {
 });
 
 
+Route::get('/clear-cache', function() {
+    Artisan::call('optimize:clear');
+    echo Artisan::output();
+});
