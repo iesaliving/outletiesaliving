@@ -73,6 +73,7 @@ class MailController extends Controller
     }
 
     public function submitContacto(Request $request){
+        //dd($request);
         $inputs = $request->input();
         $rule=array(
             'nombre' => 'required|string',
@@ -88,9 +89,9 @@ class MailController extends Controller
              return Redirect::back()->withErrors($validator)->withInput();
         }
 
-
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setPais($inputs['pais']);
         $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
@@ -224,6 +225,7 @@ class MailController extends Controller
 
         $var=new SalesManago();
         $var->setSmEmail($inputs['email']);
+        $var->setPais($inputs['pais']);
         $var->setEstado($inputs['estado']);
         $var->setSmNombre($inputs['nombre']);
         $var->setSmPhone($inputs['tel']);
@@ -233,8 +235,8 @@ class MailController extends Controller
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
         $var->setUtmAnuncioId($request->input('utm_anuncio_id'));
-
         $response=$var->upsert();
+        
          if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
               return redirect("/gracias/".str_replace(" ","-",strtolower($inputs['cBrand'])));
@@ -294,27 +296,25 @@ class MailController extends Controller
 
 
     public function submitCalendry(Request $request){
-
-
         //dump(hash('md5', $request->input('event_type_name')));
 
-        dump($request->input('event_type_name'));
+        //dump($request->input('event_type_name'));
         $division=explode("T",$request->input('event_start_time'));
 
         $fecha=Carbon::createFromFormat('Y-m-d', $division[0]);
         //dump($division);
 
         //dump($fecha->format('d-m-Y'));
-
+        
         $var=new SalesManago();
         $var->setSmEmail($request->input('invitee_email'));
         $var->setSmNombre($request->input('invitee_full_name'));
-        $var->setSmPhone('');
-        $var->setMensaje($request->input('answer_1'));
+        $var->setSmPhone($request->input('answer_1'));
+        $var->setMensaje($request->input('answer_2'));
         $var->setUtmSource($request->input('utm_source'));
         $var->setUtmCampaign($request->input('utm_campaign'));
         $var->setUtmAnuncioId($request->input('utm_medium'));
-
+        
 
         switch (hash('md5', $request->input('event_type_name'))) {
                    
@@ -380,16 +380,16 @@ class MailController extends Controller
                         $gracias='gracias-llamada';
                       break;
               }    
-//         dd($var);
 
         $response=$var->upsert();
         //$code=$response;  
-//        dd($response);
+        //dd($response);
         if ($response['success']==true && !empty($response['contactId']) &&$response['message']==null) {
             
             return redirect($gracias);
 
          }else{
+            
             abort(404);
          }
     }

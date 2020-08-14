@@ -95,40 +95,17 @@
                                 <input required type="text" name="nombre" class="form-control form-custom" placeholder="NOMBRE COMPLETO">
                             </div>
                             <div class="form-group  col-12">
-                                <select required class="form-control form-custom" name="estado"> 
-                                    <option value="">ESTADO</option>
-                                    <option value="Aguascalientes">Aguascalientes</option>
-                                    <option value="Baja California">Baja California</option>
-                                    <option value="Baja California Sur">Baja California Sur</option>
-                                    <option value="Campeche">Campeche</option>
-                                    <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-                                    <option value="Colima">Colima</option>
-                                    <option value="Chiapas">Chiapas</option>
-                                    <option value="Chihuahua">Chihuahua</option>
-                                    <option value="Distrito Federal">Distrito Federal</option>
-                                    <option value="Durango">Durango</option>
-                                    <option value="Guanajuato">Guanajuato</option>
-                                    <option value="Guerrero">Guerrero</option>
-                                    <option value="Hidalgo">Hidalgo</option>
-                                    <option value="Jalisco">Jalisco</option>
-                                    <option value="Estado de México">Estado de México</option>
-                                    <option value="Michoacán">Michoacán</option>
-                                    <option value="Morelos">Morelos</option>
-                                    <option value="Nayarit">Nayarit</option>
-                                    <option value="Nuevo León">Nuevo León</option>
-                                    <option value="Oaxaca">Oaxaca</option>
-                                    <option value="Puebla">Puebla</option>
-                                    <option value="Querétaro">Querétaro</option>
-                                    <option value="Quintana Roo">Quintana Roo</option>
-                                    <option value="San Luis Potosí">San Luis Potosí</option>
-                                    <option value="Sinaloa">Sinaloa</option>
-                                    <option value="Sonora">Sonora</option>
-                                    <option value="Tabasco">Tabasco</option>
-                                    <option value="Tamaulipas">Tamaulipas</option>
-                                    <option value="Tlaxcala">Tlaxcala</option>
-                                    <option value="Veracruz">Veracruz</option>
-                                    <option value="Yucatán">Yucatán</option>
-                                    <option value="Zacatecas">Zacatecas</option>
+                                <select required class="form-control form-custom" id="pais" name="pais"> 
+                                    <option value="" disabled selected>PAÍS</option>
+                                    <option value="México">México</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Panamá">Panamá</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group  col-12">
+                                <select required class="form-control form-custom" id="estado" name="estado"> {{--function onchange--}}
+                                    <option value="" disabled selected>ESTADO</option>
                                 </select>
                                 @if($errors->has('nombre'))
                                     <div class="invalid-feeback">
@@ -203,6 +180,73 @@
                 scrollTop: $("#dealers").offset().top
             }, 2000);
         }
+
+        $('#pais').change(()=>{
+            let 
+                pais = $('#pais').val();
+                colombia = `
+                    <option value="" disabled selected>ESTADO</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Medellín">Medellín</option>
+                `,
+                panama = `
+                    <option value="" disabled selected>ESTADO</option>
+                    <option value="Ciudad de Panamá">Ciudad de Panamá</option>
+                `,
+                mexico = `
+                    <option value="" disabled selected>ESTADO</option>
+                    <option value="Distrito Federal">Distrito Federal</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Guanajuato">Guanajuato</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Estado de México">Estado de México</option>
+                    <option value="Michoacán">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo León">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Querétaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosí">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                `;
+
+                switch (pais) {
+                    case 'México':
+                            $('#estado').html(mexico);
+                        break;
+                    case 'Panamá':
+                            $('#estado').html(panama);
+                        break;
+                    case 'Colombia':
+                            $('#estado').html(colombia);
+                        break;
+                
+                    default:
+                        $('#estado').html(`<option value="" disabled selected>Otro</option>`);
+                        break;
+                }
+
+            
+        })
     </script>
 @endsection
 

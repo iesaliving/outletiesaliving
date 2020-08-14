@@ -25,48 +25,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
-
     <style type="text/css">
+      /* Preloader */
 
-/* Preloader */
+      #preloader {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 99999;
+      }
 
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  /* change if the mask should have another color then white */
-  z-index: 99;
-  /* makes sure it stays on top */
-}
-
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */
-}
-
-
-
-
-
+      #status {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        /* centers the loading animation horizontally one the screen */
+        top: 50%;
+        /* centers the loading animation vertically one the screen */
+        background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+        /* path to your loading animation */
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -100px 0 0 -100px;
+        /* is width and height divided by two */
+      }
     </style>
-
-
     @yield('styles')
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -139,17 +127,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Custom scripts -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script   src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <script  src="{{ asset('js/gallery.js') }}"></script>
     @yield('scripts')
-
-
     <script  type="text/javascript">
-
+     
       $(document).ready(function(){
 
           $("[data-toggle=tooltip]").tooltip();
@@ -207,20 +190,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </script>
 
+    <script src="https://app3.salesmanago.pl/dynamic/o28qhomp7m09zozm/popups.js"></script>
     <script type="text/javascript">
-    $(window).on('load', function() { // makes sure the whole site is loaded 
+      $(window).on('load', function() { // makes sure the whole site is loaded 
           $('#status').fadeOut(); // will first fade out the loading animation 
           $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
           //$('body').delay(350).css({'overflow':'visible'});
-        })
+      })
     </script>
-
-    <script src="https://app3.salesmanago.pl/dynamic/o28qhomp7m09zozm/popups.js"></script>
     @if (isset($popups))
-<script type="text/javascript">    
-    $('#{{$popups}}').modal('show'); 
-</script>
+      <script type="text/javascript">    
+          $('#{{$popups}}').modal('show'); 
+      </script>
     @endif
+    <script>
+      const observer = lozad();
+      observer.observe();
+    </script>
 </body>
 </html>
 

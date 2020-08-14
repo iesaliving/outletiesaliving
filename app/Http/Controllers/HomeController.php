@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use zcrmsdk\crm\crud\ZCRMRecord;
 use Illuminate\Http\Request;
+use Pixers\SalesManagoAPI\Client;
+use Pixers\SalesManagoAPI\SalesManago;
+use zcrmsdk\oauth\ZohoOAuth;
+use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
+use Carbon\Carbon;
+use Illuminate\Support\Arr;
+use App\LogsSync;
 
 class HomeController extends Controller
 {
@@ -25,4 +33,5 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
-}
+
+}  

@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lafamiliap/public_html/laravelApp/
+    - export DEPLOYPATH=/home/iesaliving/public_html/website/
     - /bin/cp artisan $DEPLOYPATH
     - /bin/cp ZCRMClientLibrary.log $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
@@ -16,7 +16,8 @@ deployment:
     - /bin/cp -R routes $DEPLOYPATH
     - /bin/cp -R storage $DEPLOYPATH
     - /bin/cp -R test $DEPLOYPATH
-    - /bin/cp -R public_html/js /home/lafamiliap/public_html/
-    - /bin/cp -R public_html/css /home/lafamiliap/public_html/
-    - /bin/cp -R public_html/img /home/lafamiliap/public_html/
+    - /bin/cp -R public/js /home/iesaliving/public_html/
+    - /bin/cp -R public/css /home/iesaliving/public_html/
+    - /bin/cp -R public/img /home/iesaliving/public_html/
+    - /bin/cp -R public/video /home/iesaliving/public_html/
     

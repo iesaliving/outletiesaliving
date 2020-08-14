@@ -4,7 +4,7 @@
                   {!! $showroom->description !!}
               
                 <div class="col-md-6 offset-md-3 topmargin nopadding">
-                    <a class="btn btn-cyan btn-block showroon-btn" href="{{ URL::to('/showroom') }}"><img src="{{ asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
+                    <a class="btn btn-cyan btn-block showroon-btn" href="{{ URL::to('/showroom') }}"><img class="lozad" data-src="{{ asset('img/icono-btn/showroon.png')   }}"><p>VISITE NUESTROS SHOWROOM</p></a>
                 </div>
 
             <div id="gallery">
@@ -18,7 +18,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6 image mx-auto">
                           <div class="img-wrapper">
 
-                            <a href="{{ asset($showd->image) }}"><img src="{{ asset($showd->image) }}" class="img-responsive"></a>
+                            <a href="{{ asset($showd->image) }}"><img data-src="{{ asset($showd->image) }}" class="lozad img-responsive"></a>
                             <div class="img-overlay">
                               <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             </div>

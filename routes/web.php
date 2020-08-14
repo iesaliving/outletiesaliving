@@ -118,6 +118,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/createsales', 'HomeController@createsales')->name('createsales');
+Route::get('/modifysales', 'HomeController@modifysales')->name('modifysales');
+Route::get('/zoho', 'HomeController@zoho')->name('zoho');
+
 Route::get('/nosotros', function () {
 
     return view('nosotros');
@@ -201,6 +205,7 @@ Route::get('/plum-wine', 'MarcasController@plumWine');
 
 
 Route::get('/gracias', 'GraciasController@GraciasDefault')->name('gracias');
+Route::get('/gracias/cotizacion', 'GraciasController@GraciasCotizacion');
 
 Route::get('/gracias-Showroom', 'GraciasController@GraciasShowRoom');
 
