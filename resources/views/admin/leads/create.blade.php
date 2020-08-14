@@ -232,6 +232,42 @@
 
                           <div class="col-md-6">
                             <div class="form-group row">
+                                <label for="Estado_de_Prospecto" class="col-md-12 col-form-label text-md-left">Estado de Prospecto</label>
+
+                                <div class="col-md-12">
+
+                                    <select id="Estado_de_Prospecto" name="Estado_de_Prospecto" class="form-control @error('Estado_de_Prospecto') is-invalid @enderror" data-live-search="true">
+                                      @foreach ($estadosProspecto as $estadoProspecto)
+                                        <option 
+                                        @if (isset($data))
+                                              @if ($data->Estado_de_Prospecto == $estadoProspecto['displayValue'])
+                                                selected="selected" 
+                                              @endif
+                                            @endif
+                                            @if (old('estadoProspecto') ==  $estadoProspecto['displayValue']) 
+                                              selected="selected" 
+                                            @endif 
+                                        value="{{$estadoProspecto['displayValue']}}">
+                                        {{$estadoProspecto['displayValue']}}
+                                      </option>
+                                      @endforeach
+                                      
+                                    </select>
+      
+
+                                   @error('Estado_de_Prospecto')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
                                 <label for="Nombre_de_Arquitecto" class="col-md-12 col-form-label text-md-left">Nombre del Arquitecto</label>
 
                                 <div class="col-md-12">
@@ -395,8 +431,6 @@
                           </div>
 
 
-
-
                           <div class="col-md-6">
                             <div class="form-group row">
                                 <label for="Dealer" class="col-md-12 col-form-label text-md-left">Nombre de Distribuidor</label>
@@ -453,6 +487,8 @@
                                 </div>
                             </div>
                           </div>
+
+
 
                           <div class="col-md-12">
                             <div class="form-group row">
