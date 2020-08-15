@@ -158,41 +158,6 @@
                             </div>
                           </div>
 
-                          <div class="col-md-6">
-                            <div class="form-group row">
-                                <label for="Estado" class="col-md-12 col-form-label text-md-left">Ubicación</label>
-
-                                <div class="col-md-12">
-
-                                    <select id="Estado" name="Estado" class="form-control @error('Estado') is-invalid @enderror"  data-live-search="true">
-                                      @foreach ($ubicaciones as $ubicacion)
-                                        <option 
-                                        @if (isset($data))
-                                            @if ($data->Estado == $ubicacion['actualValue'])
-                                              selected="selected" 
-                                            @endif
-                                          @endif
-                                          @if (old('ubicacion') ==  $ubicacion['actualValue']) 
-                                            selected="selected" 
-                                          @endif 
-                                        value="{{$ubicacion['actualValue']}}">
-                                      {{$ubicacion['displayValue']}}
-                                    </option>
-                                      @endforeach
-                                      
-                                    </select>
-      
-
-                                   @error('Estado')
-                                       <em class="invalid-feedback">
-                                            {{ $message }}
-                                        </em>
-                                   @enderror
-
-                                  
-                                </div>
-                            </div>
-                          </div>
 
                           <div class="col-md-6">
                             <div class="form-group row">
@@ -256,6 +221,41 @@
       
 
                                    @error('Estado_de_Prospecto')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+                            <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Estado" class="col-md-12 col-form-label text-md-left">Ubicación</label>
+
+                                <div class="col-md-12">
+
+                                    <select id="Estado" name="Estado" class="form-control @error('Estado') is-invalid @enderror"  data-live-search="true">
+                                      @foreach ($ubicaciones as $ubicacion)
+                                        <option 
+                                        @if (isset($data))
+                                            @if ($data->Estado == $ubicacion['actualValue'])
+                                              selected="selected" 
+                                            @endif
+                                          @endif
+                                          @if (old('ubicacion') ==  $ubicacion['actualValue']) 
+                                            selected="selected" 
+                                          @endif 
+                                        value="{{$ubicacion['actualValue']}}">
+                                      {{$ubicacion['displayValue']}}
+                                    </option>
+                                      @endforeach
+                                      
+                                    </select>
+      
+
+                                   @error('Estado')
                                        <em class="invalid-feedback">
                                             {{ $message }}
                                         </em>
