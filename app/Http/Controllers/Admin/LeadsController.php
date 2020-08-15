@@ -675,6 +675,8 @@ class LeadsController extends Controller
         $dealsInfo->setFieldValue("Producto", $leadInfo->getFieldValue("Producto"));
         $dealsInfo->setFieldValue("Estado", $leadInfo->getFieldValue("Estado"));
         $dealsInfo->setFieldValue("Lead_Source", $leadInfo->getFieldValue("Lead_Source"));
+
+        $dealsInfo->setFieldValue("Estado_de_Propecto", $leadInfo->getFieldValue("Estado_de_Prospecto"));
         $dealsInfo->setFieldValue("Nombre_de_vendedor_de_dealer", $leadInfo->getFieldValue("Nombre_de_vendedor_de_dealer"));
         
         $dealsInfo->setFieldValue("Marca", $leadInfo->getFieldValue("Marca"));
