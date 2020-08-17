@@ -444,7 +444,7 @@
 
                                 <div class="col-md-12">
 
-                                   <input required id="Email_de_Dealer" name="Email_de_Dealer" type="text" class="form-control @error('Email_de_Dealer') is-invalid @enderror" value="{{ old('Email_de_Dealer', isset($data) ? $data->Email_de_Dealer : '') }}" maxlength="100" required="">
+                                   <input required id="Email_de_Dealer" name="Email_de_Dealer" type="email" class="form-control @error('Email_de_Dealer') is-invalid @enderror" value="{{ old('Email_de_Dealer', isset($data) ? $data->Email_de_Dealer : '') }}" maxlength="100" required="">
       
 
                                    @error('Email_de_Dealer')
