@@ -56,10 +56,10 @@ class CreateSalesManagoToZoho extends Command
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
-            "from" => Carbon::createFromDate(2020, 7, 16)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
-            "to" => Carbon::createFromDate($today)->startOfDay()->timestamp * 1000//$today
+            "from" => $fechaInicial->timestamp * 1000,//Carbon::now()->startOfDay()->timestamp * 1000,//Carbon::createFromDate(2020, 8, 4)->startOfDay()->timestamp * 1000,//
+            "to" => $today
         ));
-    
+       // dd($contactResponse);
         $contacts = $contactResponse->createdContacts; // obtiene la lista de contactos (email, id) creados en el rango 
         
         $emails = array(); 
@@ -96,7 +96,7 @@ class CreateSalesManagoToZoho extends Command
                     "email" => $lote
                 )); 
                 
-                //dd($infoContactos->contacts[19]); //    
+                //dd($infoContactos->contacts); //    
                 if($infoContactos && sizeof($infoContactos->contacts) > 0){
                     foreach($infoContactos->contacts as $contact)
                     {
@@ -199,27 +199,29 @@ class CreateSalesManagoToZoho extends Command
     
                         array_push($records, $record);
                     }
-                    //dd($records);
+                }  
+            }     
+        
+            if(sizeof($records))
+            {   
+                $loteRecords = array_chunk($records, 90); // de 90 en 90 => el maximo es 100 record por upsert
+                
+                foreach($loteRecords as $lote){
+                    
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
                     $logs_sync->endDate = Carbon::now();
                     $logs_sync->mails = json_encode($emails);
                     $logs_sync->cant = count($emails);
-                    $logs_sync->origin = 1;//1 create 2 update
-                    
+                    $logs_sync->origin = 1;//1 create 2 update 
                     $logs_sync->save();
-
-                    //dd($records);
-                    echo "con ".count($emails)." registros nuevos \n";
                     
-                    //*
-                    $response = $moduleLeads->upsertRecords($records,null,null,null); // updating the records.
-            
-                    $zoho_response= $response->getEntityResponses();
-                    dd($zoho_response);
-                    //*/
+                    $response = $moduleLeads->upsertRecords($lote);    
+                    $responseIn[] = $response->getEntityResponses();
                 }
-            }     
+                dd($responseIn);
+            }
+
         }else{
             $logs_sync = new LogsSync;
             $logs_sync->startDate = $fechaInicial;

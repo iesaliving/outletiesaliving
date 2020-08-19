@@ -108,7 +108,7 @@
                                         <div class="form-group row">
 
                                             <div class="col">
-                                                <textarea class="ckeditor  @error('description') is-invalid @enderror" name="description" rows="2" maxlength="550" placeholder="{{ trans('global.description') }}">{{old('description_obj',isset($data->description_obj) ? $data->description_obj : '')}}</textarea>
+                                                <textarea class="ckeditor  @error('description_obj') is-invalid @enderror" name="description_obj" rows="2" maxlength="550" placeholder="{{ trans('global.description') }}">{{old('description_obj',isset($data->description_obj) ? $data->description_obj : '')}}</textarea>
 
                                                @error('description_obj')
                                                    <em class="invalid-feedback">

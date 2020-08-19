@@ -335,6 +335,42 @@
                             </div>
                           </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="Estado_de_Propecto" class="col-md-12 col-form-label text-md-left">Estado de Prospecto</label>
+
+                                <div class="col-md-12">
+
+                                    <select id="Estado_de_Propecto" name="Estado_de_Propecto" class="form-control @error('Estado_de_Propecto') is-invalid @enderror" data-live-search="true">
+                                      @foreach ($estadosProspecto as $estadoProspecto)
+                                        <option 
+                                        @if (isset($data))
+                                              @if ($data->Estado_de_Propecto == $estadoProspecto['displayValue'])
+                                                selected="selected" 
+                                              @endif
+                                            @endif
+                                            @if (old('estadoProspecto') ==  $estadoProspecto['displayValue']) 
+                                              selected="selected" 
+                                            @endif 
+                                        value="{{$estadoProspecto['displayValue']}}">
+                                        {{$estadoProspecto['displayValue']}}
+                                      </option>
+                                      @endforeach
+                                      
+                                    </select>
+      
+
+                                   @error('Estado_de_Propecto')
+                                       <em class="invalid-feedback">
+                                            {{ $message }}
+                                        </em>
+                                   @enderror
+
+                                  
+                                </div>
+                            </div>
+                          </div>
+
                         <div class="col-12 mt-2">
                           <h4> Informacion comercial</h4>
                         </div>

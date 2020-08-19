@@ -63,8 +63,8 @@ class ModifySalesManagoToZoho extends Command
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         
         $contactResponse = $salesManago->getContactService()->listRecentlyModified("Auxiliarmkt@iesa.cc", array(
-            "from" => Carbon::createFromDate(2020, 7, 16)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,
-            "to" => Carbon::createFromDate($today)->endOfDay()->timestamp * 1000//$today
+            "from" => $fechaInicial->timestamp * 1000,//Carbon::createFromDate(2020, 7, 16)->startOfDay()->timestamp * 1000,//
+            "to" => $today
         ));
         $contacts = $contactResponse->modifiedContacts; // obtiene la lista de contactos (email, id) modificados en el rango 
 
@@ -208,7 +208,8 @@ class ModifySalesManagoToZoho extends Command
                     
                         array_push($recordsZoho, $toZoho);
                     }
-                    //dd($recordsZoho);
+                    
+                    /*//dd($recordsZoho);
                     $logs_sync = new LogsSync;
                     $logs_sync->startDate = $fechaInicial;
                     $logs_sync->endDate = Carbon::now();
@@ -227,7 +228,26 @@ class ModifySalesManagoToZoho extends Command
                     dd($zoho_response);
                     //*/
                 }     
-            }     
+            } 
+            if(sizeof($recordsZoho))
+            {   
+                $loteRecords = array_chunk($recordsZoho, 90); // de 90 en 90 => el maximo es 100 record por upsert
+                
+                foreach($loteRecords as $lote){
+                    
+                    $logs_sync = new LogsSync;
+                    $logs_sync->startDate = $fechaInicial;
+                    $logs_sync->endDate = Carbon::now();
+                    $logs_sync->mails = json_encode($emails);
+                    $logs_sync->cant = count($emails);
+                    $logs_sync->origin = 2;//1 create 2 update 
+                    $logs_sync->save();
+                    
+                    $response = $moduleLeads->upsertRecords($lote);    
+                    $responseIn[] = $response->getEntityResponses();
+                }
+                dd($responseIn);
+            }    
         }else{
             $logs_sync = new LogsSync;
             $logs_sync->startDate = $fechaInicial;

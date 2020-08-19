@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+//ini_set('max_execution_time', 300); //3 minutes
 
 use Yajra\DataTables\Facades\DataTables;
 use zcrmsdk\crm\exception\ZCRMException;
@@ -74,6 +75,9 @@ class LeadsController extends Controller
 
     public function create(){
 
+       
+        $estadosProspecto=$this->fields('4434756000031409003','Leads');//id Fiels Obtenidos de $this->campos()
+
         $marcas=$this->fields('4434756000000270255','Leads');//id Fiels Obtenidos de $this->campos()
 
         $ubicaciones=$this->fields('4434756000000271630','Leads');//id Fiels Obtenidos de $this->campos()
@@ -93,7 +97,7 @@ class LeadsController extends Controller
         $repres=$this->representantes();
 
 
-        return view('admin.leads.create', compact('marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
+        return view('admin.leads.create', compact('marcas',  'estadosProspecto', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
     }
 
     public function store(Request $request){
@@ -135,6 +139,7 @@ class LeadsController extends Controller
         $record->setFieldValue("Fecha_de_cooking_demo",$this->FechaZoho($request->input('Fecha_de_cooking_demo')));
         $record->setFieldValue("Fecha_de_visita_al_Showroom", $this->FechaZoho($request->input('Fecha_de_visita_al_Showroom')));
         $record->setFieldValue("Description", $request->input('Description'));
+        $record->setFieldValue("Estado_de_Prospecto", $request->input('Estado_de_Prospecto'));
         $record->setFieldValue("Hora_de_visita_al_showroom", $request->input('Hora_de_visita_al_showroom'));
         $record->setFieldValue("Hora_de_la_llamada", $request->input('Hora_de_la_llamada'));
         $record->setFieldValue("Fecha_de_la_llamada", $this->FechaZoho($request->input('Fecha_de_la_llamada')));
@@ -221,7 +226,6 @@ class LeadsController extends Controller
         }else{
             $arrayData['Rep']=null;
         }
-
         $arrayData['Representante_email']=$record->getFieldValue("Representante_email");
         $arrayData['Phone']=$record->getFieldValue("Phone");
         $arrayData['Website']=$record->getFieldValue("Website");
@@ -243,6 +247,7 @@ class LeadsController extends Controller
         $arrayData['Fecha_de_cooking_demo']= $this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_cooking_demo"));
         $arrayData['Fecha_de_visita_al_Showroom']= $this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_visita_al_Showroom"));
         $arrayData['Description']=$record->getFieldValue("Description");
+        $arrayData['Estado_de_Prospecto']=$record->getFieldValue("Estado_de_Prospecto");
         $arrayData['Hora_de_visita_al_showroom']=$record->getFieldValue("Hora_de_visita_al_showroom");
         $arrayData['Hora_de_la_llamada']=$record->getFieldValue("Hora_de_la_llamada");
         $arrayData['Fecha_de_la_llamada']=$this->FechaCrmAdmin ($record->getFieldValue("Fecha_de_la_llamada"));
@@ -260,6 +265,8 @@ class LeadsController extends Controller
 
        
         $data = (object) $arrayData;
+
+        $estadosProspecto=$this->fields('4434756000031409003','Leads');//id Fiels Obtenidos de $this->campos()
 
         $marcas=$this->fields('4434756000000270255','Leads');//id Fiels Obtenidos de $this->campos()
 
@@ -283,7 +290,7 @@ class LeadsController extends Controller
 
         //dd($repres);
 
-        return view('admin.leads.update', compact('data','marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
+        return view('admin.leads.update', compact('data', 'estadosProspecto', 'marcas', 'ubicaciones' , 'estatus' , 'LeadSources','dealers','repres', 'industries', 'typesLeads', 'showroomCiudades'));
 
     }
 
@@ -329,6 +336,7 @@ class LeadsController extends Controller
         $record->setFieldValue("Fecha_de_cooking_demo",$this->FechaZoho($request->input('Fecha_de_cooking_demo')));
         $record->setFieldValue("Fecha_de_visita_al_Showroom", $this->FechaZoho($request->input('Fecha_de_visita_al_Showroom')));
         $record->setFieldValue("Description", $request->input('Description'));
+        $record->setFieldValue("Estado_de_Prospecto", $request->input('Estado_de_Prospecto'));
         $record->setFieldValue("Hora_de_visita_al_showroom", $request->input('Hora_de_visita_al_showroom'));
         $record->setFieldValue("Hora_de_la_llamada", $request->input('Hora_de_la_llamada'));
         $record->setFieldValue("Fecha_de_la_llamada", $this->FechaZoho($request->input('Fecha_de_la_llamada')));
@@ -667,6 +675,8 @@ class LeadsController extends Controller
         $dealsInfo->setFieldValue("Producto", $leadInfo->getFieldValue("Producto"));
         $dealsInfo->setFieldValue("Estado", $leadInfo->getFieldValue("Estado"));
         $dealsInfo->setFieldValue("Lead_Source", $leadInfo->getFieldValue("Lead_Source"));
+
+        $dealsInfo->setFieldValue("Estado_de_Propecto", $leadInfo->getFieldValue("Estado_de_Prospecto"));
         $dealsInfo->setFieldValue("Nombre_de_vendedor_de_dealer", $leadInfo->getFieldValue("Nombre_de_vendedor_de_dealer"));
         
         $dealsInfo->setFieldValue("Marca", $leadInfo->getFieldValue("Marca"));

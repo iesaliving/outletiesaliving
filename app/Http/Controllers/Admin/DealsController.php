@@ -71,6 +71,7 @@ class DealsController extends Controller
     public function create(){
 
 
+        $estadosProspecto=$this->fields('4434756000031409026','Deals');//id Fiels Obtenidos de $this->campos()
 
         $marcas=$this->fields('4434756000000273884','Deals');//id Fiels Obtenidos de $this->campos()
 
@@ -86,7 +87,7 @@ class DealsController extends Controller
 
         $repres=$this->representantes();
 
-        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers'));
+        return view('admin.deals.form', compact('contacts', 'estadosProspecto','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers'));
     }
 
     public function store(Request $request){
@@ -113,6 +114,7 @@ class DealsController extends Controller
         $record->setFieldValue("Closing_Date",$new_data);
         $record->setFieldValue("Contact_Apellido", $request->input('Contact_Apellido'));
         $record->setFieldValue("Estado", $request->input('ubicacion'));
+        $record->setFieldValue("Estado_de_Propecto", $request->input('Estado_de_Propecto'));
         $record->setFieldValue("Next_Step", $request->input('Next_Step'));
         $record->setFieldValue("Dealer2", $request->input('Dealer2'));
         $record->setFieldValue("Marca", $request->input('marca'));
@@ -159,9 +161,7 @@ class DealsController extends Controller
     public function edit(Request $request){
 
         $record= $this->validarDeals($request->input('dealsId'));
-
-   //dd($record);
-
+   
         $arrayData['dealsId']=$request->input('dealsId');
         $arrayData['Deal_Name']=$record->getFieldValue("Deal_Name");
         $arrayData['Stage']=$record->getFieldValue("Stage");
@@ -170,6 +170,7 @@ class DealsController extends Controller
         $arrayData['Contact_Apellido']=$record->getFieldValue("Contact_Apellido");
         $arrayData['Estado']=$record->getFieldValue("Estado");
         $arrayData['Next_Step']=$record->getFieldValue("Next_Step");
+        $arrayData['Estado_de_Propecto']=$record->getFieldValue("Estado_de_Propecto");
         $arrayData['Marca']=$record->getFieldValue("Marca");
         $arrayData['Email_de_Dealer']=$record->getFieldValue("Email_de_Dealer");
         $arrayData['Producto']=$record->getFieldValue("Producto");
@@ -212,6 +213,7 @@ class DealsController extends Controller
 
         $arrayData['UTM_Source']=$record->getFieldValue("UTM_Source");
         $arrayData['Lead_Source']=$record->getFieldValue("Lead_Source");
+        $arrayData['Estado_de_Propecto']=$record->getFieldValue("Estado_de_Propecto");
         $arrayData['UTM_Anuncio_ID']=$record->getFieldValue("UTM_Anuncio_ID");
         $arrayData['UTM_Campaign_Name']=$record->getFieldValue("UTM_Campaign_Name");
         $arrayData['Enviar_a_Dealer']=$record->getFieldValue("Enviar_a_Dealer");
@@ -226,7 +228,10 @@ class DealsController extends Controller
 
         $data = (object) $arrayData;
 
-        //dd($data);
+
+
+
+        $estadosProspecto=$this->fields('4434756000031409026','Deals');//id Fiels Obtenidos de $this->campos()
 
         $marcas=$this->fields('4434756000000273884','Deals');//id Fiels Obtenidos de $this->campos()
 
@@ -239,8 +244,6 @@ class DealsController extends Controller
         $EstatusCD=$this->fields('4434756000000273689','Deals');//id Fiels Obtenidos de $this->campos()
 
         $cityShowrooms=$this->fields('4434756000000276187','Deals');//id Fiels Obtenidos de $this->campos()
-
-
 
         $dealers=$this->dealers();
 
@@ -255,7 +258,7 @@ class DealsController extends Controller
 
         //dd($contactInfo);
 
-        return view('admin.deals.form', compact('contacts','accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers','data','LeadSources','EstatusCD','cityShowrooms','contactInfo'));
+        return view('admin.deals.form', compact('contacts', 'estadosProspecto', 'accounts','marcas', 'ubicaciones' , 'stages' , 'repres','dealers','data','LeadSources','EstatusCD','cityShowrooms','contactInfo'));
 
 
     }
@@ -290,6 +293,7 @@ class DealsController extends Controller
         $record->setFieldValue("Email_de_Dealer", $request->input('Email_de_Dealer'));
         $record->setFieldValue("Producto", $request->input('Producto'));
         $record->setFieldValue("dealer_name", $request->input('dealer_name'));
+        $record->setFieldValue("Estado_de_Propecto", $request->input('Estado_de_Propecto'));
         $record->setFieldValue("Reps", $request->input('Reps'));
         $record->setFieldValue("Representante_email", $request->input('Representante_email'));
         
