@@ -111,6 +111,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('dealer', 'DealsController@dealers')->name('deals.dealers');
 
 
+
+    Route::get('notes', 'NotesController@index')->name('notes.index');
+
+    Route::get('notes/create', 'NotesController@create')->name('notes.create');
+
+    Route::POST('notes/store', 'NotesController@store')->name('notes.store');
+
+    Route::get('notes/tabla', 'NotesController@table')->name('notes.table');
+
+    Route::get('notes/edit', 'NotesController@edit')->name('notes.edit');
+
+    Route::put('notes/update', 'NotesController@update')->name('notes.update');
+
+
 });
 
 

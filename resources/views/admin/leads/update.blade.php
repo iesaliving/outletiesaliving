@@ -1068,14 +1068,30 @@
 
                         </div>
 
-           
+                        <div class="col-12 mt-5">
+                            <h4>Notas</h4>
+                          </div>
 
+                          <div class="col-md-12">
+                            <div class="notes">
+                              <div class="form-group">
+                                  <input id="Title" name="Title" type="text" class="form-control" value="" maxlength="100" placeholder="Titulo Nota">
 
+                                  <textarea name="Content" id="Content" rows="2" placeholder="Agregar una nota" class="form-control @error('note') is-invalid @enderror"></textarea>
 
-
+                                  <a href="javascript:void(0)" class="btn btn btn-warning fa fa-close" style="position: absolute; right: 15px;"></a>
+                                  <input type="file" id="Attachment" name="Attachment" class="form-control-file" id="exampleFormControlFile1">
+                                  <a href="javascript:void(0)" id="guardarNota" class="btn btn btn-success float-right">Guardar</a>
+                                  <a href="javascript:void(0)" class="btn btn btn-default float-right mr-4">Cancelar</a>
+                              </div>
+                            </div>
+                          </div>
                       
+                      <div class="py-5">
+                        
                        <button type="submit" id='btnsummit' class="btn btn-primary mt-1">{{ trans('global.save') }}</button>
 
+                      </div>
                     </form> 
 
                 </div>
@@ -1088,11 +1104,17 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+  textarea {
+    min-height: auto;
+}
+</style>
 
 @endsection
 
 @section('scripts')
 @parent
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
@@ -1102,6 +1124,65 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+
+
+
+  /*NOTAS*/
+
+
+  $('#guardarNota').on('click', function(){
+      swal.fire({
+      title: "¿Esta seguro de borrar este Post?",
+      text: "Esta operacion es definitiva",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Si, Borrarlo",
+      cancelButtonText: "No, Cancelar",
+                    preConfirm: (login) => {
+                            var url = '{{ route("admin.notes.store") }}';
+                            var formData = new FormData();
+                            var leadsId= "{{$data->leadsId}}"
+                            var Attachment = $("#Attachment")[0].files[0]
+                            var Title = $("#Title").val()
+                            var Content = $("#Content").val()
+                            console.log(Title,Content)
+                            formData.append('_token', $('[name="csrf-token"]').attr('content'));
+                            formData.append('leadsId',leadsId);
+                            formData.append('Title',Title);
+                            formData.append('Content',Content);
+                            formData.append('Attachment',Attachment);
+                        console.log(url)
+                        $.ajax({
+                             url: url,
+                              method: 'POST',
+                              data: formData,
+                              processData: false,
+                              contentType: false,
+                              success: function(data) {
+                                  if (data==='success') {
+                                    swal.fire("Borrado", "Este Post ha sido eliminado","success");
+                                    $('#table').DataTable().ajax.reload();
+                                    
+                                }else{
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+                                }
+                              },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+                            }
+                            }) 
+                    },
+      })
+    })
+
+
+
+
+
+
+
+  /*FIN NOTAS*/
 
       var dateToday = new Date();
         //dateToday.setDate(dateToday.getDate() - 1);

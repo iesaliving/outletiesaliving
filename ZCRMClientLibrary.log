@@ -1372,3 +1372,6 @@ Trace::#0 C:\xampp\htdocs\IESA_ADMIN\vendor\zohocrm\php-sdk\src\crm\api\response
 #53 C:\xampp\htdocs\IESA_ADMIN\public\index.php(55): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #54 C:\xampp\htdocs\IESA_ADMIN\server.php(21): require_once('C:\\xampp\\htdocs...')
 #55 {main}
+2020-08-17 19:40:13 INFO: Access Token has expired. Hence refreshing.
+2020-08-19 18:06:08 INFO: Access Token has expired. Hence refreshing.
+2020-08-19 21:31:02 INFO: Access Token has expired. Hence refreshing.
