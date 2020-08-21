@@ -58,21 +58,21 @@
             </div>
         </div>
  
-        <div id="dealers">
+        <div id="dealers" class="container">
             <h2 id="text-contacto" class="col-12 text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
             <div class="row justify-content-center text-center col-12 mb-4">
-                <div class="col-md-5 col-sm-auto my-1">
+                <div class="col-md-5 col-sm-auto my-3">
                     <select required class="form-control form-custom select-estado-mex" name="estado-mex"> 
                         <option value="" selected disabled>ESTADO</option>
                     </select>
                 </div>
-                <div class="col-md-5 col-sm-auto my-1">
+                <div class="col-md-5 col-sm-auto my-3">
                     <select required class="form-control form-custom select-ciudad-mex" name="ciudad-mex"> 
                         <option value="" selected disabled>CIUDAD</option>               
                     </select>
                 </div>
-                <div class="col-md-2 col-sm-auto my-1">
-                    <button id="btnDealer" class="btn btn-primary btn-block">Buscar</button>
+                <div class="col-md-2 col-sm-auto my-3">
+                    <button id="btnDealer" class="btn btn-cyan btn-block">Buscar</button>
                 </div>         
             </div>        
             <div id="dealersfilter">
@@ -223,12 +223,12 @@
                     }
                     
                     if(+grupo === 5){
-                        ctg = "basico"
+                        ctg = "básico"
                     }
 
 
 
-                    html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
+                    html +="<h3 class=\"text-uppercase mb-4 font-weight-bold\">Categoría "+ctg+"</h3>"
                     html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
                     grupos[grupo].forEach( async(dealer, index) => {
                         let edo = estados.find(estado => estado.id === dealer.estado);
@@ -236,7 +236,7 @@
                         
                         html+="\t<div class=\"card h-100\">\n";
                         html+="\t\t<div class=\"card-body\">\n";
-                        html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
+                        html+="\t\t\t<h4 class=\" text-cyan card-title\">"+dealer.nombre+"</h4>\n";
                         html+="\t\t\t<hr>\n";
                         html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
                         html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
@@ -334,7 +334,7 @@
 
                         let grupos = ciudadFiltrados.reduce((agrupados, item) => ({
                         ...agrupados,
-                        [item.categoria]: [...(agrupados[item.categoria] || []), item]
+                        [item.categoría]: [...(agrupados[item.categoria] || []), item]
                         }), []);
 
                         
@@ -363,10 +363,10 @@
                             }
                             
                             if(+grupo === 5){
-                                ctg = "basico"
+                                ctg = "básico"
                             }
 
-                            html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
+                            html +="<h3 class=\"text-uppercase font-weight-bold\">Categoría "+ctg+"</h3>"
                             html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
                             grupos[grupo].forEach( (dealer, index) => {
                                 let edo = estados.find(estado => estado.id === dealer.estado);

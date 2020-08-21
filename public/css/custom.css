@@ -285,6 +285,12 @@ a:hover{
     padding: .575rem .75rem;
 }
 
+.text-cyan{
+    
+    color: #01bb9c;
+    
+}
+
 .btn-cyan:hover{
     color: #fff!important;
     background-color: #212832!important;
