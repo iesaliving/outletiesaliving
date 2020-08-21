@@ -202,7 +202,7 @@
                     estados = data.estados,
                     ciudades = data.ciudades;
                 
-                for(let grupo in grupos){
+                /* for(let grupo in grupos){
                     
                     let ctg = ''
                     
@@ -253,7 +253,7 @@
                         html+="\t</div>\n";
                     });
                     html +="</div>\n";    
-                }
+                } */
                 
                 $("#dealersfilter").html(html);
                 $('.owl-carousel').owlCarousel({
@@ -325,7 +325,7 @@
                             html = `
                                 <div class="row">
                                     <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
-                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic text-cyan font-weight-bold">disponibles</span></h1>
                                     <div>
                                 <div>
                             `
@@ -366,14 +366,14 @@
                                 ctg = "básico"
                             }
 
-                            html +="<h3 class=\"text-uppercase font-weight-bold\">Categoría "+ctg+"</h3>"
+                            html +="<h3 class=\"text-uppercase  mb-4 font-weight-bold\">Categoría "+ctg+"</h3>"
                             html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
                             grupos[grupo].forEach( (dealer, index) => {
                                 let edo = estados.find(estado => estado.id === dealer.estado);
                                 let ciudad = ciudades.find(city => city.id === dealer.ciudad);
                                 html+="\t<div class=\"card h-100\">\n";
                                 html+="\t\t<div class=\"card-body\">\n";
-                                html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
+                                html+="\t\t\t<h4 class=\"text-cyan card-title\">"+dealer.nombre+"</h4>\n";
                                 html+="\t\t\t<hr>\n";
                                 html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
                                 html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
@@ -416,7 +416,7 @@
                         html = `
                                 <div class="row">
                                     <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
-                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic text-cyan font-weight-bold">disponibles</span></h1>
                                     <div>
                                 <div>
                             `
