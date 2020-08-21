@@ -61,17 +61,17 @@
         <div id="dealers">
             <h2 id="text-contacto" class="col-12 text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
             <div class="row justify-content-center text-center col-12 mb-4">
-                <div class="col-5">
+                <div class="col-md-5 col-sm-auto my-1">
                     <select required class="form-control form-custom select-estado-mex" name="estado-mex"> 
                         <option value="" selected disabled>ESTADO</option>
                     </select>
                 </div>
-                <div class="col-5">
+                <div class="col-md-5 col-sm-auto my-1">
                     <select required class="form-control form-custom select-ciudad-mex" name="ciudad-mex"> 
                         <option value="" selected disabled>CIUDAD</option>               
                     </select>
                 </div>
-                <div class="col-2">
+                <div class="col-md-2 col-sm-auto my-1">
                     <button id="btnDealer" class="btn btn-primary btn-block">Buscar</button>
                 </div>         
             </div>        
@@ -197,6 +197,11 @@
                 }), []);
                 
                 let html = ''; 
+
+                let 
+                    estados = data.estados,
+                    ciudades = data.ciudades;
+                
                 for(let grupo in grupos){
                     
                     let ctg = ''
@@ -221,16 +226,29 @@
                         ctg = "basico"
                     }
 
+
+
                     html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
                     html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
                     grupos[grupo].forEach( async(dealer, index) => {
+                        let edo = estados.find(estado => estado.id === dealer.estado);
+                        let ciudad = ciudades.find(city => city.id === dealer.ciudad);
+                        
                         html+="\t<div class=\"card h-100\">\n";
                         html+="\t\t<div class=\"card-body\">\n";
                         html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
+                        html+="\t\t\t<hr>\n";
                         html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
+                        html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
                         html+="\t\t</div>\n";
                         html+="\t\t<div class=\"card-footer\">\n";
-                        html+="\t\t\t<span class=\"card-text\">"+dealer.estado+" - "+dealer.ciudad +"</span>\n";
+                        if(dealer.tlf){
+                            html+="\t\t\t<span class=\"card-text\">Tlf: "+dealer.tlf+"</span>\n";
+                            
+                        }else{
+                            html+="\t\t\t<span class=\"card-text\"></span>\n";
+                        }
+                        //html+="\t\t\t<span class=\"card-text\">"+dealer.estado+" - "+dealer.ciudad +"</span>\n";
                         html+="\t\t</div>\n";
                         html+="\t</div>\n";
                     });
@@ -318,6 +336,11 @@
                         ...agrupados,
                         [item.categoria]: [...(agrupados[item.categoria] || []), item]
                         }), []);
+
+                        
+                        let 
+                            estados = data.estados,
+                            ciudades = data.ciudades;
                         
                         for(let grupo in grupos){
                             
@@ -346,13 +369,22 @@
                             html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
                             html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
                             grupos[grupo].forEach( (dealer, index) => {
+                                let edo = estados.find(estado => estado.id === dealer.estado);
+                                let ciudad = ciudades.find(city => city.id === dealer.ciudad);
                                 html+="\t<div class=\"card h-100\">\n";
                                 html+="\t\t<div class=\"card-body\">\n";
                                 html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
+                                html+="\t\t\t<hr>\n";
                                 html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
+                                html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
                                 html+="\t\t</div>\n";
                                 html+="\t\t<div class=\"card-footer\">\n";
-                                html+="\t\t\t<span class=\"card-text\">"+dealer.estado+" - "+dealer.ciudad +"</span>\n";
+                                if(dealer.tlf){
+                                    html+="\t\t\t<span class=\"card-text\">Tlf: "+dealer.tlf+"</span>\n";
+                                    
+                                }else{
+                                    html+="\t\t\t<span class=\"card-text\"></span>\n";
+                                }
                                 html+="\t\t</div>\n";
                                 html+="\t</div>\n";
                             });

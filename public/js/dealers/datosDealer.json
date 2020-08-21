@@ -5,259 +5,297 @@
             "categoria": 2,
             "direccion1": "VALERIO GONZALEZ CANSECO",
             "ciudad": 4,
-            "estado": 2
+            "estado": 2,
+            "tlf": "624 142 1359"
         },
         {
             "nombre": "ALBERO CHIHUAHUA",
             "categoria": 3,
             "direccion1": "AVE. DE LA EMPRESA",
             "ciudad": 5,
-            "estado": 3
+            "estado": 3,
+            "tlf": "6144385225"
         },
         {
             "nombre": "AVR STILE",
             "categoria": 3,
             "direccion1": "CTO. PLAZA ESMERALDA NO 9-1A\nTERRAZA AMALFI",
             "ciudad": 1,
-            "estado": 1
+            "estado": 1,
+            "tlf": "6591-3424"
         },
         {
             "nombre": "AZNUSI CUCINE",
             "categoria": 3,
             "direccion1": "AVE UNIVERSIDAD 654",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5605-5896"
         },
         {
             "nombre": "BOA LAB",
             "categoria": 1,
             "direccion1": "TABASCO 311",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5537-0861"
+            
         },
         {
             "nombre": "COCINAS SEVILLA",
             "categoria": 3,
             "direccion1": "Av. Explanada 720",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5516-2431"
         },
         {
             "nombre": "SCAVOLINI",
             "categoria": 3,
             "direccion1": "Goldsmith 53",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5280-3689"
         },
         {
             "nombre": "D+M",
             "categoria": 3,
             "direccion1": "Lago Mask 183",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5545-6100"
         },
         {
             "nombre": "EGGPLANT KITCHEN",
             "categoria": 2,
             "direccion1": "ALTAVISTA #76",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "437-3499"
         },
         {
             "nombre": "DANA",
             "categoria": 3,
             "direccion1": "JAIME BALMES 11 L27 PLAZA POLANCO",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": "5557-0787"
         },
         {
             "nombre": "CASA PALACIO POLANCO",
             "categoria": 3,
             "direccion1": "",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": ""
         },
         {
             "nombre": "CASA PALACIO SANTA FE",
             "categoria": 3,
             "direccion1": "",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": ""
         },
         {
             "nombre": "PALACIO DE HIERRO PERISUR",
             "categoria": 3,
             "direccion1": "",
             "ciudad": 2,
-            "estado": 1
+            "estado": 1,
+            "tlf": ""
         },
         {
             "nombre": "PALACIO DE HIERRO MONTERREY",
             "categoria": 3,
             "direccion1": "",
             "ciudad": 3,
-            "estado": 1
+            "estado": 1,
+            "tlf": ""
         },
         {
             "nombre": "CIAO TORREON",
             "categoria": 3,
             "direccion1": "BLVD.INDEPENDENCIA 513 OTE",
             "ciudad": 6,
-            "estado": 4
+            "estado": 4,
+            "tlf": "871722-6185"
         },
         {
             "nombre": "ENSERES FINO",
             "categoria": 3,
             "direccion1": "CARRETERA LIBRE A LOS VALDEZ",
             "ciudad": 7,
-            "estado": 4
+            "estado": 4,
+            "tlf": "8441640108"
         },
         {
             "nombre": "MOROSINI",
             "categoria": 4,
             "direccion1": "AV COLOSIO 22099-2",
             "ciudad": 7,
-            "estado": 4
+            "estado": 4,
+            "tlf": "8111811478"
         },
         {
             "nombre": "MADETRO",
             "categoria": 5,
             "direccion1": "AVE. ELIAS ZAMORA VERDUZCO 1908",
             "ciudad": 8,
-            "estado": 5
+            "estado": 5,
+            "tlf": "314 334 8200"
         },
         {
             "nombre": "COCINAS GAUDI",
-            "categoria": 0,
+            "categoria": 4,
             "direccion1": "FELIPE PESCADOR 913",
             "ciudad": 9,
-            "estado": 6
+            "estado": 6,
+            "tlf": "618 827 4250"
         },
         {
             "nombre": "INTERMUEBLES DEL CENTRO",
             "categoria": 3,
             "direccion1": "BLVD. ALONSO DE TORRES",
             "ciudad": 10,
-            "estado": 7
+            "estado": 7,
+            "tlf": "1222-1533"
         },
         {
             "nombre": "VALTORINI",
             "categoria": 3,
             "direccion1": "BOULEVARD CAMPESTRE 202",
             "ciudad": 10,
-            "estado": 7
+            "estado": 7,
+            "tlf": "477 717 6727"
         },
         {
             "nombre": "COCINA CONTEMPORANEA,",
             "categoria": 5,
             "direccion1": "MAR BALTICO #2240",
             "ciudad": 11,
-            "estado": 8
+            "estado": 8,
+            "tlf": "33 3817 8415"
         },
         {
             "nombre": "SANDERMO",
             "categoria": 4,
             "direccion1": "AVE. REAL ACUEDUCTO",
             "ciudad": 11,
-            "estado": 8
+            "estado": 8,
+            "tlf": "33 3615 4090"
         },
         {
             "nombre": "KITCHEN AND BATH COLLECTION",
             "categoria": 4,
             "direccion1": "BLVRD RIVIERA NAYARIT 1480",
             "ciudad": 12,
-            "estado": 9
+            "estado": 9,
+            "tlf": "322 297 8779"
         },
         {
             "nombre": "ALBERO",
             "categoria": 1,
             "direccion1": "AV . SAN PEDRO 505 NTE",
             "ciudad": 13,
-            "estado": 10
+            "estado": 10,
+            "tlf": "8335-1285"
         },
         {
             "nombre": "ALTER",
             "categoria": 3,
             "direccion1": "AV JOSE VASCONCELOS 6-B",
             "ciudad": 14,
-            "estado": 10
+            "estado": 10,
+            "tlf": "8112-2407"
         },
         {
             "nombre": "COCINAS SANTOS",
             "categoria": 4,
             "direccion1": "RIO MANZANARES # 433 OTE",
             "ciudad": 14,
-            "estado": 10
+            "estado": 10,
+            "tlf": "8989-6601"
         },
         {
             "nombre": "GAUDI",
             "categoria": 3,
             "direccion1": "AVENIDA MANUEL GOMEZ MORIN PLAZA CHIPINQUE",
             "ciudad": 14,
-            "estado": 10
+            "estado": 10,
+            "tlf": "8378-4450"
         },
         {
             "nombre": "SANTISTEBAN COCINAS",
             "categoria": 3,
             "direccion1": "AVENIDA MANUEL GOMEZ MORIN PLAZA CHIPINQUE",
             "ciudad": 14,
-            "estado": 10
+            "estado": 10,
+            "tlf": "8345-0203"
         },
         {
             "nombre": "EXCLUSIVO",
             "categoria": 3,
             "direccion1": "AVENIDA 25 PTE",
             "ciudad": 15,
-            "estado": 11
+            "estado": 11,
+            "tlf": ""
         },
         {
             "nombre": "ALBERO CANCUN",
             "categoria": 3,
             "direccion1": "BOULEVARD LUIS DONALDO COLOSIO MANZANA 2 LOTE 49",
             "ciudad": 16,
-            "estado": 12
+            "estado": 12,
+            "tlf": "9988821147"
         },
         {
             "nombre": "VALTORINI CANCUN",
             "categoria": 3,
             "direccion1": "BONAMPAK MANZANA 5 LOTE 2",
             "ciudad": 16,
-            "estado": 12
+            "estado": 12,
+            "tlf": "9988022622"
         },
         {
             "nombre": "GEZA",
             "categoria": 3,
             "direccion1": "EMILIANO ZAPATA 3539",
             "ciudad": 17,
-            "estado": 13
+            "estado": 13,
+            "tlf": "667 456 7949"
         },
         {
             "nombre": "RUIZ T CASA",
             "categoria": 5,
             "direccion1": "AV. DE LOS GENERALES S/N",
             "ciudad": 18,
-            "estado": 14
+            "estado": 14,
+            "tlf": "647-426-1031"
         },
         {
             "nombre": "MOBILE",
             "categoria": 4,
             "direccion1": "AVE. PASEO TABASCO 1002-B",
             "ciudad": 19,
-            "estado": 15
+            "estado": 15,
+            "tlf": "3315-9823"
         },
         {
             "nombre": "EBANES",
             "categoria": 4,
             "direccion1": "ROBERTO FIERRO #204",
             "ciudad": 20,
-            "estado": 16
+            "estado": 16,
+            "tlf": "8333001851"
         },
         {
             "nombre": "AMMEX",
             "categoria": 3,
             "direccion1": "CALLE 30 # 329 POR 39 Y 41",
             "ciudad": 21,
-            "estado": 17
+            "estado": 17,
+            "tlf": "9991711921"
         }
     ],
     "estados": [
