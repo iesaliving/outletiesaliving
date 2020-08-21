@@ -1,53 +1,340 @@
 {
-    "dealers" : [
+    "dealers" : [  
         {
-            "nombre": "BOA Luxury Projects",
-            "direccion1": "102A, Tabasco 311, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX, México",
-            "estado": 1,
-            "ciudad": 2,
-            "categoria": 3
-        },
-        {
-            "nombre": "KITCHEN & BATH COLLECTION",
-            "direccion1": "Blvd. Riviera Nayarit #1480 Local 8 Col. Nuevo Vallarta, Bahía de Banderas, Nayarit CP: 63735",
-            "estado": 3,
+            "nombre": "GOMEZ & HILMAN",
+            "categoria": 2,
+            "direccion1": "VALERIO GONZALEZ CANSECO",
             "ciudad": 4,
-            "categoria": 1
+            "estado": 2
         },
         {
-            "nombre": "Benneti Casa",
-            "direccion1": "Bosques de la Reforma 1813, Lomas del Chamizal, Cuajimalpa de Morelos",
-            "estado": 1,
-            "ciudad": 2,
-            "categoria": 1
+            "nombre": "ALBERO CHIHUAHUA",
+            "categoria": 3,
+            "direccion1": "AVE. DE LA EMPRESA",
+            "ciudad": 5,
+            "estado": 3
         },
         {
-            "nombre": "Cocinas Gaudí San Pedro",
-            "direccion1": "Local 202 Plaza Chipinque, Av. Manuel Gómez Morín 938, Comercial Gómez Morin, Jerónimo Siller, 66266 San Pedro Garza García, N.L., México",
-            "estado": 2,
+            "nombre": "AVR STILE",
+            "categoria": 3,
+            "direccion1": "CTO. PLAZA ESMERALDA NO 9-1A\nTERRAZA AMALFI",
             "ciudad": 1,
-            "categoria": 2
+            "estado": 1
+        },
+        {
+            "nombre": "AZNUSI CUCINE",
+            "categoria": 3,
+            "direccion1": "AVE UNIVERSIDAD 654",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "BOA LAB",
+            "categoria": 1,
+            "direccion1": "TABASCO 311",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "COCINAS SEVILLA",
+            "categoria": 3,
+            "direccion1": "Av. Explanada 720",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "SCAVOLINI",
+            "categoria": 3,
+            "direccion1": "Goldsmith 53",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "D+M",
+            "categoria": 3,
+            "direccion1": "Lago Mask 183",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "EGGPLANT KITCHEN",
+            "categoria": 2,
+            "direccion1": "ALTAVISTA #76",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "DANA",
+            "categoria": 3,
+            "direccion1": "JAIME BALMES 11 L27 PLAZA POLANCO",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "CASA PALACIO POLANCO",
+            "categoria": 3,
+            "direccion1": "",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "CASA PALACIO SANTA FE",
+            "categoria": 3,
+            "direccion1": "",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "PALACIO DE HIERRO PERISUR",
+            "categoria": 3,
+            "direccion1": "",
+            "ciudad": 2,
+            "estado": 1
+        },
+        {
+            "nombre": "PALACIO DE HIERRO MONTERREY",
+            "categoria": 3,
+            "direccion1": "",
+            "ciudad": 3,
+            "estado": 1
+        },
+        {
+            "nombre": "CIAO TORREON",
+            "categoria": 3,
+            "direccion1": "BLVD.INDEPENDENCIA 513 OTE",
+            "ciudad": 6,
+            "estado": 4
+        },
+        {
+            "nombre": "ENSERES FINO",
+            "categoria": 3,
+            "direccion1": "CARRETERA LIBRE A LOS VALDEZ",
+            "ciudad": 7,
+            "estado": 4
+        },
+        {
+            "nombre": "MOROSINI",
+            "categoria": 4,
+            "direccion1": "AV COLOSIO 22099-2",
+            "ciudad": 7,
+            "estado": 4
+        },
+        {
+            "nombre": "MADETRO",
+            "categoria": 5,
+            "direccion1": "AVE. ELIAS ZAMORA VERDUZCO 1908",
+            "ciudad": 8,
+            "estado": 5
+        },
+        {
+            "nombre": "COCINAS GAUDI",
+            "categoria": 0,
+            "direccion1": "FELIPE PESCADOR 913",
+            "ciudad": 9,
+            "estado": 6
+        },
+        {
+            "nombre": "INTERMUEBLES DEL CENTRO",
+            "categoria": 3,
+            "direccion1": "BLVD. ALONSO DE TORRES",
+            "ciudad": 10,
+            "estado": 7
+        },
+        {
+            "nombre": "VALTORINI",
+            "categoria": 3,
+            "direccion1": "BOULEVARD CAMPESTRE 202",
+            "ciudad": 10,
+            "estado": 7
+        },
+        {
+            "nombre": "COCINA CONTEMPORANEA,",
+            "categoria": 5,
+            "direccion1": "MAR BALTICO #2240",
+            "ciudad": 11,
+            "estado": 8
+        },
+        {
+            "nombre": "SANDERMO",
+            "categoria": 4,
+            "direccion1": "AVE. REAL ACUEDUCTO",
+            "ciudad": 11,
+            "estado": 8
+        },
+        {
+            "nombre": "KITCHEN AND BATH COLLECTION",
+            "categoria": 4,
+            "direccion1": "BLVRD RIVIERA NAYARIT 1480",
+            "ciudad": 12,
+            "estado": 9
+        },
+        {
+            "nombre": "ALBERO",
+            "categoria": 1,
+            "direccion1": "AV . SAN PEDRO 505 NTE",
+            "ciudad": 13,
+            "estado": 10
+        },
+        {
+            "nombre": "ALTER",
+            "categoria": 3,
+            "direccion1": "AV JOSE VASCONCELOS 6-B",
+            "ciudad": 14,
+            "estado": 10
+        },
+        {
+            "nombre": "COCINAS SANTOS",
+            "categoria": 4,
+            "direccion1": "RIO MANZANARES # 433 OTE",
+            "ciudad": 14,
+            "estado": 10
+        },
+        {
+            "nombre": "GAUDI",
+            "categoria": 3,
+            "direccion1": "AVENIDA MANUEL GOMEZ MORIN PLAZA CHIPINQUE",
+            "ciudad": 14,
+            "estado": 10
+        },
+        {
+            "nombre": "SANTISTEBAN COCINAS",
+            "categoria": 3,
+            "direccion1": "AVENIDA MANUEL GOMEZ MORIN PLAZA CHIPINQUE",
+            "ciudad": 14,
+            "estado": 10
+        },
+        {
+            "nombre": "EXCLUSIVO",
+            "categoria": 3,
+            "direccion1": "AVENIDA 25 PTE",
+            "ciudad": 15,
+            "estado": 11
+        },
+        {
+            "nombre": "ALBERO CANCUN",
+            "categoria": 3,
+            "direccion1": "BOULEVARD LUIS DONALDO COLOSIO MANZANA 2 LOTE 49",
+            "ciudad": 16,
+            "estado": 12
+        },
+        {
+            "nombre": "VALTORINI CANCUN",
+            "categoria": 3,
+            "direccion1": "BONAMPAK MANZANA 5 LOTE 2",
+            "ciudad": 16,
+            "estado": 12
+        },
+        {
+            "nombre": "GEZA",
+            "categoria": 3,
+            "direccion1": "EMILIANO ZAPATA 3539",
+            "ciudad": 17,
+            "estado": 13
+        },
+        {
+            "nombre": "RUIZ T CASA",
+            "categoria": 5,
+            "direccion1": "AV. DE LOS GENERALES S/N",
+            "ciudad": 18,
+            "estado": 14
+        },
+        {
+            "nombre": "MOBILE",
+            "categoria": 4,
+            "direccion1": "AVE. PASEO TABASCO 1002-B",
+            "ciudad": 19,
+            "estado": 15
+        },
+        {
+            "nombre": "EBANES",
+            "categoria": 4,
+            "direccion1": "ROBERTO FIERRO #204",
+            "ciudad": 20,
+            "estado": 16
+        },
+        {
+            "nombre": "AMMEX",
+            "categoria": 3,
+            "direccion1": "CALLE 30 # 329 POR 39 Y 41",
+            "ciudad": 21,
+            "estado": 17
         }
     ],
     "estados": [
         {
             "id": 1,
-            "nombre": "CDMX"
+            "nombre": "CIUDAD DE MEXICO"
         },
         {
             "id": 2,
-            "nombre": "MONTERREY"
+            "nombre": "BAJA CALIFORNIA SUR"
         },
         {
             "id": 3,
-            "nombre": "RIVIERA"
+            "nombre": "CHIHUAHUA"
+        },
+        {
+            "id": 4,
+            "nombre": "COAHUILA"
+        },
+        {
+            "id": 5,
+            "nombre": "COLIMA"
+        },
+        {
+            "id": 6,
+            "nombre": "DURANGO"
+        },
+        {
+            "id": 7,
+            "nombre": "GUANAJUATO"
+        },
+        {
+            "id": 8,
+            "nombre": "JALISCO"
+        },
+        {
+            "id": 9,
+            "nombre": "NAYARIT"
+        },
+        {
+            "id": 10,
+            "nombre": "NUEVO LEON"
+        },
+        {
+            "id": 11,
+            "nombre": "PUEBLA"
+        },
+        {
+            "id": 12,
+            "nombre": "QUINTANA ROO"
+        },
+        {
+            "id": 13,
+            "nombre": "SINALOA"
+        },
+        {
+            "id": 14,
+            "nombre": "SONORA"
+        },
+        {
+            "id": 15,
+            "nombre": "TABASCO"
+        },
+        {
+            "id": 16,
+            "nombre": "TAMAULIPAS"
+        },
+        {
+            "id": 17,
+            "nombre": "YUCATAN"
         }
     ],
     "ciudades": [
         {
             "id": 1,
-            "nombre": "NUEVO LEÓN",
-            "estado": 2
+            "nombre": "ATIZAPAN",
+            "estado": 1
         },
         {
             "id": 2,
@@ -56,13 +343,99 @@
         },
         {
             "id": 3,
-            "nombre": "CDMX 2",
+            "nombre": "MONTERREY",
             "estado": 1
         },
         {
             "id": 4,
-            "nombre": "NUEVO VALLARTA",
+            "nombre": "LOS  CABOS",
+            "estado": 2
+        },
+        {
+            "id": 5,
+            "nombre": "CHIHUAHUA",
             "estado": 3
+        },
+        {
+            "id": 6,
+            "nombre": "TORREON",
+            "estado": 4
+        },
+        {
+            "id": 7,
+            "nombre": "SALTILLO",
+            "estado": 4
+        },
+        {
+            "id": 8,
+            "nombre": "MANZANILLO",
+            "estado": 5
+        },
+        {
+            "id": 9,
+            "nombre": "DURANGO",
+            "estado": 6
+        },
+        {
+            "id": 10,
+            "nombre": "LEON",
+            "estado": 7
+        },
+        {
+            "id": 11,
+            "nombre": "ZAPOPAN",
+            "estado": 8
+        },
+        {
+            "id": 12,
+            "nombre": "NUEVO VALLARTA",
+            "estado": 9
+        },
+        {
+            "id": 13,
+            "nombre": "GARZA GARCIA",
+            "estado": 10
+        },
+        {
+            "id": 14,
+            "nombre": "MONTERREY",
+            "estado": 10
+        },
+        {
+            "id": 15,
+            "nombre": "PUEBLA",
+            "estado": 11
+        },
+        {
+            "id": 16,
+            "nombre": "CANCUN",
+            "estado": 12
+        },
+        {
+            "id": 17,
+            "nombre": "CULIACAN",
+            "estado": 13
+        },
+        {
+            "id": 18,
+            "nombre": "HUATABAMPO",
+            "estado": 14
+        },
+        {
+            "id": 19,
+            "nombre": "VILLA HERMOSA",
+            "estado": 15
+        },
+        {
+            "id": 20,
+            "nombre": "TAMPICO",
+            "estado": 16
+        },
+        {
+            "id": 21,
+            "nombre": "MERIDA",
+            "estado": 17
         }
+
     ]
 }

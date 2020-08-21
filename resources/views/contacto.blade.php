@@ -225,20 +225,28 @@
                     let ctg = ''
                     
                     if(+grupo === 1){
+                        ctg = "platino"
+                    }
+                    
+                    if(+grupo === 2){
                         ctg = "diamante"
                     }
 
-                    if(+grupo === 2){
+                    if(+grupo === 3){
                         ctg = "oro"
                     }
 
-                    if(+grupo === 3){
+                    if(+grupo === 4){
                         ctg = "plata"
+                    }
+                    
+                    if(+grupo === 5){
+                        ctg = "basico"
                     }
 
                     html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
                     html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
-                    grupos[grupo].forEach( (dealer, index) => {
+                    grupos[grupo].forEach( async(dealer, index) => {
                         html+="\t<div class=\"card h-100\">\n";
                         html+="\t\t<div class=\"card-body\">\n";
                         html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
@@ -253,6 +261,25 @@
                 }
                 
                 $("#dealersfilter").html(html);
+                $('.owl-carousel').owlCarousel({
+                loop: false,
+                nav: true,
+                navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 4,
+                        margin: 20
+                    }
+                }
+            })
+                
             }     
         });  
 
@@ -299,7 +326,14 @@
                         let ciudadFiltrados = estadosFiltrados.filter( dealer => dealer.ciudad === +selectCiudad);
                         
                         if(!estadosFiltrados.length || !ciudadFiltrados.length){
-                            html = "<div class=\"alert alert-info\">No hay dealers disponibles</div>";
+                            //html = "<div class=\"alert alert-info\">No hay dealers disponibles</div>";
+                            html = `
+                                <div class="row">
+                                    <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                    <div>
+                                <div>
+                            `
                             return $("#dealersfilter").html(html);
                         }
 
@@ -313,15 +347,23 @@
                             let ctg = ''
                             
                             if(+grupo === 1){
+                                ctg = "platino"
+                            }
+                            
+                            if(+grupo === 2){
                                 ctg = "diamante"
                             }
 
-                            if(+grupo === 2){
+                            if(+grupo === 3){
                                 ctg = "oro"
                             }
 
-                            if(+grupo === 3){
+                            if(+grupo === 4){
                                 ctg = "plata"
+                            }
+                            
+                            if(+grupo === 5){
+                                ctg = "basico"
                             }
 
                             html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
@@ -361,30 +403,20 @@
                         })
                        // data.estados.map( estado => $(".select-estado-mex").append(`<option value="${estado.id}">${estado.nombre}</option>`));
                     }else{
-                        html +="<div class=\"alert alert-info\">No hay dealers disponibles</div>"
+                        //html +="<div class=\"alert alert-info\">No hay dealers disponibles</div>"
+                        html = `
+                                <div class="row">
+                                    <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                    <div>
+                                <div>
+                            `
                         $("#dealersfilter").html(html);
                     }
                 });  
             });
            
-            $('.owl-carousel').owlCarousel({
-                loop: false,
-                nav: true,
-                navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
-                margin: 10,
-                responsive: {
-                    0: {
-                        items: 1,
-                    },
-                    600: {
-                        items: 3,
-                    },
-                    1000: {
-                        items: 4,
-                        margin: 20
-                    }
-                }
-            })
+           
         }) 
     </script>
 @endsection
