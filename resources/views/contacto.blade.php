@@ -75,7 +75,7 @@
                     <button id="btnDealer" class="btn btn-cyan btn-block">Buscar</button>
                 </div>         
             </div>        
-            <div id="dealersfilter">
+            <div id="dealersfilter" class="mt-3">
             </div>
         </div>
         <div class="row nomargin topmargin-lg">

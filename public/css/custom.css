@@ -277,6 +277,8 @@ a:hover{
 }
 
 
+
+
 .btn-cyan{
     color: #fff!important;
     background-color: #01bb9c;
@@ -286,9 +288,17 @@ a:hover{
 }
 
 .text-cyan{
-    
+
     color: #01bb9c;
     
+}
+
+.fa-chevron-right {
+  color: #01bb9c;
+}
+
+.fa-chevron-left {
+  color: #01bb9c;
 }
 
 .btn-cyan:hover{
