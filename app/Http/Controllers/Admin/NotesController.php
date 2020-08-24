@@ -46,17 +46,46 @@ class NotesController extends Controller
     }
     
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.leads.index');
+        //dd($request->input());
+        $leadId=base64_decode($request->input('leadsId'));
+        $module=$request->input('Module');
+        $record = ZCRMRestClient::getInstance()->getRecordInstance( $module,  $leadId); // To get record instance
+        /* For VERSION <=2.0.6 $notes = $record->getNotes()->getData(); // to get the notes in form of ZCRMNote instances array */
+        $param_map=array(); // key-value pair containing all the parameters - optional
+        $header_map = array(); // key-value pair containing all the headers - optional
+        $notes = $record->getNotes($param_map,$header_map) ;// to get the notes in form of ZCRMNote instances array
+
+           // dump($notes->getData());
+        if ($notes->getHttpStatusCode()===200) {
+    
+            $data = array();
+            $data['code']='success';
+            foreach ($notes->getData() as $key => $note) {
+                $data['notes'][$key]['noteId']=base64_encode($note->getId());
+                $data['notes'][$key]['Title']= ($note->getTitle()!=null ) ? $note->getTitle() : '' ; 
+                $data['notes'][$key]['Content']= $note->getContent();
+
+                $attchments = $note->getAttachments();
+                if ($attchments != null) {
+                
+                     $data['notes'][$key]['Attachment']= url('noteFiles/'.$attchments[0]->getFileName());
+                }
+            }
+          //  dump($data);
+            echo json_encode($data);
+        }
     }
 
 
     public function store(Request $request)
     {
+
+        $module=$request->input('Module');
         $leadId=base64_decode($request->input('leadsId'));
 
-        $record = ZCRMRestClient::getInstance()->getRecordInstance("Leads", $leadId); // To get record instance
+        $record = ZCRMRestClient::getInstance()->getRecordInstance($module, $leadId); // To get record instance
         $noteIns = ZCRMNote::getInstance($record, null); // to get the note instance
         $noteIns->setTitle($request->input('Title')); // to set the note title
         $noteIns->setContent($request->input('Content')); // to set the note content
@@ -78,7 +107,7 @@ class NotesController extends Controller
 
                 $responseUpload=$this->AttachmentToNote($noteId,$pathInfo);// subir a zoho crm
 
-                \File::delete($pathInfo);
+               //\File::delete($pathInfo);
                 return $responseUpload->getStatus();
 
             }
@@ -92,6 +121,57 @@ class NotesController extends Controller
     }
 
 
+    public function update(Request $request){
+        
+        $module=$request->input('Module');
+        $leadId=base64_decode($request->input('leadsId'));
+        $noteId=base64_decode($request->input('noteId'));
+
+        $record = ZCRMRestClient::getInstance()->getRecordInstance($module, $leadId); // To get record instance
+        $noteIns = ZCRMNote::getInstance($record, $noteId); // to get the note instance
+        $noteIns->setTitle($request->input('Title')); // to set the title of the note
+        $noteIns->setContent($request->input('Content')); // to set the content of the note
+        $responseIns = $record->updateNote($noteIns); // to update the note
+
+        if ($responseIns->getStatus()=='success') {
+            
+            if($request->file('Attachment')){
+
+                $data=$responseIns->getData();//data
+                $noteId=$data->getId();//id Note
+
+                $file = $request->file('Attachment');//archivo
+                $extension=$file->getClientOriginalExtension();//extension documento
+                $name ='note-'.$noteId.".".$file->getClientOriginalExtension();//nombre documento
+                $file->move("noteFiles",$name);//mover a local
+                $pathInfo='noteFiles/note-'.$noteId.".".$extension;//path info local
+
+
+                $responseUpload=$this->AttachmentToNote($noteId,$pathInfo);// subir a zoho crm
+
+               //\File::delete($pathInfo);
+                return $responseUpload->getStatus();
+
+            }
+            else{
+                return $responseIns->getStatus();
+            }
+
+        }
+    }
+
+    public function delete(Request $request){
+
+        $module=$request->input('Module');
+        $leadId=base64_decode($request->input('leadsId'));
+        $noteId=base64_decode($request->input('noteId'));
+
+        $record = ZCRMRestClient::getInstance()->getRecordInstance($module,$leadId ); // To get record instance
+        $noteIns = ZCRMNote::getInstance($record, $noteId); // to get the note instance
+        $responseIns = $record->deleteNote($noteIns); // to delete the note
+
+        return $responseIns->getStatus();
+    }
 
     private function  AttachmentToNote($noteId , $pathInfo){
         $filepath = $pathInfo;

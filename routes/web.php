@@ -114,15 +114,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::get('notes', 'NotesController@index')->name('notes.index');
 
-    Route::get('notes/create', 'NotesController@create')->name('notes.create');
-
-    Route::POST('notes/store', 'NotesController@store')->name('notes.store');
-
-    Route::get('notes/tabla', 'NotesController@table')->name('notes.table');
-
-    Route::get('notes/edit', 'NotesController@edit')->name('notes.edit');
+    Route::post('notes/store', 'NotesController@store')->name('notes.store');
 
     Route::put('notes/update', 'NotesController@update')->name('notes.update');
+
+    Route::post('notes/delete', 'NotesController@delete')->name('notes.delete');
 
 
 });

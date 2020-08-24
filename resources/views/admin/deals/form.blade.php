@@ -41,7 +41,7 @@
                         <h4> Informacion de prospecto</h4>
                       </div>
 
-                       <form class="form-horizontal" role="form" method="POST" action="{{ isset($data) ? route('admin.deals.update') : route('admin.deals.store') }}"  enctype="multipart/form-data">
+                       <form id="deals-form" class="form-horizontal" role="form" method="POST" action="{{ isset($data) ? route('admin.deals.update') : route('admin.deals.store') }}"  enctype="multipart/form-data">
                         @csrf
 
                         @if(isset($data))
@@ -963,16 +963,37 @@
 
                         </div>
 
+                    </form> 
            
 
 
 
 
                       
-                       <button type="submit" id='btnsummit' class="btn btn-primary mt-1">{{ trans('global.save') }}</button>
 
-                    </form> 
+                          <div class="col-12 mt-5">
+                            <h4>Notas</h4>
+                          </div>
 
+                          <div class="col-md-12">
+                            <div id="notes-container">
+                              <div class="form-group py-4">
+                                  <input id="Title" name="Title" type="text" class="form-control" value="" maxlength="100" placeholder="Titulo Nota">
+
+                                  <textarea name="Content" id="Content" rows="2" placeholder="Agregar una nota" class="form-control @error('note') is-invalid @enderror"></textarea>
+
+                                  <input type="file" id="Attachment" name="Attachment" class="form-control-file" id="exampleFormControlFile1">
+                                  <a href="javascript:void(0)" id="guardarNota" class="btn btn btn-success float-right">Guardar Nota</a>
+                                  <a href="javascript:void(0)" class="btn btn btn-default float-right mr-4">Cancelar</a>
+                              </div>
+                            </div>
+                          </div>
+                      
+                      <div class="py-5">
+                        
+                       <button form="deals-form" type="submit" id='btnsummit' class="btn btn-primary mt-1">{{ trans('global.save') }}</button>
+
+                      </div>
                 </div>
 
 @endsection
@@ -984,7 +1005,9 @@
 
 <style type="text/css">
 
-
+textarea {
+    min-height: auto;
+}
 .icono-btn{
         width: 25px
     }
@@ -1063,6 +1086,7 @@
 
 @section('scripts')
 @parent
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     
@@ -1086,6 +1110,239 @@ $(document).ready(function(){
         container: 'body'
       });
     })
+
+
+
+
+
+
+  /*NOTAS*/
+
+  getNotes();
+
+
+  function getNotes(){
+      var url = '{{ route("admin.notes.index") }}';
+      var leadsId= "{{$data->dealsId}}"
+      $.ajax({
+        url: url,
+        method: 'GET',
+        data: {
+                leadsId:leadsId,
+                Module:'Deals'
+              },
+        success: function(response) {
+                   data= JSON.parse(response)
+          
+                    if (data.code=='success') {
+
+                      buildNotes(data.notes)
+                        
+                    }else{
+                        swal.fire("Error", "No se pudo realizar la operacion", "error");
+                    }
+                  }
+      }) 
+
+
+  }
+
+  function buildNotes(notes){
+
+    notes.forEach(function(note) {
+
+              var adjunto=note.hasOwnProperty('Attachment') ? '<a target="_blank" href="'+note.Attachment+'">'+note.Attachment+'</>' : "";
+              var note=  `
+                            <div class="form-group py-5 notes-list">
+                                  <a href='javascript:void(0)' class="float-right btn-control btn btn-info btn-editar"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                                  <a href='javascript:void(0)' class="float-right btn-control btn btn-danger btn-eliminar  mr-3"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                  <input required type="hidden" id="noteId" name="leadsId" value="`+note.noteId+`">
+                                  <input readonly name="Title" type="text" class="Title form-control p-t-3" value="`+note.Title+`" maxlength="100" placeholder="Titulo Nota">
+                                  <textarea readonly name="Content" id="Content" rows="2" placeholder="Agregar una nota" class="form-control @error('note') is-invalid @enderror">`+note.Content+`</textarea>
+                                  `+adjunto+` 
+                                  <a href="javascript:void(0)" class="btn btn btn-warning fa fa-close d-none" style="position: absolute; right: 15px;"></a>
+                                  <input type="file" class="Attachment form-control-file d-none" id="exampleFormControlFile1">
+                                  <a href="javascript:void(0)" class="editarNota btn btn btn-dark float-right d-none">Actualizar Nota</a>
+                                  <a href="javascript:void(0)" class="btn-cancelar btn btn btn-default float-right d-none mr-4">Cancelar</a>
+                              </div>
+                            </div> 
+                    `
+      $("#notes-container").prepend(note);
+    });
+  }
+
+
+    $('#notes-container').on('click', '.btn-editar', function(){
+      $(this).siblings("input.Title").removeAttr("readonly")
+      $(this).siblings("textarea").removeAttr("readonly")
+      $(this).siblings(".editarNota").removeClass("d-none")
+      $(this).siblings(".btn-cancelar").removeClass("d-none")
+      $(this).siblings(".btn-cancelar").removeClass("d-none")
+      $(this).siblings("input.Attachment").removeClass("d-none")
+
+
+      
+
+    })
+
+    $('#notes-container').on('click', '.btn-cancelar', function(){
+        $(this).siblings("input.Title").attr("readonly", "readonly")
+        $(this).siblings("textarea").attr("readonly", "readonly")
+        $(this).siblings(".editarNota").addClass("d-none")
+        $(this).siblings(".btn-cancelar").addClass("d-none")
+        $(this).siblings("input.Attachment").addClass("d-none")
+        $(this).addClass("d-none")
+
+    })
+
+  $('#guardarNota').on('click', function(){
+      swal.fire({
+      title: "¿Desea crear esta nueva Nota?",
+      text: "Esta operacion es definitiva",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Si, Guardar",
+      cancelButtonText: "No, Cancelar",
+                    preConfirm: (login) => {
+                            var url = '{{ route("admin.notes.store") }}';
+                            var formData = new FormData();
+                            var leadsId= "{{$data->dealsId}}"
+                            var Attachment = $("#Attachment")[0].files[0]
+                            var Title = $("#Title").val()
+                            var Content = $("#Content").val()
+                            formData.append('_token', $('[name="csrf-token"]').attr('content'));
+                            formData.append('leadsId',leadsId);
+                            formData.append('Title',Title);
+                            formData.append('Content',Content);
+                            formData.append('Module','Deals');
+                            formData.append('Attachment',Attachment);
+                        $.ajax({
+                             url: url,
+                              method: 'POST',
+                              data: formData,
+                              processData: false,
+                              contentType: false,
+                              success: function(data) {
+                                  if (data==='success') {
+                                    swal.fire("Guardado", "Se ha creado la nota","success");
+                                    $('.notes-list').remove();
+                                    getNotes()
+                                    
+                                }else{
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+
+                                }
+                              },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                    $("#Content").addClass("is-invalid")
+                                    swal.fire("Error","El campo Nota es requerido", "error");
+                            }
+                            }) 
+                    },
+      })
+    })
+
+  $('#notes-container').on('click', '.editarNota', function(){
+        var editarCampos=$(this)
+        var formData = new FormData();
+        var Attachment=editarCampos.siblings("input.Attachment")[0].files[0]
+        var Title=editarCampos.siblings("input.Title").val()
+        var Content=editarCampos.siblings("textarea").val()
+        var noteId=editarCampos.siblings("input#noteId").val()
+        var leadsId= "{{$data->dealsId}}"
+        formData.append('_token', $('[name="csrf-token"]').attr('content'));
+        formData.append('_method', 'PUT');
+        formData.append('leadsId',leadsId);
+        formData.append('noteId',noteId);
+        formData.append('Title',Title);
+        formData.append('Content',Content);
+        formData.append('Module','Deals');
+        formData.append('Attachment',Attachment);
+        
+    swal.fire({
+      title: "¿Desea ejecutar los cambios?",
+      text: "Esta operacion es definitiva",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Si, Actualizar",
+      cancelButtonText: "No, Cancelar",
+                    preConfirm: (login) => {
+                            var url = '{{ route("admin.notes.update") }}';
+                        $.ajax({
+                             url: url,
+                              method: 'POST',
+                              data: formData,
+                              processData: false,
+                              contentType: false,
+                              success: function(data) {
+                                  if (data==='success') {
+                                    swal.fire("Actualizado", "Se han guardado los cambios","success");
+                                    $('.notes-list').remove();
+                                    getNotes()
+                                }else{
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+                                }
+                              },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                    editarCampos.siblings("textarea").addClass("is-invalid")
+                                    swal.fire("Error","El campo Nota es requerido", "error");
+                            }
+                            }) 
+                    },
+      })
+  })
+
+   $('#notes-container').on('click', '.btn-eliminar', function(){
+        var borrarCampos=$(this)
+        var formData = new FormData();
+        var noteId=borrarCampos.siblings("input#noteId").val()
+        var leadsId= "{{$data->dealsId}}"
+        formData.append('_token', $('[name="csrf-token"]').attr('content'));
+        formData.append('_method', 'DELETE');
+        formData.append('Module','Deals');
+        formData.append('leadsId',leadsId);
+        formData.append('noteId',noteId);
+        
+    swal.fire({
+      title: "¿Esta seguro de borrar esta Nota?",
+      text: "Esta operacion es definitiva",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Si, Borrar",
+      cancelButtonText: "No, Cancelar",
+                    preConfirm: (login) => {
+                            var url = '{{ route("admin.notes.delete") }}';
+                        $.ajax({
+                             url: url,
+                              method: 'POST',
+                              data: formData,
+                              processData: false,
+                              contentType: false,
+                              success: function(data) {
+                                  if (data==='success') {
+                                    swal.fire("Borrado", "Esta Nota ha sido eliminado","success");
+                                    borrarCampos.closest('.notes-list').remove();
+                                }else{
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+                                }
+                              },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                    swal.fire("Error", "No se pudo realizar la operacion", "error");
+                            }
+                            }) 
+                    },
+      })
+  })
+
+
+/*FIN NOTAS*/
+
+
+
+
 
 
 

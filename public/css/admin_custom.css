@@ -266,3 +266,11 @@ table.dataTable thead .sorting_desc {
 .col-padding-sm{
   padding: 20px
 }
+
+.notes-list .btn-control{
+  opacity: 0!important
+}
+
+.notes-list:hover .btn-control{
+  opacity: 1!important
+}
