@@ -277,12 +277,28 @@ a:hover{
 }
 
 
+
+
 .btn-cyan{
     color: #fff!important;
     background-color: #01bb9c;
     border-color: #01bb9c;
     transition: all 0.3s;
     padding: .575rem .75rem;
+}
+
+.text-cyan{
+
+    color: #01bb9c;
+    
+}
+
+.fa-chevron-right {
+  color: #01bb9c;
+}
+
+.fa-chevron-left {
+  color: #01bb9c;
 }
 
 .btn-cyan:hover{

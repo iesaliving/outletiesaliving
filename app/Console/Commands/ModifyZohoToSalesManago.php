@@ -85,7 +85,8 @@ class ModifyZohoToSalesManago extends Command
        $logs = LogsSync::where('origin', 3)->get();
        $lastLog = $logs->last();
         
-       $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
+       //$fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
+       $fechaInicial = Carbon::createFromDate(2020, 8, 15)->startOfDay();
 
        $url = "https://www.zohoapis.com/crm/v2/coql";
         
