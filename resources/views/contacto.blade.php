@@ -58,14 +58,26 @@
             </div>
         </div>
  
-        <div id="dealers" class="row justify-content-center">
+        <div id="dealers container">
             <h2 id="text-contacto" class="col-12 text-center my-5 text-uppercase"> encuentra tu distribuidor más cercano</h2>
-            <div class="row w-100 justify-content-center">
-                <div class="col-md-4" id="panel"></div>
-                <div class="col-md-8" id="map-canvas"></div>
+            <div class="row nomargin justify-content-center text-center col-12 mb-4">
+                <div class="col-md-5 col-sm-auto my-2">
+                    <select required class="form-control form-custom select-estado-mex" name="estado-mex"> 
+                        <option value="" selected disabled>ESTADO</option>
+                    </select>
+                </div>
+                <div class="col-md-5 col-sm-auto my-2">
+                    <select required class="form-control form-custom select-ciudad-mex" name="ciudad-mex"> 
+                        <option value="" selected disabled>CIUDAD</option>               
+                    </select>
+                </div>
+                <div class="col-md-2 col-sm-auto my-2">
+                    <button id="btnDealer" class="btn btn-cyan btn-block">Buscar</button>
+                </div>         
+            </div>        
+            <div id="dealersfilter" class="mt-3">
             </div>
         </div>
-
         <div class="row nomargin topmargin-lg">
             <div class="col-xl-7 col-lg-7 text-center">
 
@@ -157,23 +169,17 @@
 @section('styles')
     <link rel="stylesheet" href="{{URL::asset('css/storelocator.css')}}" />
     <style>
-      #map-canvas, #panel { height: 500px; }
-      /*
-      #panel .feature-filter label { width: 130px; }
-      p.attribution, p.attribution a { color: #666; }
-      .store .hours { color: grey; }
-      */
+        .owl-carousel .owl-stage {
+            display: flex;
+        }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 @endsection
 
-
-
 @section('scripts')
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnRJ8mwP4Ftwk0_5PoBcnXIPLMxnhPHhI&libraries=places"></script>
-    <script src="{{URL::asset('js/store-locator/store-locator.min.js')}}"></script>
-    <script src="{{URL::asset('js/store-locator/medicare-static-ds.js')}}"></script>
-    <script src="{{URL::asset('js/store-locator/panel.js')}}"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
     <script>
         if(location.hash.length){
             $('html, body').animate({
@@ -181,72 +187,245 @@
             }, 2000);
         }
 
-        $('#pais').change(()=>{
-            let 
-                pais = $('#pais').val();
-                colombia = `
-                    <option value="" disabled selected>ESTADO</option>
-                    <option value="Bogotá">Bogotá</option>
-                    <option value="Medellín">Medellín</option>
-                `,
-                panama = `
-                    <option value="" disabled selected>ESTADO</option>
-                    <option value="Ciudad de Panamá">Ciudad de Panamá</option>
-                `,
-                mexico = `
-                    <option value="" disabled selected>ESTADO</option>
-                    <option value="Distrito Federal">Distrito Federal</option>
-                    <option value="Aguascalientes">Aguascalientes</option>
-                    <option value="Baja California">Baja California</option>
-                    <option value="Baja California Sur">Baja California Sur</option>
-                    <option value="Campeche">Campeche</option>
-                    <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-                    <option value="Colima">Colima</option>
-                    <option value="Chiapas">Chiapas</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                    <option value="Durango">Durango</option>
-                    <option value="Guanajuato">Guanajuato</option>
-                    <option value="Guerrero">Guerrero</option>
-                    <option value="Hidalgo">Hidalgo</option>
-                    <option value="Jalisco">Jalisco</option>
-                    <option value="Estado de México">Estado de México</option>
-                    <option value="Michoacán">Michoacán</option>
-                    <option value="Morelos">Morelos</option>
-                    <option value="Nayarit">Nayarit</option>
-                    <option value="Nuevo León">Nuevo León</option>
-                    <option value="Oaxaca">Oaxaca</option>
-                    <option value="Puebla">Puebla</option>
-                    <option value="Querétaro">Querétaro</option>
-                    <option value="Quintana Roo">Quintana Roo</option>
-                    <option value="San Luis Potosí">San Luis Potosí</option>
-                    <option value="Sinaloa">Sinaloa</option>
-                    <option value="Sonora">Sonora</option>
-                    <option value="Tabasco">Tabasco</option>
-                    <option value="Tamaulipas">Tamaulipas</option>
-                    <option value="Tlaxcala">Tlaxcala</option>
-                    <option value="Veracruz">Veracruz</option>
-                    <option value="Yucatán">Yucatán</option>
-                    <option value="Zacatecas">Zacatecas</option>
-                `;
+        $.getJSON("{{asset('js/dealers/datosDealer.json')}}", function( data ) {
+    
+            if(data.dealers && data.dealers.length){
 
-                switch (pais) {
-                    case 'México':
-                            $('#estado').html(mexico);
-                        break;
-                    case 'Panamá':
-                            $('#estado').html(panama);
-                        break;
-                    case 'Colombia':
-                            $('#estado').html(colombia);
-                        break;
+                let grupos = data.dealers.reduce((agrupados, item) => ({
+                ...agrupados,
+                [item.categoria]: [...(agrupados[item.categoria] || []), item]
+                }), []);
                 
-                    default:
-                        $('#estado').html(`<option value="" disabled selected>Otro</option>`);
-                        break;
-                }
+                let html = ''; 
 
+                /* let 
+                    estados = data.estados,
+                    ciudades = data.ciudades;
+                
+                for(let grupo in grupos){
+                    
+                    let ctg = ''
+                    
+                    if(+grupo === 1){
+                        ctg = "platino"
+                    }
+                    
+                    if(+grupo === 2){
+                        ctg = "diamante"
+                    }
+
+                    if(+grupo === 3){
+                        ctg = "oro"
+                    }
+
+                    if(+grupo === 4){
+                        ctg = "plata"
+                    }
+                    
+                    if(+grupo === 5){
+                        ctg = "basico"
+                    }
+
+
+
+                    html +="<h3 class=\"text-uppercase font-weight-bold\">Categoria "+ctg+"</h3>"
+                    html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
+                    grupos[grupo].forEach( async(dealer, index) => {
+                        let edo = estados.find(estado => estado.id === dealer.estado);
+                        let ciudad = ciudades.find(city => city.id === dealer.ciudad);
+                        
+                        html+="\t<div class=\"card h-100\">\n";
+                        html+="\t\t<div class=\"card-body\">\n";
+                        html+="\t\t\t<h4 class=\"card-title\">"+dealer.nombre+"</h4>\n";
+                        html+="\t\t\t<hr>\n";
+                        html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
+                        html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
+                        html+="\t\t</div>\n";
+                        html+="\t\t<div class=\"card-footer\">\n";
+                        if(dealer.tlf){
+                            html+="\t\t\t<span class=\"card-text\">Tlf: "+dealer.tlf+"</span>\n";
+                            
+                        }else{
+                            html+="\t\t\t<span class=\"card-text\"></span>\n";
+                        }
+                        //html+="\t\t\t<span class=\"card-text\">"+dealer.estado+" - "+dealer.ciudad +"</span>\n";
+                        html+="\t\t</div>\n";
+                        html+="\t</div>\n";
+                    });
+                    html +="</div>\n";    
+                } */
+                
+                $("#dealersfilter").html(html);
+                $('.owl-carousel').owlCarousel({
+                loop: false,
+                nav: true,
+                navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 4,
+                        margin: 20
+                    }
+                }
+            })
+                
+            }     
+        });  
+
+        $.getJSON("{{asset('js/dealers/datosDealer.json')}}", function( data ) {
+            if(data.estados && data.estados.length){
+                data.estados.map( estado => $(".select-estado-mex").append(`<option value="${estado.id}">${estado.nombre}</option>`));
+            }  
+        });  
+
+        $(document).ready(function() {
             
-        })
+            $(".select-ciudad-mex").prop("disabled", true);
+            $("#btnDealer").prop("disabled", true);
+            
+            $(".select-estado-mex").on("change", function(){
+                let selected = $(this);
+                if(selected.val()){
+                    $(".select-ciudad-mex").prop("disabled", false);
+                    $(".select-ciudad-mex").empty();
+                    $(".select-ciudad-mex").append(`<option value="" disabled selected>CIUDAD</option>`)
+                    $.getJSON("{{asset('js/dealers/datosDealer.json')}}", function( data ) {
+                        data.ciudades
+                        .filter( ciudad => ciudad.estado === +selected.val())
+                        .map( ciudad => $(".select-ciudad-mex").append(`<option value="${ciudad.id}">${ciudad.nombre}</option>`));
+                    }); 
+                }
+            });
+
+            $(".select-ciudad-mex").on("change", function(){
+                let selected = $(this);
+                if(selected.val()){
+                    $("#btnDealer").prop("disabled", false);
+                }
+            });
+
+            $("#btnDealer").on("click", function(event){
+                event.preventDefault();
+                let selectEstado = $(".select-estado-mex").val();
+                let selectCiudad = $(".select-ciudad-mex").val();
+                $.getJSON("{{asset('js/dealers/datosDealer.json')}}", function( data ) {
+                    let html = ''; 
+                    if(data.estados && data.estados.length){
+                        let estadosFiltrados = data.dealers.filter( dealer => dealer.estado === +selectEstado);
+                        let ciudadFiltrados = estadosFiltrados.filter( dealer => dealer.ciudad === +selectCiudad);
+                        
+                        if(!estadosFiltrados.length || !ciudadFiltrados.length){
+                            //html = "<div class=\"alert alert-info\">No hay dealers disponibles</div>";
+                            html = `
+                                <div class="row">
+                                    <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                    <div>
+                                <div>
+                            `
+                            return $("#dealersfilter").html(html);
+                        }
+
+                        let grupos = ciudadFiltrados.reduce((agrupados, item) => ({
+                        ...agrupados,
+                        [item.categoria]: [...(agrupados[item.categoria] || []), item]
+                        }), []);
+
+                        
+                        let 
+                            estados = data.estados,
+                            ciudades = data.ciudades;
+                        
+                        for(let grupo in grupos){
+                            
+                            let ctg = ''
+                            
+                            if(+grupo === 1){
+                                ctg = "platino"
+                            }
+                            
+                            if(+grupo === 2){
+                                ctg = "diamante"
+                            }
+
+                            if(+grupo === 3){
+                                ctg = "oro"
+                            }
+
+                            if(+grupo === 4){
+                                ctg = "plata"
+                            }
+                            
+                            if(+grupo === 5){
+                                ctg = "básico"
+                            }
+
+                            html +="<h3 class=\"text-uppercase mb-4 font-weight-bold\">Categoria "+ctg+"</h3>"
+                            html +="<div class='dealer"+grupo+" owl-carousel owl-theme mb-5'>\n";
+                            grupos[grupo].forEach( (dealer, index) => {
+                                let edo = estados.find(estado => estado.id === dealer.estado);
+                                let ciudad = ciudades.find(city => city.id === dealer.ciudad);
+                                html+="\t<div class=\"card h-100\">\n";
+                                html+="\t\t<div class=\"card-body\">\n";
+                                html+="\t\t\t<h4 class=\"text-cyan card-title\">"+dealer.nombre+"</h4>\n";
+                                html+="\t\t\t<hr>\n";
+                                html+="\t\t\t<p class=\"card-text\">"+dealer.direccion1+"</p>\n";
+                                html+="\t\t\t<p class=\"card-text\">"+edo.nombre+" - "+ciudad.nombre +"</p>\n";
+                                html+="\t\t</div>\n";
+                                html+="\t\t<div class=\"card-footer\">\n";
+                                if(dealer.tlf){
+                                    html+="\t\t\t<span class=\"card-text\">Tlf: "+dealer.tlf+"</span>\n";
+                                    
+                                }else{
+                                    html+="\t\t\t<span class=\"card-text\"></span>\n";
+                                }
+                                html+="\t\t</div>\n";
+                                html+="\t</div>\n";
+                            });
+                            html +="</div>\n";    
+                        }
+
+                        $("#dealersfilter").html(html);
+                        $('.owl-carousel').owlCarousel({
+                            loop: false,
+                            nav: true,
+                            navText: ["<i class='fa fa-chevron-left fa-2x'></i>","<i class='fa fa-chevron-right fa-2x'></i>"],
+                            margin: 10,
+                            responsive: {
+                                0: {
+                                    items: 1,
+                                },
+                                600: {
+                                    items: 3,
+                                },
+                                1000: {
+                                    items: 4,
+                                    margin: 20
+                                }
+                            }
+                        })
+                       // data.estados.map( estado => $(".select-estado-mex").append(`<option value="${estado.id}">${estado.nombre}</option>`));
+                    }else{
+                        //html +="<div class=\"alert alert-info\">No hay dealers disponibles</div>"
+                        html = `
+                                <div class="row">
+                                    <div class="col-md align-self-center text-center mb-4 py-5" style="width: 100vw; background-color: #f4f4f4;">
+                                        <h1 class="display-md-4 text-uppercase font-weight-light" style="word-wrap: break-word;">No hay Dealers <br /><span class="font-italic font-weight-bold">disponibles</span></h1>
+                                    <div>
+                                <div>
+                            `
+                        $("#dealersfilter").html(html);
+                    }
+                });  
+            });
+           
+           
+        }) 
     </script>
 @endsection
-

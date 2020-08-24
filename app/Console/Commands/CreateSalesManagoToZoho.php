@@ -56,7 +56,7 @@ class CreateSalesManagoToZoho extends Command
         
         $fechaInicial = ($lastLog) ?  Carbon::parse($lastLog->endDate) : Carbon::now()->startOfDay();
         $contactResponse = $salesManago->getContactService()->listRecentlyCreated("Auxiliarmkt@iesa.cc", array(
-            "from" => $fechaInicial->timestamp * 1000,//Carbon::now()->startOfDay()->timestamp * 1000,//Carbon::createFromDate(2020, 8, 4)->startOfDay()->timestamp * 1000,//
+            "from" => Carbon::createFromDate(2020, 8, 15)->startOfDay()->timestamp * 1000,//$fechaInicial->timestamp * 1000,//Carbon::now()->startOfDay()->timestamp * 1000,////
             "to" => $today
         ));
        // dd($contactResponse);
