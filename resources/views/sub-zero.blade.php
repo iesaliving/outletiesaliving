@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Sub Zero')
 @section('content')
@@ -23,7 +23,7 @@
 
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}">
+                    <img src="{{ URL::asset('img/subzero/subzero1.jpg')}}" alt="subzero1">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -44,9 +44,9 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                               <!--  <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a> -->
+                               <!--  <a target="_blank" class="btn btn-block btn-cyan solicitar-btn" href="{{ URL::asset('catalogo/SubZeroWolf.pdf')   }}"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a> -->
 
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_REFRIGERACION_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_REFRIGERACION_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a>
 
                                 
                             </div>
@@ -79,19 +79,19 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_SUB-ZERO_REFRI_BAJO_CUBIERTA.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_SUB-ZERO_REFRI_BAJO_CUBIERTA.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/subzero/subzero2.jpg')}}">
+                    <img src="{{ URL::asset('img/subzero/subzero2.jpg')}}" alt="subzero2">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/subzero/subzero3.jpg')}}">
+                    <img src="{{ URL::asset('img/subzero/subzero3.jpg')}}" alt="subzero3">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -113,7 +113,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_CONSERVADORES_DE_VINO.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_CONSERVADORES_DE_VINO.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
 
                         </div>
@@ -135,7 +135,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-md-6 col-7 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofllow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofllow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}" alt="icono fb">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

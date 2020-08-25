@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Showroom')
 @section('content')
@@ -10,10 +10,10 @@
 
 
 <section id="hero-desktop">
-  <img src="{{ URL::asset('img/showrooms/hero.jpg')}}">
+  <img src="{{ URL::asset('img/showrooms/hero.jpg')}}" alt="hero showrooms">
 </section>
 <section id="hero-mobile">
-  <img src="{{ URL::asset('img/hero-showroom-mobile.jpg')}}">
+  <img src="{{ URL::asset('img/hero-showroom-mobile.jpg')}}" alt="hero showroom mobile">
 </section>
 
 
@@ -31,8 +31,8 @@
                                 <p>Carr. Monterrey – Saltillo 3061 Fracc. Bosques del Poniente Santa Catarina, NL 66350</p>
                             </div>
 
-                            <a href="tel:5218183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 81 8389 4372</p></a>
-                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">recepción@iesa.cc</p></a>
+                            <a href="tel:5218183894372"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px" alt="icono telefono">+52 (1) 81 8389 4372</p></a>
+                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px" alt="icono email">recepción@iesa.cc</p></a>
 
 
                             <div class="col-12 topmargin-sm bottommargin-sm nopadding">
@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-lg-6 row nomargin">
                             <div class="col-12 bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj" alt="icono reloj">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>
@@ -82,8 +82,8 @@
                                 </p>
                             </div>
 
-                            <a href="tel:5215552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 55 5280 9648</p></a>
-                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">showroom@iesa.cc</p></a>
+                            <a href="tel:5215552809648"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px" alt="icono telefono">+52 (1) 55 5280 9648</p></a>
+                            <a href="mailto:recepción@iesa.container-catalogo"><p class="nomargin"><img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px" alt="icopno email">showroom@iesa.cc</p></a>
 
 
                             <div class="col-12 topmargin-sm bottommargin-sm nopadding">
@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-lg-6 row nomargin">
                             <div class="col-12 bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj">
+                                <img src="{{ URL::asset('img/icono-btn/reloj.png')}}" class="img-reloj" alt="icono reloj">
                             </div>
                             <div class="col-md-4 col-6" style="display: inline-grid;display: -moz-inline-stack;">
                                 <p class="bottommargin-xs">Lun.</p>
@@ -129,25 +129,25 @@
             <div class="owl-carousel owl-theme col-md-8 offset-md-2">
                 <div class="item">
                     <div>
-                        <img src="{{ URL::asset('img/showrooms/carrusel_1.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/carrusel_1.jpg')}}" alt="showrooms carrusel">
                     </div>
 
                 </div>
                 <div class="item">
                     <div>
-                        <img src="{{ URL::asset('img/showrooms/carrusel_2.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/carrusel_2.jpg')}}" alt="showrooms carrusel2">
                     </div>
 
                 </div>
                 <div class="item">
                     <div>
-                        <img src="{{ URL::asset('img/showrooms/carrusel_3.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/carrusel_3.jpg')}}" alt="showroom carrusel3">
                     </div>
 
                 </div>
                 <div class="item">
                     <div>
-                        <img src="{{ URL::asset('img/showrooms/carrusel_4.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/carrusel_4.jpg')}}" alt="showroom carrusel4">
                     </div>
 
                 </div>
@@ -167,7 +167,7 @@
             <div class="col-md-12 row nomargin">
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/consulte.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/consulte.jpg')}}" alt="showroom consulte">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>CONSULTE A LOS EXPERTOS</h5>
@@ -177,7 +177,7 @@
 
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/test.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/test.jpg')}}" alt="showroom test">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>HAGA UN TEST DRIVE</h5>
@@ -187,7 +187,7 @@
 
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/sabor.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/sabor.jpg')}}" alt="showrooms sabor">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>SABOREE CADA BOCADO</h5>
@@ -197,7 +197,7 @@
 
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/sueno.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/sueno.jpg')}}" alt="showrooms sueno">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>HAGA REALIDAD SUS SUEÑOS</h5>
@@ -207,7 +207,7 @@
 
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/invitado.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/invitado.jpg')}}" alt="showrooms invitado">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>SEA NUESTRO INVITADO</h5>
@@ -217,7 +217,7 @@
 
                 <div class="col-lg-6 col-xl-4 bottommargin">
                     <div class="col-md-10 offset-md-1 bottommargin-sm" >
-                        <img src="{{ URL::asset('img/showrooms/familia.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/familia.jpg')}}" alt="showrooms familia">
                     </div>
                     <div class="col-md-12 offset-md-0 text-center" >
                         <h5>ÚNETE A NUESTRA FAMILIA</h5>
@@ -227,7 +227,7 @@
             </div>
 
             <div id="check" class="offset-xl-5 col-xl-2 offset-lg-4 col-lg-4">
-                <a onclick="mover()" class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>SOLICITAR CITA</p></a>
+                <a onclick="mover()" class="btn btn-cyan btn-block descubra-btn" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}" alt="icono agenda"><p>SOLICITAR CITA</p></a>
             </div>
         </div>
 
@@ -339,7 +339,7 @@
                         </div>
 
                         <div class="form-group  col-xl-2 offset-xl-5 col-lg-4 offset-lg-4 text-center topmargin-sm">
-                            <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
+                            <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}" alt="icono enviar"> ENVIAR</button>
                         </div>
                     </div>
                 </form>
@@ -350,7 +350,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-xl-7 col-lg-6 col-padding-sm d-flex">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/showrooms/demo.jpg')}}">
+                        <img src="{{ URL::asset('img/showrooms/demo.jpg')}}" alt="showrooms demo">
                     </div>
                 </div>
                 <div id="cooking" class="col-xl-5 col-lg-6 d-flex" style="padding: 25px 5vw " >
@@ -419,7 +419,7 @@
                                 <label class="custom-control-label" for="customCheck2"><a target="_blank" href="{{ URL::to('/aviso-privacidad')}}">Acepta nuestro Aviso de Privacidad</a></label>
                             </div>
                             <div class="col-md-12 nopadding topmargin-sm">
-                                <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}"> ENVIAR</button>
+                                <button type="submit" class="btn btn-cyan btn-block"><img style="margin-right: 15px; width: 20px" src="{{ URL::asset('img/icono-btn/enviar.png')   }}" alt="icono enviar"> ENVIAR</button>
                             </div>
                         </form>
                     </div>

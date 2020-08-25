@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'DEXA')
 @section('content')
@@ -30,7 +30,7 @@
             </div>
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/dexa/estufas.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/estufas.jpg')}}" alt="dexa estufas">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -51,7 +51,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_ESTUFAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_ESTUFAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icon"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -78,19 +78,19 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_PARRILLAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_PARRILLAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="cataloco icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/dexa/parrillas.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/parrillas.jpg')}}" alt="dexa parrilas">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/dexa/hornos.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/hornos.jpg')}}" alt="dexa hornos">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -111,7 +111,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo__Dexa__HORNOS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo__Dexa__HORNOS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icon"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -138,19 +138,19 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_CAMPANAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_CAMPANAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/dexa/campanas.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/campanas.jpg')}}" alt="dexa campanas">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/dexa/lavavajillas.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/lavavajillas.jpg')}}" alt="lavavajillas dexa">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -171,7 +171,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_LAVAVAJILLAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_LAVAVAJILLAS.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -198,13 +198,13 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-md-7 offset-lg-5 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_TARJAS_LLAVES.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_TARJAS_LLAVES.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/dexa/llaves.jpg')}}">
+                    <img src="{{ URL::asset('img/dexa/llaves.jpg')}}" alt="dexa llaves">
                 </div>
             </div>
 
@@ -221,7 +221,7 @@
                         <div class="col-md-12 col-12 justify-content-center align-self-center">
                             <h2 style="color: #fff" class="light text-center">DEXA</h2>
                         <div class="col-lg-2 offset-lg-5 col-md-4 offset-md-4 col-6 offset-3 text-center nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/DEXA.MX/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}" alt="facebook icono">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Cocina Exterior')
 @section('content')
@@ -28,7 +28,7 @@
 
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/exteriores/asadores.jpg')}}">
+                    <img src="{{ URL::asset('img/exteriores/asadores.jpg')}}" alt="exteriores asadores">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -52,7 +52,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_ASADORES.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_ASADORES.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -79,19 +79,19 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 offset-lg-5 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_REFRIGERACION.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_REFRIGERACION.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icon"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/exteriores/refrigeracion.jpg')}}">
+                    <img src="{{ URL::asset('img/exteriores/refrigeracion.jpg')}}" alt="exteriores refrigeradores">
                 </div>
             </div>
 
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm col-xl-5 offset-xl-1">
-                    <img src="{{ URL::asset('img/exteriores/calentadores.jpg')}}">
+                    <img src="{{ URL::asset('img/exteriores/calentadores.jpg')}}" alt="exteriores calentadores">
                 </div>
                 <div class="col-lg-6 d-flex col-lg-5">
                     <div class="justify-content-center align-self-center">
@@ -112,7 +112,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_CAJON_CALENTADOR.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_COCINA_EXTERIOR_CAJON_CALENTADOR.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-md-6 col-7  nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}" alt="facebook icono">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

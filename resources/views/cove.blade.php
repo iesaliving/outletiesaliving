@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'COVE')
 @section('content')
@@ -24,7 +24,7 @@
             </div>
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/cove/vajilla.jpg')}}">
+                    <img src="{{ URL::asset('img/cove/vajilla.jpg')}}" alt="cove vajilla">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -45,7 +45,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding bottommargin-sm nopadding-mobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Cove_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Cove_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="bottommargin-sm col-md-4">
                 <div class="col-5 nopadding">
-                    <img src="{{ URL::asset('img/cove/limpie.png')   }}">
+                    <img src="{{ URL::asset('img/cove/limpie.png')   }}" alt="cove limpie">
                 </div>
                 <div class="col-12 nopadding topmargin-sm">
                     <p><b>LIMPIE CON CONFIANZA</b></p>
@@ -71,7 +71,7 @@
 
             <div class="bottommargin-sm col-md-4">
                 <div class="col-5 nopadding">
-                    <img src="{{ URL::asset('img/cove/personalice.png')   }}">
+                    <img src="{{ URL::asset('img/cove/personalice.png')   }}" alt="cove personalice">
                 </div>
                 <div class="col-12 nopadding topmargin-sm">
                     <p><b>PERSONALICE SU LIMPIEZA</b></p>
@@ -82,7 +82,7 @@
 
             <div class="bottommargin-sm col-md-4">
                 <div class="col-5 nopadding">
-                    <img src="{{ URL::asset('img/cove/silencio.png')   }}">
+                    <img src="{{ URL::asset('img/cove/silencio.png')   }}" alt="cove silencio">
                 </div>
                 <div class="col-12 nopadding topmargin-sm">
                     <p><b>LIMPIEZA EN SILENCIO</b></p>
@@ -93,7 +93,7 @@
 
             <div class="bottommargin-sm col-md-4 offset-md-1">
                 <div class="col-5 nopadding">
-                    <img src="{{ URL::asset('img/cove/ajuste.png')   }}">
+                    <img src="{{ URL::asset('img/cove/ajuste.png')   }}" alt="cove ajuste">
                 </div>
                 <div class="col-12 nopadding topmargin-sm">
                     <p><b>SE AJUSTA A CUALQUIER (Y CADA) PLATO</b></p>
@@ -104,7 +104,7 @@
 
             <div class="bottommargin-sm col-md-4 offset-md-2">
                 <div class="col-5 nopadding">
-                    <img src="{{ URL::asset('img/cove/asegura.png')   }}">
+                    <img src="{{ URL::asset('img/cove/asegura.png')   }}" alt="cove asegura">
                 </div>
                 <div class="col-12 nopadding topmargin-sm">
                     <p><b>ASEGURA DÉCADAS DE FIABILIDAD</b></p>
@@ -124,7 +124,7 @@
                         <div class="col-md-5 col-12 justify-content-center align-self-center">
                             <h2 class="light">SUB-ZERO WOLF MÉXICO Y LATINOAMERICA</h2>
                         <div class="col-md-6 col-7 nopadding topmargin-sm">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}">SÍGUENOS</a>
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/subzerowolf/" class="btn btn-block  btn-cyan btn-facebook"><img src="{{ URL::asset('img/icono-btn/facebook.png')   }}" alt="facebook icono">SÍGUENOS</a>
                         </div>
                         </div>
                     </div>

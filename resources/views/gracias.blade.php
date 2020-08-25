@@ -6,11 +6,11 @@
 
 
 <section id="hero-desktop">
-    <img src="{{ URL::asset('img/Hero-Gracias.jpg')}}">
+    <img src="{{ URL::asset('img/Hero-Gracias.jpg')}}" alt="hero gracias">
 </section>
 
 <section id="hero-mobile">
-    <img src="{{ URL::asset('img/hero-gracias-mobile.jpg')}}">
+    <img src="{{ URL::asset('img/hero-gracias-mobile.jpg')}}" alt="hero gracias mobile">
 </section>
 
 <section class="container-gral">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Home')
 @section('content')
@@ -73,27 +73,27 @@
     <div class="owl-carousel owl-theme col-md-12">
 
             <div class="item">
-                <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/subzero/logo.png')}}"></a>
+                <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/subzero/logo.png')}}" alt="logo subzero"></a>
             </div>
 
             <div class="item">
-                <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/wolf/logo.png')}}"></a>
+                <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/wolf/logo.png')}}" alt="wolf logo"></a>
             </div>
 
             <div class="item">
-                <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cove/logo.png')}}"></a>
+                <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cove/logo.png')}}" alt="logo cove"></a>
             </div>
 
             <div class="item">
-                <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/asko/logo.png')}}"></a>
+                <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/asko/logo.png')}}" alt="asko logo"></a>
             </div>
 
             <div class="item">
-                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/dexa/logo.png')}}"></a>
+                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/dexa/logo.png')}}" alt="dexa logo"></a>
             </div>
 
             <div class="item">
-                <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/scotsman/logo.png')}}"></a>
+                <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/scotsman/logo.png')}}" alt="scotsman logo"></a>
             </div>
 
         </div>
@@ -106,7 +106,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}">
+                        <img src="{{ URL::asset('img/Wolf_SubZero_Cove-home.jpg')}}" alt="wolf subzero cove home">
                     </div>
                 </div>
                 <div class="col-xl-5  col-lg-6 container-descripcion d-flex"  style="">
@@ -115,32 +115,32 @@
                         <div class="row nomargin">
                             <div class="col-12 col-lg-11 row" style="display: block;">
                                    
-                                   <a href="{{ URL::to('/sub-zero') }}"><img style="width: 35%" src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                                   <a href="{{ URL::to('/sub-zero') }}"><img style="width: 35%" src="{{ URL::asset('img/cintillos/SubZero.png')}}" alt="subzero cintillos"></a>
                                
-                                    <a href="{{ URL::to('/wolf') }}"><img style="width: 26%;margin-left: 12px" src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                                    <a href="{{ URL::to('/wolf') }}"><img style="width: 26%;margin-left: 12px" src="{{ URL::asset('img/cintillos/Wolf.png')}}" alt="wolf cintillos"></a>
                          
                           
-                                    <a href="{{ URL::to('/cove') }}"><img style="width: 28%;margin-left: 12px" src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                                    <a href="{{ URL::to('/cove') }}"><img style="width: 28%;margin-left: 12px" src="{{ URL::asset('img/cintillos/Cove.png')}}" alt="cintillos cove"></a>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Cafetera.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Cafetera.png')   }}" alt="cafetera icono">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Campana.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Campana.png')   }}" alt="campana icono">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}" alt="estufa icono">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}" alt="horno icon">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}" alt="nevera icon">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}" alt="lavaplatos icon">
                             </div>
                         </div>
 
@@ -156,11 +156,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-5 col-8 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}" alt="descubra icono"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Wolf_Cove_Home_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Sub-Zero_Wolf_Cove_Home_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -173,19 +173,19 @@
                         <div class="col-12 col-lg-10 row nopadding" style="display: block;margin-right: 0;
                         margin-left: auto;">
                             <div class="text-lg-right text-left">
-                                <a href="{{ URL::to('/sub-zero') }}"><img style="width: 35%" src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                                <a href="{{ URL::to('/sub-zero') }}"><img style="width: 35%" src="{{ URL::asset('img/cintillos/SubZero.png')}}" alt="subzero cintillos"></a>
 
-                                <a href="{{ URL::to('/wolf') }}"><img style="width: 26%;margin-left: 15px" src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                                <a href="{{ URL::to('/wolf') }}"><img style="width: 26%;margin-left: 15px" src="{{ URL::asset('img/cintillos/Wolf.png')}}" alt="wolf cintillos"></a>
                          
                             </div>
                            
                         </div>
                         <div class="row  topmargin-sm container-icon left">
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Parrilla.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Parrilla.png')   }}" alt="parrilla icono">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}" alt="nevera icono">
                             </div>
                         </div>
 
@@ -201,18 +201,18 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-5 col-8 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/cocina-exterior') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}" alt="descubra icono"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                 <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Cocina_Exterior_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                 <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Cocina_Exterior_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icon"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex col-padding-sm order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}">
+                        <img src="{{ URL::asset('img/Cocina-exterior-home.jpg')}}" alt="cocina exterior home">
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/Asko-home.jpg')}}">
+                        <img src="{{ URL::asset('img/Asko-home.jpg')}}" alt="asko home">
                     </div>
                 </div>
                 <div class="col-xl-5 offset-xl-0 col-lg-6 d-flex">
@@ -229,27 +229,27 @@
 
                         <div class="row nomargin text-lg-right text-left col-12 nopadding">
                             <div class="col-lg-4 col-xl-3 col-4 nopadding topmargin-sm" style="padding-left: 0">
-                               <a href="{{ URL::to('/asko') }}"> <img class="" src="{{ URL::asset('img/cintillos/Asko.png')}}" style=""></a>
+                               <a href="{{ URL::to('/asko') }}"> <img class="" src="{{ URL::asset('img/cintillos/Asko.png')}}" style="" alt="asko cintillos"></a>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Cafetera.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Cafetera.png')   }}" alt="cafetera icono">
                             </div>
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Campana.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Campana.png')   }}" alt="campana icono">
                             </div>
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Horno.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Horno.png')   }}" alt="horno icono">
                             </div>
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Estufa.png')   }}" alt="icono estufa">
                             </div>
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Nevera.png')   }}" alt="icono nevera">
                             </div>
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Lavaplatos.png')   }}" alt="icono lavaplatos">
                             </div>
                         </div>
 
@@ -265,11 +265,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-5 col-8 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}" alt="descubra icono"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                               <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Asko_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                               <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Asko_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -283,27 +283,27 @@
                     <div class="justify-content-center align-self-center">
                         <div class="row nomargin">
                             <div class="col-xl-1 offset-xl-11 col-lg-2 offset-lg-10 col-2  nopadding">
-                                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')   }}"></a>
+                                <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')   }}" alt="cintillos dexa"></a>
                             </div>
                         </div>
                         <div class="row  topmargin-sm container-icon left">
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Estufa.png')   }}" alt="icono estufa">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Horno.png')   }}" alt="icono horno">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Nevera.png')   }}" alt="icon nevera">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Lavaplatos.png')   }}" alt="icon lavaplatos">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Vajillas.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Vajillas.png')   }}" alt="icono vajillas">
                             </div>
                             <div>
-                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Fregadero.png')   }}">
+                                <img class="icon-catalogo-right" src="{{ URL::asset('img/icono/Fregadero.png')   }}" alt="icono fregadero">
                             </div>
                         </div>
 
@@ -319,18 +319,18 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-5 col-8 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}" alt="icono descubra"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-md-7 col-10 noPaddingLeftMobile nopaddingright bottommargin-sm">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Dexa_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icon catalogo"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex col-padding-sm  order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
-                         <img src="{{ URL::asset('img/dexa.jpg')}}">
+                         <img src="{{ URL::asset('img/dexa.jpg')}}" alt="dexa">
                     </div>
                 </div>
             </div>
@@ -339,19 +339,19 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 d-flex col-padding-sm">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/Scotsman-home.jpg')}}">
+                        <img src="{{ URL::asset('img/Scotsman-home.jpg')}}" alt="scotsman home">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 d-flex">
                     <div class="align-self-center justify-content-center">
                         <div class="row nomargin text-lg-right text-left col-12 nopadding">
                             <div class="col-4 nopadding" style="padding-left: 0">
-                                <a href="{{ URL::to('/scotsman') }}"><img class="" src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
+                                <a href="{{ URL::to('/scotsman') }}"><img class="" src="{{ URL::asset('img/cintillos/Scotsman.png')}}" alt="cintillos scotsman"></a>
                             </div>
                         </div>
                         <div class="row nomargin topmargin-sm container-icon right">
                             <div>
-                                <img  src="{{ URL::asset('img/icono/Hielo.png')   }}">
+                                <img  src="{{ URL::asset('img/icono/Hielo.png')   }}" alt="icono hielo">
                             </div>
                         </div>
 
@@ -367,11 +367,11 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-5 col-8 nopadding bottommargin-sm">
-                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}"><p>DESCUBRA MÁS</p></a>
+                                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/icono-btn/descubra.png')   }}" alt="icon descubra"><p>DESCUBRA MÁS</p></a>
                             </div>
 
                             <div class="col-lg-7 col-10 bottommargin-sm noPaddingLeftMobile">
-                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Scotsman_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Scotsman_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="icono catalogo"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -398,7 +398,7 @@
                 <div class="carousel-item active">
                   <div class="col-md-10 offset-md-1 col-10 offset-1 row">
                     <div class="col-lg-2  offset-md-0 col-md-3 offset-md-0 col-6 offset-3  bottommargin-sm">
-                        <img src="{{ URL::asset('img/persona1.png')   }}">
+                        <img src="{{ URL::asset('img/persona1.png')   }}" alt="persona1">
                     </div>
                     <div class="col-md-9 col-12">
                         <p class="light">“Visitar su showroom es una experiencia increíble, todos te atienden con mucha calidez desde que se abren las puertas del elevador, un excelente servicio al cliente, resuelven tus dudas y siempre están dispuestos a ayudar.
@@ -413,7 +413,7 @@
                 <div class="carousel-item ">
                   <div class="col-md-10 offset-md-1 col-10 offset-1 row">
                     <div class="col-lg-2  offset-md-0 col-md-3 offset-md-0 col-6 offset-3  bottommargin-sm">
-                        <img src="{{ URL::asset('img/persona2.png')   }}">
+                        <img src="{{ URL::asset('img/persona2.png')   }}" alt="persona2">
                     </div>
                     <div class="col-xl-10 col-md-9 col-12">
                         <p class="light">“Llevo más de 10 años  en contacto con IESA y sus trabajadores, me  encuentro totalmente satisfecho con el trato que he recibido por parte de ellos, facilitan siempre la solución a cualquier problema que se presente y siempre lo hacen con una sonrisa y profesionalismo.   Los recomiendo ampliamente, es una empresa en la que se puede confiar.  Esto hablando de  la empresa, si tocamos el de tema de las marcas que representan, no tengo más que decir  que son las mejores a nivel mundial.”</p>
