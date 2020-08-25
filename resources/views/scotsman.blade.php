@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Scotsman')
 @section('content')
@@ -22,7 +22,7 @@
             </div>
             <div class="row col-padding catalogo topmargin-lg">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/scotsman/hielo.jpg')}}">
+                    <img src="{{ URL::asset('img/scotsman/hielo.jpg')}}" alt="hielo scotsman">
                 </div>
                 <div class="col-lg-6 d-flex col-xl-5">
                     <div class="justify-content-center align-self-center">
@@ -43,7 +43,7 @@
 
                         <div class="topmargin-sm row nomargin">
                             <div class="col-lg-7 nopadding  bottommargin-sm">
-                                 <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Scotsman_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}"><p>SOLICITAR CATÁLOGO</p></a>
+                                 <a class="btn btn-block btn-cyan solicitar-btn" rel="https://app3.salesmanago.pl/mscf/o28qhomp7m09zozm/default/Catalogo_Scotsman_Download.htm" href="javascript:void(0)"><img src="{{ URL::asset('img/icono-btn/catalogo.png')   }}" alt="catalogo icono"><p>SOLICITAR CATÁLOGO</p></a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
             <div id="hielo" class="row nomargin topmargin-lg">
                 <div class="col-md-6 bottommargin">
                     <div class="col-7 offset-1">
-                        <img src="{{ URL::asset('img/scotsman/hielo-gourmet.png')}}">
+                        <img src="{{ URL::asset('img/scotsman/hielo-gourmet.png')}}" alt="scotsman hielo gourmet">
                     </div>
                     <div class="topmargin-sm">
                         <h3 class="light" style="margin-left: 40px">HIELO GOURMET</h3>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-md-6 bottommargin">
                     <div class="col-7 offset-1">
-                        <img src="{{ URL::asset('img/scotsman/hielo-nugget.png')}}">
+                        <img src="{{ URL::asset('img/scotsman/hielo-nugget.png')}}" alt="scotsman hielo nugget">
                     </div>
                     <div class="topmargin-sm">
                         <h3 class="light" style="margin-left: 40px">HIELO NUGGET</h3>

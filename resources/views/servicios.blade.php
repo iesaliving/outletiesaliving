@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Servicios')
 @section('content')
@@ -8,19 +8,19 @@
 
 <section style="position: relative;">
     <div id="hero-desktop" class="col-12 nopadding">
-        <img src="{{ URL::asset('img/servicios/hero.jpg')}}">
+        <img src="{{ URL::asset('img/servicios/hero.jpg')}}" alt="servicios hero">
     </div>
 
     <div id="hero-mobile" class="col-12 nopadding">
-        <img src="{{ URL::asset('img/hero-servicio-mobile.jpg')}}">
+        <img src="{{ URL::asset('img/hero-servicio-mobile.jpg')}}" alt="hero servicio mobile">
     </div>
     <div id="container-btn-servicios">
         <div class="row nomargin">
             <div class="col-xl-7 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}"><p>AGENDE UNA CITA DE SERVICIO</p></a>
+                <a class="btn btn-block btn-cyan descubra-btn" href="{{ URL::to('/contacto')}}"><img src="{{ URL::asset('img/icono-btn/agenda.png')   }}" alt="icono agenda"><p>AGENDE UNA CITA DE SERVICIO</p></a>
             </div>
             <div class="col-xl-5 col-lg-6 bottommargin-sm">
-                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p><img src="{{ URL::asset('img/icono-btn/whatsapp_blanco.png')}}" style="margin-right: 15px;width: 20px">+52 (1) 811 803 6339</p></a>
+                <a class="btn btn-block btn-cyan descubra-btn" href="tel:+5218118036339"><p><img src="{{ URL::asset('img/icono-btn/whatsapp_blanco.png')}}" style="margin-right: 15px;width: 20px" alt="icono whatsapp blanco">+52 (1) 811 803 6339</p></a>
             </div>
 
         </div>
@@ -39,7 +39,7 @@
         </div>
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
-                  <img src="{{ URL::asset('img/servicios/servicio.jpg')}}">
+                  <img src="{{ URL::asset('img/servicios/servicio.jpg')}}" alt="servicios">
                 </div>
                 <div class="col-xl-6  col-lg-6">
                     <div class="topmargin-sm col-xl-11">
@@ -53,19 +53,19 @@
 
                     <div class="topmargin-sm row nomargin col-xl-11">
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
+                            <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px" alt="icono telefono">
                         </div>
                         <div class="col-11 bottommargin-sm">
                             <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
+                            <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px" alt="icono whatsapp">
                         </div>
                         <div class="col-11 bottommargin-sm">
                             <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+52 (1) 811 803 6339</p></a>
                         </div>
                         <div class="col-1 nopadding bottommargin-sm">
-                            <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">
+                            <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px" alt="icono email">
                         </div>
                         <div class="col-11 bottommargin-sm">
                            <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
@@ -74,22 +74,22 @@
 
                     <div class="row nomargin">
                         <div class="col-2" style="padding: 0 5px 0 0">
-                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}" alt="vintillos subzero"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}" alt="cintillos wolf"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}" alt="cintillos cove"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}" alt="cintillos asko"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
-                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
+                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}" alt="cintillos dexa"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
+                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}" alt="cintillos scotsman"></a>
                         </div>
                     </div>
 
@@ -125,7 +125,7 @@
                                <a href="tel:+5218004004372"><p class="nomargin">+52 (1) 800 400 IESA (4372)</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px">
+                                <img src="{{ URL::asset('img/icono-btn/telefono.png')}}" style="margin-right: 15px;width: 20px" alt="icono telefono">
                             </div>
                         </div>
                         <div class="row nomargin col-12 nopadding">
@@ -133,7 +133,7 @@
                                 <a href="https://wa.me/+5218118036339" target="_blank" ><p class="nomargin">+5218118036339</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px">
+                                <img src="{{ URL::asset('img/icono-btn/whatsapp.png')}}" style="margin-right: 15px;width: 20px" alt="icono whatsapp">
                             </div>
                         </div>
                         <div class="row nomargin col-12 nopadding">
@@ -141,29 +141,29 @@
                                <a href="mailto:atencionalcliente@iesa.cc"> <p class="nomargin">atencionalcliente@iesa.cc</p></a>
                             </div>
                             <div class="order-lg-2 order-1 col-1 nopadding bottommargin-sm">
-                                <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px">
+                                <img src="{{ URL::asset('img/icono-btn/email.png')}}" style="margin-right: 15px;width: 20px" alt="icono email">
                             </div>
                         </div>
                     </div>
 
                     <div class="row nomargin">
                         <div class="col-2 offset-lg-1" style="padding: 0 5px 0 0">
-                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}"></a>
+                            <a href="{{ URL::to('/sub-zero') }}"><img src="{{ URL::asset('img/cintillos/SubZero.png')}}" alt="cintillos subzero"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}"></a>
+                            <a href="{{ URL::to('/wolf') }}"><img src="{{ URL::asset('img/cintillos/Wolf.png')}}" alt="cintillos wolf"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}"></a>
+                            <a href="{{ URL::to('/cove') }}"><img src="{{ URL::asset('img/cintillos/Cove.png')}}" alt="cintillos cove"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}"></a>
+                            <a href="{{ URL::to('/asko') }}"><img src="{{ URL::asset('img/cintillos/Asko.png')}}" alt="cintillos asko"></a>
                         </div>
                         <div class="col-1" style="padding: 0 5px">
-                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}"></a>
+                            <a href="{{ URL::to('/dexa') }}"><img src="{{ URL::asset('img/cintillos/Dexa.png')}}" alt="cintillos dexa"></a>
                         </div>
                         <div class="col-2" style="padding: 0 10px">
-                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}"></a>
+                            <a href="{{ URL::to('/scotsman') }}"><img src="{{ URL::asset('img/cintillos/Scotsman.png')}}" alt="cintillos scotsman"></a>
                         </div>
                     </div>
 
@@ -174,7 +174,7 @@
                 </div>
                 <div class="col-lg-6 col-padding-sm d-flex order-1 order-lg-2">
                     <div class="align-self-center justify-content-center">
-                        <img src="{{ URL::asset('img/servicios/agenda.jpg')}}">
+                        <img src="{{ URL::asset('img/servicios/agenda.jpg')}}" alt="servicios agenda">
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@
 
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/servicios/autorizado.jpg')}}">
+                    <img src="{{ URL::asset('img/servicios/autorizado.jpg')}}" alt="servicios autorizado">
                 </div>
                 <div class="col-lg-6 col-xl-5 d-flex">
                     <div class="justify-content-center align-self-center">
@@ -219,7 +219,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-padding-sm order-lg-2 order-1">
-                    <img src="{{ URL::asset('img/servicios/garantia.jpg')}}">
+                    <img src="{{ URL::asset('img/servicios/garantia.jpg')}}" alt="servicios garantia">
                 </div>
             </div>
 
@@ -227,7 +227,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm d-flex">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/servicios/guantes.jpg')}}">
+                        <img src="{{ URL::asset('img/servicios/guantes.jpg')}}" alt="servicios guantes">
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-5 d-flex">
@@ -254,7 +254,7 @@
                 </div>
                 <div class="col-lg-6 col-padding-sm d-flex order-lg-2 order-1">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/servicios/capacitacion.jpg')}}">
+                        <img src="{{ URL::asset('img/servicios/capacitacion.jpg')}}" alt="servicios capacitacion">
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm d-flex">
                     <div class="justify-content-center align-self-center">
-                        <img src="{{ URL::asset('img/servicios/fabricante.jpg')}}">
+                        <img src="{{ URL::asset('img/servicios/fabricante.jpg')}}" alt="fabricante">
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-5 d-flex">

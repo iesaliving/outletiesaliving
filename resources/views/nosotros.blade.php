@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Nosotros')
 @section('content')
@@ -18,11 +18,11 @@
 </section> -->
 
 <section id="hero-desktop">
-        <img src="{{ URL::asset('img/nosotros/hero.jpg')}}">
+        <img src="{{ URL::asset('img/nosotros/hero.jpg')}}" alt="hero nosotros">
     </section>
 
 <section id="hero-mobile">
-  <img src="{{ URL::asset('img/nosotros/mobile.jpg')}}">
+  <img src="{{ URL::asset('img/nosotros/mobile.jpg')}}" alt="mobile nosotros">
 </section>
 
 <section class="container-gral" style="padding-top: 4px" >
@@ -36,7 +36,7 @@
             </div>
             <div class="row col-padding catalogo topmargin">
                 <div class="col-lg-6 col-padding-sm">
-                    <img src="{{ URL::asset('img/nosotros/objetivo.jpg')}}">
+                    <img src="{{ URL::asset('img/nosotros/objetivo.jpg')}}" alt="objetivo nosotros">
                 </div>
                 <div class="col-lg-6 d-flex">
                     <div class="justify-content-center align-self-center">

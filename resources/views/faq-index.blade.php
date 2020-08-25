@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'FAQ')
 @section('content')
@@ -6,12 +6,12 @@
 
 
 <section id="hero-desktop">
-        <img src="{{ URL::asset('img/faq/hero.jpg')}}">
+        <img src="{{ URL::asset('img/faq/hero.jpg')}}" alt="hero">
     </section>
 
 
 <section id="hero-mobile">
-    <img src="{{ URL::asset('img/hero-faq-mobile.jpg')}}">
+    <img src="{{ URL::asset('img/hero-faq-mobile.jpg')}}" alt="hero faq mobile">
 </section>
 
 
@@ -30,19 +30,19 @@
 
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <a href="#marketing"><img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2"></a>
+                            <a href="#marketing"><img src="{{ URL::asset('img/faq/marketing.png')   }}" class="mb-2" alt="marketing faq"></a>
                         </div>
                         <p class="text-center"><strong>Marketing</strong></p>
                     </div>
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <a href="#servicio"><img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2"></a>
+                            <a href="#servicio"><img src="{{ URL::asset('img/faq/servicio.png')   }}" class="mb-2" alt="servicio faq"></a>
                         </div>
                         <p class="text-center"><strong>Consierge de Servicio</strong></p>
                     </div>
                     <div class="col-4 text-center">
                         <div style="padding: 10px 4vw">
-                            <a href="#entregas"><img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2"></a>
+                            <a href="#entregas"><img src="{{ URL::asset('img/faq/entregas.png')   }}" class="mb-2" alt="entregas faq"></a>
                         </div>
                         <p class="text-center"><strong>Entregas</strong></p>
                     </div>

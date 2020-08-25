@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('description', 'IESA')
 @section('title', 'Aviso de privacidad')
 @section('content')
@@ -6,11 +6,11 @@
 
 
     <section id="hero-desktop">
-        <img src="{{ URL::asset('img/hero-aviso.jpg')}}">
+        <img src="{{ URL::asset('img/hero-aviso.jpg')}}" alt="hero aviso">
     </section>
 
     <section id="hero-mobile">
-        <img src="{{ URL::asset('img/hero-aviso-mobile.jpg')}}">
+        <img src="{{ URL::asset('img/hero-aviso-mobile.jpg')}}" alt="hero aviso mobile">
     </section>
 
 
@@ -27,31 +27,31 @@
             </div>
             <div class="row col-md-10 offset-md-1">
             <!--     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
+    			<img src="{{ URL::asset('img/boceto1.png')   }}" alt="boceto1">
     			<div class='text-center'>
     				<h6><b>Lorem ipsum dolor sit amet</b></h6>
     			</div>
     		</div>
     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
+    			<img src="{{ URL::asset('img/boceto1.png')   }}" alt="boceto1">
     			<div class='text-center'>
     				<h6><b>Lorem ipsum dolor sit amet</b></h6>
     			</div>
     		</div>
     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
+    			<img src="{{ URL::asset('img/boceto1.png')   }}" alt="boceto1">
     			<div class='text-center'>
     				<h6><b>Lorem ipsum dolor sit amet</b></h6>
     			</div>
     		</div>
     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
+    			<img src="{{ URL::asset('img/boceto1.png')   }}" alt="boceto1">
     			<div class='text-center'>
     				<h6><b>Lorem ipsum dolor sit amet</b></h6>
     			</div>
     		</div>
     		<div style="width: 20%; padding: 2vw">
-    			<img src="{{ URL::asset('img/boceto1.png')   }}">
+    			<img src="{{ URL::asset('img/boceto1.png')   }}" alt="boceto1">
     			<div class='text-center'>
     				<h6><b>Lorem ipsum dolor sit amet</b></h6>
     			</div>
